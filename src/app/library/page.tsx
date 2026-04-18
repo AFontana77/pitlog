@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "PitLog Library — 500+ BBQ cuts and recipes",
+  title: "PitLog Library — 129+ BBQ cuts and recipes",
   description: "Cuts, target temps, stall temps, wood pairings, and estimated cook times organized by protein. Browse the PitLog reference database — available in the free app.",
 };
 
@@ -32,7 +32,7 @@ export default function LibraryPage() {
               PitLog Library
             </h1>
             <p className="text-gray-600 text-lg max-w-xl mx-auto leading-relaxed">
-              500+ BBQ cuts and recipes from AmazingRibs.com + pitmasters. Cuts, target temps, stall temps, wood pairings, and estimated cook times organized by protein.
+              129+ BBQ cuts and recipes from AmazingRibs.com + pitmasters. Cuts, target temps, stall temps, wood pairings, and estimated cook times organized by protein.
             </p>
             <div className="mt-6 inline-flex items-center gap-2 text-sm text-amber-700 bg-amber-50 px-4 py-2 rounded-full">
               <Search size={14} /> Full search available in the free app
@@ -64,7 +64,7 @@ export default function LibraryPage() {
               Search the full database in the app.
             </h2>
             <p className="text-gray-600 mb-6">
-              The PitLog app has the complete 500+ BBQ cuts and recipes with full-text search, filters, and your personal log — all free.
+              The PitLog app has the complete 129+ BBQ cuts and recipes with full-text search, filters, and your personal log — all free.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer"

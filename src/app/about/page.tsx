@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "About PitLog",
-  description: "The story behind PitLog. Search 500+ BBQ cuts and cook times. Log your cooks. Build your pit mastery.",
+  description: "The story behind PitLog. Search 129+ BBQ cuts and cook times. Log your cooks. Build your pit mastery.",
 };
 
 export default function AboutPage() {

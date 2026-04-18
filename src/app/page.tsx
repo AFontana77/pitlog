@@ -5,8 +5,8 @@ import { Database, BookOpen, BarChart3, Star, ArrowRight, Download, CheckCircle 
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "PitLog — Search 500+ BBQ cuts and cook times",
-  description: "PitLog has 500+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
+  title: "PitLog — Search 129+ BBQ cuts and cook times",
+  description: "PitLog has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
 };
 
 const FEATURES = [
@@ -26,10 +26,10 @@ export default function HomePage() {
         <section className="py-20 px-4" style={{ backgroundColor: '#FFFBEB' }}>
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full mb-6">
-              Search 500+ BBQ cuts and recipes. Log your own.
+              Search 129+ BBQ cuts and recipes. Log your own.
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Search 500+ BBQ cuts and cook times.
+              Search 129+ BBQ cuts and cook times.
               <br />
               <span className="text-amber-700">Log every cook.</span>
             </h1>
@@ -45,7 +45,7 @@ export default function HomePage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-gray-400">
-              Free app. No credit card. 500+ BBQ cuts and recipes from AmazingRibs.com + pitmasters.
+              Free app. No credit card. 129+ BBQ cuts and recipes from AmazingRibs.com + pitmasters.
             </p>
           </div>
         </section>
@@ -57,7 +57,7 @@ export default function HomePage() {
               The database IS the app.
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Most log apps give you a blank screen. PitLog gives you 500+ BBQ cuts and recipes from AmazingRibs.com + pitmasters — searchable, organized, and ready to use. Log what you do. Build your personal collection alongside the reference library.
+              Most log apps give you a blank screen. PitLog gives you 129+ BBQ cuts and recipes from AmazingRibs.com + pitmasters — searchable, organized, and ready to use. Log what you do. Build your personal collection alongside the reference library.
             </p>
             <div className="grid sm:grid-cols-2 gap-6 text-left">
               {FEATURES.map(({ icon: Icon, title, body }) => (
