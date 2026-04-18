@@ -89,6 +89,25 @@ const FAQS = [
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PitLog",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "iOS, Android",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "description": "BBQ cook times and temperatures for 200+ cuts. Log your cooks, track results by cut, and build a personal BBQ reference book.",
+            "url": "https://www.pitlog.app"
+          })
+        }}
+      />
       <SiteNav />
       <main id="main-content" className="pt-20">
 
