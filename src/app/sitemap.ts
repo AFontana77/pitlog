@@ -12,5 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE}/support`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    // SEO content pages
+    { url: `${BASE}/smoking-times-temperatures`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/traeger-recipes`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/pit-boss-recipes`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/smoker-recipes`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/pellet-smoker-recipes`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/smoked-meat-recipes`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
   ];
 }
