@@ -1,6 +1,5 @@
 import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { Flame, ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -11,42 +10,12 @@ export const metadata: Metadata = {
 };
 
 const WOOD_GUIDE = [
-  {
-    wood: 'Hickory',
-    flavor: 'Bold, smoky, bacon-like',
-    best: 'Brisket, pork shoulder, ribs',
-    note: 'The most classic BBQ wood. Strong smoke flavor. Can overpower delicate proteins like fish or chicken.',
-  },
-  {
-    wood: 'Applewood',
-    flavor: 'Mild, sweet, fruity',
-    best: 'Chicken, pork, salmon, turkey',
-    note: 'Works with almost any protein. Produces a mild smoke that does not compete with your rub or sauce.',
-  },
-  {
-    wood: 'Cherry',
-    flavor: 'Mild, slightly sweet, adds dark color',
-    best: 'Chicken, pork, duck, ribs',
-    note: 'Blends well with hickory or oak. Adds a deep mahogany color to bark. Avoid for long fish cooks.',
-  },
-  {
-    wood: 'Mesquite',
-    flavor: 'Very strong, earthy, almost bitter',
-    best: 'Beef, Texas-style brisket',
-    note: 'Burns hot and fast. Best for shorter cooks. On a long smoke it can turn bitter — blend with oak to tone it down.',
-  },
-  {
-    wood: 'Pecan',
-    flavor: 'Mild, nutty, rich',
-    best: 'Brisket, ribs, whole chicken, pork',
-    note: 'A softer version of hickory. One of the most versatile pellets in BBQ. Hard to go wrong.',
-  },
-  {
-    wood: 'Oak',
-    flavor: 'Medium, earthy, clean',
-    best: 'Brisket, beef ribs, lamb, all-around use',
-    note: 'The most neutral wood. Produces a clean smoke without overwhelming the meat. Used in most competition BBQ blends.',
-  },
+  { wood: 'Hickory', flavor: 'Bold, smoky, bacon-like', best: 'Brisket, pork shoulder, ribs', note: 'The most classic BBQ wood. Strong smoke flavor. Can overpower delicate proteins like fish or chicken.' },
+  { wood: 'Applewood', flavor: 'Mild, sweet, fruity', best: 'Chicken, pork, salmon, turkey', note: 'Works with almost any protein. Produces a mild smoke that does not compete with your rub or sauce.' },
+  { wood: 'Cherry', flavor: 'Mild, slightly sweet, adds dark color', best: 'Chicken, pork, duck, ribs', note: 'Blends well with hickory or oak. Adds a deep mahogany color to bark. Avoid for long fish cooks.' },
+  { wood: 'Mesquite', flavor: 'Very strong, earthy, almost bitter', best: 'Beef, Texas-style brisket', note: 'Burns hot and fast. Best for shorter cooks. On a long smoke it can turn bitter. Blend with oak to tone it down.' },
+  { wood: 'Pecan', flavor: 'Mild, nutty, rich', best: 'Brisket, ribs, whole chicken, pork', note: 'A softer version of hickory. One of the most versatile pellets in BBQ. Hard to go wrong.' },
+  { wood: 'Oak', flavor: 'Medium, earthy, clean', best: 'Brisket, beef ribs, lamb, all-around use', note: 'The most neutral wood. Produces a clean smoke without overwhelming the meat. Used in most competition BBQ blends.' },
 ];
 
 const RECIPES = [
@@ -54,12 +23,12 @@ const RECIPES = [
     name: 'Hickory Smoked Brisket',
     smokerTemp: '225°F',
     internalTarget: '203°F',
-    time: '1–1.5 hr/lb',
-    wood: 'Hickory (or hickory + oak blend)',
+    time: '1 to 1.5 hr/lb',
+    wood: 'Hickory or hickory-oak blend',
     steps: [
       'Season brisket with salt, pepper, and garlic powder the night before. Refrigerate uncovered.',
       'Set pellet smoker to 225°F using hickory pellets. Place brisket fat-side up.',
-      'Smoke until 160–165°F internal. Wrap tightly in butcher paper.',
+      'Smoke until 160 to 165°F internal. Wrap tightly in butcher paper.',
       'Return to smoker. Continue until 203°F and probe slides in with no resistance. Rest at least 1 hour.',
     ],
   },
@@ -80,20 +49,20 @@ const RECIPES = [
     name: 'Cherry Smoked Chicken Thighs',
     smokerTemp: '275°F',
     internalTarget: '175°F',
-    time: '1.5–2 hr',
+    time: '1.5 to 2 hr',
     wood: 'Cherry',
     steps: [
       'Dry brine chicken thighs overnight with salt and your preferred rub. Cherry wood gives great skin color.',
       'Set pellet smoker to 275°F using cherry pellets.',
-      'Smoke skin-side up until internal hits 165°F. Crank to 400°F for 10–15 min to crisp the skin.',
+      'Smoke skin-side up until internal hits 165°F. Crank to 400°F for 10 to 15 min to crisp the skin.',
       'Pull at 175°F. The cherry smoke adds color and a slight sweetness without overpowering the chicken.',
     ],
   },
   {
     name: 'Pecan Smoked Ribs',
     smokerTemp: '225°F',
-    internalTarget: '195–203°F',
-    time: '5–6 hr',
+    internalTarget: '195 to 203°F',
+    time: '5 to 6 hr',
     wood: 'Pecan',
     steps: [
       'Remove membrane. Apply rub generously. Pecan is mild enough to use for the full cook without wrapping.',
@@ -104,12 +73,12 @@ const RECIPES = [
   },
   {
     name: 'Oak Smoked Salmon',
-    smokerTemp: '180–200°F',
+    smokerTemp: '180 to 200°F',
     internalTarget: '145°F',
-    time: '1–2 hr',
+    time: '1 to 2 hr',
     wood: 'Oak or alder',
     steps: [
-      'Dry brine salmon with salt and brown sugar for 1–2 hours. Rinse and pat dry before smoking.',
+      'Dry brine salmon with salt and brown sugar for 1 to 2 hours. Rinse and pat dry before smoking.',
       'Set pellet smoker to 180°F using oak or alder pellets. Place salmon skin-side down.',
       'Smoke until internal hits 130°F. Brush with a honey-soy glaze.',
       'Continue smoking until 145°F. Let rest 5 min. Oak gives a clean smoke that does not overpower the fish.',
@@ -118,22 +87,10 @@ const RECIPES = [
 ];
 
 const PELLET_TIPS = [
-  {
-    title: 'Consistent temp is the main advantage',
-    body: 'Pellet smokers hold temperature automatically. You do not babysit the fire. This makes long cooks much easier — set the temp, walk away, and let the PID controller do the work.',
-  },
-  {
-    title: 'Pellet quality matters',
-    body: 'Cheap pellets with wood "flavor" additives can taste different than 100% hardwood pellets. Look for brands that list the wood species clearly and avoid pellets with bark or filler.',
-  },
-  {
-    title: 'Cold weather changes things',
-    body: 'In cold or windy conditions, your pellet smoker burns through pellets faster and may struggle to hold temp. Add 15–20 min per pound to your estimate. Check the hopper level before any long cook.',
-  },
-  {
-    title: 'Works on any brand',
-    body: 'These recipes work on any pellet smoker: Traeger, Pit Boss, Camp Chef, Z Grills, Weber SmokeFire, Recteq, or any other. Temp is temp. The brand does not change the internal target.',
-  },
+  { title: 'Consistent temp is the main advantage', body: 'Pellet smokers hold temperature automatically. You do not babysit the fire. This makes long cooks much easier. Set the temp, walk away, and let the PID controller do the work.' },
+  { title: 'Pellet quality matters', body: 'Cheap pellets with wood flavor additives can taste different than 100 percent hardwood pellets. Look for brands that list the wood species clearly and avoid pellets with bark or filler.' },
+  { title: 'Cold weather changes things', body: 'In cold or windy conditions, your pellet smoker burns through pellets faster and may struggle to hold temp. Add 15 to 20 min per pound to your estimate. Check the hopper level before any long cook.' },
+  { title: 'Works on any brand', body: 'These recipes work on any pellet smoker. Traeger, Pit Boss, Camp Chef, Z Grills, Weber SmokeFire, Recteq, or any other. Temp is temp. The brand does not change the internal target.' },
 ];
 
 export default function PelletSmokerRecipesPage() {
@@ -142,51 +99,45 @@ export default function PelletSmokerRecipesPage() {
       <SiteNav />
       <main id="main-content" className="pt-20">
 
-        {/* Hero */}
-        <section aria-label="Page introduction" className="py-16 px-4" style={{ backgroundColor: '#FFF7ED' }}>
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex w-14 h-14 bg-amber-100 rounded-2xl items-center justify-center mb-6">
-              <Flame className="text-amber-700" size={28} />
+        <section className="px-4 sm:px-6 lg:px-8 py-20 lg:py-24" style={{ backgroundColor: 'oklch(0.10 0.020 50)' }}>
+          <div className="max-w-5xl mx-auto">
+            <div className="font-display uppercase font-semibold mb-8 flex items-center gap-3" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.18em', fontSize: '0.7rem' }}>
+              <span style={{ display: 'inline-block', width: '24px', height: '1px', background: 'oklch(0.62 0.16 55)' }} aria-hidden="true" />
+              ANY PELLET SMOKER · USDA TARGETS
             </div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Pellet Smoker Recipes
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl mb-6" style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}>
+              Pellet smoker recipes by wood.
             </h1>
-            <p className="text-gray-600 text-lg max-w-xl mx-auto leading-relaxed mb-4">
-              Pellet smokers run at a set temperature automatically — no fire management, no babysitting. The main variable you control is wood pellet choice. Here is how to match wood to protein, plus five recipes with exact temps, times, and pairings.
+            <p className="text-lg leading-relaxed max-w-2xl" style={{ color: 'oklch(0.82 0.018 50)' }}>
+              Pellet smokers run at a set temperature automatically. No fire management, no babysitting. The main variable you control is wood pellet choice. Here is how to match wood to protein, plus five recipes with exact temps, times, and pairings. Works on Traeger, Pit Boss, Camp Chef, Z Grills, Recteq, and more.
             </p>
-            <div className="inline-flex items-center gap-2 text-sm text-amber-800 bg-amber-50 px-4 py-2 rounded-full">
-              Works on Traeger, Pit Boss, Camp Chef, Z Grills, Recteq, and more
-            </div>
           </div>
         </section>
 
         {/* Wood Guide */}
-        <section aria-label="Wood pellet pairing guide" className="py-16 px-4 bg-white">
+        <section className="px-4 sm:px-6 lg:px-8 py-20" style={{ backgroundColor: 'oklch(0.13 0.025 50)' }}>
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3 text-center">Wood Pellet Pairing Guide</h2>
-            <p className="text-gray-600 text-center max-w-xl mx-auto mb-10">
-              Six woods. Each one changes the flavor profile. Start here before you choose your pellets.
-            </p>
-            <div className="overflow-x-auto rounded-xl border border-gray-200">
+            <span className="font-display uppercase mb-5 inline-block" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.18em', fontSize: '0.7rem' }}>Wood pairings</span>
+            <h2 className="font-display text-3xl sm:text-4xl mb-12" style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}>
+              Six pellets. Six different cooks.
+            </h2>
+            <div className="overflow-x-auto">
               <table className="w-full text-sm" aria-label="Wood pellet flavor and pairing guide">
                 <thead>
-                  <tr className="bg-amber-50 border-b border-amber-100">
-                    <th className="text-left py-3 px-4 font-semibold text-amber-900">Wood</th>
-                    <th className="text-left py-3 px-4 font-semibold text-amber-900">Flavor</th>
-                    <th className="text-left py-3 px-4 font-semibold text-amber-900">Best for</th>
-                    <th className="text-left py-3 px-4 font-semibold text-amber-900">Notes</th>
+                  <tr style={{ borderBottom: '1px solid oklch(0.28 0.025 50)' }}>
+                    <th className="text-left py-3 px-4 font-display uppercase" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.12em', fontSize: '0.7rem' }}>Wood</th>
+                    <th className="text-left py-3 px-4 font-display uppercase" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.12em', fontSize: '0.7rem' }}>Flavor</th>
+                    <th className="text-left py-3 px-4 font-display uppercase" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.12em', fontSize: '0.7rem' }}>Best for</th>
+                    <th className="text-left py-3 px-4 font-display uppercase" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.12em', fontSize: '0.7rem' }}>Notes</th>
                   </tr>
                 </thead>
                 <tbody>
                   {WOOD_GUIDE.map((row, i) => (
-                    <tr
-                      key={row.wood}
-                      className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-amber-50 transition-colors`}
-                    >
-                      <td className="py-3 px-4 font-semibold text-amber-700">{row.wood}</td>
-                      <td className="py-3 px-4 text-gray-700">{row.flavor}</td>
-                      <td className="py-3 px-4 text-gray-600">{row.best}</td>
-                      <td className="py-3 px-4 text-gray-500 text-xs leading-relaxed">{row.note}</td>
+                    <tr key={row.wood} style={{ borderBottom: '1px solid oklch(0.28 0.025 50)', background: i % 2 === 0 ? 'transparent' : 'oklch(0.18 0.030 50)' }}>
+                      <td className="py-4 px-4 font-display tabular-nums" style={{ color: 'oklch(0.72 0.14 55)' }}>{row.wood}</td>
+                      <td className="py-4 px-4" style={{ color: 'oklch(0.93 0.020 50)' }}>{row.flavor}</td>
+                      <td className="py-4 px-4 text-xs" style={{ color: 'oklch(0.82 0.018 50)' }}>{row.best}</td>
+                      <td className="py-4 px-4 text-xs leading-relaxed" style={{ color: 'oklch(0.62 0.018 50)' }}>{row.note}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -196,93 +147,88 @@ export default function PelletSmokerRecipesPage() {
         </section>
 
         {/* Recipes */}
-        <section aria-label="Pellet smoker recipes" className="py-16 px-4 bg-amber-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3 text-center">5 Pellet Smoker Recipes</h2>
-            <p className="text-gray-600 text-center max-w-xl mx-auto mb-10">
-              Each recipe is matched to a specific wood pairing. All internal targets follow USDA food safety guidelines.
-            </p>
-            <div className="space-y-10">
-              {RECIPES.map((recipe) => (
-                <article key={recipe.name} aria-label={recipe.name} className="border border-gray-200 rounded-2xl overflow-hidden bg-white">
-                  <div className="bg-amber-50 px-6 py-4 border-b border-amber-100">
-                    <h3 className="text-xl font-bold text-gray-900">{recipe.name}</h3>
-                    <div className="flex flex-wrap gap-4 mt-2 text-sm">
-                      <span className="text-gray-600"><span className="font-semibold text-amber-700">Smoker temp:</span> {recipe.smokerTemp}</span>
-                      <span className="text-gray-600"><span className="font-semibold text-amber-700">Pull at:</span> {recipe.internalTarget}</span>
-                      <span className="text-gray-600"><span className="font-semibold text-amber-700">Time:</span> {recipe.time}</span>
-                      <span className="text-gray-600"><span className="font-semibold text-amber-700">Wood:</span> {recipe.wood}</span>
+        <section className="px-4 sm:px-6 lg:px-8 py-20" style={{ backgroundColor: 'oklch(0.18 0.030 50)' }}>
+          <div className="max-w-5xl mx-auto">
+            <span className="font-display uppercase mb-5 inline-block" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.18em', fontSize: '0.7rem' }}>Five recipes</span>
+            <h2 className="font-display text-3xl sm:text-4xl mb-12" style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}>
+              Each one matched to a wood.
+            </h2>
+            <div className="space-y-12">
+              {RECIPES.map((recipe, idx) => (
+                <article key={recipe.name} aria-label={recipe.name} style={{ background: 'oklch(0.13 0.025 50)', border: '1px solid oklch(0.28 0.025 50)', borderRadius: '0.25rem' }}>
+                  <div className="px-6 py-5" style={{ borderBottom: '1px solid oklch(0.28 0.025 50)' }}>
+                    <div className="font-display tabular-nums mb-2" style={{ color: 'oklch(0.62 0.16 55)', fontSize: '0.875rem' }}>{String(idx + 1).padStart(2, '0')}</div>
+                    <h3 className="font-display text-2xl mb-3" style={{ color: 'oklch(0.93 0.020 50)' }}>{recipe.name}</h3>
+                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                      <span><span className="font-display uppercase" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.1em', fontSize: '0.7rem', marginRight: '0.5rem' }}>Smoker</span><span style={{ color: 'oklch(0.93 0.020 50)' }}>{recipe.smokerTemp}</span></span>
+                      <span><span className="font-display uppercase" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.1em', fontSize: '0.7rem', marginRight: '0.5rem' }}>Pull at</span><span className="font-display tabular-nums" style={{ color: 'oklch(0.72 0.14 55)' }}>{recipe.internalTarget}</span></span>
+                      <span><span className="font-display uppercase" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.1em', fontSize: '0.7rem', marginRight: '0.5rem' }}>Time</span><span style={{ color: 'oklch(0.93 0.020 50)' }}>{recipe.time}</span></span>
+                      <span><span className="font-display uppercase" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.1em', fontSize: '0.7rem', marginRight: '0.5rem' }}>Wood</span><span style={{ color: 'oklch(0.93 0.020 50)' }}>{recipe.wood}</span></span>
                     </div>
                   </div>
-                  <div className="px-6 py-5">
-                    <ol className="space-y-3">
-                      {recipe.steps.map((step, i) => (
-                        <li key={i} className="flex gap-3 text-sm text-gray-700 leading-relaxed">
-                          <span className="flex-shrink-0 w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold text-xs flex items-center justify-center mt-0.5">
-                            {i + 1}
-                          </span>
-                          {step}
-                        </li>
-                      ))}
-                    </ol>
-                  </div>
+                  <ol className="px-6 py-5 space-y-4">
+                    {recipe.steps.map((step, i) => (
+                      <li key={i} className="flex gap-4 text-sm leading-relaxed">
+                        <span className="font-display tabular-nums shrink-0" style={{ color: 'oklch(0.62 0.16 55)', minWidth: '1.5rem' }}>{String(i + 1).padStart(2, '0')}</span>
+                        <span style={{ color: 'oklch(0.82 0.018 50)' }}>{step}</span>
+                      </li>
+                    ))}
+                  </ol>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Pellet Smoker Tips */}
-        <section aria-label="Pellet smoker tips" className="py-16 px-4 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3 text-center">Pellet Smoker Tips</h2>
-            <p className="text-gray-600 text-center max-w-xl mx-auto mb-10">
-              A few things that make a difference no matter what brand you own.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-5">
-              {PELLET_TIPS.map(({ title, body }) => (
-                <div key={title} className="flex gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
-                  <CheckCircle className="text-amber-700 flex-shrink-0 mt-0.5" size={18} />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">{title}</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
+        {/* Tips */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20" style={{ backgroundColor: 'oklch(0.13 0.025 50)' }}>
+          <div className="max-w-5xl mx-auto">
+            <span className="font-display uppercase mb-5 inline-block" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.18em', fontSize: '0.7rem' }}>Pellet tips</span>
+            <h2 className="font-display text-3xl sm:text-4xl mb-12" style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}>
+              Things that make a difference.
+            </h2>
+            <ul>
+              {PELLET_TIPS.map(({ title, body }, idx) => (
+                <li key={title} className="grid grid-cols-12 gap-4 sm:gap-8 py-8" style={{ borderTop: '1px solid oklch(0.28 0.025 50)', borderBottom: idx === PELLET_TIPS.length - 1 ? '1px solid oklch(0.28 0.025 50)' : 'none' }}>
+                  <div className="col-span-2 sm:col-span-1 font-display tabular-nums text-2xl sm:text-3xl leading-none" style={{ color: 'oklch(0.62 0.16 55)' }}>{String(idx + 1).padStart(2, '0')}</div>
+                  <div className="col-span-10 sm:col-span-4">
+                    <h3 className="font-display text-xl sm:text-2xl leading-tight" style={{ color: 'oklch(0.93 0.020 50)' }}>{title}</h3>
                   </div>
-                </div>
+                  <div className="col-span-12 sm:col-span-7">
+                    <p className="leading-relaxed" style={{ color: 'oklch(0.82 0.018 50)' }}>{body}</p>
+                  </div>
+                </li>
               ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="px-4 sm:px-6 lg:px-8 py-12" style={{ backgroundColor: 'oklch(0.18 0.030 50)', borderTop: '1px solid oklch(0.28 0.025 50)' }}>
+          <div className="max-w-5xl mx-auto">
+            <p className="font-display uppercase mb-4" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.18em', fontSize: '0.7rem' }}>Also useful</p>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              <Link href="/smoking-times-temperatures" className="text-sm" style={{ color: 'oklch(0.93 0.020 50)' }}>Full smoking times chart</Link>
+              <Link href="/traeger-recipes" className="text-sm" style={{ color: 'oklch(0.93 0.020 50)' }}>Traeger recipes</Link>
+              <Link href="/pit-boss-recipes" className="text-sm" style={{ color: 'oklch(0.93 0.020 50)' }}>Pit Boss recipes</Link>
+              <Link href="/smoker-recipes" className="text-sm" style={{ color: 'oklch(0.93 0.020 50)' }}>All smoker recipes</Link>
             </div>
           </div>
         </section>
 
-        {/* Related Links */}
-        <section aria-label="Related pages" className="py-10 px-4 bg-white border-t border-gray-100">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-sm text-gray-500 mb-3 font-semibold uppercase tracking-wide">Also useful</p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/smoking-times-temperatures" className="text-sm text-amber-700 hover:underline">Full smoking times chart</Link>
-              <span className="text-gray-300">|</span>
-              <Link href="/traeger-recipes" className="text-sm text-amber-700 hover:underline">Traeger recipes</Link>
-              <span className="text-gray-300">|</span>
-              <Link href="/pit-boss-recipes" className="text-sm text-amber-700 hover:underline">Pit Boss recipes</Link>
-              <span className="text-gray-300">|</span>
-              <Link href="/smoker-recipes" className="text-sm text-amber-700 hover:underline">All smoker recipes</Link>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section aria-label="Download PitLog app" className="py-16 px-4" style={{ backgroundColor: '#FFF7ED' }}>
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Log which pellets worked best.</h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              PitLog lets you record wood type alongside temp, time, and rating so you can actually remember what combination produced the best result.
+        <section className="px-4 sm:px-6 lg:px-8 py-20 lg:py-24" style={{ backgroundColor: 'oklch(0.10 0.020 50)', borderTop: '1px solid oklch(0.28 0.025 50)' }}>
+          <div className="max-w-3xl mx-auto">
+            <span className="font-display uppercase mb-5 inline-block" style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.18em', fontSize: '0.7rem' }}>The log</span>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl mb-6" style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}>
+              Log which pellets worked best.
+            </h2>
+            <p className="leading-relaxed mb-10 max-w-2xl" style={{ color: 'oklch(0.82 0.018 50)' }}>
+              PitLog lets you record wood type alongside temp, time, and rating. So you can actually remember what combination produced the best result.
             </p>
-            <Link
-              href="/free-download"
-              className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold px-8 py-3 rounded-xl transition-colors min-h-[48px]"
-            >
-              Download PitLog Free <ArrowRight size={18} />
-            </Link>
-            <p className="text-sm text-gray-400 mt-4">Free. No subscription. $6.99 one-time to unlock the cook log.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/free-download" className="btn-primary press-feedback">Download PitLog free</Link>
+              <Link href="/library" className="btn-ghost">Browse the library</Link>
+            </div>
+            <p className="mt-6 text-sm" style={{ color: 'oklch(0.62 0.018 50)' }}>Free. No subscription. $6.99 one-time to unlock the cook log.</p>
           </div>
         </section>
 

@@ -1,6 +1,5 @@
 import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { Mail } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -8,84 +7,117 @@ export const metadata: Metadata = {
   description: 'Get help with the PitLog app. Contact support or browse common questions.',
 };
 
+const FAQS = [
+  { q: 'How do I get the app?', a: 'Search PitLog in the App Store or Google Play. The app is free to download. The $6.99 one-time unlock removes entry limits and adds premium features.' },
+  { q: 'What does the $6.99 unlock include?', a: 'Unlimited cook logs, full PDF export, advanced wood pairing guide, and offline database. One-time payment, no subscription, no expiration.' },
+  { q: 'How do I restore my purchase?', a: 'Open the app, go to Settings, and tap Restore Purchases. Make sure you are signed in to the same Apple ID or Google account you used to purchase.' },
+  { q: 'Does the app require an account?', a: 'No account is required for offline use. An optional free account lets you sync your BBQ cook logs across devices.' },
+  { q: 'Is there a subscription?', a: 'No. PitLog is free to download with entry limits, and $6.99 one-time to unlock everything. No monthly fees, ever.' },
+  { q: 'How do I delete my account and data?', a: 'Go to Settings in the app and tap Delete Account. This removes all cloud data within 30 days. Local data is removed when you uninstall the app.' },
+];
+
 export default function SupportPage() {
   return (
     <>
       <SiteNav />
       <main id="main-content" className="pt-20">
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-2xl mx-auto">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">App Support</h1>
-            <p className="text-gray-500 mb-10">Get help with PitLog or give us feedback.</p>
 
-            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-10 flex gap-4 items-start">
-              <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0 mt-1">
-                <Mail className="text-amber-700" size={20} />
-              </div>
-              <div>
-                <h2 className="font-semibold text-gray-900 mb-1">Email Support</h2>
-                <p className="text-gray-600 text-sm mb-2">We respond within 1–2 business days.</p>
-                <a href="mailto:support@pitlog.app" className="text-amber-700 font-medium hover:underline">support@pitlog.app</a>
-              </div>
+        <section
+          className="px-4 sm:px-6 lg:px-8 py-20 lg:py-24"
+          style={{ backgroundColor: 'oklch(0.10 0.020 50)' }}
+        >
+          <div className="max-w-3xl mx-auto">
+            <div
+              className="font-display uppercase font-semibold mb-8 flex items-center gap-3"
+              style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.18em', fontSize: '0.7rem' }}
+            >
+              <span style={{ display: 'inline-block', width: '24px', height: '1px', background: 'oklch(0.62 0.16 55)' }} aria-hidden="true" />
+              SUPPORT
             </div>
+            <h1
+              className="font-display text-4xl sm:text-5xl lg:text-6xl mb-6"
+              style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}
+            >
+              App support.
+            </h1>
+            <p className="text-lg leading-relaxed mb-12" style={{ color: 'oklch(0.82 0.018 50)' }}>
+              Get help with PitLog or give us feedback.
+            </p>
 
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-            <div className="flex flex-col gap-3">
-              <details className="border border-gray-200 rounded-xl">
-                <summary className="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 rounded-xl list-none flex justify-between items-center">
-                  How do I get the app? <span className="text-amber-600 text-lg">+</span>
-                </summary>
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
-                  Search &ldquo;PitLog&rdquo; in the App Store or Google Play. The app is free to download. The $6.99 one-time unlock removes entry limits and adds premium features.
-                </div>
-              </details>
-              <details className="border border-gray-200 rounded-xl">
-                <summary className="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 rounded-xl list-none flex justify-between items-center">
-                  What does the $6.99 unlock include? <span className="text-amber-600 text-lg">+</span>
-                </summary>
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
-                  Unlimited cook logs, full PDF export, advanced wood pairing guide, and offline database. One-time payment, no subscription, no expiration.
-                </div>
-              </details>
-              <details className="border border-gray-200 rounded-xl">
-                <summary className="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 rounded-xl list-none flex justify-between items-center">
-                  How do I restore my purchase? <span className="text-amber-600 text-lg">+</span>
-                </summary>
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
-                  Open the app, go to Settings, and tap &ldquo;Restore Purchases.&rdquo; Make sure you are signed in to the same Apple ID or Google account you used to purchase.
-                </div>
-              </details>
-              <details className="border border-gray-200 rounded-xl">
-                <summary className="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 rounded-xl list-none flex justify-between items-center">
-                  Does the app require an account? <span className="text-amber-600 text-lg">+</span>
-                </summary>
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
-                  No account is required for offline use. An optional free account lets you sync your BBQ cook logs across devices.
-                </div>
-              </details>
-              <details className="border border-gray-200 rounded-xl">
-                <summary className="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 rounded-xl list-none flex justify-between items-center">
-                  Is there a subscription? <span className="text-amber-600 text-lg">+</span>
-                </summary>
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
-                  No. PitLog is free to download with entry limits, and $6.99 one-time to unlock everything. No monthly fees, ever.
-                </div>
-              </details>
-              <details className="border border-gray-200 rounded-xl">
-                <summary className="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 rounded-xl list-none flex justify-between items-center">
-                  How do I delete my account and data? <span className="text-amber-600 text-lg">+</span>
-                </summary>
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
-                  Go to Settings in the app and tap &ldquo;Delete Account.&rdquo; This removes all cloud data within 30 days. Local data is removed when you uninstall the app.
-                </div>
-              </details>
+            <div
+              className="p-8 mb-12"
+              style={{
+                background: 'oklch(0.18 0.030 50)',
+                border: '1px solid oklch(0.28 0.025 50)',
+                borderRadius: '0.25rem',
+              }}
+            >
+              <span
+                className="font-display uppercase block mb-3"
+                style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.18em', fontSize: '0.7rem' }}
+              >
+                Email support
+              </span>
+              <p className="text-sm mb-3" style={{ color: 'oklch(0.82 0.018 50)' }}>
+                We respond within 1 to 2 business days.
+              </p>
+              <a
+                href="mailto:support@pitlog.app"
+                className="font-display text-xl"
+                style={{ color: 'oklch(0.72 0.14 55)' }}
+              >
+                support@pitlog.app
+              </a>
             </div>
+          </div>
+        </section>
 
-            <p className="mt-10 text-sm text-gray-400 text-center">
-              See our <a href="/privacy" className="text-amber-600 hover:underline">Privacy Policy</a> for information on how we handle your data.
+        <section className="px-4 sm:px-6 lg:px-8 py-20" style={{ backgroundColor: 'oklch(0.13 0.025 50)' }}>
+          <div className="max-w-3xl mx-auto">
+            <span
+              className="font-display uppercase mb-5 inline-block"
+              style={{ color: 'oklch(0.62 0.16 55)', letterSpacing: '0.18em', fontSize: '0.7rem' }}
+            >
+              FAQ
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl mb-12" style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}>
+              Frequently asked questions.
+            </h2>
+            <ul>
+              {FAQS.map(({ q, a }, idx) => (
+                <li
+                  key={q}
+                  className="grid grid-cols-12 gap-4 sm:gap-8 py-8"
+                  style={{
+                    borderTop: '1px solid oklch(0.28 0.025 50)',
+                    borderBottom: idx === FAQS.length - 1 ? '1px solid oklch(0.28 0.025 50)' : 'none',
+                  }}
+                >
+                  <div
+                    className="col-span-2 sm:col-span-1 font-display tabular-nums text-2xl sm:text-3xl leading-none"
+                    style={{ color: 'oklch(0.62 0.16 55)' }}
+                  >
+                    {String(idx + 1).padStart(2, '0')}
+                  </div>
+                  <div className="col-span-10 sm:col-span-4">
+                    <h3 className="font-display text-lg sm:text-xl leading-tight" style={{ color: 'oklch(0.93 0.020 50)' }}>
+                      {q}
+                    </h3>
+                  </div>
+                  <div className="col-span-12 sm:col-span-7">
+                    <p className="leading-relaxed" style={{ color: 'oklch(0.82 0.018 50)' }}>{a}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-12 text-sm" style={{ color: 'oklch(0.62 0.018 50)' }}>
+              See our{' '}
+              <a href="/privacy" style={{ color: 'oklch(0.72 0.14 55)' }}>Privacy Policy</a>{' '}
+              for information on how we handle your data.
             </p>
           </div>
         </section>
+
       </main>
       <SiteFooter />
     </>

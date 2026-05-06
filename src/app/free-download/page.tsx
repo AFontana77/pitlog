@@ -1,60 +1,196 @@
 import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { EmailCaptureForm } from '@/components/EmailCaptureForm';
-import { Download, CheckCircle, ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Free BBQ Cook Times Reference Card",
-  description: "One-page quick reference — target temps, approximate cook times, and wood suggestions for 20 common cuts. Free printable from PitLog — no signup required.",
+  description: "One-page quick reference. Target temps, approximate cook times, and wood suggestions for 20 common cuts. Free printable from PitLog. No signup required.",
 };
+
+const INSIDE = [
+  '20 most common cuts with target internal temps',
+  'Approximate cook time ranges by weight',
+  'Top wood pairing suggestion for each protein',
+  'Stall temperature ranges for low-and-slow cuts',
+  'Printable. Laminate it and hang it at the pit.',
+];
 
 export default function FreeDownloadPage() {
   return (
     <>
       <SiteNav />
       <main id="main-content" className="pt-20">
-        <section className="py-20 px-4" style={{ backgroundColor: '#FFFBEB' }}>
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="inline-flex w-16 h-16 bg-amber-50 rounded-2xl items-center justify-center mb-6">
-              <Download className="text-amber-600" size={28} />
+        <section
+          className="px-4 sm:px-6 lg:px-8 py-20 lg:py-24"
+          style={{ backgroundColor: 'oklch(0.10 0.020 50)' }}
+        >
+          <div className="max-w-5xl mx-auto">
+            <div
+              className="font-display uppercase font-semibold mb-8 flex items-center gap-3"
+              style={{
+                color: 'oklch(0.62 0.16 55)',
+                letterSpacing: '0.18em',
+                fontSize: '0.7rem',
+              }}
+            >
+              <span
+                style={{
+                  display: 'inline-block',
+                  width: '24px',
+                  height: '1px',
+                  background: 'oklch(0.62 0.16 55)',
+                }}
+                aria-hidden="true"
+              />
+              FREE PRINTABLE
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Free BBQ Cook Times Reference Card
+            <h1
+              className="font-display text-4xl sm:text-5xl lg:text-6xl mb-6"
+              style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}
+            >
+              Free BBQ cook times reference card.
             </h1>
-            <p className="text-gray-500 text-lg leading-relaxed mb-8">
-              One-page quick reference — target temps, approximate cook times, and wood suggestions for 20 common cuts.
+            <p
+              className="text-lg leading-relaxed mb-12 max-w-2xl"
+              style={{ color: 'oklch(0.82 0.018 50)' }}
+            >
+              One-page quick reference. Target temps, approximate cook times, and wood suggestions for 20 common cuts.
             </p>
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 text-left mb-6">
-              <h2 className="font-bold text-gray-900 text-lg mb-4">What is inside</h2>
-              <ul className="space-y-3">
-                            <li key="20 most common cuts with target internal temps" className="flex items-start gap-3 text-gray-600 text-sm"><CheckCircle size={16} className="text-amber-600 mt-0.5 shrink-0" /> 20 most common cuts with target internal temps</li>
-            <li key="Approximate cook time ranges by weight" className="flex items-start gap-3 text-gray-600 text-sm"><CheckCircle size={16} className="text-amber-600 mt-0.5 shrink-0" /> Approximate cook time ranges by weight</li>
-            <li key="Top wood pairing suggestion for each protein" className="flex items-start gap-3 text-gray-600 text-sm"><CheckCircle size={16} className="text-amber-600 mt-0.5 shrink-0" /> Top wood pairing suggestion for each protein</li>
-            <li key="Stall temperature ranges for low-and-slow cuts" className="flex items-start gap-3 text-gray-600 text-sm"><CheckCircle size={16} className="text-amber-600 mt-0.5 shrink-0" /> Stall temperature ranges for low-and-slow cuts</li>
-            <li key="Printable — laminate it and hang it at the pit" className="flex items-start gap-3 text-gray-600 text-sm"><CheckCircle size={16} className="text-amber-600 mt-0.5 shrink-0" /> Printable — laminate it and hang it at the pit</li>
-              </ul>
-            </div>
-            <div className="bg-amber-50 border border-amber-100 rounded-2xl p-8">
-              <h2 className="font-bold text-gray-900 text-xl mb-2">Get your free copy</h2>
-              <p className="text-gray-500 text-sm mb-6">Enter your email and we will send it right to your inbox.</p>
-              <EmailCaptureForm buttonLabel="Send Me the Free PDF" />
-              <p className="text-xs text-gray-400 mt-4 text-center">No spam. Unsubscribe any time.</p>
+
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div
+                className="p-8"
+                style={{
+                  background: 'oklch(0.18 0.030 50)',
+                  border: '1px solid oklch(0.28 0.025 50)',
+                  borderRadius: '0.25rem',
+                }}
+              >
+                <span
+                  className="font-display uppercase block mb-4"
+                  style={{
+                    color: 'oklch(0.62 0.16 55)',
+                    letterSpacing: '0.18em',
+                    fontSize: '0.7rem',
+                  }}
+                >
+                  What is inside
+                </span>
+                <ul>
+                  {INSIDE.map((item, idx) => (
+                    <li
+                      key={item}
+                      className="grid grid-cols-12 gap-3 py-3"
+                      style={{
+                        borderTop: idx === 0 ? 'none' : '1px solid oklch(0.28 0.025 50)',
+                      }}
+                    >
+                      <div
+                        className="col-span-1 font-display tabular-nums text-sm"
+                        style={{ color: 'oklch(0.62 0.16 55)' }}
+                      >
+                        {String(idx + 1).padStart(2, '0')}
+                      </div>
+                      <div
+                        className="col-span-11 text-sm"
+                        style={{ color: 'oklch(0.93 0.020 50)' }}
+                      >
+                        {item}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div
+                className="p-8"
+                style={{
+                  background: 'oklch(0.18 0.030 50)',
+                  border: '1px solid oklch(0.28 0.025 50)',
+                  borderRadius: '0.25rem',
+                }}
+              >
+                <span
+                  className="font-display uppercase block mb-4"
+                  style={{
+                    color: 'oklch(0.62 0.16 55)',
+                    letterSpacing: '0.18em',
+                    fontSize: '0.7rem',
+                  }}
+                >
+                  Get your free copy
+                </span>
+                <h2
+                  className="font-display text-2xl mb-2"
+                  style={{ color: 'oklch(0.93 0.020 50)' }}
+                >
+                  Send it to my inbox
+                </h2>
+                <p
+                  className="text-sm mb-6"
+                  style={{ color: 'oklch(0.78 0.020 50)' }}
+                >
+                  Enter your email and we will send the PDF right over.
+                </p>
+                <EmailCaptureForm buttonLabel="Send the free PDF" />
+                <p
+                  className="text-xs mt-4"
+                  style={{ color: 'oklch(0.62 0.018 50)' }}
+                >
+                  No spam. Unsubscribe any time.
+                </p>
+              </div>
             </div>
           </div>
         </section>
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Want the searchable database?</h2>
-            <p className="text-gray-500 mb-6">The free PDF covers the basics. The PitLog app gives you the full searchable library and your personal log — free on iPhone and Android.</p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer"
-                 className="inline-flex items-center justify-center gap-2 bg-black text-white font-semibold px-8 py-3 rounded-xl hover:bg-gray-800 transition-colors min-h-[48px]">
-                Get on App Store <ArrowRight size={18} />
+
+        <section
+          className="px-4 sm:px-6 lg:px-8 py-16 lg:py-20"
+          style={{
+            backgroundColor: 'oklch(0.18 0.030 50)',
+            borderTop: '1px solid oklch(0.28 0.025 50)',
+          }}
+        >
+          <div className="max-w-3xl mx-auto">
+            <span
+              className="font-display uppercase mb-5 inline-block"
+              style={{
+                color: 'oklch(0.62 0.16 55)',
+                letterSpacing: '0.18em',
+                fontSize: '0.7rem',
+              }}
+            >
+              The full database
+            </span>
+            <h2
+              className="font-display text-3xl sm:text-4xl mb-6"
+              style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}
+            >
+              Want the searchable database?
+            </h2>
+            <p
+              className="leading-relaxed mb-8"
+              style={{ color: 'oklch(0.82 0.018 50)' }}
+            >
+              The free PDF covers the basics. The PitLog app gives you the full searchable library and your personal log. Free on iPhone and Android.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://apps.apple.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                App Store
               </a>
-              <a href="https://play.google.com" target="_blank" rel="noopener noreferrer"
-                 className="inline-flex items-center justify-center gap-2 bg-black text-white font-semibold px-8 py-3 rounded-xl hover:bg-gray-800 transition-colors min-h-[48px]">
-                Get on Google Play <ArrowRight size={18} />
+              <a
+                href="https://play.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                Google Play
               </a>
             </div>
           </div>
