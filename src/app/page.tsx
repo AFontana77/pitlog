@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { Database, BookOpen, BarChart3, Star, ArrowRight, Download, CheckCircle, Flame, Clock, ThumbsUp } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,80 +8,40 @@ export const metadata: Metadata = {
   description: "PitLog has 129+ BBQ cuts with target temps, stall temps, wood pairings, and cook time estimates. Log every cook, rate the result, and build a record of everything you've pulled off the smoker. Free on iPhone and Android.",
 };
 
+const REFERENCE_ROWS = [
+  { cut: 'Brisket', time: '12-18h', temp: '225°F', target: '203°F internal' },
+  { cut: 'Pork shoulder', time: '10-14h', temp: '225°F', target: '203°F internal' },
+  { cut: 'Spare ribs', time: '5-6h', temp: '225°F', target: 'Tender, bend test' },
+  { cut: 'Chicken', time: '3-4h', temp: '250°F', target: '165°F internal' },
+  { cut: 'Turkey', time: '4-5h', temp: '275°F', target: '165°F internal' },
+];
+
+const STATS = [
+  { number: '129', label: 'Cuts of meat' },
+  { number: 'USDA', label: 'Verified times' },
+  { number: '$0', label: 'To start' },
+];
+
 const FEATURES = [
   {
-    icon: Database,
-    title: "129+ cuts with real data",
-    body: "Brisket, pork butt, ribs, chicken thighs, tri-tip — every major cut with target internal temp, stall temp range, estimated cook time per pound, and wood pairing notes. Written for pitmasters who want actual numbers, not vague 'cook until done' guidance.",
+    num: '01',
+    title: 'Cut database',
+    body: "Brisket, pork shoulder, ribs, chicken, turkey, and 124 more. USDA times. Target internal temps. Stall temp ranges. Wood pairings. Built into the app, no signal needed.",
   },
   {
-    icon: BookOpen,
-    title: "Cook log built for BBQ",
-    body: "Log meat weight, start time, smoker temp, fuel type, rub, injection, and result. Rate every cook 1–5. Add notes on what worked and what to change next time. Every cook saved, searchable by cut or date.",
+    num: '02',
+    title: 'Cook log',
+    body: 'Cut, weight, smoker temp, wood, time, internal temp. Add a photo. Note what worked, what to change. Rate the result one through five.',
   },
   {
-    icon: Flame,
-    title: "Wood pairing guide",
-    body: "Hickory, oak, cherry, pecan, apple, mesquite — each wood matched to protein types and flavor profiles. Know which wood works with what before you load the firebox, not after.",
+    num: '03',
+    title: 'Stall tracker',
+    body: "Watch the stall in real time. Know when to wrap. Predict when it will hit 203. Stop second-guessing the foil call.",
   },
   {
-    icon: BarChart3,
-    title: "Session history",
-    body: "Every cook you've ever logged, all in one place. Search by cut, sort by rating, find your best brisket ever. Build a real record instead of relying on memory when someone asks how you did it.",
-  },
-];
-
-const HOW_IT_WORKS = [
-  {
-    step: "1",
-    title: "Find your cut",
-    body: "Search by meat type or browse the full library. Get target internal temp, stall range, estimated cook time, and wood pairing recommendations — everything you need before you fire up the smoker.",
-  },
-  {
-    step: "2",
-    title: "Log the cook as it happens",
-    body: "Start a cook log with the cut, weight, and smoker temp. Add notes throughout — temp stalls, spritzes, wrap decisions. Rate the result when you pull it. 30 seconds of logging saves hours of guessing next time.",
-  },
-  {
-    step: "3",
-    title: "Build your record",
-    body: "Every cook adds to your personal history. See what rubs you've used, which wood pairings worked, and which cooks rated highest. Share your best sessions with friends who want to know your method.",
-  },
-];
-
-const DB_CATEGORIES = [
-  { label: "Brisket (flat)", temp: "195–205°F", time: "1–1.5 hrs/lb", wood: "Oak or hickory" },
-  { label: "Pork shoulder / butt", temp: "195–205°F", time: "1.5–2 hrs/lb", wood: "Hickory or apple" },
-  { label: "Baby back ribs", temp: "180–190°F", time: "4–5 hrs total", wood: "Cherry or hickory" },
-  { label: "Spare ribs", temp: "185–195°F", time: "5–6 hrs total", wood: "Oak or cherry" },
-  { label: "Chicken thighs", temp: "165–175°F", time: "1.5–2 hrs total", wood: "Apple or pecan" },
-  { label: "Tri-tip", temp: "130–140°F", time: "1.5–2 hrs total", wood: "Oak or pecan" },
-];
-
-const FAQS = [
-  {
-    q: "Is PitLog free?",
-    a: "Yes. The app is free to download and the reference library is free. The $6.99 one-time unlock adds unlimited cook log entries, session history, and search. No subscription, no renewal — pay once and keep it forever.",
-  },
-  {
-    q: "What's in the BBQ reference library?",
-    a: "129+ cuts across beef, pork, poultry, lamb, seafood, and vegetables. Each entry has target internal temp, stall temp range, estimated cook time per pound, and wood pairing notes. All data sourced from USDA safe temp guidelines and established pitmaster practice.",
-  },
-  {
-    q: "Can I log cooks for different smokers?",
-    a: "Yes. Each cook log entry includes a smoker type field — offset, kettle, kamado, pellet, drum, or custom. You can filter your history by smoker type to compare results across setups.",
-  },
-  {
-    q: "Does the app work offline?",
-    a: "Yes. The full reference library is built into the app and available offline. Log entries are stored locally on your device. No internet required at the pit.",
-  },
-  {
-    q: "Can I share my cook logs?",
-    a: "Yes. Individual cook entries can be exported as a simple summary — cut, time, temps, rating, and notes. Good for sharing with friends or posting to BBQ groups.",
-  },
-  {
-    q: "Does PitLog have a timer?",
-    a: "A basic cook timer with estimated finish time based on your cut, weight, and smoker temp is on the roadmap for a future update. For now, the reference data gives you the time estimate to set your own timer.",
+    num: '04',
+    title: 'Personal records',
+    body: 'Best brisket time. Best ribs flavor. Best pork shoulder bark. Your wins, logged. Find them again by cut, by rating, by date.',
   },
 ];
 
@@ -98,12 +57,8 @@ export default function HomePage() {
             "name": "PitLog",
             "applicationCategory": "LifestyleApplication",
             "operatingSystem": "iOS, Android",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "description": "BBQ cook times and temperatures for 200+ cuts. Log your cooks, track results by cut, and build a personal BBQ reference book.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "BBQ cook times and temperatures for 129+ cuts. Log your cooks, track results by cut, and build a personal BBQ reference book.",
             "url": "https://www.pitlog.app"
           })
         }}
@@ -111,194 +66,248 @@ export default function HomePage() {
       <SiteNav />
       <main id="main-content" className="pt-20">
 
-        {/* Hero */}
-        <section className="py-20 px-4" style={{ backgroundColor: '#FFFBEB' }}>
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full mb-6">
-              129+ cuts. Real temps. Real times.
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Every BBQ cut. Every cook.
-              <br />
-              <span className="text-amber-700">Logged and searchable.</span>
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-              PitLog gives you 129+ BBQ cuts with target internal temps, stall ranges, estimated cook times, and wood pairing notes — built into the app, searchable before you load the smoker. Log every cook, rate the result, and build a real record you can actually use next time.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/library" className="inline-flex items-center justify-center gap-2 bg-amber-700 text-white font-semibold px-8 py-3 rounded-xl hover:bg-amber-800 transition-colors press-feedback min-h-[48px]">
-                Browse the Reference Library <ArrowRight size={18} />
-              </Link>
-              <Link href="/free-download" className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 font-medium px-8 py-3 rounded-xl hover:bg-gray-50 transition-colors min-h-[48px]">
-                <Download size={18} /> Free Temp Reference Card
-              </Link>
-            </div>
-            <p className="mt-4 text-sm text-gray-400">
-              Free app. No credit card. 129+ cuts included.
-            </p>
-          </div>
-        </section>
-
-        {/* The database IS the app */}
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                The reference IS the reason to log.
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                Most cook log apps are just blank screens. PitLog gives you the reference data first — 129+ cuts with real numbers — so your logs mean something. You know what you were shooting for, and whether you hit it.
+        {/* Section 1: Hero */}
+        <section
+          className="px-4 sm:px-6 lg:px-8 py-20 lg:py-28"
+          style={{ backgroundColor: 'oklch(0.10 0.020 50)' }}
+        >
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            {/* Left column */}
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <span
+                  className="block h-px w-10"
+                  style={{ backgroundColor: 'oklch(0.62 0.16 55)' }}
+                  aria-hidden="true"
+                />
+                <span
+                  className="font-display uppercase text-xs tracking-[0.18em]"
+                  style={{ color: 'oklch(0.62 0.16 55)' }}
+                >
+                  PitLog · USDA cook times · Free reference
+                </span>
+              </div>
+              <h1
+                className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.02] mb-8"
+                style={{ color: 'oklch(0.93 0.020 50)' }}
+              >
+                Smoke meat by the numbers.
+              </h1>
+              <p
+                className="text-lg leading-relaxed mb-10 max-w-lg"
+                style={{ color: 'oklch(0.82 0.018 50)' }}
+              >
+                PitLog gives you 129 cuts with target temps, stall ranges, and cook times built into the app. Log every cook. Rate the result. Build a record of every brisket, butt, and rack you have ever pulled off the smoker.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/library" className="btn-primary press-feedback">
+                  Browse the library
+                </Link>
+                <Link href="/free-download" className="btn-ghost">
+                  Free temp card
+                </Link>
+              </div>
+              <p
+                className="mt-6 text-sm"
+                style={{ color: 'oklch(0.62 0.018 50)' }}
+              >
+                Free app. No signup. Works offline at the pit.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {FEATURES.map(({ icon: Icon, title, body }) => (
-                <div key={title} className="flex gap-4 p-6 rounded-xl bg-gray-50 card-hover">
-                  <div className="flex-shrink-0 h-10 w-10 rounded-lg bg-amber-50 flex items-center justify-center">
-                    <Icon className="h-5 w-5 text-amber-700" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* How it works */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">How PitLog works</h2>
-              <p className="text-gray-600 max-w-xl mx-auto">Reference before the cook. Log during. History after.</p>
-            </div>
-            <div className="grid sm:grid-cols-3 gap-8">
-              {HOW_IT_WORKS.map(({ step, title, body }) => (
-                <div key={step} className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-amber-100 text-amber-700 font-bold text-lg mb-4">
-                    {step}
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Database preview */}
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Sample cuts from the library
-              </h2>
-              <p className="text-gray-600 max-w-xl mx-auto">
-                A preview of what's in PitLog. 129+ cuts total — browse and search the full library in the app.
-              </p>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 pr-4 font-semibold text-gray-700">Cut</th>
-                    <th className="text-left py-3 pr-4 font-semibold text-gray-700">Target temp</th>
-                    <th className="text-left py-3 pr-4 font-semibold text-gray-700">Est. time</th>
-                    <th className="text-left py-3 font-semibold text-gray-700">Wood pairing</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {DB_CATEGORIES.map(({ label, temp, time, wood }) => (
-                    <tr key={label} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                      <td className="py-3 pr-4 font-medium text-gray-900">{label}</td>
-                      <td className="py-3 pr-4 text-amber-700 font-medium">{temp}</td>
-                      <td className="py-3 pr-4 text-gray-600">{time}</td>
-                      <td className="py-3 text-gray-600">{wood}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-center mt-6 text-sm text-gray-400">
-              129+ cuts total including beef, pork, poultry, lamb, seafood, and vegetables. Full search in the app.
-            </p>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section className="py-16 px-4 bg-amber-50">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Free app. One-time unlock.
-            </h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Download PitLog free. The reference library is free. Unlock the cook log, session history, and search for a one-time $6.99. No subscription, no renewal.
-            </p>
-            <div className="bg-white rounded-2xl p-8 border border-amber-100 mb-8">
-              <div className="text-4xl font-bold text-gray-900 mb-1">$6.99</div>
-              <div className="text-sm text-gray-400 mb-6">One-time. Yours forever.</div>
-              <ul className="text-left space-y-3 mb-6">
-                {[
-                  "Unlimited cook log entries",
-                  "Full session history with search",
-                  "Wood pairing guide for all 129+ cuts",
-                  "Rating and notes per cook",
-                  "Works fully offline",
-                  "All future updates included",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-gray-700">
-                    <CheckCircle size={16} className="text-amber-600 flex-shrink-0" />
-                    {item}
+            {/* Right column: reference card */}
+            <div
+              className="border p-6 sm:p-8"
+              style={{
+                backgroundColor: 'oklch(0.18 0.030 50)',
+                borderColor: 'oklch(0.28 0.025 50)',
+                borderRadius: '0.25rem',
+              }}
+            >
+              <div
+                className="flex items-baseline justify-between pb-4 mb-4 border-b"
+                style={{ borderColor: 'oklch(0.28 0.025 50)' }}
+              >
+                <span
+                  className="font-display uppercase text-xs tracking-[0.18em]"
+                  style={{ color: 'oklch(0.62 0.16 55)' }}
+                >
+                  Cut · Time · Temp
+                </span>
+                <span
+                  className="text-xs uppercase tracking-wider"
+                  style={{ color: 'oklch(0.62 0.018 50)' }}
+                >
+                  Sample
+                </span>
+              </div>
+              <ul className="divide-y" style={{ borderColor: 'oklch(0.28 0.025 50)' }}>
+                {REFERENCE_ROWS.map((row, idx) => (
+                  <li
+                    key={row.cut}
+                    className="grid grid-cols-12 gap-3 py-4"
+                    style={{
+                      borderTop: idx === 0 ? 'none' : '1px solid oklch(0.28 0.025 50)',
+                    }}
+                  >
+                    <div
+                      className="col-span-5 text-sm font-medium"
+                      style={{ color: 'oklch(0.93 0.020 50)' }}
+                    >
+                      {row.cut}
+                    </div>
+                    <div
+                      className="col-span-3 font-display tabular-nums text-sm"
+                      style={{ color: 'oklch(0.72 0.14 55)' }}
+                    >
+                      {row.time}
+                    </div>
+                    <div
+                      className="col-span-4 text-sm tabular-nums text-right"
+                      style={{ color: 'oklch(0.82 0.018 50)' }}
+                    >
+                      {row.temp} → {row.target.split(' ')[0]}
+                    </div>
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer"
-                 className="inline-flex items-center justify-center gap-2 bg-black text-white font-semibold px-8 py-3 rounded-xl hover:bg-gray-800 transition-colors min-h-[48px]">
-                Download on App Store
-              </a>
-              <a href="https://play.google.com" target="_blank" rel="noopener noreferrer"
-                 className="inline-flex items-center justify-center gap-2 bg-black text-white font-semibold px-8 py-3 rounded-xl hover:bg-gray-800 transition-colors min-h-[48px]">
-                Get it on Google Play
-              </a>
+              <p
+                className="mt-5 text-xs leading-relaxed"
+                style={{ color: 'oklch(0.62 0.018 50)' }}
+              >
+                Five of 129 cuts. Full database in the app, every entry with stall range and wood pairing.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-10 text-center">
-              Common questions
-            </h2>
-            <div className="space-y-6">
-              {FAQS.map(({ q, a }) => (
-                <div key={q} className="border-b border-gray-100 pb-6">
-                  <h3 className="font-semibold text-gray-900 mb-2">{q}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
+        {/* Section 2: Stat strip */}
+        <section
+          className="px-4 sm:px-6 lg:px-8 py-14"
+          style={{
+            backgroundColor: 'oklch(0.10 0.020 50)',
+            borderTop: '1px solid oklch(0.28 0.025 50)',
+            borderBottom: '1px solid oklch(0.28 0.025 50)',
+          }}
+        >
+          <div className="max-w-6xl mx-auto grid grid-cols-3 gap-6 sm:gap-12">
+            {STATS.map((stat) => (
+              <div key={stat.label} className="text-left">
+                <div
+                  className="font-display tabular-nums text-4xl sm:text-5xl lg:text-6xl mb-2 leading-none"
+                  style={{ color: 'oklch(0.72 0.14 55)' }}
+                >
+                  {stat.number}
                 </div>
-              ))}
-            </div>
+                <div
+                  className="font-display uppercase text-xs sm:text-sm tracking-[0.16em]"
+                  style={{ color: 'oklch(0.93 0.020 50)' }}
+                >
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Start with the free temp card.
+        {/* Section 3: Editorial value */}
+        <section
+          className="px-4 sm:px-6 lg:px-8 py-20 lg:py-24"
+          style={{ backgroundColor: 'oklch(0.18 0.030 50)' }}
+        >
+          <div className="max-w-5xl mx-auto">
+            <div className="max-w-3xl mb-16">
+              <span
+                className="font-display uppercase text-xs tracking-[0.18em] mb-5 inline-block"
+                style={{ color: 'oklch(0.62 0.16 55)' }}
+              >
+                What's inside
+              </span>
+              <h2
+                className="font-display text-4xl sm:text-5xl leading-[1.05] mb-6"
+                style={{ color: 'oklch(0.93 0.020 50)' }}
+              >
+                Most cook-time apps don't tell you what 203 means.
+              </h2>
+              <p
+                className="text-lg leading-relaxed"
+                style={{ color: 'oklch(0.82 0.018 50)' }}
+              >
+                PitLog gives you the reference data first, then the log. Numbers you can trust before the firebox is loaded, a place to record what worked after the brisket rests. Built for people who already know what a stall is.
+              </p>
+            </div>
+
+            <ul>
+              {FEATURES.map((f, idx) => (
+                <li
+                  key={f.num}
+                  className="grid grid-cols-12 gap-4 sm:gap-8 py-8"
+                  style={{
+                    borderTop: '1px solid oklch(0.28 0.025 50)',
+                    borderBottom: idx === FEATURES.length - 1 ? '1px solid oklch(0.28 0.025 50)' : 'none',
+                  }}
+                >
+                  <div
+                    className="col-span-2 sm:col-span-1 font-display tabular-nums text-2xl sm:text-3xl leading-none"
+                    style={{ color: 'oklch(0.62 0.16 55)' }}
+                  >
+                    {f.num}
+                  </div>
+                  <div className="col-span-10 sm:col-span-3">
+                    <h3
+                      className="font-display text-xl sm:text-2xl leading-tight"
+                      style={{ color: 'oklch(0.93 0.020 50)' }}
+                    >
+                      {f.title}
+                    </h3>
+                  </div>
+                  <div className="col-span-12 sm:col-span-8">
+                    <p
+                      className="text-base leading-relaxed"
+                      style={{ color: 'oklch(0.82 0.018 50)' }}
+                    >
+                      {f.body}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Section 4: CTA panel */}
+        <section
+          className="px-4 sm:px-6 lg:px-8 py-20 lg:py-24"
+          style={{
+            backgroundColor: 'oklch(0.10 0.020 50)',
+            borderTop: '1px solid oklch(0.28 0.025 50)',
+          }}
+        >
+          <div className="max-w-3xl mx-auto">
+            <span
+              className="font-display uppercase text-xs tracking-[0.18em] mb-5 inline-block"
+              style={{ color: 'oklch(0.62 0.16 55)' }}
+            >
+              Free to start
+            </span>
+            <h2
+              className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] mb-6"
+              style={{ color: 'oklch(0.93 0.020 50)' }}
+            >
+              Get the cuts sheet first.
             </h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Download the printable BBQ temp reference card — 20 most common cuts with target temps on one page. Stick it on the fridge, hang it in the garage. Get the app when you're ready to start logging.
+            <p
+              className="text-lg leading-relaxed mb-10 max-w-2xl"
+              style={{ color: 'oklch(0.82 0.018 50)' }}
+            >
+              Twenty most common cuts. Target temps, cook times, wood pairings. One page, printable, fits on the fridge or in the smoker shed. Get it free, then grab the app when you are ready to start logging.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/free-download" className="inline-flex items-center justify-center gap-2 bg-amber-700 text-white font-semibold px-8 py-3 rounded-xl hover:bg-amber-800 transition-colors press-feedback min-h-[48px]">
-                <Download size={18} /> Get the Free Card
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/free-download" className="btn-primary press-feedback">
+                Get the free card
               </Link>
-              <Link href="/library" className="inline-flex items-center justify-center gap-2 border border-amber-200 text-amber-700 font-medium px-8 py-3 rounded-xl hover:bg-amber-50 transition-colors min-h-[48px]">
-                Browse the Library
+              <Link href="/library" className="btn-ghost">
+                Browse the library
               </Link>
             </div>
           </div>
