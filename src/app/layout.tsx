@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Alfa_Slab_One, Asap } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { AffiliateClickTracker } from "@/components/analytics/affiliate-click-tracker";
 
 const alfaSlab = Alfa_Slab_One({
   variable: "--font-display",
@@ -21,10 +22,10 @@ const SITE_URL = "https://www.pitlog.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "PitLog — Search 129+ BBQ cuts and cook times",
-    template: "%s | PitLog",
+    default: "Pit Master Log — Search 129+ BBQ cuts and cook times",
+    template: "%s | Pit Master Log",
   },
-  description: "PitLog has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
+  description: "Pit Master Log has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
   keywords: ["bbq log app", "pitmaster log", "smoking meat tracker", "bbq cook times", "pellet grill log"],
   authors: [{ name: "Anvil Road LLC" }],
   creator: "Anvil Road LLC",
@@ -34,15 +35,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    siteName: "PitLog",
-    title: "PitLog — Search 129+ BBQ cuts and cook times",
-    description: "PitLog has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PitLog" }],
+    siteName: "Pit Master Log",
+    title: "Pit Master Log — Search 129+ BBQ cuts and cook times",
+    description: "Pit Master Log has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pit Master Log" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PitLog — Search 129+ BBQ cuts and cook times",
-    description: "PitLog has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
+    title: "Pit Master Log — Search 129+ BBQ cuts and cook times",
+    description: "Pit Master Log has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
     images: ["/og-image.png"],
   },
   alternates: { canonical: SITE_URL },
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${alfaSlab.variable} ${asap.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
+        <AffiliateClickTracker />
         {/* Google Tag Manager - GTM-T9PF8VXN */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T9PF8VXN');`}

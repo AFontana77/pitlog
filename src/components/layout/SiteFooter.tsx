@@ -23,7 +23,7 @@ export function SiteFooter() {
           className="font-display text-lg"
           style={{ color: 'oklch(0.93 0.020 50)' }}
         >
-          PitLog
+          Pit Master Log
         </div>
         <div className="flex gap-6">
           <Link href="/library" style={linkStyle}>Library</Link>

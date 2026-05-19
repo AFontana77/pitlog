@@ -57,9 +57,9 @@ export function SiteNav() {
             href="/"
             className="font-display text-xl tracking-tight"
             style={{ color: 'oklch(0.93 0.020 50)' }}
-            aria-label="PitLog home"
+            aria-label="Pit Master Log home"
           >
-            PitLog
+            Pit Master Log
           </Link>
           <div className="hidden sm:flex items-center gap-8">
             {links.map(l => (

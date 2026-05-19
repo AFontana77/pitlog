@@ -3,16 +3,16 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Support — PitLog',
-  description: 'Get help with the PitLog app. Contact support or browse common questions.',
+  title: 'Support — Pit Master Log',
+  description: 'Get help with the Pit Master Log app. Contact support or browse common questions.',
 };
 
 const FAQS = [
-  { q: 'How do I get the app?', a: 'Search PitLog in the App Store or Google Play. The app is free to download. The $6.99 one-time unlock removes entry limits and adds premium features.' },
+  { q: 'How do I get the app?', a: 'Search Pit Master Log in the App Store or Google Play. The app is free to download. The $6.99 one-time unlock removes entry limits and adds premium features.' },
   { q: 'What does the $6.99 unlock include?', a: 'Unlimited cook logs, full PDF export, advanced wood pairing guide, and offline database. One-time payment, no subscription, no expiration.' },
   { q: 'How do I restore my purchase?', a: 'Open the app, go to Settings, and tap Restore Purchases. Make sure you are signed in to the same Apple ID or Google account you used to purchase.' },
   { q: 'Does the app require an account?', a: 'No account is required for offline use. An optional free account lets you sync your BBQ cook logs across devices.' },
-  { q: 'Is there a subscription?', a: 'No. PitLog is free to download with entry limits, and $6.99 one-time to unlock everything. No monthly fees, ever.' },
+  { q: 'Is there a subscription?', a: 'No. Pit Master Log is free to download with entry limits, and $6.99 one-time to unlock everything. No monthly fees, ever.' },
   { q: 'How do I delete my account and data?', a: 'Go to Settings in the app and tap Delete Account. This removes all cloud data within 30 days. Local data is removed when you uninstall the app.' },
 ];
 
@@ -41,7 +41,7 @@ export default function SupportPage() {
               App support.
             </h1>
             <p className="text-lg leading-relaxed mb-12" style={{ color: 'oklch(0.82 0.018 50)' }}>
-              Get help with PitLog or give us feedback.
+              Get help with Pit Master Log or give us feedback.
             </p>
 
             <div

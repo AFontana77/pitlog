@@ -3,8 +3,8 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — PitLog',
-  description: 'Privacy policy for the PitLog mobile application and pitlog.app website.',
+  title: 'Privacy Policy — Pit Master Log',
+  description: 'Privacy policy for the Pit Master Log mobile application and pitlog.app website.',
 };
 
 const linkStyle = { color: 'oklch(0.72 0.14 55)' };
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
 
             <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>1. Who We Are</h2>
             <p className="leading-relaxed mb-6" style={bodyStyle}>
-              Anvil Road LLC operates pitlog.app and the PitLog mobile application. Contact:{' '}
+              Anvil Road LLC operates pitlog.app and the Pit Master Log mobile application. Contact:{' '}
               <a href="mailto:support@pitlog.app" style={linkStyle} className="hover:underline">support@pitlog.app</a>
             </p>
 

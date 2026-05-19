@@ -4,9 +4,9 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Smoker Recipes — Times and Temps for Every Cut | PitLog',
+  title: 'Smoker Recipes — Times and Temps for Every Cut | Pit Master Log',
   description:
-    'Smoker recipes for beef, pork, poultry, and fish. Smoking temperatures, internal targets, and times. Log every cook in PitLog.',
+    'Smoker recipes for beef, pork, poultry, and fish. Smoking temperatures, internal targets, and times. Log every cook in Pit Master Log.',
 };
 
 const CATEGORIES = [
@@ -171,10 +171,10 @@ export default function SmokerRecipesPage() {
               Track every cook. Get better every time.
             </h2>
             <p className="leading-relaxed mb-10 max-w-2xl" style={{ color: 'oklch(0.82 0.018 50)' }}>
-              PitLog has 129+ cuts with reference temps and times, plus a cook log to record your actual results. Free to download. $6.99 one-time to unlock the log.
+              Pit Master Log has 129+ cuts with reference temps and times, plus a cook log to record your actual results. Free to download. $6.99 one-time to unlock the log.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/free-download" className="btn-primary press-feedback">Download PitLog free</Link>
+              <Link href="/free-download" className="btn-primary press-feedback">Download Pit Master Log free</Link>
               <Link href="/library" className="btn-ghost">Browse the library</Link>
             </div>
             <p className="mt-6 text-sm" style={{ color: 'oklch(0.62 0.018 50)' }}>Free. No subscription. $6.99 one-time to unlock the cook log.</p>

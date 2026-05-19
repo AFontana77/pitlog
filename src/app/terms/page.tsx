@@ -3,8 +3,8 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — PitLog',
-  description: 'Terms of service for the PitLog mobile application and pitlog.app website.',
+  title: 'Terms of Service — Pit Master Log',
+  description: 'Terms of service for the Pit Master Log mobile application and pitlog.app website.',
 };
 
 const linkStyle = { color: 'oklch(0.72 0.14 55)' };
@@ -36,18 +36,18 @@ export default function TermsPage() {
             </p>
 
             <p className="leading-relaxed mb-6" style={bodyStyle}>
-              These Terms of Service govern your use of the PitLog BBQ cook log app and the website at pitlog.app. By downloading the app or using the website, you agree to these terms. If you do not agree, do not use the service.
+              These Terms of Service govern your use of the Pit Master Log BBQ cook log app and the website at pitlog.app. By downloading the app or using the website, you agree to these terms. If you do not agree, do not use the service.
             </p>
 
             <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>1. Who we are</h2>
             <p className="leading-relaxed mb-6" style={bodyStyle}>
-              Anvil Road LLC operates pitlog.app and the PitLog mobile application. Contact:{' '}
+              Anvil Road LLC operates pitlog.app and the Pit Master Log mobile application. Contact:{' '}
               <a href="mailto:support@pitlog.app" style={linkStyle}>support@pitlog.app</a>
             </p>
 
             <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>2. Use of the service</h2>
             <p className="leading-relaxed mb-6" style={bodyStyle}>
-              PitLog is a personal BBQ cook log app. You may use the service for personal, non-commercial purposes only. You agree not to misuse the service, reverse-engineer the app, or use it in any way that violates applicable law.
+              Pit Master Log is a personal BBQ cook log app. You may use the service for personal, non-commercial purposes only. You agree not to misuse the service, reverse-engineer the app, or use it in any way that violates applicable law.
             </p>
             <p className="leading-relaxed mb-6" style={bodyStyle}>
               You are responsible for all data you enter into the app. We do not verify the accuracy of your logged entries.
@@ -60,7 +60,7 @@ export default function TermsPage() {
 
             <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>4. In-app purchases</h2>
             <p className="leading-relaxed mb-6" style={bodyStyle}>
-              PitLog offers a one-time in-app purchase ($6.99 USD) to unlock the full database and premium logging features. Purchases are processed by Apple App Store or Google Play and are subject to their respective refund policies. We do not process payment information directly.
+              Pit Master Log offers a one-time in-app purchase ($6.99 USD) to unlock the full database and premium logging features. Purchases are processed by Apple App Store or Google Play and are subject to their respective refund policies. We do not process payment information directly.
             </p>
             <p className="leading-relaxed mb-6" style={bodyStyle}>
               Purchases are tied to your App Store or Google Play account and can be restored on new devices using the restore purchases option in settings.
@@ -68,7 +68,7 @@ export default function TermsPage() {
 
             <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>5. Intellectual property</h2>
             <p className="leading-relaxed mb-6" style={bodyStyle}>
-              All content, design, code, and database records in the PitLog app and website are owned by Anvil Road LLC or licensed to us. You may not copy, reproduce, or redistribute any part of the service without written permission.
+              All content, design, code, and database records in the Pit Master Log app and website are owned by Anvil Road LLC or licensed to us. You may not copy, reproduce, or redistribute any part of the service without written permission.
             </p>
             <p className="leading-relaxed mb-6" style={bodyStyle}>
               Data you create in the app (your personal log entries) remains yours. We do not claim ownership of your personal records.
@@ -81,7 +81,7 @@ export default function TermsPage() {
 
             <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>6. Limitation of liability</h2>
             <p className="leading-relaxed mb-6" style={bodyStyle}>
-              PitLog is provided as is without warranties of any kind. Anvil Road LLC is not liable for any damages arising from use of the app, including data loss, inaccurate reference information, or service interruptions. Our total liability to you is limited to the amount you paid for any in-app purchase.
+              Pit Master Log is provided as is without warranties of any kind. Anvil Road LLC is not liable for any damages arising from use of the app, including data loss, inaccurate reference information, or service interruptions. Our total liability to you is limited to the amount you paid for any in-app purchase.
             </p>
 
             <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>7. Changes to these terms</h2>
