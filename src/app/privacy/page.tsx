@@ -78,7 +78,11 @@ export default function PrivacyPage() {
               We may update this policy. We will post the revised policy at this URL with a new last updated date. Continued use of the app after changes constitutes acceptance of the updated policy.
             </p>
 
-            <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>8. Contact</h2>
+            <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>8. Email you give us on this website</h2>
+
+            <p className="text-sm mb-12" style={{ color: 'oklch(0.62 0.018 50)' }}>If you enter your email address in a signup form on this website, we store it so we can send you the updates you asked for. We also record which page you signed up from and when you gave consent. We use Resend to send and manage that mail. We do not sell your address, and every email has an unsubscribe link. This is separate from anything described above: your email address is not linked to any other data on this site or in any of our apps.</p>
+
+            <h2 className="font-display text-xl mt-10 mb-4" style={headingStyle}>9. Contact</h2>
             <p className="leading-relaxed" style={bodyStyle}>
               Questions about this policy? Email{' '}
               <a href="mailto:support@pitlog.app" style={linkStyle} className="hover:underline">support@pitlog.app</a>.
