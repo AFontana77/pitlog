@@ -1,13 +1,102 @@
 'use client';
+
+import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+
+/**
+ * Email capture for pitlog.app.
+ *
+ * This form used to call preventDefault and do nothing else, so every
+ * address anyone typed was discarded behind a working-looking button.
+ *
+ * It now posts to /api/subscribe and only reports success when the backend
+ * accepts the address. Consent is explicit and starts unchecked. The only
+ * thing asked for is an email address.
+ */
 
 interface EmailCaptureFormProps {
   buttonLabel: string;
+  /** Page the form sits on, stored so we know which content earns signups. */
+  source?: string;
+  /** Which offer this responded to. */
+  campaign?: string;
 }
 
-export function EmailCaptureForm({ buttonLabel }: EmailCaptureFormProps) {
+type State = 'idle' | 'sending' | 'done' | 'error';
+
+export function EmailCaptureForm({
+  buttonLabel,
+  source = 'pitlog.app',
+  campaign = 'signup',
+}: EmailCaptureFormProps) {
+  const [email, setEmail] = useState('');
+  const [consent, setConsent] = useState(false);
+  const [hp, setHp] = useState('');
+  const [state, setState] = useState<State>('idle');
+  const [message, setMessage] = useState('');
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (state === 'sending') return;
+
+    if (!consent) {
+      setState('error');
+      setMessage('Please tick the box so we know it is okay to email you.');
+      return;
+    }
+
+    setState('sending');
+    setMessage('');
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, consent, source, campaign, _hp: hp }),
+      });
+      const body = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setState('error');
+        setMessage(body.error || 'Something went wrong. Please try again.');
+        return;
+      }
+      setState('done');
+    } catch {
+      setState('error');
+      setMessage('Something went wrong. Please try again.');
+    }
+  }
+
+  if (state === 'done') {
+    return (
+      <div
+        className="px-4 py-4 text-sm"
+        style={{
+          background: 'oklch(0.13 0.025 50)',
+          color: 'oklch(0.93 0.020 50)',
+          border: '1px solid oklch(0.28 0.025 50)',
+          borderRadius: '0.25rem',
+        }}
+        role="status"
+      >
+        You&apos;re on the list. Thanks for signing up.
+      </div>
+    );
+  }
+
   return (
-    <form className="flex flex-col gap-3" onSubmit={e => e.preventDefault()}>
+    <form className="flex flex-col gap-3" onSubmit={onSubmit}>
+      {/* Honeypot. Hidden from people, tempting to bots. */}
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        value={hp}
+        onChange={(e) => setHp(e.target.value)}
+        style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+      />
+
       <input
         type="email"
         required
@@ -20,13 +109,35 @@ export function EmailCaptureForm({ buttonLabel }: EmailCaptureFormProps) {
           border: '1px solid oklch(0.28 0.025 50)',
           borderRadius: '0.25rem',
         }}
+        name="email"
+        autoComplete="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        disabled={state === 'sending'}
       />
       <button
         type="submit"
         className="btn-primary press-feedback w-full"
+        disabled={state === 'sending'}
       >
-        {buttonLabel} <ArrowRight size={18} />
+        {state === 'sending' ? 'Sending...' : <>{buttonLabel} <ArrowRight size={18} /></>}
       </button>
+
+      <label className="flex items-start gap-2.5 text-sm cursor-pointer opacity-90">
+        <input
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-1 h-4 w-4 shrink-0"
+        />
+        <span>Send me the download and occasional barbecue resources. Unsubscribe anytime.</span>
+      </label>
+
+      {state === 'error' && message ? (
+        <p className="text-sm" role="alert">
+          {message}
+        </p>
+      ) : null}
     </form>
   );
 }
