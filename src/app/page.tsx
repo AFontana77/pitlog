@@ -59,7 +59,7 @@ export default function HomePage() {
             "operatingSystem": "iOS, Android",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
             "description": "BBQ cook times and temperatures for 129+ cuts. Log your cooks, track results by cut, and build a personal BBQ reference book.",
-            "url": "https://www.pitlog.app"
+            "url": "https://pitlog.app"
           })
         }}
       />

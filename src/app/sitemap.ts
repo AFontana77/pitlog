@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE = 'https://www.pitlog.app';
+const BASE = 'https://pitlog.app';
 const now = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {

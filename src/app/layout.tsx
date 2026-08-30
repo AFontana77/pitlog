@@ -17,7 +17,7 @@ const asap = Asap({
   display: "swap",
 });
 
-const SITE_URL = "https://www.pitlog.app";
+const SITE_URL = "https://pitlog.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
