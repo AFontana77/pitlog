@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { ANIMALS, RECIPES, getRegions } from '@/content';
+import { CUT_TEMPERATURE_PAGES } from '@/content/cutTemperaturePages';
 
 const BASE = 'https://pitlog.app';
 const now = new Date();
@@ -13,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   const animalTemps = ANIMALS.map((a) => ({
     url: `${BASE}/temperatures/${a.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }));
+  const cutTemps = CUT_TEMPERATURE_PAGES.map((p) => ({
+    url: `${BASE}/temperatures/${p.animal}/${p.cut}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
@@ -39,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...beefRegions,
     { url: `${BASE}/temperatures`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     ...animalTemps,
+    ...cutTemps,
     { url: `${BASE}/woods`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/recipes`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     ...recipes,

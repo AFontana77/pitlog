@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { ANIMALS, HANDLING, PITMASTER_TARGETS, RECIPES, getAnimal, getRegions, getSafetyMinimum, renderableDoneness, type AnimalSlug } from '@/content';
+import { cutTemperaturePagesFor } from '@/content/cutTemperaturePages';
 import { SafetyLine } from '@/components/content/SafetyLine';
 import { DonenessTable } from '@/components/content/DonenessTable';
 import { Citations } from '@/components/content/Citations';
@@ -100,6 +101,7 @@ export default async function AnimalTemperaturePage({ params }: { params: Promis
   const targets = c.targets.map((id) => PITMASTER_TARGETS.find((t) => t.id === id)).filter((t): t is NonNullable<typeof t> => !!t);
   const handling = HANDLING.filter((h) => ['handling-thermometer-placement', 'handling-colour-is-not-doneness', 'handling-rest-is-part-of-safety', 'handling-danger-zone'].includes(h.id));
   const regions = getRegions(a);
+  const cutPages = cutTemperaturePagesFor(a);
   const recipes = RECIPES.filter((r) => r.animal === a && r.status !== 'PLANNED' && r.status !== 'RETIRED');
   const refs = [
     ...safety.source_refs,
@@ -127,6 +129,19 @@ export default async function AnimalTemperaturePage({ params }: { params: Promis
             <SafetyLine safety={safety} />
             {ground && <SafetyLine safety={ground} />}
           </div>
+          {cutPages.length > 0 && (
+            <p className="mt-6 text-sm" style={{ color: C.textSoft }}>
+              <span className="font-semibold" style={{ color: C.text }}>One cut? </span>
+              {cutPages.map((p, i) => (
+                <span key={p.cut}>
+                  <Link href={`/temperatures/${p.animal}/${p.cut}`} style={{ color: C.emberLight, textDecoration: 'underline' }}>
+                    {p.name} internal temp
+                  </Link>
+                  {i < cutPages.length - 1 ? ', ' : '.'}
+                </span>
+              ))}
+            </p>
+          )}
         </Section>
 
         <Section>

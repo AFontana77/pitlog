@@ -3,11 +3,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { ANIMALS, cutReference, getRegions, getSafetyMinimum, getPitmasterTarget, getWood, renderableDoneness, type AnimalSlug } from '@/content';
+import { ANIMALS, cutReference, getRegions, getSafetyMinimum, getWood, type AnimalSlug } from '@/content';
 import { SafetyLine } from '@/components/content/SafetyLine';
 import { DonenessTable } from '@/components/content/DonenessTable';
 import { Citations } from '@/components/content/Citations';
 import { GearList } from '@/components/content/GearList';
+import { finishLabel } from '@/components/content/finishLabel';
 import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, Label, Lede, P, Section, Td, Th, Tr } from '@/components/content/ui';
 
 export function generateStaticParams() {
@@ -44,16 +45,6 @@ function Bar({ label, value }: { label: string; value: number }) {
       </div>
     </div>
   );
-}
-
-function finishLabel(finish: string, animal: AnimalSlug): string {
-  const t = getPitmasterTarget(finish);
-  if (t) return `${t.finish_test?.replace(/_/g, ' ')}, ${t.window_f?.min} to ${t.window_f?.max} F (craft)`;
-  const s = getSafetyMinimum(finish);
-  if (s) return `${s.temp_f} F${s.rest ? ' + rest' : ''} (USDA)`;
-  const d = renderableDoneness(finish);
-  if (d) return `Your doneness, ${d.safety.temp_f} F${d.safety.rest ? ' + rest' : ''} USDA floor`;
-  return finish;
 }
 
 export default async function RegionPage({ params }: { params: Promise<{ animal: string; region: string }> }) {
@@ -156,7 +147,7 @@ export default async function RegionPage({ params }: { params: Promise<{ animal:
                   <Tr key={rc.slug} i={i}>
                     <Td strong>{rc.name}</Td>
                     <Td>{rc.methods.join(', ')}</Td>
-                    <Td num>{finishLabel(rc.finish, a)}</Td>
+                    <Td num>{finishLabel(rc.finish)}</Td>
                     <Td>{rc.note}</Td>
                   </Tr>
                 ))}

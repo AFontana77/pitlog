@@ -268,6 +268,8 @@ export const WOODS = woodsJson.woods as unknown as Wood[];
 export const RECIPES = recipesJson.recipes as unknown as Recipe[];
 export const GEAR_CATEGORIES = gearJson.categories as unknown as GearCategory[];
 export const MASTERS = mastersJson.masters as unknown as MasterGraphic[];
+/** How each PITMASTER_TENDERNESS finish test is judged, keyed by finish_test. */
+export const FINISH_TESTS = targetsJson._meta.finish_tests as Record<string, string>;
 
 const CUT_FILES: Record<AnimalSlug, { regions: unknown[] }> = {
   beef: beefJson,
