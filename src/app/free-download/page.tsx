@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app/free-download' },
   title: "Free BBQ Field Guide: Meat Cuts, Temps and Smoke Woods (PDF)",
-  description: "The Pit Log field guide. USDA safe temperatures, the pitmaster finish for every collagen cut, six animal cut pages, the smoke wood chart and two cook log pages. Free PDF by email.",
+  description: "The Pit Log field guide: USDA safe temps, the pitmaster finish for the tough cuts, six animal pages, the smoke wood chart and cook log pages. Free PDF by email.",
 };
 
 // Matches what build_pitlog_field_guide.py actually renders from the spine.

@@ -9,7 +9,7 @@ import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Label, Lede, P, Sect
 export const metadata: Metadata = {
   title: 'Best Wood for Smoking: Pairing Chart for Beef, Pork, Chicken, Salmon',
   description:
-    'Oak, hickory, mesquite, pecan, apple, cherry, maple and alder. Smoke strength, flavor, the best wood for brisket, pork, chicken, lamb, goat and salmon, and blends that work.',
+    'Oak, hickory, mesquite, pecan, apple, cherry, maple, alder. Smoke strength, flavor, the best wood for each meat, and the blends that work.',
   alternates: { canonical: 'https://pitlog.app/woods' },
 };
 
@@ -137,13 +137,9 @@ export default function WoodsPage() {
                     <Td strong>{a.name}</Td>
                     <Td>{a.wood_refs.map((w) => WOODS.find((x) => x.slug === w)?.name ?? w).join(', ')}</Td>
                     <Td>
-                      {a.slug === 'beef' ? (
-                        <Link href="/cuts/beef" style={{ color: C.emberLight, textDecoration: 'underline' }}>
-                          Beef cuts
-                        </Link>
-                      ) : (
-                        <span style={{ color: C.textMuted }}>Guide in the works</span>
-                      )}
+                      <Link href={a.route} style={{ color: C.emberLight, textDecoration: 'underline' }}>
+                        {a.name} cuts
+                      </Link>
                     </Td>
                   </Tr>
                 ))}

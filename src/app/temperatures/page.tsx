@@ -11,7 +11,7 @@ import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Label, Lede, P, Sect
 export const metadata: Metadata = {
   title: 'Meat Temperature Chart: USDA Safe Minimums vs. BBQ Finish Temps',
   description:
-    'The full USDA FSIS safe minimum internal temperature chart, next to the brisket, pork shoulder and rib finish temps pitmasters actually cook to. Three different numbers, kept apart.',
+    'The full USDA FSIS safe minimum chart beside the brisket, shoulder and rib finish temps pitmasters cook to. Three different numbers, kept apart.',
   alternates: { canonical: 'https://pitlog.app/temperatures' },
 };
 
@@ -155,7 +155,7 @@ export default function TemperaturesPage() {
                     <Td>{t.finish_test?.replace(/_/g, ' ')}</Td>
                     <Td num>{t.pit_temp_f ? `${t.pit_temp_f.min} to ${t.pit_temp_f.max} F` : ''}</Td>
                     <Td>{t.rest}</Td>
-                    <Td>{t.review_status === 'SOURCED' ? 'Industry body' : 'Convention'}</Td>
+                    <Td>{t.review_status === 'SOURCED' ? 'Sourced, window is craft' : 'Convention'}</Td>
                   </Tr>
                 ))}
               </tbody>

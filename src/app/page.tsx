@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app' },
   title: "PitLog: BBQ Reference and Cook Log App",
-  description: "PitLog has 129+ BBQ cuts with target temps, stall temps, wood pairings, and cook time estimates. Log every cook, rate the result, and build a record of everything you've pulled off the smoker. Free on iPhone and Android.",
+  description: "Every BBQ cut with its USDA safe temp, the pitmaster finish, the wood and the recipe. Log every cook and build a record of what worked. Free on iPhone and Android.",
 };
 
 // Figures from the content spine (content/temperatures). Collagen cuts show

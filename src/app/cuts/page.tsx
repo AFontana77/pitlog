@@ -10,7 +10,7 @@ import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Label, Lede, P, Sect
 export const metadata: Metadata = {
   title: 'Meat Cuts Guide: Beef, Pork, Lamb, Goat, Chicken and Salmon',
   description:
-    'Interactive cut guides. Pick the animal, tap the primal, get the cut, the USDA safe temperature, the pitmaster finish, the wood and the recipe.',
+    'Interactive cut guides. Pick the animal, tap the primal, get the cut, the USDA safe temp, the pitmaster finish, the wood and the recipe.',
   alternates: { canonical: 'https://pitlog.app/cuts' },
 };
 

@@ -14,7 +14,7 @@ import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Lede, P, Section } f
 export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app/gear' },
   title: 'BBQ Gear by Cut: What Each Cook Actually Needs',
-  description: 'The thermometer, paper, knife, cooler and fuel each cut and recipe calls for, ranked by how often it comes up. Categories only until Pit Log carries verified product links.',
+  description: 'The thermometer, paper, knife, cooler and fuel each cut and recipe calls for, ranked by how often it comes up. Categories only until verified product links exist.',
   robots: { index: false, follow: true },
 };
 

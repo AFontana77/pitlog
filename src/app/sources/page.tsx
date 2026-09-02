@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app/sources' },
   title: 'Sources and Method: Where Pit Log Numbers Come From',
   description:
-    'Every temperature on Pit Log points at a record, and every record points at a source with the date we read it. USDA FSIS for safety. Industry bodies and universities for cuts and craft. Here is the list.',
+    'Every temperature on Pit Log points at a record, and every record at a source with the date we read it. USDA FSIS for safety; industry bodies and universities for cuts.',
 };
 
 const TIER: Record<number, string> = { 1: 'Federal agency', 2: 'University', 3: 'Industry body', 4: 'Provider documentation', 5: 'Practitioner report' };

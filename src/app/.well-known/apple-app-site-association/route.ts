@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 // apple-app-site-association — served at /.well-known/apple-app-site-association
-// iOS Universal Links: lets the OS open baitcastcatch.com links directly in the app.
+// iOS Universal Links: lets the OS open pitlog.app links directly in the app.
 //
 // ACTION REQUIRED before App Store submission:
 //   Replace APPLE_TEAM_ID with your 10-character Apple Developer Team ID.
@@ -15,7 +15,7 @@ export function GET() {
       apps: [],
       details: [
         {
-          appID: 'APPLE_TEAM_ID.com.pitlog.app',
+          appID: 'APPLE_TEAM_ID.com.anvilroad.pitlog',
           paths: ['*'],
         },
       ],

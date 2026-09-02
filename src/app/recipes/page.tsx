@@ -8,7 +8,7 @@ import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Label, Lede, P, Sect
 export const metadata: Metadata = {
   title: 'Pit Log Recipes: Smoked Brisket, BBQ Sauces, Cedar Plank Salmon',
   description:
-    'The Pit Log house recipes. Central Texas brisket, Ember Citrus BBQ sauce, Carolina Gold mustard sauce and maple cedar salmon, each with the USDA temperature printed on the page.',
+    'The Pit Log house recipes: brisket, sauces, chicken thighs, lamb, goat, tri-tip and cedar plank salmon, each with the USDA temperature on the page.',
   alternates: { canonical: 'https://pitlog.app/recipes' },
 };
 

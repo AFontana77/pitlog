@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app/library' },
   title: 'Pit Log Library: Every Cut, Temperature, Wood and Recipe',
   description:
-    'Browse the whole Pit Log reference: six animals and their primal cuts, the USDA safe minimums, the pitmaster tenderness targets, eight smoke woods, and the house recipes. One set of records behind the site, the app and the field guide.',
+    'Browse the whole Pit Log reference: six animals and their cuts, the USDA safe minimums, the tenderness targets, eight smoke woods and the house recipes.',
 };
 
 export default function LibraryPage() {

@@ -14,32 +14,32 @@ import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Label, Lede, P, Sect
 const TITLES: Record<AnimalSlug, { title: string; description: string; h1: string }> = {
   beef: {
     title: 'Beef Cuts Chart: Interactive Primal Guide with Temps and Woods',
-    description: 'Tap the beef primal cuts: chuck, rib, short loin, sirloin, brisket, plate, flank, round, shank. Tenderness, best method, USDA safe temp, brisket finish window, woods and recipes.',
+    description: 'Tap the beef primals: chuck, rib, short loin, sirloin, brisket, plate, flank, round, shank. Tenderness, method, USDA safe temp, brisket finish, woods, recipes.',
     h1: 'Beef primal cuts.',
   },
   pork: {
     title: 'Pork Cuts Chart: Butt, Loin, Ribs, Belly, Ham, Explained',
-    description: 'Tap the pork primal cuts: Boston butt, picnic shoulder, loin, spareribs, belly, ham, hock. The 145 F USDA rule, the pulled-pork finish, woods, mistakes and recipes.',
+    description: 'Tap the pork primals: Boston butt, picnic, loin, spareribs, belly, ham, hock. The 145 F USDA rule, the pulled-pork finish, woods, mistakes and recipes.',
     h1: 'Pork primal cuts.',
   },
   chicken: {
     title: 'Chicken Cuts Guide: Breast, Thigh, Wing, Drumstick, Back',
-    description: 'The parts of a chicken and how to smoke or grill each: breast, wing, thigh, drumstick, back, tail. 165 F USDA rule, dark-meat texture, woods and recipes.',
+    description: 'The parts of a chicken and how to smoke or grill each: breast, wing, thigh, drumstick, back, tail. The 165 F USDA rule, dark-meat texture, woods, recipes.',
     h1: 'Chicken cuts.',
   },
   lamb: {
     title: 'Lamb Cuts Chart: Shoulder, Rack, Loin, Leg, Breast, Shank',
-    description: 'Tap the lamb primal cuts. Which ones grill, which ones go low and slow, the 145 F USDA rule, the American Lamb Board doneness scale, woods and recipes.',
+    description: 'Tap the lamb primals. Which ones grill, which go low and slow, the 145 F USDA rule, the American Lamb Board doneness scale, woods and recipes.',
     h1: 'Lamb primal cuts.',
   },
   goat: {
     title: 'Goat Meat Cuts: Shoulder, Rack, Loin, Leg, Breast, Shank',
-    description: 'Goat cuts and how to cook each one. Goat is lean, so heat and moisture matter. The 145 F USDA rule, braising vs smoking, woods, and the Moroccan shoulder recipe.',
+    description: 'Goat cuts and how to cook each. Goat is lean, so heat and moisture matter. The 145 F USDA rule, braising vs smoking, woods, the Moroccan shoulder recipe.',
     h1: 'Goat primal cuts.',
   },
   salmon: {
     title: 'Salmon Cuts: Collar, Loin, Center Cut, Belly, Tail',
-    description: 'The portions of a side of salmon and how each cooks: collar, top loin, center cut, belly, tail, tail meat. 145 F USDA and FDA rule, alder and fruit woods, cedar plank recipe.',
+    description: 'The portions of a side of salmon and how each cooks: collar, top loin, center cut, belly, tail. The 145 F USDA and FDA rule, alder and fruit woods, cedar plank recipe.',
     h1: 'Salmon cuts.',
   },
 };
@@ -52,7 +52,18 @@ export async function generateMetadata({ params }: { params: Promise<{ animal: s
   const { animal } = await params;
   const t = TITLES[animal as AnimalSlug];
   if (!t) return {};
-  return { title: t.title, description: t.description, alternates: { canonical: `https://pitlog.app/cuts/${animal}` } };
+  const hs = getHotspots(animal as AnimalSlug);
+  const a = getAnimal(animal);
+  const og = hs && a
+    ? { images: [{ url: hs._meta.web_image, width: hs._meta.web_image_px[0], height: hs._meta.web_image_px[1], alt: diagramAlt(a.name, getRegions(animal as AnimalSlug)) }] }
+    : {};
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: { canonical: `https://pitlog.app/cuts/${animal}` },
+    openGraph: { title: t.title, description: t.description, url: `https://pitlog.app/cuts/${animal}`, type: 'article', ...og },
+    twitter: { card: 'summary_large_image', title: t.title, description: t.description, ...(hs ? { images: [hs._meta.web_image] } : {}) },
+  };
 }
 
 export default async function AnimalPage({ params }: { params: Promise<{ animal: string }> }) {
@@ -198,6 +209,34 @@ export default async function AnimalPage({ params }: { params: Promise<{ animal:
             </table>
           </div>
         </Section>
+
+        {a === 'beef' && (
+          <Section tone="surface" width="max-w-6xl" id="quick-reference" labelledBy="qr-heading">
+            <Eyebrow>Quick reference</Eyebrow>
+            <H2 id="qr-heading">The nine primals on one card</H2>
+            <P className="mb-6">
+              Tenderness, richness, best method, finish and slice direction for each region, with the USDA reminder in the
+              corner. The numbers on this card match the records on this page.
+            </P>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/cuts/beef-cut-quick-reference.jpg"
+              alt="Beef cut quick reference card: nine primal regions with tenderness, richness, best method, finish and slice direction, the Pit Log Ember Citrus BBQ Sauce teaser, and the USDA reminder that whole-muscle beef is 145 F with a 3 minute rest and ground beef 160 F"
+              width={1103}
+              height={1426}
+              loading="lazy"
+              className="w-full max-w-3xl h-auto"
+              style={{ borderRadius: '0.25rem', border: `1px solid ${C.border}` }}
+            />
+            <p className="text-xs mt-2" style={{ color: C.textMuted }}>
+              Poster print coming once the print master is ready. The sauce it names is{' '}
+              <Link href="/recipes/pit-log-ember-citrus-bbq-sauce" style={{ color: C.emberLight, textDecoration: 'underline' }}>
+                live in the test kitchen
+              </Link>
+              .
+            </p>
+          </Section>
+        )}
 
         <Section tone="bgDeep" width="max-w-6xl">
           <Label>Cook it, log it</Label>
