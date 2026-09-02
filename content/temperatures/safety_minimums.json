@@ -51,9 +51,11 @@
       "measurement": "for a whole bird, check the innermost part of the thigh and wing and the thickest part of the breast",
       "statement": "Cook all poultry, including ground poultry, giblets and stuffing, to 165 F (73.9 C).",
       "notes": [
-        "USDA does not require a rest for poultry. Two of the ChatGPT masters print '165 F with a 3 minute rest' for chicken; the rest is not USDA guidance and is recorded as a graphics defect.",
-        "Pink colour in safely cooked chicken can come from heat-stable hemoglobin, and smoking or grilling makes it more likely in young birds (FSIS).",
+        "USDA requires no rest for poultry. Pink at the bone can persist at 165 F, and smoking or grilling makes it more likely in young birds (FSIS).",
         "Never pull poultry below 165 F to rely on carryover. Carryover is not a safety mechanism."
+      ],
+      "internal_notes": [
+        "Two of the ChatGPT masters print '165 F with a 3 minute rest' for chicken; the rest is not USDA guidance and is recorded as a graphics defect."
       ],
       "source_refs": ["fsis-safe-temp-chart", "fsis-chicken-farm-to-table", "fsis-smoking-meat-poultry"],
       "review_status": "SOURCED",
@@ -70,7 +72,7 @@
       "measurement": "thermometer in the thickest part of the fillet; or the flesh is opaque and separates easily with a fork",
       "statement": "Cook fish and shellfish to 145 F (62.8 C), or until the flesh is opaque and separates easily with a fork.",
       "notes": [
-        "Salmon served below 145 F (the common 120 to 135 F preference range) is a culinary preference below the federal minimum and must be labelled as such wherever it appears."
+        "Salmon served below 145 F (the common 120 to 135 F range) is a culinary preference below the federal minimum. Pit Log labels it that way every time it appears."
       ],
       "source_refs": ["fsis-safe-temp-chart", "fda-seafood-safety"],
       "review_status": "SOURCED",
@@ -102,6 +104,9 @@
       "measurement": "thickest part",
       "statement": "Reheat fully cooked ham to 165 F (73.9 C). A ham packaged in a USDA-inspected plant may be reheated to 140 F (60 C).",
       "notes": [
+        "Read the label. The 140 F figure applies only to ham packaged in a USDA-inspected plant."
+      ],
+      "internal_notes": [
         "Master pork-B prints 'Reheat to 140 F or until hot' for ham with no plant qualifier. That is only correct for USDA-inspected-plant packaged ham; recorded as a graphics defect."
       ],
       "source_refs": ["fsis-safe-temp-chart"],
@@ -135,7 +140,8 @@
       "rest": null,
       "measurement": "centre of the dish",
       "statement": "Cook egg dishes to 160 F (71.1 C).",
-      "notes": ["Kept so the master temperature reference page can print the full FSIS chart without omission."],
+      "notes": ["Smoked egg dishes and casseroles follow the same figure."],
+      "internal_notes": ["Kept so the master temperature reference page can print the full FSIS chart without omission."],
       "source_refs": ["fsis-safe-temp-chart"],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"

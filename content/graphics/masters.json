@@ -62,7 +62,8 @@
     },
     {
       "id": "pork-cuts-cooking-guide-B",
-      "file": "brand-assets/cut-guides/pork-cuts-cooking-guide-B.png",
+      "file": "brand-assets/cut-guides/_retired/pork-cuts-cooking-guide-B.png",
+      "retired": "2026-09-02: Anthony chose pork-A. Kept for the jowl and as the drawing base for the family-B fine-art brief; never ships.",
       "md5": "11474a9d2aaf80c5b67781fc0f4f6978",
       "px": [1122, 1402],
       "subject": "pork",
@@ -80,7 +81,8 @@
     },
     {
       "id": "chicken-cuts-cooking-guide-A",
-      "file": "brand-assets/cut-guides/chicken-cuts-cooking-guide-A.png",
+      "file": "brand-assets/cut-guides/_retired/chicken-cuts-cooking-guide-A.png",
+      "retired": "2026-09-02: Anthony chose chicken-B. Kept only for the Smoked Chicken Thighs recipe concept it names; never ships.",
       "md5": "109ca2255a733401f5bdb47aa346f50f",
       "px": [1024, 1536],
       "subject": "chicken",

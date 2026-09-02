@@ -25,7 +25,11 @@ export function SiteFooter() {
         >
           Pit Master Log
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
+          <Link href="/cuts" style={linkStyle}>Cuts</Link>
+          <Link href="/temperatures" style={linkStyle}>Temps</Link>
+          <Link href="/woods" style={linkStyle}>Woods</Link>
+          <Link href="/recipes" style={linkStyle}>Recipes</Link>
           <Link href="/library" style={linkStyle}>Library</Link>
           <Link href="/free-download" style={linkStyle}>Free Download</Link>
           <Link href="/about" style={linkStyle}>About</Link>

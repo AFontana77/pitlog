@@ -1,0 +1,294 @@
+{
+  "_meta": {
+    "purpose": "Hotspot polygons for the beef primal diagram, in MASTER pixel coordinates. The web image is the crop below, upscaled 2x; the SVG overlay uses viewBox = crop box so these coordinates apply unchanged. If the master md5 changes, every polygon must be re-checked.",
+    "master": "beef-cuts-cooking-guide",
+    "master_file": "brand-assets/cut-guides/beef-cuts-cooking-guide.png",
+    "master_md5": "06c81423eb420afa35433c46a5bcc2db",
+    "crop_box_xyxy": [
+      20,
+      290,
+      660,
+      690
+    ],
+    "web_image": "/images/cuts/beef-primal-diagram.png",
+    "web_image_px": [
+      1280,
+      800
+    ],
+    "drawn": "2026-09-02",
+    "method": "grid overlay + visual check of a filled-polygon render",
+    "review_status": "REVIEWED"
+  },
+  "viewBox": "20 290 640 400",
+  "regions": [
+    {
+      "slug": "chuck",
+      "polygon": [
+        [
+          183,
+          328
+        ],
+        [
+          276,
+          334
+        ],
+        [
+          276,
+          458
+        ],
+        [
+          192,
+          480
+        ]
+      ],
+      "label": [
+        232,
+        395
+      ]
+    },
+    {
+      "slug": "rib",
+      "polygon": [
+        [
+          276,
+          334
+        ],
+        [
+          376,
+          329
+        ],
+        [
+          376,
+          440
+        ],
+        [
+          276,
+          458
+        ]
+      ],
+      "label": [
+        326,
+        385
+      ]
+    },
+    {
+      "slug": "short-loin",
+      "polygon": [
+        [
+          376,
+          329
+        ],
+        [
+          450,
+          328
+        ],
+        [
+          446,
+          440
+        ],
+        [
+          376,
+          440
+        ]
+      ],
+      "label": [
+        412,
+        385
+      ]
+    },
+    {
+      "slug": "sirloin",
+      "polygon": [
+        [
+          450,
+          328
+        ],
+        [
+          526,
+          324
+        ],
+        [
+          520,
+          440
+        ],
+        [
+          446,
+          440
+        ]
+      ],
+      "label": [
+        485,
+        380
+      ]
+    },
+    {
+      "slug": "round",
+      "polygon": [
+        [
+          526,
+          324
+        ],
+        [
+          612,
+          332
+        ],
+        [
+          618,
+          470
+        ],
+        [
+          604,
+          540
+        ],
+        [
+          562,
+          560
+        ],
+        [
+          520,
+          528
+        ],
+        [
+          520,
+          440
+        ]
+      ],
+      "label": [
+        568,
+        430
+      ]
+    },
+    {
+      "slug": "brisket",
+      "polygon": [
+        [
+          192,
+          480
+        ],
+        [
+          276,
+          458
+        ],
+        [
+          302,
+          540
+        ],
+        [
+          302,
+          598
+        ],
+        [
+          232,
+          600
+        ],
+        [
+          204,
+          562
+        ]
+      ],
+      "label": [
+        250,
+        530
+      ]
+    },
+    {
+      "slug": "plate",
+      "polygon": [
+        [
+          276,
+          458
+        ],
+        [
+          392,
+          436
+        ],
+        [
+          392,
+          566
+        ],
+        [
+          312,
+          592
+        ],
+        [
+          302,
+          540
+        ]
+      ],
+      "label": [
+        345,
+        510
+      ]
+    },
+    {
+      "slug": "flank",
+      "polygon": [
+        [
+          392,
+          436
+        ],
+        [
+          446,
+          440
+        ],
+        [
+          472,
+          470
+        ],
+        [
+          520,
+          470
+        ],
+        [
+          520,
+          528
+        ],
+        [
+          470,
+          562
+        ],
+        [
+          402,
+          566
+        ]
+      ],
+      "label": [
+        455,
+        505
+      ]
+    },
+    {
+      "slug": "shank",
+      "polygon": [
+        [
+          562,
+          560
+        ],
+        [
+          604,
+          540
+        ],
+        [
+          622,
+          600
+        ],
+        [
+          612,
+          652
+        ],
+        [
+          562,
+          652
+        ],
+        [
+          556,
+          600
+        ]
+      ],
+      "label": [
+        588,
+        610
+      ]
+    }
+  ]
+}

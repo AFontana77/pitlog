@@ -2,6 +2,7 @@ import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { getPitmasterTarget, getSafetyMinimum } from '@/content';
 
 export const metadata: Metadata = {
   title: 'Smoking Times and Temperatures Chart | PitLog',
@@ -9,19 +10,29 @@ export const metadata: Metadata = {
     'Smoking times and internal temperatures for beef, pork, poultry, and fish. Reference every cut with smoker temp and internal target.',
 };
 
+/**
+ * Rows are derived from the content spine (content/temperatures). The
+ * "internal" column shows the tenderness window for collagen cuts and the
+ * USDA minimum for lean cuts; both are labelled so the two never blur.
+ * Full detail, sources and the doneness scales live on /temperatures.
+ */
+const tgt = (id: string) => getPitmasterTarget(id)!;
+const safe = (id: string) => getSafetyMinimum(id)!;
+const win = (id: string) => `${tgt(id).window_f!.min} to ${tgt(id).window_f!.max}°F, ${tgt(id).finish_test!.replace(/_/g, ' ')}`;
+const pit = (id: string) => `${tgt(id).pit_temp_f!.min} to ${tgt(id).pit_temp_f!.max}°F`;
+
 const CUTS = [
-  { cut: 'Brisket (full packer)', smokerTemp: '225 to 250°F', internalTarget: '203°F', approxTime: '1 to 1.5 hr/lb', notes: 'Wrap in butcher paper at 160 to 165°F. Done when probe slides in like warm butter.' },
-  { cut: 'Pork Shoulder / Boston Butt', smokerTemp: '225 to 250°F', internalTarget: '203°F', approxTime: '1.5 hr/lb', notes: 'Pull at 203°F, rest 1 hr minimum. Should shred with no effort.' },
-  { cut: 'Baby Back Ribs', smokerTemp: '225°F', internalTarget: '195 to 203°F', approxTime: '5 to 6 hr', notes: 'Use the bend test. Ribs should crack slightly when bent. 2-2-1 method works well.' },
-  { cut: 'Spare Ribs / St. Louis', smokerTemp: '225°F', internalTarget: '195 to 203°F', approxTime: '6 to 7 hr', notes: 'Thicker than baby backs. 3-2-1 method (3 hr smoke, 2 hr wrapped, 1 hr unwrapped).' },
-  { cut: 'Pork Belly / Burnt Ends', smokerTemp: '225°F', internalTarget: '195 to 200°F', approxTime: '5 to 6 hr', notes: 'Cube at 165°F, toss in sauce and butter, return to smoker uncovered for 1 hr.' },
-  { cut: 'Chuck Roast', smokerTemp: '250°F', internalTarget: '205°F', approxTime: '1.5 hr/lb', notes: 'Often called the poor man brisket. Wrap at 165°F. Probe tender when done.' },
-  { cut: 'Lamb Shoulder', smokerTemp: '250°F', internalTarget: '195°F', approxTime: '1.5 hr/lb', notes: 'Same collagen logic as pork shoulder. Pull when probe meets no resistance.' },
-  { cut: 'Whole Chicken', smokerTemp: '275 to 300°F', internalTarget: '165°F (breast)', approxTime: '3 to 4 hr', notes: 'Higher pit temp helps crisp the skin. Check thigh. It runs hotter than breast.' },
-  { cut: 'Chicken Thighs', smokerTemp: '275°F', internalTarget: '175°F', approxTime: '2 hr', notes: 'Dark meat benefits from higher internal temp. 175°F renders fat and firms texture.' },
-  { cut: 'Chicken Wings', smokerTemp: '275°F then 400°F', internalTarget: '165°F+', approxTime: '1.5 to 2 hr total', notes: 'Smoke at 275°F for 1 hr, then crank to 400°F for 15 to 20 min to crisp the skin.' },
-  { cut: 'Turkey Breast', smokerTemp: '275°F', internalTarget: '165°F', approxTime: '4 to 5 hr', notes: 'Brine overnight if possible. Wrap at 155°F to preserve moisture.' },
-  { cut: 'Salmon Fillet', smokerTemp: '180 to 200°F', internalTarget: '145°F', approxTime: '1 to 2 hr', notes: 'Low and slow. Glaze with honey or maple in the last 20 min. No stall on fish.' },
+  { cut: 'Brisket (full packer)', smokerTemp: pit('target-brisket'), internalTarget: win('target-brisket'), approxTime: '1 to 1.5 hr/lb', notes: `USDA minimum ${safe('safety-whole-muscle-red-meat').temp_f}°F + 3 min rest is passed hours earlier. ${tgt('target-brisket').stall}` },
+  { cut: 'Pork Shoulder / Boston Butt', smokerTemp: pit('target-pork-shoulder'), internalTarget: win('target-pork-shoulder'), approxTime: '1 hr 15 min/lb (Pork Board)', notes: 'Pork Board says 185 to 190°F with the bone-slip test; backyard convention runs to 205°F. Rest 1 hr above 140°F.' },
+  { cut: 'Spare Ribs / St. Louis / Baby Back', smokerTemp: pit('target-pork-ribs'), internalTarget: win('target-pork-ribs'), approxTime: '3 to 5 hr baby backs, 5 to 7 hr spares (Pork Board)', notes: 'The thermometer is unreliable on ribs. Bend test and fork tender decide.' },
+  { cut: 'Pork Belly / Burnt Ends', smokerTemp: pit('target-pork-belly'), internalTarget: win('target-pork-belly'), approxTime: 'About 7 hr (Pork Board)', notes: 'Cube around 165°F for burnt ends, sauce, back on uncovered until glazed and tender.' },
+  { cut: 'Chuck Roast / Beef Short Ribs', smokerTemp: pit('target-beef-chuck-and-short-ribs'), internalTarget: win('target-beef-chuck-and-short-ribs'), approxTime: '1.5 hr/lb chuck; 6 to 8 hr short ribs', notes: 'Brisket logic. Wrap when the bark is set. Pull on feel.' },
+  { cut: 'Lamb or Goat Shoulder (pulled)', smokerTemp: pit('target-lamb-goat-shoulder'), internalTarget: win('target-lamb-goat-shoulder'), approxTime: '1.5 hr/lb', notes: 'Goat is lean (FSIS). Wrap early. A sliced roast follows the Lamb Board scale instead.' },
+  { cut: 'Whole Chicken', smokerTemp: '275 to 325°F', internalTarget: `${safe('safety-poultry').temp_f}°F USDA minimum, thigh, wing and breast`, approxTime: '60 to 75 min indirect (FSIS)', notes: 'No rest required by USDA. Higher pit temp for skin. Pink at the bone can persist at 165°F.' },
+  { cut: 'Chicken Thighs', smokerTemp: pit('target-chicken-pulled'), internalTarget: `${safe('safety-poultry').temp_f}°F minimum; 175 to 185°F preferred texture`, approxTime: '1.5 to 2 hr', notes: 'Dark meat renders above the minimum. That is preference, not safety.' },
+  { cut: 'Chicken Wings', smokerTemp: '275°F then 400°F', internalTarget: `${safe('safety-poultry').temp_f}°F minimum`, approxTime: '1.5 to 2 hr total', notes: 'Smoke about 1 hr, then finish hot to crisp the skin. Sauce in the last 15 to 30 min (FSIS).' },
+  { cut: 'Pork Loin / Chops', smokerTemp: '225 to 250°F', internalTarget: `${safe('safety-whole-muscle-red-meat').temp_f}°F + 3 min rest (USDA)`, approxTime: 'About 1.5 hr loin (Pork Board)', notes: 'Lean. Pork Board: pull a loin at 140°F and rest 10 min to reach 145°F. The 145°F reading is the rule.' },
+  { cut: 'Salmon Fillet', smokerTemp: '225°F', internalTarget: `${safe('safety-fish').temp_f}°F (USDA and FDA), or opaque and flakes`, approxTime: '45 to 60 min', notes: 'Fish does not stall. Anything under 145°F is a preference below the federal minimum.' },
 ];
 
 const STALL_NOTES = [
@@ -122,7 +133,11 @@ export default function SmokingTimesPage() {
               </table>
             </div>
             <p className="text-xs mt-4" style={{ color: 'oklch(0.62 0.018 50)' }}>
-              USDA minimum safe temperatures: pork 145°F, poultry 165°F, whole muscle beef 145°F. Pitmaster targets for collagen cuts (brisket, shoulder, ribs) are higher to achieve probe-tender texture.
+              USDA FSIS safe minimums: beef, pork, lamb and goat steaks, chops and roasts 145°F plus a 3 minute rest; ground meat 160°F; all poultry 165°F, no rest required; fish 145°F. The higher figures for brisket, shoulder and ribs are tenderness targets, not safety numbers. Where the two differ, the USDA minimum governs. Times are planning estimates.{' '}
+              <Link href="/temperatures" style={{ color: 'oklch(0.72 0.14 55)', textDecoration: 'underline' }}>
+                Full chart with sources
+              </Link>
+              .
             </p>
           </div>
         </section>

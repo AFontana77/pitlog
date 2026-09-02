@@ -1,7 +1,14 @@
 {
   "_meta": {
     "purpose": "The Pit Log house recipe canon. Every recipe the brief names (section 10) and every recipe an approved graphic promises by name. NONE is OFFICIAL. A recipe becomes TEST_V1 when it has been written in full with quantities, TEST_V2+ after each kitchen test, and OFFICIAL only after a documented kitchen test signed off by Anthony. Until a recipe reaches at least TEST_V1 and has a live page, any graphic that names it is blocked from publication (graphics/masters.json publish_gate).",
-    "status_enum": ["PLANNED", "TEST_V1", "TEST_V2", "TEST_V3", "OFFICIAL", "RETIRED"],
+    "status_enum": [
+      "PLANNED",
+      "TEST_V1",
+      "TEST_V2",
+      "TEST_V3",
+      "OFFICIAL",
+      "RETIRED"
+    ],
     "record_shape": "slug, title, status, family, animal, cuts[], description, concept_ingredients[] (creative direction only, no quantities until TEST_V1), yield, prep_time, cook_time_guidance, pit_temp_ref, finish_ref, safety_refs[], wood_refs[], equipment_refs[], shop_ingredient_categories[], promised_by_graphic, app_log_prefill, related_cut_refs[], review_status, updated_at",
     "commerce_note": "shop_ingredient_categories are shelf-stable pantry items suited to an Amazon Grocery / Fresh SHOP THIS RECIPE module. Fresh meat is never promised as available. Amazon links may appear on the web recipe page only, never in the PDF or the book (Associates Program Policies, offline prohibition).",
     "app_log_prefill_contract": "Fields map 1:1 to pitlog-app src/skin/config.ts field keys: meat_type, smoker_type, wood_type[], rub, target_temp (pit), internal temp target is shown as reference text, wrap_method. The user can edit every value."
@@ -10,26 +17,119 @@
     {
       "slug": "pit-log-central-texas-brisket",
       "title": "Pit Log Central Texas Brisket",
-      "status": "PLANNED",
+      "status": "TEST_V1",
       "family": "brisket",
       "animal": "beef",
-      "cuts": ["packer-brisket"],
+      "cuts": [
+        "packer-brisket"
+      ],
       "description": "Salt, coarse black pepper, post oak, patience. A whole packer smoked at 250 F, wrapped in butcher paper through the stall, pulled probe tender, and rested long above 140 F.",
-      "concept_ingredients": ["whole packer brisket", "kosher salt", "coarse black pepper", "optional: Pit Log House Brisket Rub"],
-      "yield": null,
-      "prep_time": null,
-      "cook_time_guidance": "10 to 16 hours plus a 1 to 2 hour rest. Planning estimate only.",
+      "concept_ingredients": [
+        "whole packer brisket",
+        "kosher salt",
+        "coarse black pepper",
+        "optional: Pit Log House Brisket Rub"
+      ],
+      "yield": "A 12 lb packer feeds 12 to 16",
+      "prep_time": "30 minutes to trim. Add an overnight dry brine if you have the time.",
+      "cook_time_guidance": "10 to 16 hours at 250 F, plus a 1 to 2 hour rest. Estimate. Start earlier than you think.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "target-brisket",
-      "safety_refs": ["safety-whole-muscle-red-meat", "handling-danger-zone", "handling-rest-is-part-of-safety"],
-      "wood_refs": ["oak"],
-      "equipment_refs": ["leave-in-probe", "instant-read-thermometer", "butcher-paper", "slicing-knife", "cooler-holding"],
-      "shop_ingredient_categories": ["kosher-salt", "coarse-black-pepper", "butcher-paper"],
+      "safety_refs": [
+        "safety-whole-muscle-red-meat",
+        "handling-danger-zone",
+        "handling-rest-is-part-of-safety",
+        "handling-two-thermometers"
+      ],
+      "wood_refs": [
+        "oak"
+      ],
+      "equipment_refs": [
+        "leave-in-probe",
+        "instant-read-thermometer",
+        "butcher-paper",
+        "slicing-knife",
+        "cooler-holding"
+      ],
+      "shop_ingredient_categories": [
+        "kosher-salt",
+        "coarse-black-pepper",
+        "butcher-paper"
+      ],
       "promised_by_graphic": null,
-      "app_log_prefill": { "meat_type": "Brisket", "wood_type": ["Oak"], "target_temp": 250, "wrap_method": "Butcher Paper", "rub": "Salt and pepper" },
-      "related_cut_refs": ["beef/brisket"],
+      "app_log_prefill": {
+        "meat_type": "Brisket",
+        "wood_type": [
+          "Oak"
+        ],
+        "target_temp": 250,
+        "wrap_method": "Butcher Paper",
+        "rub": "Salt and pepper"
+      },
+      "related_cut_refs": [
+        "beef/brisket"
+      ],
       "review_status": "DRAFT",
-      "updated_at": "2026-09-02"
+      "updated_at": "2026-09-02",
+      "ingredient_groups": [
+        {
+          "name": "Meat",
+          "items": [
+            {
+              "qty": "1",
+              "item": "whole packer brisket, 12 to 14 lb, untrimmed"
+            }
+          ]
+        },
+        {
+          "name": "Rub",
+          "items": [
+            {
+              "qty": "1/4 cup",
+              "item": "coarse black pepper",
+              "note": "16 mesh if you can find it"
+            },
+            {
+              "qty": "1/4 cup",
+              "item": "kosher salt"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "granulated garlic",
+              "note": "optional. Central Texas purists skip it."
+            }
+          ]
+        },
+        {
+          "name": "Pit",
+          "items": [
+            {
+              "qty": "as needed",
+              "item": "post oak splits or chunks"
+            },
+            {
+              "qty": "1 roll",
+              "item": "pink butcher paper"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        "Trim. Leave a quarter inch of fat on the cap. Cut out the hard fat between the point and the flat. Round the edges so nothing burns.",
+        "Mix the rub. Coat every side. If you have the time, leave it uncovered in the fridge overnight.",
+        "Run the pit at 250 F. Post oak, clean thin smoke. Put the brisket on fat side up, point toward the fire.",
+        "Leave it alone for 4 hours. Then spritz with water every hour if the edges look dry.",
+        "The stall. Somewhere around 150 to 170 F the temperature stops climbing. It can sit there for hours. That is normal. When the bark is set and dark, usually 165 to 175 F, wrap it tight in butcher paper.",
+        "Back on at 250 F. Start checking at 195 F. It is done when a probe slides into the flat with almost no resistance. That is usually between 195 and 205 F. The number is a checkpoint. The feel is the answer. USDA FSIS calls beef safe at 145 F with a 3 minute rest. Brisket passed that hours ago. This window is about collagen, not safety.",
+        "Rest. Leave it wrapped on the counter for 30 minutes. Then hold it in a dry cooler or a 150 F oven for 1 to 2 hours. Keep it above 140 F the whole time. That is the USDA line for hot holding.",
+        "Slice the flat across the grain, pencil thick. Turn the point 90 degrees and slice it across its own grain, thicker. Serve on paper."
+      ],
+      "notes": [
+        "Untested as a Pit Log recipe. This is the standard Central Texas method. It becomes OFFICIAL after a logged cook.",
+        "USDA FSIS calls beef safe at 145 F with a 3 minute rest. Brisket is not tender there. The 195 to 205 F window is about collagen, not safety."
+      ],
+      "kitchen_tested": false,
+      "test_log": []
     },
     {
       "slug": "coffee-chile-smoked-chuck-roast",
@@ -37,20 +137,56 @@
       "status": "PLANNED",
       "family": "brisket",
       "animal": "beef",
-      "cuts": ["chuck-roast"],
+      "cuts": [
+        "chuck-roast"
+      ],
       "description": "A chuck roast treated like a small brisket with a coffee and ancho rub, wrapped at the stall and pulled probe tender for slicing or shredding.",
-      "concept_ingredients": ["chuck roast", "finely ground coffee", "ancho chile powder", "brown sugar", "kosher salt", "black pepper", "garlic powder"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "chuck roast",
+        "finely ground coffee",
+        "ancho chile powder",
+        "brown sugar",
+        "kosher salt",
+        "black pepper",
+        "garlic powder"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "5 to 7 hours. Planning estimate only.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "target-beef-chuck-and-short-ribs",
-      "safety_refs": ["safety-whole-muscle-red-meat"],
-      "wood_refs": ["oak", "hickory"],
-      "equipment_refs": ["leave-in-probe", "butcher-paper"],
-      "shop_ingredient_categories": ["coffee", "ancho-chile-powder", "brown-sugar", "kosher-salt", "coarse-black-pepper", "garlic-powder"],
+      "safety_refs": [
+        "safety-whole-muscle-red-meat"
+      ],
+      "wood_refs": [
+        "oak",
+        "hickory"
+      ],
+      "equipment_refs": [
+        "leave-in-probe",
+        "butcher-paper"
+      ],
+      "shop_ingredient_categories": [
+        "coffee",
+        "ancho-chile-powder",
+        "brown-sugar",
+        "kosher-salt",
+        "coarse-black-pepper",
+        "garlic-powder"
+      ],
       "promised_by_graphic": null,
-      "app_log_prefill": { "meat_type": "Custom", "wood_type": ["Oak"], "target_temp": 250, "wrap_method": "Butcher Paper", "rub": "Coffee-chile" },
-      "related_cut_refs": ["beef/chuck"],
+      "app_log_prefill": {
+        "meat_type": "Custom",
+        "wood_type": [
+          "Oak"
+        ],
+        "target_temp": 250,
+        "wrap_method": "Butcher Paper",
+        "rub": "Coffee-chile"
+      },
+      "related_cut_refs": [
+        "beef/chuck"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -60,20 +196,55 @@
       "status": "PLANNED",
       "family": "steaks",
       "animal": "beef",
-      "cuts": ["ribeye-steak"],
+      "cuts": [
+        "ribeye-steak"
+      ],
       "description": "Thick ribeyes brought up slowly in smoke, then seared hard over coals and finished with a compound butter. Doneness is the cook's preference; the page prints the Beef Board scale and the USDA minimum side by side.",
-      "concept_ingredients": ["thick-cut ribeye", "kosher salt", "black pepper", "butter", "garlic", "smoked paprika", "chives"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "thick-cut ribeye",
+        "kosher salt",
+        "black pepper",
+        "butter",
+        "garlic",
+        "smoked paprika",
+        "chives"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "45 to 60 minutes in smoke plus a 2 minute sear. Planning estimate only.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "doneness-beef-industry",
-      "safety_refs": ["safety-whole-muscle-red-meat"],
-      "wood_refs": ["oak", "cherry"],
-      "equipment_refs": ["instant-read-thermometer", "cast-iron", "heat-resistant-gloves"],
-      "shop_ingredient_categories": ["kosher-salt", "coarse-black-pepper", "smoked-paprika", "garlic-powder"],
+      "safety_refs": [
+        "safety-whole-muscle-red-meat"
+      ],
+      "wood_refs": [
+        "oak",
+        "cherry"
+      ],
+      "equipment_refs": [
+        "instant-read-thermometer",
+        "cast-iron",
+        "heat-resistant-gloves"
+      ],
+      "shop_ingredient_categories": [
+        "kosher-salt",
+        "coarse-black-pepper",
+        "smoked-paprika",
+        "garlic-powder"
+      ],
       "promised_by_graphic": null,
-      "app_log_prefill": { "meat_type": "Custom", "wood_type": ["Oak"], "target_temp": 225, "wrap_method": "None", "rub": "Salt and pepper" },
-      "related_cut_refs": ["beef/rib"],
+      "app_log_prefill": {
+        "meat_type": "Custom",
+        "wood_type": [
+          "Oak"
+        ],
+        "target_temp": 225,
+        "wrap_method": "None",
+        "rub": "Salt and pepper"
+      },
+      "related_cut_refs": [
+        "beef/rib"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -83,20 +254,51 @@
       "status": "PLANNED",
       "family": "steaks",
       "animal": "beef",
-      "cuts": ["tri-tip"],
+      "cuts": [
+        "tri-tip"
+      ],
       "description": "Garlic, salt, pepper and red oak. Smoked to just under the target, seared, rested, and sliced across both grain directions.",
-      "concept_ingredients": ["tri-tip roast", "kosher salt", "black pepper", "garlic powder", "dried parsley"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "tri-tip roast",
+        "kosher salt",
+        "black pepper",
+        "garlic powder",
+        "dried parsley"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "60 to 90 minutes plus sear. Planning estimate only.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "doneness-beef-industry",
-      "safety_refs": ["safety-whole-muscle-red-meat"],
-      "wood_refs": ["oak"],
-      "equipment_refs": ["instant-read-thermometer", "slicing-knife", "cutting-board"],
-      "shop_ingredient_categories": ["kosher-salt", "coarse-black-pepper", "garlic-powder"],
+      "safety_refs": [
+        "safety-whole-muscle-red-meat"
+      ],
+      "wood_refs": [
+        "oak"
+      ],
+      "equipment_refs": [
+        "instant-read-thermometer",
+        "slicing-knife",
+        "cutting-board"
+      ],
+      "shop_ingredient_categories": [
+        "kosher-salt",
+        "coarse-black-pepper",
+        "garlic-powder"
+      ],
       "promised_by_graphic": null,
-      "app_log_prefill": { "meat_type": "Tri-Tip", "wood_type": ["Oak"], "target_temp": 225, "wrap_method": "None", "rub": "Santa Maria" },
-      "related_cut_refs": ["beef/sirloin"],
+      "app_log_prefill": {
+        "meat_type": "Tri-Tip",
+        "wood_type": [
+          "Oak"
+        ],
+        "target_temp": 225,
+        "wrap_method": "None",
+        "rub": "Santa Maria"
+      },
+      "related_cut_refs": [
+        "beef/sirloin"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -106,68 +308,272 @@
       "status": "PLANNED",
       "family": "ribs",
       "animal": "beef",
-      "cuts": ["plate-short-ribs"],
+      "cuts": [
+        "plate-short-ribs"
+      ],
       "description": "Plate short ribs with a heavy pepper bark, smoked unwrapped until probe tender between the bones.",
-      "concept_ingredients": ["plate short ribs", "coarse black pepper", "kosher salt", "granulated garlic"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "plate short ribs",
+        "coarse black pepper",
+        "kosher salt",
+        "granulated garlic"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "6 to 8 hours. Planning estimate only.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "target-beef-chuck-and-short-ribs",
-      "safety_refs": ["safety-whole-muscle-red-meat"],
-      "wood_refs": ["oak", "hickory"],
-      "equipment_refs": ["leave-in-probe", "instant-read-thermometer"],
-      "shop_ingredient_categories": ["coarse-black-pepper", "kosher-salt", "garlic-powder"],
+      "safety_refs": [
+        "safety-whole-muscle-red-meat"
+      ],
+      "wood_refs": [
+        "oak",
+        "hickory"
+      ],
+      "equipment_refs": [
+        "leave-in-probe",
+        "instant-read-thermometer"
+      ],
+      "shop_ingredient_categories": [
+        "coarse-black-pepper",
+        "kosher-salt",
+        "garlic-powder"
+      ],
       "promised_by_graphic": null,
-      "app_log_prefill": { "meat_type": "Ribs", "wood_type": ["Oak"], "target_temp": 265, "wrap_method": "None", "rub": "Pepper bark" },
-      "related_cut_refs": ["beef/plate"],
+      "app_log_prefill": {
+        "meat_type": "Ribs",
+        "wood_type": [
+          "Oak"
+        ],
+        "target_temp": 265,
+        "wrap_method": "None",
+        "rub": "Pepper bark"
+      },
+      "related_cut_refs": [
+        "beef/plate"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
     {
       "slug": "pit-log-ember-citrus-bbq-sauce",
       "title": "Pit Log Ember Citrus BBQ Sauce",
-      "status": "PLANNED",
+      "status": "TEST_V1",
       "family": "sauces",
       "animal": null,
       "cuts": [],
       "description": "A bright, smoky house sauce. The beef quick-reference master describes it as built on ketchup, reduced apple juice, fresh orange juice, brown sugar, vinegar, molasses and warm spice, for brisket, short ribs and grilled beef.",
-      "concept_ingredients": ["ketchup", "apple juice", "orange juice", "brown sugar", "apple cider vinegar", "molasses", "smoked paprika", "chipotle", "kosher salt", "black pepper"],
-      "yield": null, "prep_time": null,
-      "cook_time_guidance": "Simmer 20 to 30 minutes.",
+      "concept_ingredients": [
+        "ketchup",
+        "apple juice",
+        "orange juice",
+        "brown sugar",
+        "apple cider vinegar",
+        "molasses",
+        "smoked paprika",
+        "chipotle",
+        "kosher salt",
+        "black pepper"
+      ],
+      "yield": "About 3 cups",
+      "prep_time": "10 minutes",
+      "cook_time_guidance": "Simmer 25 to 30 minutes. Estimate.",
       "pit_temp_ref": null,
       "finish_ref": null,
-      "safety_refs": ["handling-sauce-timing"],
+      "safety_refs": [
+        "handling-sauce-timing"
+      ],
       "wood_refs": [],
-      "equipment_refs": ["saucepan"],
-      "shop_ingredient_categories": ["ketchup", "apple-cider-vinegar", "molasses", "brown-sugar", "smoked-paprika", "chipotle-powder"],
+      "equipment_refs": [
+        "saucepan"
+      ],
+      "shop_ingredient_categories": [
+        "ketchup",
+        "apple-cider-vinegar",
+        "molasses",
+        "brown-sugar",
+        "smoked-paprika",
+        "chipotle-powder"
+      ],
       "promised_by_graphic": "beef-cut-quick-reference",
       "app_log_prefill": null,
-      "related_cut_refs": ["beef/brisket", "beef/plate"],
+      "related_cut_refs": [
+        "beef/brisket",
+        "beef/plate"
+      ],
       "review_status": "DRAFT",
-      "updated_at": "2026-09-02"
+      "updated_at": "2026-09-02",
+      "ingredient_groups": [
+        {
+          "name": "Sauce",
+          "items": [
+            {
+              "qty": "2 cups",
+              "item": "ketchup"
+            },
+            {
+              "qty": "1 cup",
+              "item": "apple juice",
+              "note": "reduced by half first, see step 1"
+            },
+            {
+              "qty": "1/2 cup",
+              "item": "fresh orange juice",
+              "note": "about 2 oranges"
+            },
+            {
+              "qty": "1/2 cup",
+              "item": "packed brown sugar"
+            },
+            {
+              "qty": "1/3 cup",
+              "item": "apple cider vinegar"
+            },
+            {
+              "qty": "3 tbsp",
+              "item": "molasses"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "smoked paprika"
+            },
+            {
+              "qty": "2 tsp",
+              "item": "chipotle powder",
+              "note": "1 tsp for a milder sauce"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "kosher salt"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "coarse black pepper"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "orange zest"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        "Pour the apple juice into a small pan. Simmer it over medium heat until it drops to about half a cup. That takes 8 to 10 minutes. It builds apple flavor without watering the sauce down.",
+        "Add everything else except the zest. Stir until the sugar dissolves.",
+        "Bring to a bare simmer. Cook uncovered for 20 minutes. Stir now and then. It is ready when it coats a spoon.",
+        "Stir in the zest. Taste it. Add vinegar if it is too sweet. Add brown sugar if it bites.",
+        "Cool it, then jar it. It keeps in the fridge for 2 weeks.",
+        "On the pit, brush it on in the last 15 to 30 minutes. The sugar sets and does not burn. That is the USDA FSIS timing for sauce on smoked meat."
+      ],
+      "notes": [
+        "Untested draft. Written from the concept on the approved beef quick-reference master. The amounts are a first pass. They will move after the first kitchen test.",
+        "Built for brisket, short ribs and grilled beef. Thin it with a splash of the reduced apple juice to use it as a mop."
+      ],
+      "kitchen_tested": false,
+      "test_log": []
     },
     {
       "slug": "pit-log-carolina-gold-mustard-sauce",
       "title": "Pit Log Carolina Gold Mustard Sauce",
-      "status": "PLANNED",
+      "status": "TEST_V1",
       "family": "sauces",
       "animal": null,
       "cuts": [],
       "description": "A tangy South Carolina mustard sauce. Master pork-A lists yellow mustard, apple cider vinegar, brown sugar, honey, Worcestershire, garlic and black pepper, for pulled pork, ribs and chops.",
-      "concept_ingredients": ["yellow mustard", "apple cider vinegar", "brown sugar", "honey", "Worcestershire sauce", "garlic powder", "black pepper", "cayenne"],
-      "yield": null, "prep_time": null,
-      "cook_time_guidance": "Simmer 10 to 15 minutes.",
+      "concept_ingredients": [
+        "yellow mustard",
+        "apple cider vinegar",
+        "brown sugar",
+        "honey",
+        "Worcestershire sauce",
+        "garlic powder",
+        "black pepper",
+        "cayenne"
+      ],
+      "yield": "About 2 cups",
+      "prep_time": "5 minutes",
+      "cook_time_guidance": "Simmer 10 to 15 minutes. Estimate.",
       "pit_temp_ref": null,
       "finish_ref": null,
-      "safety_refs": ["handling-sauce-timing"],
+      "safety_refs": [
+        "handling-sauce-timing"
+      ],
       "wood_refs": [],
-      "equipment_refs": ["saucepan"],
-      "shop_ingredient_categories": ["yellow-mustard", "apple-cider-vinegar", "brown-sugar", "honey", "worcestershire", "garlic-powder"],
+      "equipment_refs": [
+        "saucepan"
+      ],
+      "shop_ingredient_categories": [
+        "yellow-mustard",
+        "apple-cider-vinegar",
+        "brown-sugar",
+        "honey",
+        "worcestershire",
+        "garlic-powder"
+      ],
       "promised_by_graphic": "pork-cuts-cooking-guide-A",
       "app_log_prefill": null,
-      "related_cut_refs": ["pork/butt", "pork/spareribs"],
+      "related_cut_refs": [
+        "pork/butt",
+        "pork/spareribs"
+      ],
       "review_status": "DRAFT",
-      "updated_at": "2026-09-02"
+      "updated_at": "2026-09-02",
+      "ingredient_groups": [
+        {
+          "name": "Sauce",
+          "items": [
+            {
+              "qty": "1 cup",
+              "item": "yellow mustard"
+            },
+            {
+              "qty": "1/2 cup",
+              "item": "apple cider vinegar"
+            },
+            {
+              "qty": "1/3 cup",
+              "item": "packed brown sugar"
+            },
+            {
+              "qty": "3 tbsp",
+              "item": "honey"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "Worcestershire sauce"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "garlic powder"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "coarse black pepper"
+            },
+            {
+              "qty": "1/2 tsp",
+              "item": "kosher salt"
+            },
+            {
+              "qty": "1/4 tsp",
+              "item": "cayenne",
+              "note": "more if you like heat"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        "Whisk everything together in a small pan.",
+        "Bring it to a bare simmer over medium-low heat. Cook 10 to 15 minutes and keep stirring. It thickens a little and the raw vinegar edge softens.",
+        "Cool it. It thickens more as it cools. Keeps in the fridge for 2 weeks.",
+        "Serve it at the table with pulled pork. Or brush it on ribs and chops in the last 15 to 30 minutes on the pit."
+      ],
+      "notes": [
+        "Untested draft. Written from the concept on the approved pork master. South Carolina style: mustard first, sugar second.",
+        "Skip the honey and add one more tablespoon of vinegar for a sharper version."
+      ],
+      "kitchen_tested": false,
+      "test_log": []
     },
     {
       "slug": "pit-log-house-brisket-rub",
@@ -175,19 +581,37 @@
       "status": "PLANNED",
       "family": "rubs",
       "animal": "beef",
-      "cuts": ["packer-brisket", "chuck-roast", "plate-short-ribs"],
+      "cuts": [
+        "packer-brisket",
+        "chuck-roast",
+        "plate-short-ribs"
+      ],
       "description": "Coarse salt and 16-mesh pepper with a little garlic. The Central Texas base.",
-      "concept_ingredients": ["kosher salt", "16-mesh black pepper", "granulated garlic"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "kosher salt",
+        "16-mesh black pepper",
+        "granulated garlic"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": null,
-      "pit_temp_ref": null, "finish_ref": null,
+      "pit_temp_ref": null,
+      "finish_ref": null,
       "safety_refs": [],
       "wood_refs": [],
-      "equipment_refs": ["shaker"],
-      "shop_ingredient_categories": ["kosher-salt", "coarse-black-pepper", "garlic-powder"],
+      "equipment_refs": [
+        "shaker"
+      ],
+      "shop_ingredient_categories": [
+        "kosher-salt",
+        "coarse-black-pepper",
+        "garlic-powder"
+      ],
       "promised_by_graphic": null,
       "app_log_prefill": null,
-      "related_cut_refs": ["beef/brisket"],
+      "related_cut_refs": [
+        "beef/brisket"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -197,19 +621,47 @@
       "status": "PLANNED",
       "family": "rubs",
       "animal": "pork",
-      "cuts": ["boston-butt", "spareribs-full", "baby-back-ribs"],
+      "cuts": [
+        "boston-butt",
+        "spareribs-full",
+        "baby-back-ribs"
+      ],
       "description": "Sweet, paprika-forward pork rub with a mustard-powder backbone.",
-      "concept_ingredients": ["brown sugar", "paprika", "kosher salt", "black pepper", "garlic powder", "onion powder", "mustard powder", "cayenne"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "brown sugar",
+        "paprika",
+        "kosher salt",
+        "black pepper",
+        "garlic powder",
+        "onion powder",
+        "mustard powder",
+        "cayenne"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": null,
-      "pit_temp_ref": null, "finish_ref": null,
+      "pit_temp_ref": null,
+      "finish_ref": null,
       "safety_refs": [],
       "wood_refs": [],
-      "equipment_refs": ["shaker"],
-      "shop_ingredient_categories": ["brown-sugar", "paprika", "kosher-salt", "coarse-black-pepper", "garlic-powder", "onion-powder", "mustard-powder"],
+      "equipment_refs": [
+        "shaker"
+      ],
+      "shop_ingredient_categories": [
+        "brown-sugar",
+        "paprika",
+        "kosher-salt",
+        "coarse-black-pepper",
+        "garlic-powder",
+        "onion-powder",
+        "mustard-powder"
+      ],
       "promised_by_graphic": null,
       "app_log_prefill": null,
-      "related_cut_refs": ["pork/butt", "pork/spareribs"],
+      "related_cut_refs": [
+        "pork/butt",
+        "pork/spareribs"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -221,17 +673,34 @@
       "animal": null,
       "cuts": [],
       "description": "Eastern Carolina thin vinegar and pepper sauce for pulled pork.",
-      "concept_ingredients": ["apple cider vinegar", "crushed red pepper", "black pepper", "kosher salt", "brown sugar (small)", "hot sauce"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "apple cider vinegar",
+        "crushed red pepper",
+        "black pepper",
+        "kosher salt",
+        "brown sugar (small)",
+        "hot sauce"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "No cook; rests overnight.",
-      "pit_temp_ref": null, "finish_ref": null,
+      "pit_temp_ref": null,
+      "finish_ref": null,
       "safety_refs": [],
       "wood_refs": [],
       "equipment_refs": [],
-      "shop_ingredient_categories": ["apple-cider-vinegar", "crushed-red-pepper", "kosher-salt", "hot-sauce"],
+      "shop_ingredient_categories": [
+        "apple-cider-vinegar",
+        "crushed-red-pepper",
+        "kosher-salt",
+        "hot-sauce"
+      ],
       "promised_by_graphic": null,
       "app_log_prefill": null,
-      "related_cut_refs": ["pork/butt", "pork/picnic-shoulder"],
+      "related_cut_refs": [
+        "pork/butt",
+        "pork/picnic-shoulder"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -243,17 +712,37 @@
       "animal": null,
       "cuts": [],
       "description": "Mayonnaise, vinegar, horseradish and black pepper. For smoked chicken and wings.",
-      "concept_ingredients": ["mayonnaise", "apple cider vinegar", "prepared horseradish", "black pepper", "lemon juice", "kosher salt", "cayenne"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "mayonnaise",
+        "apple cider vinegar",
+        "prepared horseradish",
+        "black pepper",
+        "lemon juice",
+        "kosher salt",
+        "cayenne"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "No cook.",
-      "pit_temp_ref": null, "finish_ref": null,
-      "safety_refs": ["handling-danger-zone"],
+      "pit_temp_ref": null,
+      "finish_ref": null,
+      "safety_refs": [
+        "handling-danger-zone"
+      ],
       "wood_refs": [],
       "equipment_refs": [],
-      "shop_ingredient_categories": ["mayonnaise", "apple-cider-vinegar", "prepared-horseradish", "coarse-black-pepper"],
+      "shop_ingredient_categories": [
+        "mayonnaise",
+        "apple-cider-vinegar",
+        "prepared-horseradish",
+        "coarse-black-pepper"
+      ],
       "promised_by_graphic": null,
       "app_log_prefill": null,
-      "related_cut_refs": ["chicken/thigh", "chicken/wing"],
+      "related_cut_refs": [
+        "chicken/thigh",
+        "chicken/wing"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -263,20 +752,59 @@
       "status": "PLANNED",
       "family": "chicken",
       "animal": "chicken",
-      "cuts": ["bone-in-thigh"],
+      "cuts": [
+        "bone-in-thigh"
+      ],
       "description": "Simple rub, low and slow, hot finish for the skin. Master chicken-A lists olive oil, garlic, paprika, brown sugar, salt, black pepper and smoked paprika.",
-      "concept_ingredients": ["bone-in skin-on thighs", "olive oil", "garlic powder", "paprika", "smoked paprika", "brown sugar", "kosher salt", "black pepper"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "bone-in skin-on thighs",
+        "olive oil",
+        "garlic powder",
+        "paprika",
+        "smoked paprika",
+        "brown sugar",
+        "kosher salt",
+        "black pepper"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "1.5 to 2 hours. Planning estimate only.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "doneness-chicken-dark-meat-preference",
-      "safety_refs": ["safety-poultry", "handling-colour-is-not-doneness"],
-      "wood_refs": ["apple", "cherry"],
-      "equipment_refs": ["instant-read-thermometer", "tongs"],
-      "shop_ingredient_categories": ["paprika", "smoked-paprika", "brown-sugar", "garlic-powder", "kosher-salt", "coarse-black-pepper", "olive-oil"],
+      "safety_refs": [
+        "safety-poultry",
+        "handling-colour-is-not-doneness"
+      ],
+      "wood_refs": [
+        "apple",
+        "cherry"
+      ],
+      "equipment_refs": [
+        "instant-read-thermometer",
+        "tongs"
+      ],
+      "shop_ingredient_categories": [
+        "paprika",
+        "smoked-paprika",
+        "brown-sugar",
+        "garlic-powder",
+        "kosher-salt",
+        "coarse-black-pepper",
+        "olive-oil"
+      ],
       "promised_by_graphic": "chicken-cuts-cooking-guide-A",
-      "app_log_prefill": { "meat_type": "Chicken", "wood_type": ["Apple"], "target_temp": 275, "wrap_method": "None", "rub": "Pit Log chicken rub" },
-      "related_cut_refs": ["chicken/thigh"],
+      "app_log_prefill": {
+        "meat_type": "Chicken",
+        "wood_type": [
+          "Apple"
+        ],
+        "target_temp": 275,
+        "wrap_method": "None",
+        "rub": "Pit Log chicken rub"
+      },
+      "related_cut_refs": [
+        "chicken/thigh"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -286,20 +814,58 @@
       "status": "PLANNED",
       "family": "chicken",
       "animal": "chicken",
-      "cuts": ["bone-in-thigh", "boneless-thigh"],
+      "cuts": [
+        "bone-in-thigh",
+        "boneless-thigh"
+      ],
       "description": "Sweet, savoury, smoky. Master chicken-B lists chicken thighs, honey, soy sauce, garlic, brown sugar, apple cider vinegar and paprika. Glaze goes on in the last 15 to 30 minutes (FSIS).",
-      "concept_ingredients": ["chicken thighs", "honey", "soy sauce", "garlic", "brown sugar", "apple cider vinegar", "paprika"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "chicken thighs",
+        "honey",
+        "soy sauce",
+        "garlic",
+        "brown sugar",
+        "apple cider vinegar",
+        "paprika"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "1.5 to 2 hours. Planning estimate only.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "doneness-chicken-dark-meat-preference",
-      "safety_refs": ["safety-poultry", "handling-sauce-timing"],
-      "wood_refs": ["cherry", "pecan"],
-      "equipment_refs": ["instant-read-thermometer", "basting-brush"],
-      "shop_ingredient_categories": ["honey", "soy-sauce", "brown-sugar", "apple-cider-vinegar", "paprika", "garlic-powder"],
+      "safety_refs": [
+        "safety-poultry",
+        "handling-sauce-timing"
+      ],
+      "wood_refs": [
+        "cherry",
+        "pecan"
+      ],
+      "equipment_refs": [
+        "instant-read-thermometer",
+        "basting-brush"
+      ],
+      "shop_ingredient_categories": [
+        "honey",
+        "soy-sauce",
+        "brown-sugar",
+        "apple-cider-vinegar",
+        "paprika",
+        "garlic-powder"
+      ],
       "promised_by_graphic": "chicken-cuts-cooking-guide-B",
-      "app_log_prefill": { "meat_type": "Chicken", "wood_type": ["Cherry"], "target_temp": 275, "wrap_method": "None", "rub": "Honey garlic glaze" },
-      "related_cut_refs": ["chicken/thigh"],
+      "app_log_prefill": {
+        "meat_type": "Chicken",
+        "wood_type": [
+          "Cherry"
+        ],
+        "target_temp": 275,
+        "wrap_method": "None",
+        "rub": "Honey garlic glaze"
+      },
+      "related_cut_refs": [
+        "chicken/thigh"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -309,20 +875,61 @@
       "status": "PLANNED",
       "family": "lamb",
       "animal": "lamb",
-      "cuts": ["shoulder-roast"],
+      "cuts": [
+        "shoulder-roast"
+      ],
       "description": "Herb-marinated, smoked low and slow until fall-apart tender. The lamb master lists olive oil, garlic, lemon, rosemary, thyme, oregano, sea salt and black pepper.",
-      "concept_ingredients": ["bone-in lamb shoulder", "olive oil", "garlic", "lemon", "rosemary", "thyme", "oregano", "sea salt", "black pepper"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "bone-in lamb shoulder",
+        "olive oil",
+        "garlic",
+        "lemon",
+        "rosemary",
+        "thyme",
+        "oregano",
+        "sea salt",
+        "black pepper"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "6 to 8 hours. Planning estimate only.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "target-lamb-goat-shoulder",
-      "safety_refs": ["safety-whole-muscle-red-meat", "handling-thaw-and-marinate"],
-      "wood_refs": ["oak", "cherry"],
-      "equipment_refs": ["leave-in-probe", "butcher-paper", "meat-claws"],
-      "shop_ingredient_categories": ["olive-oil", "dried-oregano", "dried-thyme", "dried-rosemary", "sea-salt", "coarse-black-pepper", "garlic-powder"],
+      "safety_refs": [
+        "safety-whole-muscle-red-meat",
+        "handling-thaw-and-marinate"
+      ],
+      "wood_refs": [
+        "oak",
+        "cherry"
+      ],
+      "equipment_refs": [
+        "leave-in-probe",
+        "butcher-paper",
+        "meat-claws"
+      ],
+      "shop_ingredient_categories": [
+        "olive-oil",
+        "dried-oregano",
+        "dried-thyme",
+        "dried-rosemary",
+        "sea-salt",
+        "coarse-black-pepper",
+        "garlic-powder"
+      ],
       "promised_by_graphic": "lamb-cuts-cooking-guide",
-      "app_log_prefill": { "meat_type": "Custom", "wood_type": ["Oak"], "target_temp": 250, "wrap_method": "Butcher Paper", "rub": "Mediterranean herb" },
-      "related_cut_refs": ["lamb/shoulder"],
+      "app_log_prefill": {
+        "meat_type": "Custom",
+        "wood_type": [
+          "Oak"
+        ],
+        "target_temp": 250,
+        "wrap_method": "Butcher Paper",
+        "rub": "Mediterranean herb"
+      },
+      "related_cut_refs": [
+        "lamb/shoulder"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
@@ -332,45 +939,186 @@
       "status": "PLANNED",
       "family": "goat",
       "animal": "goat",
-      "cuts": ["goat-shoulder"],
+      "cuts": [
+        "goat-shoulder"
+      ],
       "description": "Bold, aromatic, fall-apart tender. The goat master lists harissa, cumin, coriander, garlic, lemon, olive oil, paprika and cinnamon. Smoke, then wrap or braise, because goat is lean (FSIS).",
-      "concept_ingredients": ["bone-in goat shoulder", "harissa", "cumin", "coriander", "garlic", "lemon", "olive oil", "paprika", "cinnamon", "kosher salt"],
-      "yield": null, "prep_time": null,
+      "concept_ingredients": [
+        "bone-in goat shoulder",
+        "harissa",
+        "cumin",
+        "coriander",
+        "garlic",
+        "lemon",
+        "olive oil",
+        "paprika",
+        "cinnamon",
+        "kosher salt"
+      ],
+      "yield": null,
+      "prep_time": null,
       "cook_time_guidance": "6 to 8 hours, wrapped for the second half. Planning estimate only.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "target-lamb-goat-shoulder",
-      "safety_refs": ["safety-whole-muscle-red-meat"],
-      "wood_refs": ["oak", "pecan"],
-      "equipment_refs": ["leave-in-probe", "butcher-paper", "dutch-oven"],
-      "shop_ingredient_categories": ["harissa", "ground-cumin", "ground-coriander", "paprika", "ground-cinnamon", "olive-oil", "kosher-salt"],
+      "safety_refs": [
+        "safety-whole-muscle-red-meat"
+      ],
+      "wood_refs": [
+        "oak",
+        "pecan"
+      ],
+      "equipment_refs": [
+        "leave-in-probe",
+        "butcher-paper",
+        "dutch-oven"
+      ],
+      "shop_ingredient_categories": [
+        "harissa",
+        "ground-cumin",
+        "ground-coriander",
+        "paprika",
+        "ground-cinnamon",
+        "olive-oil",
+        "kosher-salt"
+      ],
       "promised_by_graphic": "goat-cuts-cooking-guide",
-      "app_log_prefill": { "meat_type": "Custom", "wood_type": ["Oak"], "target_temp": 240, "wrap_method": "Butcher Paper", "rub": "Moroccan spice" },
-      "related_cut_refs": ["goat/shoulder"],
+      "app_log_prefill": {
+        "meat_type": "Custom",
+        "wood_type": [
+          "Oak"
+        ],
+        "target_temp": 240,
+        "wrap_method": "Butcher Paper",
+        "rub": "Moroccan spice"
+      },
+      "related_cut_refs": [
+        "goat/shoulder"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     },
     {
       "slug": "pit-log-maple-cedar-salmon",
       "title": "Pit Log Maple Cedar Salmon",
-      "status": "PLANNED",
+      "status": "TEST_V1",
       "family": "salmon",
       "animal": "salmon",
-      "cuts": ["center-cut-fillet"],
+      "cuts": [
+        "center-cut-fillet"
+      ],
       "description": "Sweet, smoky, balanced, on a soaked cedar plank. The salmon master lists maple syrup, Dijon mustard, soy sauce, garlic, lemon juice and smoked paprika. The page prints 145 F as the federal minimum and labels anything lower as preference.",
-      "concept_ingredients": ["center-cut salmon fillet, skin on", "maple syrup", "Dijon mustard", "soy sauce", "garlic", "lemon juice", "smoked paprika", "cedar plank"],
-      "yield": null, "prep_time": null,
-      "cook_time_guidance": "15 to 20 minutes on a plank at 350 F, or 45 to 60 minutes at 225 F. Planning estimate only.",
+      "concept_ingredients": [
+        "center-cut salmon fillet, skin on",
+        "maple syrup",
+        "Dijon mustard",
+        "soy sauce",
+        "garlic",
+        "lemon juice",
+        "smoked paprika",
+        "cedar plank"
+      ],
+      "yield": "Serves 4",
+      "prep_time": "15 minutes, plus 1 hour to soak the plank",
+      "cook_time_guidance": "15 to 20 minutes on a plank at 350 F, or 45 to 60 minutes smoked at 225 F. Estimate.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "safety-fish",
-      "safety_refs": ["safety-fish"],
-      "wood_refs": ["alder", "apple"],
-      "equipment_refs": ["cedar-planks", "instant-read-thermometer", "fish-spatula"],
-      "shop_ingredient_categories": ["maple-syrup", "dijon-mustard", "soy-sauce", "smoked-paprika", "cedar-planks"],
+      "safety_refs": [
+        "safety-fish"
+      ],
+      "wood_refs": [
+        "alder",
+        "apple"
+      ],
+      "equipment_refs": [
+        "cedar-planks",
+        "instant-read-thermometer",
+        "fish-spatula"
+      ],
+      "shop_ingredient_categories": [
+        "maple-syrup",
+        "dijon-mustard",
+        "soy-sauce",
+        "smoked-paprika",
+        "cedar-planks"
+      ],
       "promised_by_graphic": "salmon-cuts-cooking-guide",
-      "app_log_prefill": { "meat_type": "Fish", "wood_type": ["Alder"], "target_temp": 225, "wrap_method": "None", "rub": "Maple Dijon glaze" },
-      "related_cut_refs": ["salmon/center-cut"],
+      "app_log_prefill": {
+        "meat_type": "Fish",
+        "wood_type": [
+          "Alder"
+        ],
+        "target_temp": 225,
+        "wrap_method": "None",
+        "rub": "Maple Dijon glaze"
+      },
+      "related_cut_refs": [
+        "salmon/center-cut"
+      ],
       "review_status": "DRAFT",
-      "updated_at": "2026-09-02"
+      "updated_at": "2026-09-02",
+      "ingredient_groups": [
+        {
+          "name": "Fish",
+          "items": [
+            {
+              "qty": "1.5 to 2 lb",
+              "item": "center-cut salmon fillet, skin on"
+            },
+            {
+              "qty": "1",
+              "item": "untreated cedar grilling plank"
+            }
+          ]
+        },
+        {
+          "name": "Glaze",
+          "items": [
+            {
+              "qty": "1/4 cup",
+              "item": "pure maple syrup"
+            },
+            {
+              "qty": "2 tbsp",
+              "item": "Dijon mustard"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "soy sauce"
+            },
+            {
+              "qty": "1",
+              "item": "garlic clove, grated"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "lemon juice"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "smoked paprika"
+            },
+            {
+              "qty": "1/2 tsp",
+              "item": "coarse black pepper"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        "Soak the plank in water for at least 1 hour. Weigh it down so it stays under.",
+        "Whisk the glaze. Set a third of it aside for serving.",
+        "Pat the salmon dry. Lay it skin down on the plank. Brush on half of the rest of the glaze.",
+        "Grill: heat to 350 F, indirect. Put the plank on and close the lid. Smoker: run 225 F with alder or apple.",
+        "Brush on the rest of the glaze after 10 minutes on the grill, or after 30 minutes in the smoker.",
+        "Check the thickest part with a thermometer through the side. USDA FSIS and FDA say 145 F, or until the flesh is opaque and flakes with a fork. Many cooks pull it earlier for a softer center. That is a preference below the federal minimum, and this page says so.",
+        "Rest 3 to 5 minutes on the plank. Spoon the reserved glaze over the top. Serve from the board."
+      ],
+      "notes": [
+        "Untested draft from the concept on the approved salmon master.",
+        "Cedar planks are one use on the grill. Rinse and reuse only for low smoking."
+      ],
+      "kitchen_tested": false,
+      "test_log": []
     }
   ]
 }

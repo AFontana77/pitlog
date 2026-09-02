@@ -194,6 +194,17 @@ export interface AppLogPrefill {
   rub: string;
 }
 
+export interface IngredientItem {
+  qty: string;
+  item: string;
+  note?: string;
+}
+
+export interface IngredientGroup {
+  name: string;
+  items: IngredientItem[];
+}
+
 export interface Recipe {
   slug: string;
   title: string;
@@ -203,6 +214,13 @@ export interface Recipe {
   cuts: string[];
   description: string;
   concept_ingredients: string[];
+  /** Present from TEST_V1 up. */
+  ingredient_groups?: IngredientGroup[];
+  steps?: string[];
+  notes?: string[];
+  yield?: string | null;
+  prep_time?: string | null;
+  kitchen_tested?: boolean;
   cook_time_guidance: string | null;
   pit_temp_ref: string | null;
   finish_ref: string | null;

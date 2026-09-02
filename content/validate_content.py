@@ -247,6 +247,26 @@ for r in RECIPES:
         for ing in r.get("concept_ingredients", []):
             if QTY_RX.search(ing):
                 fail(f"recipes:{r['slug']} PLANNED recipe carries a quantity in concept_ingredients ({ing!r}); quantities arrive at TEST_V1")
+    if r.get("status") not in ("PLANNED", "RETIRED"):
+        # From TEST_V1 up a recipe is a real recipe: quantities, steps, yield.
+        groups = r.get("ingredient_groups") or []
+        if not groups or not any(g.get("items") for g in groups):
+            fail(f"recipes:{r['slug']} is {r['status']} without ingredient_groups")
+        if not r.get("steps"):
+            fail(f"recipes:{r['slug']} is {r['status']} without steps")
+        if not r.get("yield"):
+            fail(f"recipes:{r['slug']} is {r['status']} without yield")
+        if r.get("kitchen_tested") is None:
+            fail(f"recipes:{r['slug']} is {r['status']} without an explicit kitchen_tested flag")
+        # A recipe that touches a safety minimum must say the number, and may not
+        # tell the cook to pull under it. Cheap regex, deliberately blunt.
+        text = " ".join(r.get("steps", [])).lower()
+        if r.get("animal") == "chicken" and "165" not in text:
+            fail(f"recipes:{r['slug']} chicken recipe never states 165 F")
+        if r.get("animal") == "salmon" and "145" not in text:
+            fail(f"recipes:{r['slug']} salmon recipe never states 145 F")
+        if r.get("animal") in ("beef", "pork", "lamb", "goat") and "145" not in text:
+            fail(f"recipes:{r['slug']} red-meat recipe never states the 145 F minimum")
     for k in ("pit_temp_ref", "finish_ref"):
         v = r.get(k)
         if v and v not in TEMP_IDS:

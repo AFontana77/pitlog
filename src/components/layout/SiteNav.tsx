@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const links = [
+  { href: '/cuts', label: 'Cuts' },
+  { href: '/temperatures', label: 'Temps' },
+  { href: '/woods', label: 'Woods' },
+  { href: '/recipes', label: 'Recipes' },
   { href: '/library', label: 'Library' },
-  { href: '/free-download', label: 'Free Download' },
-  { href: '/about', label: 'About' },
 ];
 
 const linkStyle = {

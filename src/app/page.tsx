@@ -8,12 +8,14 @@ export const metadata: Metadata = {
   description: "PitLog has 129+ BBQ cuts with target temps, stall temps, wood pairings, and cook time estimates. Log every cook, rate the result, and build a record of everything you've pulled off the smoker. Free on iPhone and Android.",
 };
 
+// Figures from the content spine (content/temperatures). Collagen cuts show
+// the tenderness window; poultry shows the USDA minimum.
 const REFERENCE_ROWS = [
-  { cut: 'Brisket', time: '12-18h', temp: '225°F', target: '203°F internal' },
-  { cut: 'Pork shoulder', time: '10-14h', temp: '225°F', target: '203°F internal' },
-  { cut: 'Spare ribs', time: '5-6h', temp: '225°F', target: 'Tender, bend test' },
-  { cut: 'Chicken', time: '3-4h', temp: '250°F', target: '165°F internal' },
-  { cut: 'Turkey', time: '4-5h', temp: '275°F', target: '165°F internal' },
+  { cut: 'Brisket', time: '10-16h', temp: '225-250°F', target: '195-205°F, probe tender' },
+  { cut: 'Pork shoulder', time: '8-14h', temp: '225-275°F', target: '185-205°F, bone slips' },
+  { cut: 'Spare ribs', time: '5-7h', temp: '225-250°F', target: 'Bend test, fork tender' },
+  { cut: 'Chicken', time: '1-2h', temp: '275-325°F', target: '165°F USDA minimum' },
+  { cut: 'Salmon', time: '45-60m', temp: '225°F', target: '145°F USDA minimum' },
 ];
 
 const STATS = [
