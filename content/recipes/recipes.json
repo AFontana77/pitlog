@@ -362,7 +362,7 @@
       "family": "sauces",
       "animal": null,
       "cuts": [],
-      "description": "A bright, smoky house sauce. The beef quick-reference master describes it as built on ketchup, reduced apple juice, fresh orange juice, brown sugar, vinegar, molasses and warm spice, for brisket, short ribs and grilled beef.",
+      "description": "A bright, smoky house sauce built on ketchup, reduced apple juice, fresh orange juice, brown sugar, vinegar, molasses and warm spice. Made for brisket, short ribs and grilled beef.",
       "concept_ingredients": [
         "ketchup",
         "apple juice",
@@ -466,7 +466,7 @@
         "On the pit, brush it on in the last 15 to 30 minutes. The sugar sets and does not burn. That is the USDA FSIS timing for sauce on smoked meat."
       ],
       "notes": [
-        "Untested draft. Written from the concept on the approved beef quick-reference master. The amounts are a first pass. They will move after the first kitchen test.",
+        "Untested draft. Concept from the approved Pit Log beef graphic. The amounts are a first pass. They will move after the first kitchen test.",
         "Built for brisket, short ribs and grilled beef. Thin it with a splash of the reduced apple juice to use it as a mop."
       ],
       "kitchen_tested": false,
@@ -479,7 +479,7 @@
       "family": "sauces",
       "animal": null,
       "cuts": [],
-      "description": "A tangy South Carolina mustard sauce. Master pork-A lists yellow mustard, apple cider vinegar, brown sugar, honey, Worcestershire, garlic and black pepper, for pulled pork, ribs and chops.",
+      "description": "A tangy South Carolina mustard sauce: yellow mustard, apple cider vinegar, brown sugar, honey, Worcestershire, garlic and black pepper. For pulled pork, ribs and chops.",
       "concept_ingredients": [
         "yellow mustard",
         "apple cider vinegar",
@@ -569,7 +569,7 @@
         "Serve it at the table with pulled pork. Or brush it on ribs and chops in the last 15 to 30 minutes on the pit."
       ],
       "notes": [
-        "Untested draft. Written from the concept on the approved pork master. South Carolina style: mustard first, sugar second.",
+        "Untested draft. Concept from the approved Pit Log pork graphic. South Carolina style: mustard first, sugar second.",
         "Skip the honey and add one more tablespoon of vinegar for a sharper version."
       ],
       "kitchen_tested": false,
@@ -755,7 +755,7 @@
       "cuts": [
         "bone-in-thigh"
       ],
-      "description": "Simple rub, low and slow, hot finish for the skin. Master chicken-A lists olive oil, garlic, paprika, brown sugar, salt, black pepper and smoked paprika.",
+      "description": "Simple rub, low and slow, hot finish for the skin. Olive oil, garlic, paprika, smoked paprika, brown sugar, salt and black pepper.",
       "concept_ingredients": [
         "bone-in skin-on thighs",
         "olive oil",
@@ -818,7 +818,7 @@
         "bone-in-thigh",
         "boneless-thigh"
       ],
-      "description": "Sweet, savoury, smoky. Master chicken-B lists chicken thighs, honey, soy sauce, garlic, brown sugar, apple cider vinegar and paprika. Glaze goes on in the last 15 to 30 minutes (FSIS).",
+      "description": "Sweet, savoury, smoky. Chicken thighs, honey, soy sauce, garlic, brown sugar, apple cider vinegar and paprika. Glaze goes on in the last 15 to 30 minutes (FSIS).",
       "concept_ingredients": [
         "chicken thighs",
         "honey",
@@ -878,7 +878,7 @@
       "cuts": [
         "shoulder-roast"
       ],
-      "description": "Herb-marinated, smoked low and slow until fall-apart tender. The lamb master lists olive oil, garlic, lemon, rosemary, thyme, oregano, sea salt and black pepper.",
+      "description": "Herb-marinated, smoked low and slow until fall-apart tender. Olive oil, garlic, lemon, rosemary, thyme, oregano, sea salt and black pepper.",
       "concept_ingredients": [
         "bone-in lamb shoulder",
         "olive oil",
@@ -942,7 +942,7 @@
       "cuts": [
         "goat-shoulder"
       ],
-      "description": "Bold, aromatic, fall-apart tender. The goat master lists harissa, cumin, coriander, garlic, lemon, olive oil, paprika and cinnamon. Smoke, then wrap or braise, because goat is lean (FSIS).",
+      "description": "Bold, aromatic, fall-apart tender. Harissa, cumin, coriander, garlic, lemon, olive oil, paprika and cinnamon. Smoke, then wrap or braise, because goat is lean (FSIS).",
       "concept_ingredients": [
         "bone-in goat shoulder",
         "harissa",
@@ -1006,7 +1006,7 @@
       "cuts": [
         "center-cut-fillet"
       ],
-      "description": "Sweet, smoky, balanced, on a soaked cedar plank. The salmon master lists maple syrup, Dijon mustard, soy sauce, garlic, lemon juice and smoked paprika. The page prints 145 F as the federal minimum and labels anything lower as preference.",
+      "description": "Sweet, smoky, balanced, on a soaked cedar plank. Maple syrup, Dijon mustard, soy sauce, garlic, lemon juice and smoked paprika. The page prints 145 F as the federal minimum and labels anything lower as preference.",
       "concept_ingredients": [
         "center-cut salmon fillet, skin on",
         "maple syrup",
@@ -1114,7 +1114,7 @@
         "Rest 3 to 5 minutes on the plank. Spoon the reserved glaze over the top. Serve from the board."
       ],
       "notes": [
-        "Untested draft from the concept on the approved salmon master.",
+        "Untested draft. Concept from the approved Pit Log salmon graphic.",
         "Cedar planks are one use on the grill. Rinse and reuse only for low smoking."
       ],
       "kitchen_tested": false,

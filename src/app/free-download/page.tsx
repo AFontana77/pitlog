@@ -4,16 +4,18 @@ import { EmailCaptureForm } from '@/components/EmailCaptureForm';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Free BBQ Cook Times Reference Card",
-  description: "One-page quick reference. Target temps, approximate cook times, and wood suggestions for 20 common cuts. Free printable from PitLog. No signup required.",
+  title: "Free BBQ Field Guide: Meat Cuts, Temps and Smoke Woods (PDF)",
+  description: "The Pit Log field guide. USDA safe temperatures, the pitmaster finish for every collagen cut, six animal cut pages, the smoke wood chart and two cook log pages. Free PDF by email.",
 };
 
+// Matches what build_pitlog_field_guide.py actually renders from the spine.
 const INSIDE = [
-  '20 most common cuts with target internal temps',
-  'Approximate cook time ranges by weight',
-  'Top wood pairing suggestion for each protein',
-  'Stall temperature ranges for low-and-slow cuts',
-  'Printable. Laminate it and hang it at the pit.',
+  'The full USDA FSIS safe minimum chart, with the source and the date we read it',
+  'One page each for beef, pork, lamb, goat, chicken and salmon: regions, tenderness, best method, finish, slice',
+  'Tenderness targets for brisket, shoulder, ribs, belly and short ribs, labelled craft, never safety',
+  'The eight smoke woods and the pairing matrix',
+  'Handling rules: the danger zone, two thermometers, probe placement, rest, sauce timing',
+  'Two cook log pages. Print them, laminate the rest, hang it at the pit.',
 ];
 
 export default function FreeDownloadPage() {
@@ -43,19 +45,19 @@ export default function FreeDownloadPage() {
                 }}
                 aria-hidden="true"
               />
-              FREE PRINTABLE
+              FREE FIELD GUIDE
             </div>
             <h1
               className="font-display text-4xl sm:text-5xl lg:text-6xl mb-6"
               style={{ color: 'oklch(0.93 0.020 50)', lineHeight: 1.05 }}
             >
-              Free BBQ cook times reference card.
+              Free meat cuts, temps and smoke field guide.
             </h1>
             <p
               className="text-lg leading-relaxed mb-12 max-w-2xl"
               style={{ color: 'oklch(0.82 0.018 50)' }}
             >
-              One-page quick reference. Target temps, approximate cook times, and wood suggestions for 20 common cuts.
+              The USDA safe temperatures, the pitmaster finish for the tough cuts, one page per animal, the smoke wood chart and two cook log pages. Built from the same records as this site. No Amazon links, no filler.
             </p>
 
             <div className="grid lg:grid-cols-2 gap-8">

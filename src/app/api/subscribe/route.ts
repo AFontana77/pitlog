@@ -25,8 +25,8 @@ const SITE = 'pitlog.app';
  * the subscriber received nothing at all.
  */
 const RESOURCE = {
-  title: 'Your BBQ Cook Times Reference Card',
-  blurb: 'The USDA safe minimum internal temperatures, kept separate from the texture temperatures barbecue actually cooks to, and a cook log.',
+  title: 'Your Pit Log Meat Cuts, Temps & Smoke Field Guide',
+  blurb: 'The USDA safe minimum temperatures, kept apart from the tenderness temperatures barbecue actually cooks to. One page per animal, the smoke wood chart, and two cook log pages.',
   url: 'https://pitlog.app/pitlog-bbq-cook-times-reference-card.pdf',
 };
 
