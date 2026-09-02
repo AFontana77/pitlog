@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "purpose": "The six animals Pit Log supports. Coverage was decided by the approved ChatGPT master set; every fact below comes from the cited sources, not from the artwork.",
+    "record_shape": "slug, name, plural, category, primal_scheme (how the product divides the animal, with the source-of-record for that scheme), fsis_primals (what USDA FSIS names as primals, when it differs), safety_ref (id in temperatures/safety_minimums.json), wood_refs, master_graphic (id in graphics/masters.json), route, source_refs, review_status, updated_at"
+  },
+  "animals": [
+    {
+      "slug": "beef",
+      "name": "Beef",
+      "plural": "beef",
+      "category": "red_meat",
+      "summary": "Meat from full-grown cattle about two years old. The tough, hard-working primals (chuck, brisket, round, shank) want low and slow; the middle meats (rib, short loin, sirloin) want dry heat.",
+      "primal_scheme": {
+        "regions": ["chuck", "rib", "short-loin", "sirloin", "brisket", "plate", "flank", "round", "shank"],
+        "note": "Nine regions, matching the Beef Board retail chart convention where the loin is shown as short loin and sirloin. USDA FSIS names four major primals (chuck, loin, rib, round); brisket, plate, flank and shank are treated as primals by the Beef Board. Short loin and sirloin are both sub-primals of the FSIS loin.",
+        "scheme_source_refs": ["beef-board-cuts", "fsis-beef-farm-to-table"]
+      },
+      "fsis_primals": ["chuck", "loin", "rib", "round"],
+      "safety_ref": "safety-whole-muscle-red-meat",
+      "ground_safety_ref": "safety-ground-meat",
+      "wood_refs": ["oak", "hickory", "mesquite", "pecan", "cherry"],
+      "master_graphic": "beef-cuts-cooking-guide",
+      "secondary_graphic": "beef-cut-quick-reference",
+      "route": "/cuts/beef",
+      "source_refs": ["fsis-beef-farm-to-table", "beef-board-cuts", "fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "pork",
+      "name": "Pork",
+      "plural": "pork",
+      "category": "red_meat",
+      "summary": "Pork is classed as red meat. Since 2011 USDA's whole-muscle minimum is 145 F with a 3 minute rest, and safely cooked pork can still be pink. The shoulder is the most forgiving barbecue cut there is.",
+      "primal_scheme": {
+        "regions": ["butt", "picnic-shoulder", "loin", "spareribs", "belly", "ham", "hock"],
+        "note": "Seven regions, matching master pork-A. USDA FSIS names four primals: shoulder (butt + picnic + hock), loin, side (spareribs + belly/bacon) and leg (ham). Master pork-B also shows the jowl; it is recorded as a retail cut under the shoulder rather than a region.",
+        "scheme_source_refs": ["fsis-pork-farm-to-table", "pork-board-cuts"]
+      },
+      "fsis_primals": ["shoulder", "loin", "side", "leg"],
+      "safety_ref": "safety-whole-muscle-red-meat",
+      "ground_safety_ref": "safety-ground-meat",
+      "wood_refs": ["hickory", "apple", "cherry", "pecan"],
+      "master_graphic": "pork-cuts-cooking-guide-A",
+      "secondary_graphic": "pork-cuts-cooking-guide-B",
+      "route": "/cuts/pork",
+      "source_refs": ["fsis-pork-farm-to-table", "pork-board-cuts", "pork-board-smoking", "fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "lamb",
+      "name": "Lamb",
+      "plural": "lamb",
+      "category": "red_meat",
+      "summary": "Lamb is a sheep under about a year old; older animals are mutton. Rack and loin are tender dry-heat cuts. Shoulder, shank and breast are collagen cuts that reward low and slow.",
+      "primal_scheme": {
+        "regions": ["shoulder", "rack", "loin", "leg", "breast", "flank", "shank"],
+        "note": "Seven regions, matching the master. USDA FSIS names five primals: shoulder, rack, shank/breast, loin, leg. Flank is not an FSIS primal; it is part of the breast/flank plate and is kept as a region because the product's diagram and the retail 'lamb flank' cut both exist.",
+        "scheme_source_refs": ["fsis-lamb-farm-to-table", "american-lamb-board-cuts"]
+      },
+      "fsis_primals": ["shoulder", "rack", "shank/breast", "loin", "leg"],
+      "safety_ref": "safety-whole-muscle-red-meat",
+      "ground_safety_ref": "safety-ground-meat",
+      "wood_refs": ["oak", "pecan", "hickory", "cherry"],
+      "master_graphic": "lamb-cuts-cooking-guide",
+      "route": "/cuts/lamb",
+      "source_refs": ["fsis-lamb-farm-to-table", "american-lamb-board-cuts", "american-lamb-board-time-temp", "fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "goat",
+      "name": "Goat",
+      "plural": "goat",
+      "category": "red_meat",
+      "summary": "Goat is red meat, very lean, and cut like lamb. FSIS notes a goat carcass rarely has enough fat to protect it from drying, which is why gentle heat and moisture matter more than with any other animal here.",
+      "primal_scheme": {
+        "regions": ["shoulder", "rack", "loin", "leg", "breast", "flank", "shank"],
+        "note": "Same seven regions as lamb. USDA FSIS: 'Retail cuts of goat are similar to those for lamb or mutton.' No goat-specific industry cut chart was located; the lamb scheme is used with that provenance stated.",
+        "scheme_source_refs": ["fsis-goat-farm-to-table", "fsis-lamb-farm-to-table"]
+      },
+      "fsis_primals": ["as lamb: shoulder", "rack", "shank/breast", "loin", "leg"],
+      "safety_ref": "safety-whole-muscle-red-meat",
+      "ground_safety_ref": "safety-ground-meat",
+      "wood_refs": ["oak", "pecan", "mesquite"],
+      "master_graphic": "goat-cuts-cooking-guide",
+      "route": "/cuts/goat",
+      "source_refs": ["fsis-goat-farm-to-table", "fsis-lamb-farm-to-table", "fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "chicken",
+      "name": "Chicken",
+      "plural": "chicken",
+      "category": "poultry",
+      "summary": "Every part of a chicken, including ground chicken and stuffing, is safe at 165 F, checked in the innermost thigh and wing and the thickest breast. No rest is required by USDA. Pink meat near the bone can persist at 165 F, especially on smoked young birds, and is not a sign of danger.",
+      "primal_scheme": {
+        "regions": ["breast", "wing", "thigh", "drumstick", "back", "tail"],
+        "note": "Six regions, matching master chicken-B (whose diagram labels all six correctly; chicken-A omits the thigh callout on the bird). USDA FSIS names the parts it regulates as breasts, whole bird, legs, thighs, wings, ground poultry, giblets and stuffing.",
+        "scheme_source_refs": ["fsis-safe-temp-chart", "fsis-chicken-farm-to-table"]
+      },
+      "fsis_primals": ["breasts", "whole bird", "legs", "thighs", "wings", "giblets"],
+      "safety_ref": "safety-poultry",
+      "ground_safety_ref": "safety-poultry",
+      "wood_refs": ["apple", "cherry", "pecan", "maple"],
+      "master_graphic": "chicken-cuts-cooking-guide-B",
+      "secondary_graphic": "chicken-cuts-cooking-guide-A",
+      "route": "/cuts/chicken",
+      "source_refs": ["fsis-chicken-farm-to-table", "fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "salmon",
+      "name": "Salmon",
+      "plural": "salmon",
+      "category": "fish",
+      "summary": "USDA FSIS and FDA both put fish at 145 F, or until the flesh is opaque and separates easily with a fork. Salmon cooks fast, does not stall, and is the one Pit Log animal where the delicate flavour argues for the mildest woods.",
+      "primal_scheme": {
+        "regions": ["collar", "top-loin", "center-cut", "belly", "tail", "second-cut"],
+        "note": "Six regions matching the master. These are fishmonger and restaurant trade terms for portions of a side of salmon, not a regulated primal scheme; no federal or industry cut chart naming them was located. The Alaska Seafood Marketing Institute trim guide governs fillet trim levels, not these portions. Region records carry NEEDS_SOURCE for naming and SOURCED for safety.",
+        "scheme_source_refs": ["fda-seafood-safety", "fsis-safe-temp-chart"]
+      },
+      "fsis_primals": [],
+      "safety_ref": "safety-fish",
+      "ground_safety_ref": null,
+      "wood_refs": ["alder", "apple", "cherry"],
+      "master_graphic": "salmon-cuts-cooking-guide",
+      "route": "/cuts/salmon",
+      "source_refs": ["fda-seafood-safety", "fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    }
+  ]
+}

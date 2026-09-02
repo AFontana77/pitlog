@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "purpose": "SAFETY_MINIMUM records. These are food-safety floors from USDA FSIS (and FDA for seafood). They are not preferences and no other record may present a lower figure as safe. USDA/FSIS wins every conflict.",
+    "kind": "SAFETY_MINIMUM",
+    "rendering_rule": "Every surface that prints any temperature for an animal must print that animal's SAFETY_MINIMUM alongside it, name USDA FSIS as the source, and state the rest time where one applies. Colour is never proof of safety."
+  },
+  "records": [
+    {
+      "id": "safety-whole-muscle-red-meat",
+      "kind": "SAFETY_MINIMUM",
+      "applies_to": ["beef", "pork", "lamb", "goat", "veal"],
+      "scope": "steaks, chops and roasts (whole muscle)",
+      "temp_f": 145,
+      "temp_c": 62.8,
+      "rest": "at least 3 minutes before carving or consuming",
+      "measurement": "food thermometer in the thickest part, away from bone, fat and gristle, read before removing from the heat source",
+      "statement": "Cook all raw beef, pork, lamb, goat and veal steaks, chops and roasts to a minimum internal temperature of 145 F (62.8 C) and allow to rest for at least 3 minutes.",
+      "notes": [
+        "Fresh pork at 145 F can still be pink in the centre and is safe (FSIS).",
+        "Consumers may choose higher temperatures for personal preference; lower is not safe."
+      ],
+      "source_refs": ["fsis-safe-temp-chart", "fsis-beef-farm-to-table", "fsis-pork-farm-to-table", "fsis-lamb-farm-to-table", "fsis-goat-farm-to-table", "fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "safety-ground-meat",
+      "kind": "SAFETY_MINIMUM",
+      "applies_to": ["beef", "pork", "lamb", "goat", "veal"],
+      "scope": "ground meat, burgers, sausage mixtures, meat loaf, and organ or variety meats",
+      "temp_f": 160,
+      "temp_c": 71.1,
+      "rest": null,
+      "measurement": "food thermometer through the side of a patty to the centre",
+      "statement": "Cook ground beef, pork, lamb, goat and veal, and all organ and variety meats, to 160 F (71.1 C).",
+      "notes": [
+        "One in four hamburgers that look done may not be safely cooked (FSIS)."
+      ],
+      "source_refs": ["fsis-safe-temp-chart", "fsis-doneness-vs-safety", "fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "safety-poultry",
+      "kind": "SAFETY_MINIMUM",
+      "applies_to": ["chicken", "turkey", "duck", "all poultry"],
+      "scope": "breasts, whole bird, legs, thighs, wings, ground poultry, giblets and stuffing",
+      "temp_f": 165,
+      "temp_c": 73.9,
+      "rest": null,
+      "measurement": "for a whole bird, check the innermost part of the thigh and wing and the thickest part of the breast",
+      "statement": "Cook all poultry, including ground poultry, giblets and stuffing, to 165 F (73.9 C).",
+      "notes": [
+        "USDA does not require a rest for poultry. Two of the ChatGPT masters print '165 F with a 3 minute rest' for chicken; the rest is not USDA guidance and is recorded as a graphics defect.",
+        "Pink colour in safely cooked chicken can come from heat-stable hemoglobin, and smoking or grilling makes it more likely in young birds (FSIS).",
+        "Never pull poultry below 165 F to rely on carryover. Carryover is not a safety mechanism."
+      ],
+      "source_refs": ["fsis-safe-temp-chart", "fsis-chicken-farm-to-table", "fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "safety-fish",
+      "kind": "SAFETY_MINIMUM",
+      "applies_to": ["salmon", "fish", "shellfish"],
+      "scope": "fish and shellfish",
+      "temp_f": 145,
+      "temp_c": 62.8,
+      "rest": null,
+      "measurement": "thermometer in the thickest part of the fillet; or the flesh is opaque and separates easily with a fork",
+      "statement": "Cook fish and shellfish to 145 F (62.8 C), or until the flesh is opaque and separates easily with a fork.",
+      "notes": [
+        "Salmon served below 145 F (the common 120 to 135 F preference range) is a culinary preference below the federal minimum and must be labelled as such wherever it appears."
+      ],
+      "source_refs": ["fsis-safe-temp-chart", "fda-seafood-safety"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "safety-ham-uncooked",
+      "kind": "SAFETY_MINIMUM",
+      "applies_to": ["pork"],
+      "scope": "fresh ham, or smoked ham sold uncooked",
+      "temp_f": 145,
+      "temp_c": 62.8,
+      "rest": "at least 3 minutes",
+      "measurement": "thickest part, away from bone",
+      "statement": "Cook fresh or smoked (uncooked) ham to 145 F (62.8 C) and allow to rest for at least 3 minutes.",
+      "notes": [],
+      "source_refs": ["fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "safety-ham-reheat",
+      "kind": "SAFETY_MINIMUM",
+      "applies_to": ["pork"],
+      "scope": "fully cooked ham, reheating",
+      "temp_f": 165,
+      "temp_c": 73.9,
+      "rest": null,
+      "measurement": "thickest part",
+      "statement": "Reheat fully cooked ham to 165 F (73.9 C). A ham packaged in a USDA-inspected plant may be reheated to 140 F (60 C).",
+      "notes": [
+        "Master pork-B prints 'Reheat to 140 F or until hot' for ham with no plant qualifier. That is only correct for USDA-inspected-plant packaged ham; recorded as a graphics defect."
+      ],
+      "source_refs": ["fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "safety-leftovers",
+      "kind": "SAFETY_MINIMUM",
+      "applies_to": ["all"],
+      "scope": "leftovers and casseroles, including reheated smoked meat",
+      "temp_f": 165,
+      "temp_c": 73.9,
+      "rest": null,
+      "measurement": "thickest part, hot and steaming",
+      "statement": "Reheat leftovers and casseroles to 165 F (73.9 C).",
+      "notes": [
+        "Refrigerate smoked meat within 2 hours of removing it from the smoker; use within 4 days or freeze (FSIS)."
+      ],
+      "source_refs": ["fsis-safe-temp-chart", "fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "safety-eggs",
+      "kind": "SAFETY_MINIMUM",
+      "applies_to": ["eggs"],
+      "scope": "egg dishes",
+      "temp_f": 160,
+      "temp_c": 71.1,
+      "rest": null,
+      "measurement": "centre of the dish",
+      "statement": "Cook egg dishes to 160 F (71.1 C).",
+      "notes": ["Kept so the master temperature reference page can print the full FSIS chart without omission."],
+      "source_refs": ["fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    }
+  ]
+}

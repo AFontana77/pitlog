@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "content:validate": "py -3.11 content/validate_content.py",
+    "content:export": "node content/export_bundle.mjs"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

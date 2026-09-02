@@ -1,0 +1,444 @@
+{
+  "_meta": {
+    "purpose": "Citation graph for the Pit Log content spine. Every factual record in content/ points at an id here. Nothing in this file was written from memory: every url was fetched and read on the accessed date.",
+    "tiers": {
+      "1": "federal or state government agency",
+      "2": "university or extension programme",
+      "3": "recognised industry body or standards organisation",
+      "4": "manufacturer, provider or platform documentation",
+      "5": "credible practitioner reporting. QUALITATIVE ONLY. May never carry a safety claim."
+    },
+    "update_sensitivity": {
+      "safety-critical": "revised guidance changes what is SAFE. Recheck on any change.",
+      "volatile": "moves with markets, catalogues or programme terms. Recheck on a cadence.",
+      "stable": "physics, anatomy, published standards. Changes rarely."
+    },
+    "fetch_note": "fsis.usda.gov, beefitswhatsfordinner.com, alaskaseafood.org and gelato.com return HTTP 403 to non-browser user agents. Read them through a real browser session; the 403 is bot filtering, not a dead page."
+  },
+  "sources": [
+    {
+      "id": "fsis-safe-temp-chart",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Safe Minimum Internal Temperature Chart",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2025-04-14",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Beef, pork, veal and lamb steaks, chops and roasts: 145 F (62.8 C) and rest at least 3 minutes",
+        "Ground meats: 160 F (71.1 C)",
+        "All poultry, including ground poultry, giblets and stuffing: 165 F (73.9 C)",
+        "Ham, fresh or smoked (uncooked): 145 F and rest at least 3 minutes",
+        "Fully cooked ham to reheat: 140 F if packaged in a USDA-inspected plant, otherwise 165 F",
+        "Fish and shellfish: 145 F (62.8 C)",
+        "Eggs: 160 F. Leftovers and casseroles: 165 F",
+        "Measured with a food thermometer before removing food from the heat source",
+        "For reasons of personal preference, consumers may choose to cook food to higher temperatures"
+      ]
+    },
+    {
+      "id": "fsis-beef-farm-to-table",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Beef From Farm to Table",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat/beef-farm-table",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2024-12-04",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Four basic major primal cuts of beef: chuck, loin, rib and round",
+        "Chuck and round are less tender and require moist heat; loin and rib can be cooked by dry heat",
+        "Retail names vary regionally: a boneless top loin steak is also strip steak, Kansas City steak, N.Y. strip steak",
+        "Ground beef and organ meats to 160 F; steaks and roasts to 145 F with a 3 minute rest",
+        "Never brown or partially cook beef to finish later",
+        "Marinate in the refrigerator up to 5 days; boil used marinade before brushing on cooked beef",
+        "It is safe to cook frozen beef without defrosting; time is about 50% longer. Do not cook frozen beef in a slow cooker",
+        "Refrigerate cooked beef within 2 hours (1 hour above 90 F); use within 3 to 4 days or reheat to 165 F",
+        "Chuck roast and brisket: braise at 325 F, 1.5 to 2.5 hours for 3 to 4 lb (planning table only)"
+      ]
+    },
+    {
+      "id": "fsis-pork-farm-to-table",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Fresh Pork From Farm to Table",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat/fresh-pork-farm-table",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2024-12-10",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Four basic primal cuts of pork: shoulder, loin, side and leg",
+        "Shoulder yields shoulder butt roast or steak, blade steak, boneless blade Boston roast, arm picnic, hock, ground pork",
+        "Side yields spareribs, back ribs and bacon",
+        "Loin yields whole loin, loin roast, tenderloin, sirloin roast, country style ribs, chops",
+        "Leg yields ham, fresh or smoked and cured",
+        "Pork steaks, chops and roasts to 145 F with a 3 minute rest; ground pork and organ meats to 160 F",
+        "Cooked muscle meats can be pink even at a safe internal temperature; fresh pork at 145 F throughout is safe even if pink",
+        "Trichinella is destroyed at 145 F with the 3 minute rest",
+        "Boston butt roasting at 350 F: about 45 minutes per pound (planning table only, compiled from various resources)",
+        "Ribs, all types, 1.5 to 2 hours or until fork tender (planning table only)"
+      ]
+    },
+    {
+      "id": "fsis-lamb-farm-to-table",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Lamb From Farm to Table",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat/lamb-farm-table",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Five basic major primal cuts of lamb: shoulder, rack, shank/breast, loin and leg",
+        "The rack is the rib primal and contains 9 full ribs",
+        "Loin chops and rib chops are the most tender and most expensive; blade and arm chops (shoulder) and sirloin chops (leg) are less expensive but may be just as tender",
+        "Lamb steaks, chops and roasts to 145 F with a 3 minute rest; ground lamb and organ meats to 160 F",
+        "Lamb is produced from animals typically under a year old; mutton from older animals",
+        "Shanks and breast: braise or simmer 1.5 to 2 hours (planning table only)"
+      ]
+    },
+    {
+      "id": "fsis-chicken-farm-to-table",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Chicken from Farm to Table",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/poultry/chicken-farm-table",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2024-09-30",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Whole chicken to 165 F, checked in the innermost part of the thigh and wing and the thickest part of the breast",
+        "All poultry to 165 F; consumers may choose higher for personal preference",
+        "The colour of cooked chicken is not a sign of its safety; pink can persist at 165 F, and smoking or grilling makes it more likely, especially in young birds",
+        "Do not pre-stuff a bird to cook later; stuff immediately before cooking; frozen stuffed poultry must be cooked from frozen",
+        "Washing raw poultry is not recommended; it spreads bacteria",
+        "Do not cook frozen chicken in a slow cooker or microwave; oven or stove is fine at about 50% longer",
+        "Refrigerate cooked chicken within 2 hours; use within 3 to 4 days or reheat to 165 F",
+        "Grilling planning times: breast halves bone-in 10 to 15 min per side, boneless 6 to 8; legs or thighs 10 to 15 per side; wings 8 to 12 per side; whole broiler-fryer 60 to 75 min indirect (planning table only)"
+      ]
+    },
+    {
+      "id": "fsis-goat-farm-to-table",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Goat From Farm to Table",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat/goat-farm-table",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2024-12-11",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Retail cuts of goat are similar to those for lamb or mutton",
+        "Goat steaks, chops and roasts to 145 F with a 3 minute rest; ground goat to 160 F",
+        "A goat carcass rarely has much fat to protect it from drying; goat meat is generally quite lean",
+        "Less tender cuts should be braised or stewed; kid lends itself to all lamb recipes",
+        "Goat is classified as red meat"
+      ]
+    },
+    {
+      "id": "fsis-smoking-meat-poultry",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Smoking Meat and Poultry",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/smoking-meat-and-poultry",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2024-08-13",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Use two thermometers: one for the smoker air, one for the food",
+        "Smoker air temperature should stay between 225 and 300 F throughout the cook",
+        "Smoking can take 4 to 8 hours; time depends on meat, size, distance from heat, coal temperature and weather",
+        "Smoke to the safe minimum internal temperature: 145 F plus 3 minute rest for whole-muscle beef, pork, lamb and veal; 160 F ground; 165 F poultry",
+        "Apply sauce in the last 15 to 30 minutes to prevent burning",
+        "Refrigerate smoked meat within 2 hours of removing it from the smoker; use within 4 days or freeze",
+        "Thaw before smoking. Marinate in the refrigerator. Never partially cook to finish later",
+        "Hickory, apple or maple chips give the most satisfactory smoke flavour (FSIS wording)",
+        "Do not smoke in makeshift containers such as galvanized cans"
+      ]
+    },
+    {
+      "id": "fsis-doneness-vs-safety",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Doneness Versus Safety",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/doneness-versus-safety",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2024-07-10",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Appearance and colour are not reliable indicators of safety or doneness",
+        "Doneness is a sensory state (texture, appearance, juiciness); safety is destruction of harmful bacteria",
+        "One in four hamburgers that look done may not be safely cooked",
+        "Insert the thermometer into the thickest part, not touching bone, fat or gristle"
+      ]
+    },
+    {
+      "id": "fsis-food-thermometers",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Food Thermometers",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/kitchen-thermometers",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2025-03-21",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "A food thermometer is the only reliable way to ensure a safe minimum internal temperature",
+        "Place the thermometer in the thickest part, away from bone, fat or gristle; for thin foods insert through the side",
+        "Check large or irregular pieces in several places",
+        "Read the manufacturer's instructions for insertion depth; the stem dimple marks the sensing area"
+      ]
+    },
+    {
+      "id": "fsis-danger-zone",
+      "org": "USDA Food Safety and Inspection Service",
+      "title": "Danger Zone (40 F - 140 F)",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2023-06-28",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Bacteria grow most rapidly between 40 F and 140 F, doubling in as little as 20 minutes",
+        "Never leave food out of refrigeration over 2 hours; 1 hour if above 90 F",
+        "Keep hot food at or above 140 F; keep cold food at or below 40 F",
+        "When roasting meat and poultry, use an oven temperature no lower than 325 F"
+      ]
+    },
+    {
+      "id": "fda-seafood-safety",
+      "org": "U.S. Food and Drug Administration",
+      "title": "Selecting and Serving Fresh and Frozen Seafood Safely",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely",
+      "primary": true,
+      "tier": 1,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2024-03-05",
+      "update_sensitivity": "safety-critical",
+      "supports": [
+        "Most seafood should be cooked to an internal temperature of 145 F",
+        "Cooked fish: the flesh is clear and separates easily with a fork"
+      ]
+    },
+    {
+      "id": "beef-board-cuts",
+      "org": "Cattlemen's Beef Board and National Cattlemen's Beef Association (Beef Checkoff)",
+      "title": "Beef. It's What's For Dinner: Cuts and primal pages",
+      "url": "https://www.beefitswhatsfordinner.com/cuts",
+      "primary": true,
+      "tier": 3,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "stable",
+      "supports": [
+        "Brisket is a primal cut: the animal's breast, tougher because it is used for movement, ideal for low and slow",
+        "Brisket Flat Half is the leaner 'first cut'; Brisket Point Half is the less lean, juicier half",
+        "Flat iron steak is cut from the top blade (chuck) and is the second most tender beef cut",
+        "Tri-tip roast is boneless, fairly tender, full flavour; roast or grill then slice across the grain",
+        "Flank steak is lean and boneless; best marinated and grilled or sliced thin",
+        "Chuck short ribs are flavourful, moist and tender when slow-cooked"
+      ]
+    },
+    {
+      "id": "beef-board-doneness",
+      "org": "Cattlemen's Beef Board and National Cattlemen's Beef Association (Beef Checkoff)",
+      "title": "Determining Doneness",
+      "url": "https://www.beefitswhatsfordinner.com/cooking/determining-doneness",
+      "primary": true,
+      "tier": 3,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "stable",
+      "supports": [
+        "Steaks: medium-rare reads 145 F and rest at least three minutes; medium 160 F; well done 170 F (final temperatures)",
+        "Insert an instant-read thermometer horizontally from the side into the thickest part, not touching bone or fat",
+        "Ground beef to 160 F; colour is not a reliable indicator, and meatloaf may stay pink at 160 F because of natural nitrates in onions, celery and peppers",
+        "Roasts: temperature continues to rise 5 to 15 F after removal from the oven; allow 15 to 20 minutes standing time"
+      ]
+    },
+    {
+      "id": "pork-board-cuts",
+      "org": "National Pork Board (Pork Checkoff)",
+      "title": "Pork Cuts",
+      "url": "https://pork.org/cuts/",
+      "primary": true,
+      "tier": 3,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "stable",
+      "supports": [
+        "Retail pork cut families: bacon, ground pork, ham, pork belly, pork chops, pork loin roast, pork rib roast, pork ribs, pork shoulder, pork steak, pork tenderloin, sausage",
+        "Pork shoulder goes by picnic roast, Boston butt, blade roast and pork butt",
+        "Pork belly is the boneless cut that remains after the loin and spareribs are removed"
+      ]
+    },
+    {
+      "id": "pork-board-smoking",
+      "org": "National Pork Board (Pork Checkoff)",
+      "title": "Smoking Pork",
+      "url": "https://www.pork.org/cooking-techniques/smoking-pork/",
+      "primary": true,
+      "tier": 3,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "stable",
+      "supports": [
+        "Most popular pork cuts to smoke: shoulder, loin, chops, belly, ribs",
+        "Loin back ribs 3 to 5 hours at 225-250 F; St. Louis and spareribs 5 to 7 hours at 225-250 F; times vary with thickness",
+        "Pork butt / picnic / whole shoulder: about 1 hour 15 minutes per pound; cook to an internal temperature of 185-190 F, the bone will easily slip from the meat",
+        "Pork loin: cook to 140 F then rest in a warm place 10 minutes until it reaches 145 F",
+        "Pork chops: 145 F followed by a 3 minute rest",
+        "Pork belly: 4 hours smoke, wrap, 3 more hours; cook to 190 F or until fork tender"
+      ]
+    },
+    {
+      "id": "american-lamb-board-cuts",
+      "org": "American Lamb Board",
+      "title": "Learn About the Different Cuts of Lamb",
+      "url": "https://americanlamb.com/cuts-of-lamb/",
+      "primary": true,
+      "tier": 3,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "stable",
+      "supports": [
+        "Rack of lamb: eight chops per rack, about 2 lb; roast; Frenched or crown roast variations",
+        "Lamb shoulder roast: upper front shoulder, tougher with more fat than leg, richer flavour, requires low and slow",
+        "Lamb shoulder chops (blade or arm chops) are economical and quick-cooking",
+        "Lamb shanks, fore and hind, practically melt off the bone when slow cooked; braise",
+        "Boneless leg (BRT) is the leanest and most versatile cut, about 7 to 8 lb whole",
+        "Lamb ribs are cost-effective, can substitute for pork ribs; braise and grill",
+        "Loin chops are lean and tender with a T-shaped bone"
+      ]
+    },
+    {
+      "id": "american-lamb-board-time-temp",
+      "org": "American Lamb Board",
+      "title": "Lamb Cooking Time & Temperature (PDF)",
+      "url": "https://americanlamb.com/wp-content/uploads/2023/10/Lamb-Time-and-Temperature-Guide.pdf",
+      "primary": true,
+      "tier": 3,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "stable",
+      "supports": [
+        "Medium rare: pull at 135 F, final 145 F after a 3 minute rest. Medium: pull 150 F, final 160 F. Well: pull 160 F, final 170 F",
+        "Pull lamb from the heat when it is 10 degrees lower than the desired doneness because the internal temperature will rise",
+        "Lamb shoulder benefits from slow cooking to break down connective tissue; braise, roast or smoke",
+        "Lamb shanks should be braised 1 to 2 hours per lb to medium (160 F)",
+        "Always cut against the grain; let lamb rest; use a meat thermometer"
+      ]
+    },
+    {
+      "id": "tamu-texas-bbq-cooking",
+      "org": "Texas A&M University, Department of Animal Science, Meat Science Section",
+      "title": "Texas Barbecue: How to Cook and Smoke Barbecue",
+      "url": "https://meat.tamu.edu/texas-bbq/cooking-and-smoking/",
+      "primary": true,
+      "tier": 2,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "stable",
+      "supports": [
+        "Cuts such as briskets and pork butts need low temperatures (200 to 250 F) so the outside does not overcook while the centre comes up",
+        "Planning estimate: about one hour of cooking per pound of raw cut for large barbecue cuts",
+        "The four primary Texas barbecue woods are hickory, oak, pecan and mesquite",
+        "Wood preference is often what people grew up eating; too little smoke is unsatisfying, too much overpowers the meat"
+      ]
+    },
+    {
+      "id": "amazon-associates-commission-schedule",
+      "org": "Amazon Associates Program",
+      "title": "Associates Program Standard Commission Income Statement",
+      "url": "https://affiliate-program.amazon.com/help/node/topic/GRXPHT8U84RAYDXZ",
+      "primary": true,
+      "tier": 4,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "volatile",
+      "supports": [
+        "Amazon Fresh 1.00%; Grocery 1.00%; Kitchen 4.50%; Home 3.00%; Home Improvement 3.00%; Tools 3.00%; Outdoors 3.00%; Sports 3.00%; Physical Books 4.50%",
+        "Special commission: $1.00 for a successful first purchase from the Amazon Fresh store by an eligible Prime member",
+        "No effective date is printed on the schedule; treat as changing data and re-read before any commerce build"
+      ]
+    },
+    {
+      "id": "amazon-associates-operating-agreement",
+      "org": "Amazon Associates Program",
+      "title": "Associates Program Operating Agreement",
+      "url": "https://affiliate-program.amazon.com/help/operating/agreement",
+      "primary": true,
+      "tier": 4,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2025-10-15",
+      "update_sensitivity": "volatile",
+      "supports": [
+        "Required disclosure, clearly and prominently: 'As an Amazon Associate I earn from qualifying purchases.'",
+        "Program Policies are incorporated by reference"
+      ]
+    },
+    {
+      "id": "amazon-associates-program-policies",
+      "org": "Amazon Associates Program",
+      "title": "Associates Program Policies",
+      "url": "https://affiliate-program.amazon.com/help/operating/policies",
+      "primary": true,
+      "tier": 4,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2026-04-14",
+      "update_sensitivity": "volatile",
+      "supports": [
+        "Special Links may go in emails, SMS and direct messages ONLY if solicited (opted in)",
+        "No Promotional Activities offline: no Special Link, Program Content or Amazon Mark in any printed material, ebook, mailing or oral solicitation. THIS BARS AMAZON LINKS FROM THE PDF FIELD GUIDE AND THE KDP BOOK",
+        "Prices and availability may be shown only if Amazon serves the link, or the data comes from Creators API / PA API; a date/time stamp is required when refreshed less than hourly",
+        "No cloaking, hiding, spoofing or obscuring of Special Links or the Site URL; no link shorteners that hide that the destination is Amazon",
+        "No bidding on 'amazon', 'kindle' or Amazon trademarks in paid search; purchases from paid ads that include those terms are disqualified",
+        "No grocery- or Fresh-specific linking rule appears in the Policies"
+      ]
+    },
+    {
+      "id": "printful-catalog-api",
+      "org": "Printful",
+      "title": "Printful public Catalog API: products 1, 2, 171, 172",
+      "url": "https://api.printful.com/products/1",
+      "primary": true,
+      "tier": 4,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "volatile",
+      "supports": [
+        "Enhanced Matte Paper Poster (in): 189 g/m2, 10.3 mil, sourced from Japan. 18x24 in USD 13.15; 24x36 in USD 18.25; 16x20 USD 12.13; 12x18 USD 11.62; 8x12 USD 7.84",
+        "Enhanced Matte Paper Framed Poster (in), black / white / red oak ayous wood frame with acrylite front: 18x24 USD 46.30; 24x36 USD 75.90; 16x20 USD 42.61",
+        "Premium Luster Photo Paper Poster: 18x24 USD 16.65; 24x36 USD 22.89. Framed luster 18x24 USD 56.18; 24x36 USD 92.60",
+        "Catalog API is public, 30 requests per minute unauthenticated; it does not reflect subscription-plan discounts",
+        "Printful API v1: private token or OAuth; orders, catalog, shipping-rate estimate, mockup generator, webhooks; 120 calls per minute authenticated"
+      ]
+    },
+    {
+      "id": "gelato-poster-product-page",
+      "org": "Gelato",
+      "title": "Premium Matte Paper Poster (product page) and Posters & Frames",
+      "url": "https://www.gelato.com/custom/wall-art/posters/premium-matte-paper-poster",
+      "primary": true,
+      "tier": 4,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "volatile",
+      "supports": [
+        "Premium matte: 200 gsm (80 lb), 0.26 mm, FSC-certified, 29 sizes in inches (US/CA); also Classic 170 gsm and Museum 250 gsm, matte or semi-glossy",
+        "Produced in 22 countries including the US; 20 framed formats in wood and metal; hanging kit included with framed posters",
+        "Prices are behind a 'Download full price list' control and were NOT captured in this session; Gelato pricing remains unverified",
+        "Free plan, no minimums; Shopify, Etsy, WooCommerce integrations and an API (API terms linked in footer)"
+      ]
+    }
+  ]
+}

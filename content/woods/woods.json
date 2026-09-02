@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "purpose": "Smoke woods. Eight woods, matching the coverage of the approved Smoke Wood Pairing master. Flavour character and pairings are barbecue convention: FSIS names hickory, apple and maple as giving the most satisfactory smoke flavour, and Texas A&M names hickory, oak, pecan and mesquite as the four primary Texas woods; beyond that no authoritative body ranks smoke strength. Records are labelled accordingly. Woods have no safety dimension EXCEPT the FSIS rule to use only wood intended for cooking, never treated or painted wood, and never galvanized or makeshift containers.",
+    "record_shape": "slug, name, strength (mild | medium | strong), flavor_character, best_animals[], best_cuts[], blend_ideas[], avoid_or_use_lightly_with[], regional_note, source_refs, review_status, updated_at",
+    "safety_note": "Cook only with wood sold or known to be safe for smoking: no pressure-treated, painted, stained or glued wood, no softwood construction scrap. FSIS: buy commercial charcoal briquettes or aromatic wood chips."
+  },
+  "woods": [
+    {
+      "slug": "oak",
+      "name": "Oak",
+      "strength": "medium",
+      "flavor_character": "Balanced, clean, dependable. The all-purpose smoke and the Central Texas standard (post oak).",
+      "best_animals": ["beef", "lamb", "goat", "pork"],
+      "best_cuts": ["brisket", "plate-short-ribs", "tri-tip", "lamb-shoulder", "goat-shoulder"],
+      "blend_ideas": ["oak + cherry for beef colour and balance", "oak + hickory for stronger beef"],
+      "avoid_or_use_lightly_with": ["delicate fish (use alder instead)"],
+      "regional_note": "One of Texas A&M's four primary Texas barbecue woods; red oak is the Santa Maria tri-tip tradition.",
+      "source_refs": ["tamu-texas-bbq-cooking"],
+      "review_status": "NEEDS_SOURCE",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "hickory",
+      "name": "Hickory",
+      "strength": "strong",
+      "flavor_character": "Bold, savoury, bacon-like. The classic pork and rib smoke; heavy-handed on poultry.",
+      "best_animals": ["pork", "beef"],
+      "best_cuts": ["butt", "spareribs", "brisket", "belly", "ham"],
+      "blend_ideas": ["hickory + apple for pulled pork", "hickory + cherry for ribs"],
+      "avoid_or_use_lightly_with": ["salmon", "chicken breast"],
+      "regional_note": "FSIS names hickory among the woods giving the most satisfactory flavour; Texas A&M lists it among the four primary Texas woods.",
+      "source_refs": ["fsis-smoking-meat-poultry", "tamu-texas-bbq-cooking"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "mesquite",
+      "name": "Mesquite",
+      "strength": "strong",
+      "flavor_character": "Intense, earthy, fast-burning. Best for hot-and-fast beef; turns harsh over a long cook.",
+      "best_animals": ["beef", "goat"],
+      "best_cuts": ["skirt-steak", "tri-tip", "goat-shoulder (light)"],
+      "blend_ideas": ["mesquite + oak to tame it for brisket"],
+      "avoid_or_use_lightly_with": ["long low-and-slow cooks", "poultry", "fish"],
+      "regional_note": "One of Texas A&M's four primary Texas woods; South and West Texas tradition.",
+      "source_refs": ["tamu-texas-bbq-cooking"],
+      "review_status": "NEEDS_SOURCE",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "pecan",
+      "name": "Pecan",
+      "strength": "medium",
+      "flavor_character": "Nutty, warm, slightly sweet. A softer relative of hickory.",
+      "best_animals": ["pork", "chicken", "beef", "lamb"],
+      "best_cuts": ["butt", "thigh", "brisket", "lamb-leg"],
+      "blend_ideas": ["pecan + cherry for chicken", "pecan + oak for beef"],
+      "avoid_or_use_lightly_with": [],
+      "regional_note": "One of Texas A&M's four primary Texas woods.",
+      "source_refs": ["tamu-texas-bbq-cooking"],
+      "review_status": "NEEDS_SOURCE",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "apple",
+      "name": "Apple",
+      "strength": "mild",
+      "flavor_character": "Sweet, fruity, gentle. Builds slowly; forgiving on poultry and pork.",
+      "best_animals": ["pork", "chicken", "salmon"],
+      "best_cuts": ["butt", "baby-back-ribs", "thigh", "whole-chicken", "center-cut"],
+      "blend_ideas": ["apple + hickory for pulled pork", "apple + alder for salmon"],
+      "avoid_or_use_lightly_with": ["heavy beef cuts where it disappears"],
+      "regional_note": "FSIS names apple among the woods giving the most satisfactory smoke flavour.",
+      "source_refs": ["fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "cherry",
+      "name": "Cherry",
+      "strength": "mild",
+      "flavor_character": "Fruity, mild, and it colours the meat a deep mahogany. Pairs with almost everything.",
+      "best_animals": ["pork", "chicken", "beef", "salmon"],
+      "best_cuts": ["spareribs", "thigh", "wing", "brisket (blend)", "belly"],
+      "blend_ideas": ["cherry + oak for beef", "cherry + pecan for chicken", "cherry + hickory for ribs"],
+      "avoid_or_use_lightly_with": [],
+      "regional_note": "Widely used for colour on competition ribs and chicken.",
+      "source_refs": [],
+      "review_status": "NEEDS_SOURCE",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "maple",
+      "name": "Maple",
+      "strength": "mild",
+      "flavor_character": "Soft, sweet, subtle. Good with pork, poultry, ham and vegetables.",
+      "best_animals": ["pork", "chicken"],
+      "best_cuts": ["ham", "loin", "whole-chicken", "belly"],
+      "blend_ideas": ["maple + apple for ham"],
+      "avoid_or_use_lightly_with": [],
+      "regional_note": "FSIS names maple among the woods giving the most satisfactory smoke flavour.",
+      "source_refs": ["fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "alder",
+      "name": "Alder",
+      "strength": "mild",
+      "flavor_character": "Delicate, clean, faintly sweet. The Pacific Northwest salmon wood.",
+      "best_animals": ["salmon", "chicken"],
+      "best_cuts": ["center-cut", "top-loin", "belly", "collar", "whole-chicken"],
+      "blend_ideas": ["alder + apple for a gentle salmon blend"],
+      "avoid_or_use_lightly_with": ["heavy beef; it is too light to register"],
+      "regional_note": "Traditional Pacific Northwest wood for salmon.",
+      "source_refs": [],
+      "review_status": "NEEDS_SOURCE",
+      "updated_at": "2026-09-02"
+    }
+  ]
+}

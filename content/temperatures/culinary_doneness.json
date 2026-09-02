@@ -1,0 +1,167 @@
+{
+  "_meta": {
+    "purpose": "CULINARY_PREFERENCE records. How a cook likes a steak, chop or fillet. These are not safety statements. Any tier that sits below the matching SAFETY_MINIMUM carries below_safety_minimum: true and the renderer must print the disclosure sentence next to it.",
+    "kind": "CULINARY_PREFERENCE",
+    "two_layers": "Industry bodies (Beef Board, American Lamb Board) publish doneness scales that START at the USDA minimum: medium-rare is a 145 F final. Steakhouse and pitmaster convention runs lower (rare 120-125 F). Both are recorded. The industry layer is SOURCED; the convention layer is NEEDS_SOURCE and flagged below the minimum. Neither is a safety claim.",
+    "disclosure_default": "Rare, medium-rare and medium figures are culinary preference ranges that fall below the USDA FSIS safe minimum of 145 F with a 3 minute rest. USDA does not consider them safe. Where the two differ, the USDA minimum governs."
+  },
+  "records": [
+    {
+      "id": "doneness-beef-industry",
+      "kind": "CULINARY_PREFERENCE",
+      "applies_to": ["beef"],
+      "scope": "steaks and roasts, final temperature after rest",
+      "safety_ref": "safety-whole-muscle-red-meat",
+      "tiers": [
+        { "label": "Medium rare", "temp_f_min": 145, "temp_f_max": 145, "rest": "at least 3 minutes", "below_safety_minimum": false },
+        { "label": "Medium", "temp_f_min": 160, "temp_f_max": 160, "rest": null, "below_safety_minimum": false },
+        { "label": "Well done", "temp_f_min": 170, "temp_f_max": 170, "rest": null, "below_safety_minimum": false }
+      ],
+      "carryover": "Roasts rise 5 to 15 F after leaving the heat; allow 15 to 20 minutes standing time.",
+      "below_safety_minimum": false,
+      "disclosure": null,
+      "notes": ["This is the Beef Checkoff's published scale. It aligns with USDA and is the scale Pit Log prints by default on beef pages."],
+      "source_refs": ["beef-board-doneness", "fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "doneness-beef-convention",
+      "kind": "CULINARY_PREFERENCE",
+      "applies_to": ["beef"],
+      "scope": "steaks, steakhouse and pitmaster convention, pull temperatures",
+      "safety_ref": "safety-whole-muscle-red-meat",
+      "tiers": [
+        { "label": "Rare", "temp_f_min": 120, "temp_f_max": 125, "below_safety_minimum": true },
+        { "label": "Medium rare", "temp_f_min": 130, "temp_f_max": 135, "below_safety_minimum": true },
+        { "label": "Medium", "temp_f_min": 140, "temp_f_max": 145, "below_safety_minimum": true },
+        { "label": "Medium well", "temp_f_min": 150, "temp_f_max": 155, "below_safety_minimum": false },
+        { "label": "Well done", "temp_f_min": 160, "temp_f_max": null, "below_safety_minimum": false }
+      ],
+      "carryover": "Craft convention: 5 to 10 F rise on a steak during a 5 to 10 minute rest.",
+      "below_safety_minimum": true,
+      "disclosure": "Rare, medium-rare and medium figures are culinary preference ranges that fall below the USDA FSIS safe minimum of 145 F with a 3 minute rest. USDA does not consider them safe. Where the two differ, the USDA minimum governs.",
+      "notes": [
+        "These are the figures the beef master prints. No federal or industry body publishes them; they are convention. They may render only with the disclosure and only alongside doneness-beef-industry.",
+        "A tier-2 or tier-3 source for the convention scale has not been located. Until one is, review_status stays NEEDS_SOURCE and the beef page leads with the industry scale."
+      ],
+      "source_refs": ["fsis-safe-temp-chart"],
+      "review_status": "NEEDS_SOURCE",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "doneness-lamb-industry",
+      "kind": "CULINARY_PREFERENCE",
+      "applies_to": ["lamb", "goat"],
+      "scope": "chops, rack, leg and roasts. Pull temperature and final temperature after rest",
+      "safety_ref": "safety-whole-muscle-red-meat",
+      "tiers": [
+        { "label": "Medium rare", "pull_f": 135, "temp_f_min": 145, "temp_f_max": 145, "rest": "3 minutes", "below_safety_minimum": false },
+        { "label": "Medium", "pull_f": 150, "temp_f_min": 160, "temp_f_max": 160, "below_safety_minimum": false },
+        { "label": "Well", "pull_f": 160, "temp_f_min": 170, "temp_f_max": 170, "below_safety_minimum": false }
+      ],
+      "carryover": "American Lamb Board: pull 10 F below the target because the internal temperature keeps rising.",
+      "below_safety_minimum": false,
+      "disclosure": null,
+      "notes": [
+        "Applied to goat on the FSIS statement that goat cuts are similar to lamb; no goat industry scale exists.",
+        "The pull figure of 135 F is a pull, not a final. A surface may print it only as 'pull at 135, final 145 after rest'."
+      ],
+      "source_refs": ["american-lamb-board-time-temp", "fsis-safe-temp-chart", "fsis-goat-farm-to-table"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "doneness-lamb-goat-convention",
+      "kind": "CULINARY_PREFERENCE",
+      "applies_to": ["lamb", "goat"],
+      "scope": "chops and rack, restaurant convention, pull temperatures",
+      "safety_ref": "safety-whole-muscle-red-meat",
+      "tiers": [
+        { "label": "Rare", "temp_f_min": 125, "temp_f_max": 130, "below_safety_minimum": true },
+        { "label": "Medium rare", "temp_f_min": 130, "temp_f_max": 135, "below_safety_minimum": true },
+        { "label": "Medium", "temp_f_min": 135, "temp_f_max": 145, "below_safety_minimum": true },
+        { "label": "Medium well", "temp_f_min": 145, "temp_f_max": 155, "below_safety_minimum": false },
+        { "label": "Well done", "temp_f_min": 160, "temp_f_max": null, "below_safety_minimum": false }
+      ],
+      "carryover": "5 to 10 F on a rack or chop.",
+      "below_safety_minimum": true,
+      "disclosure": "Rare, medium-rare and medium figures are culinary preference ranges that fall below the USDA FSIS safe minimum of 145 F with a 3 minute rest. USDA does not consider them safe. Where the two differ, the USDA minimum governs.",
+      "notes": [
+        "These are the figures on the lamb and goat masters. The masters do not flag them as below the minimum; that is a graphics defect logged in graphics/masters.json.",
+        "The lamb master's 'magic range 130-145 F for most lamb cuts' is a convention claim that contradicts the American Lamb Board's own scale. Do not reproduce it."
+      ],
+      "source_refs": ["fsis-safe-temp-chart"],
+      "review_status": "NEEDS_SOURCE",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "doneness-pork-chops-roasts",
+      "kind": "CULINARY_PREFERENCE",
+      "applies_to": ["pork"],
+      "scope": "chops, loin, tenderloin and whole-muscle roasts",
+      "safety_ref": "safety-whole-muscle-red-meat",
+      "tiers": [
+        { "label": "Medium (USDA minimum)", "temp_f_min": 145, "temp_f_max": 145, "rest": "at least 3 minutes", "below_safety_minimum": false },
+        { "label": "Medium well", "temp_f_min": 150, "temp_f_max": 155, "below_safety_minimum": false },
+        { "label": "Well done", "temp_f_min": 160, "temp_f_max": null, "below_safety_minimum": false }
+      ],
+      "carryover": "National Pork Board: pull a smoked loin at 140 F and rest 10 minutes in a warm place until it reaches 145 F. Chops: 145 F then a 3 minute rest.",
+      "below_safety_minimum": false,
+      "disclosure": null,
+      "notes": [
+        "Pork at 145 F is often still pink. That is safe and normal (FSIS).",
+        "The Pork Board's 'pull at 140, rest to 145' is a carryover technique whose FINAL reading is the USDA minimum. A surface may only print it with the final figure. Never print 140 F as a pork target on its own."
+      ],
+      "source_refs": ["fsis-safe-temp-chart", "fsis-pork-farm-to-table", "pork-board-smoking"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "doneness-salmon-convention",
+      "kind": "CULINARY_PREFERENCE",
+      "applies_to": ["salmon"],
+      "scope": "fillets and portions, restaurant convention",
+      "safety_ref": "safety-fish",
+      "tiers": [
+        { "label": "Rare", "temp_f_min": 120, "temp_f_max": 125, "below_safety_minimum": true },
+        { "label": "Medium rare", "temp_f_min": 125, "temp_f_max": 130, "below_safety_minimum": true },
+        { "label": "Medium", "temp_f_min": 130, "temp_f_max": 135, "below_safety_minimum": true },
+        { "label": "Medium well", "temp_f_min": 135, "temp_f_max": 145, "below_safety_minimum": true },
+        { "label": "Well done (USDA minimum)", "temp_f_min": 145, "temp_f_max": null, "below_safety_minimum": false }
+      ],
+      "carryover": "Salmon carries over 5 to 10 F after a short rest; a fillet pulled at 140 F commonly reads 145 F at the table, but only the reading counts.",
+      "below_safety_minimum": true,
+      "disclosure": "Every salmon figure below 145 F is a culinary preference that falls below the USDA FSIS and FDA safe minimum of 145 F. Where the two differ, the federal minimum governs.",
+      "notes": [
+        "The salmon master's 'Pull at 135-140 F for juicy, flaky results' describes a preference below the minimum and must not render as advice without the disclosure.",
+        "FDA visual cue at the minimum: flesh opaque and separates easily with a fork."
+      ],
+      "source_refs": ["fsis-safe-temp-chart", "fda-seafood-safety"],
+      "review_status": "NEEDS_SOURCE",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "doneness-chicken-dark-meat-preference",
+      "kind": "CULINARY_PREFERENCE",
+      "applies_to": ["chicken"],
+      "scope": "thighs, drumsticks and whole legs",
+      "safety_ref": "safety-poultry",
+      "tiers": [
+        { "label": "Safe minimum (all chicken)", "temp_f_min": 165, "temp_f_max": 165, "below_safety_minimum": false },
+        { "label": "Dark meat, rendered and tender", "temp_f_min": 175, "temp_f_max": 185, "below_safety_minimum": false },
+        { "label": "Pulled or shredded", "temp_f_min": 190, "temp_f_max": 205, "below_safety_minimum": false }
+      ],
+      "carryover": "A whole bird rises several degrees during a 10 minute rest; the rest is for juiciness, USDA requires none.",
+      "below_safety_minimum": false,
+      "disclosure": null,
+      "notes": [
+        "Cooking dark meat past 165 F is a texture preference: connective tissue renders and the meat firms. It is above the minimum, so it needs no disclosure, but it is still convention and not USDA guidance.",
+        "Breast meat: 165 F is both the minimum and the practical ceiling for juiciness. The chicken-A master's 'pull at 160-165 F' is BELOW the minimum at its low end and is logged as a safety defect."
+      ],
+      "source_refs": ["fsis-safe-temp-chart", "fsis-chicken-farm-to-table"],
+      "review_status": "NEEDS_SOURCE",
+      "updated_at": "2026-09-02"
+    }
+  ]
+}

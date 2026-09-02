@@ -3,3 +3,7 @@ node_modules/
 .env
 .env.local
 .vercel
+
+# generated from content/*.json by content/export_bundle.mjs
+content-dist/
+tsconfig.tsbuildinfo

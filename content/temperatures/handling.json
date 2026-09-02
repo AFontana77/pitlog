@@ -1,0 +1,118 @@
+{
+  "_meta": {
+    "purpose": "Handling, holding, thermometer and pit-temperature rules that sit alongside the safety minimums. Every record here is a federal statement unless its kind says otherwise.",
+    "kinds_used": ["SAFETY_HANDLING", "PLANNING_GUIDANCE"]
+  },
+  "records": [
+    {
+      "id": "handling-danger-zone",
+      "kind": "SAFETY_HANDLING",
+      "title": "The danger zone",
+      "statement": "Bacteria grow fastest between 40 F and 140 F, doubling in as little as 20 minutes. Never leave food out of refrigeration more than 2 hours, or 1 hour when the air is above 90 F. Hold hot food at or above 140 F and cold food at or below 40 F.",
+      "pitlog_application": "A finished brisket held in a cooler must stay at or above 140 F. If it drops below 140 F, the 2 hour clock is running. Log the hold temperature, not just the hold time.",
+      "source_refs": ["fsis-danger-zone"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "handling-two-thermometers",
+      "kind": "SAFETY_HANDLING",
+      "title": "Two thermometers",
+      "statement": "Smoke with two thermometers: one for the air in the smoker, one for the food. Keep the smoker air between 225 and 300 F throughout the cook. Use a food thermometer to decide when the meat is done, never the clock.",
+      "pitlog_application": "This is the FSIS basis for the app's pit temp and internal temp fields being separate. The 225 to 300 F band is the FSIS safety recommendation for a smoker; craft pit temps below 225 F (some salmon and cold-smoke practice) fall outside it and must say so.",
+      "source_refs": ["fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "handling-thermometer-placement",
+      "kind": "SAFETY_HANDLING",
+      "title": "Where the probe goes",
+      "statement": "Insert the thermometer into the thickest part of the food, not touching bone, fat or gristle. For thin foods insert through the side. Check large or irregular pieces in several places. For a whole bird check the innermost thigh and wing and the thickest part of the breast.",
+      "pitlog_application": "Brisket: probe the thickest part of the flat, not the point. Ribs: between bones, not touching. Whole chicken: thigh, then breast.",
+      "source_refs": ["fsis-food-thermometers", "fsis-doneness-vs-safety", "fsis-chicken-farm-to-table"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "handling-colour-is-not-doneness",
+      "kind": "SAFETY_HANDLING",
+      "title": "Colour is not doneness",
+      "statement": "Appearance and colour are not reliable indicators of safety or doneness. A burger can be brown and unsafe or pink and safe. Pork at 145 F can be pink. Smoked chicken can stay pink at the bone at 165 F.",
+      "pitlog_application": "A smoke ring is a chemical reaction with the smoke, not a doneness signal. No Pit Log surface uses colour words as a safety cue.",
+      "source_refs": ["fsis-doneness-vs-safety", "fsis-pork-farm-to-table", "fsis-chicken-farm-to-table"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "handling-rest-is-part-of-safety",
+      "kind": "SAFETY_HANDLING",
+      "title": "The 3 minute rest is part of the 145 F rule",
+      "statement": "For whole-muscle beef, pork, lamb, goat and veal the safety rule is 145 F AND a rest of at least 3 minutes before carving or eating. The rest is not optional and it is not the same thing as the long barbecue rest.",
+      "pitlog_application": "Pitmaster rests of 30 minutes to 2 hours for brisket and shoulder are craft guidance for juiciness and slicing. They exceed the 3 minute safety rest; they never replace the 145 F floor.",
+      "source_refs": ["fsis-safe-temp-chart", "fsis-pork-farm-to-table"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "handling-no-partial-cook",
+      "kind": "SAFETY_HANDLING",
+      "title": "Never partially cook to finish later",
+      "statement": "Never brown or partially cook meat or poultry, refrigerate it, and finish later. Bacteria present would not have been destroyed. Partially cooking immediately before transferring to a hot grill is fine.",
+      "pitlog_application": "A cook split across two days (smoke today, finish tomorrow) is not a Pit Log method. Sous-vide-then-sear in one session is.",
+      "source_refs": ["fsis-beef-farm-to-table", "fsis-pork-farm-to-table", "fsis-lamb-farm-to-table", "fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "handling-thaw-and-marinate",
+      "kind": "SAFETY_HANDLING",
+      "title": "Thaw and marinate in the refrigerator",
+      "statement": "Thaw in the refrigerator, in cold water changed every 30 minutes, or in the microwave; never on the counter. Thaw before smoking. Marinate in the refrigerator (beef, pork and lamb up to 5 days; cubes 2 days). Boil used marinade before brushing it on cooked meat, or discard it. Do not cook frozen meat in a slow cooker.",
+      "pitlog_application": "Brine and injection notes in a cook log follow the same rule: fridge only.",
+      "source_refs": ["fsis-beef-farm-to-table", "fsis-lamb-farm-to-table", "fsis-chicken-farm-to-table", "fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "handling-sauce-timing",
+      "kind": "SAFETY_HANDLING",
+      "title": "Sauce in the last 15 to 30 minutes",
+      "statement": "If using a sauce, apply it during the last 15 to 30 minutes of smoking to prevent excess browning or burning.",
+      "pitlog_application": "This is the FSIS line behind every Pit Log sauce recipe's 'glaze at the end' step. Sugar burns; it is a quality rule stated by a safety agency.",
+      "source_refs": ["fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "handling-chill-after-smoking",
+      "kind": "SAFETY_HANDLING",
+      "title": "Chill within 2 hours of leaving the smoker",
+      "statement": "Refrigerate meat and poultry within 2 hours of removing it from a smoker. Cut into smaller portions, use shallow covered containers, use within 4 days or freeze. Reheat leftovers to 165 F.",
+      "pitlog_application": "The app's 'off' timestamp starts this clock. A hold above 140 F pauses it; a hold below 140 F does not.",
+      "source_refs": ["fsis-smoking-meat-poultry", "fsis-safe-temp-chart"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "planning-time-is-not-doneness",
+      "kind": "PLANNING_GUIDANCE",
+      "title": "Time is planning guidance, never doneness",
+      "statement": "Smoking can take 4 to 8 hours or more; time depends on the cut, its size and shape, distance from heat, coal temperature and weather. A common planning estimate for large barbecue cuts is about one hour per pound of raw weight at 200 to 250 F. Every published time on a Pit Log surface is a planning estimate and must be labelled approximate.",
+      "pitlog_application": "Start earlier than you think. A finished brisket can rest for hours above 140 F; an unfinished one cannot be rescued at dinner time.",
+      "source_refs": ["fsis-smoking-meat-poultry", "tamu-texas-bbq-cooking"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "planning-pit-temperature-bands",
+      "kind": "PLANNING_GUIDANCE",
+      "title": "Pit temperature bands",
+      "statement": "Low and slow for collagen cuts (brisket, pork butt) means 200 to 250 F pit air so the outside does not overcook while the centre catches up (Texas A&M). FSIS's food-safety band for a smoker is 225 to 300 F. Poultry skin crisps better at the top of the band or above it.",
+      "pitlog_application": "Default pit prefill by animal: beef and pork collagen cuts 225 to 250 F; poultry 275 to 300 F; salmon 225 F. Any prefill under 225 F displays the FSIS band note.",
+      "source_refs": ["tamu-texas-bbq-cooking", "fsis-smoking-meat-poultry"],
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "_meta": {
+    "purpose": "Registry of approved ChatGPT masters in brand-assets/cut-guides/. Each entry records identity (md5, pixels), what the master decides (coverage and look), the statements on it that disagree with a sourced record (defects), and its publish gate. A master is visual direction. Its text is never transcribed into a record. Where it disagrees with a record, the record wins and the master returns to the ChatGPT lane for regeneration with the defect list as the brief.",
+    "creative_lane_rule": "ChatGPT owns creative. Claude may upscale, outpaint, clean, and re-typeset an approved master. Claude may not reinterpret it, change its concept, or generate a replacement.",
+    "print_requirement": "18 x 24 in at 300 dpi = 5400 x 7200 px. 24 x 36 in = 7200 x 10800 px. Every master below is 1024 to 1149 px wide, roughly one fifth of poster resolution. None may go to print at native resolution. Web use at up to 1100 px CSS width is fine.",
+    "publish_gate_rule": "No species master is published on the site until (a) pitlog.app/recipes exists and (b) every recipe the master names by title has a live page at least at TEST_V1, and (c) the master's safety defects are fixed or the surrounding page corrects them in text. A guide graphic that names a recipe is a promise.",
+    "variants_pending_decision": ["pork: A or B", "chicken: A or B"]
+  },
+  "masters": [
+    {
+      "id": "beef-cuts-cooking-guide",
+      "file": "brand-assets/cut-guides/beef-cuts-cooking-guide.png",
+      "md5": "06c81423eb420afa35433c46a5bcc2db",
+      "px": [1149, 1369],
+      "subject": "beef",
+      "format": "full infographic: 9-region primal diagram, doneness table, popular cuts table, BBQ guide, QR",
+      "decides": ["nine regions and their numbering", "vintage butcher-shop look", "table furniture"],
+      "names_recipes": [],
+      "defects": [
+        { "severity": "safety", "text_on_master": "Doneness guide: Rare 120-125, Medium rare 130-135, Medium 140-145 with no below-USDA flag; footer says 'Always cook to a safe minimum temperature, then cook to the finish temperature' which is contradictory for rare", "record": "doneness-beef-convention / safety-whole-muscle-red-meat", "fix": "Add the below-minimum disclosure to the doneness table or lead with the Beef Board scale (145 medium rare final)." },
+        { "severity": "accuracy", "text_on_master": "Rest steaks 5-10 minutes", "record": "handling-rest-is-part-of-safety", "fix": "State the 3 minute safety rest explicitly." }
+      ],
+      "publish_gate": "BLOCKED: recipes hub missing; safety defect open",
+      "poster_candidate": true,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "beef-cut-quick-reference",
+      "file": "brand-assets/cut-guides/beef-cut-quick-reference.png",
+      "md5": "e6e1bb0ed250e5a7078d459d9e0d49ac",
+      "px": [1103, 1426],
+      "subject": "beef",
+      "format": "9-primal table: tenderness, richness, method, finish, slice; house recipe teaser; USDA reminder",
+      "decides": ["the tenderness/richness 1-5 scale as a product idiom", "the 'three mistakes' module", "Ember Citrus sauce as a named house recipe"],
+      "names_recipes": ["pit-log-ember-citrus-bbq-sauce"],
+      "defects": [],
+      "notes": ["This master gets the safety framing right: it prints the USDA 145 F + 3 minute rest and states that rare and medium-rare are preference ranges below USDA guidance. It is the model for the others.", "'Full recipe coming soon at PITLOG.APP' is a promise; blocked until the sauce page exists."],
+      "publish_gate": "BLOCKED: named recipe has no page",
+      "poster_candidate": true,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "pork-cuts-cooking-guide-A",
+      "file": "brand-assets/cut-guides/pork-cuts-cooking-guide-A.png",
+      "md5": "72dc9ed1772c3c625fc9b1c27f011028",
+      "px": [1024, 1536],
+      "subject": "pork",
+      "format": "full infographic, black header, 7 numbered regions (butt, loin, ham, picnic, spareribs, belly, hock), Carolina Gold sauce",
+      "decides": ["seven regions", "region numbering used by cuts/pork.json"],
+      "names_recipes": ["pit-log-carolina-gold-mustard-sauce"],
+      "defects": [
+        { "severity": "accuracy", "text_on_master": "Ribs (spareribs) 190-203 F; Pulled pork 195-205 F", "record": "target-pork-ribs / target-pork-shoulder", "fix": "Acceptable as convention if labelled; Pork Board publishes 185-190 F for shoulder. Add 'convention' wording or the Pork Board figure." },
+        { "severity": "cosmetic", "text_on_master": "Hock: 'Great for for-vor in stocks & beans' (typo, broken word)", "record": null, "fix": "Regenerate text." }
+      ],
+      "notes": ["Recommended survivor over B: matches the seven-region scheme in cuts/pork.json, includes hock and picnic, carries the full doneness table and a correctly stated 145 F + 3 minute rest, and the named sauce is one Pit Log intends to publish."],
+      "publish_gate": "BLOCKED: recipes hub missing",
+      "poster_candidate": true,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "pork-cuts-cooking-guide-B",
+      "file": "brand-assets/cut-guides/pork-cuts-cooking-guide-B.png",
+      "md5": "11474a9d2aaf80c5b67781fc0f4f6978",
+      "px": [1122, 1402],
+      "subject": "pork",
+      "format": "variant: parchment header, unnumbered regions (shoulder/Boston butt, picnic, jowl, loin, spareribs, belly, ham), six popular cuts",
+      "decides": [],
+      "names_recipes": [],
+      "defects": [
+        { "severity": "safety", "text_on_master": "Ham: 'Reheat to 140 F or until hot'", "record": "safety-ham-reheat", "fix": "140 F applies only to ham packaged in a USDA-inspected plant; otherwise 165 F. Must be qualified or changed." }
+      ],
+      "notes": ["Larger, cleaner diagram than A and the only master that shows the jowl. Not recommended as the survivor: no hock, no numbering, no doneness table, and a safety defect. If B's diagram is preferred for the fine-art poster line, brief ChatGPT to carry B's pig drawing into A's layout rather than shipping B."],
+      "publish_gate": "BLOCKED: variant not selected; safety defect open",
+      "poster_candidate": true,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "chicken-cuts-cooking-guide-A",
+      "file": "brand-assets/cut-guides/chicken-cuts-cooking-guide-A.png",
+      "md5": "109ca2255a733401f5bdb47aa346f50f",
+      "px": [1024, 1536],
+      "subject": "chicken",
+      "format": "full infographic, 6 numbered regions, Smoked Chicken Thighs recipe",
+      "decides": [],
+      "names_recipes": ["pit-log-smoked-chicken-thighs"],
+      "defects": [
+        { "severity": "safety", "text_on_master": "'Breast meat dries out quickly above 170 F. Pull at 160-165 F and rest.'", "record": "safety-poultry", "fix": "Pulling at 160 F is below the USDA minimum; carryover is not a safety mechanism. Must read 'cook to 165 F'." },
+        { "severity": "safety", "text_on_master": "'USDA safe temperature (all cuts) 165 F ... Rest 3 minutes' and 'Always cook chicken to at least 165 F and rest for 3 minutes'", "record": "safety-poultry", "fix": "USDA requires no rest for poultry. The 3 minute rest belongs to the 145 F red-meat rule. Remove or relabel as optional." },
+        { "severity": "accuracy", "text_on_master": "Diagram numbers 3 as DRUMSTICK and 4 is missing; legend lists 3 THIGH, 4 DRUMSTICK. The thigh has no callout on the bird.", "record": "cuts/chicken.json regions", "fix": "Regenerate the diagram labels." }
+      ],
+      "publish_gate": "BLOCKED: variant not selected; two safety defects; diagram defect",
+      "poster_candidate": false,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "chicken-cuts-cooking-guide-B",
+      "file": "brand-assets/cut-guides/chicken-cuts-cooking-guide-B.png",
+      "md5": "cf9b62e895ff45db7024c263b2e388ce",
+      "px": [1024, 1536],
+      "subject": "chicken",
+      "format": "full infographic, 6 numbered regions (wing, breast, thigh, drumstick, back, tail), per-cut doneness table, Honey Garlic Chicken Thighs recipe",
+      "decides": ["six regions and numbering used by cuts/chicken.json"],
+      "names_recipes": ["pit-log-honey-garlic-chicken-thighs"],
+      "defects": [
+        { "severity": "safety", "text_on_master": "'USDA safe temperature for all chicken: 165 F with a 3-minute rest' and footer 'Cook chicken to 165 F with a 3-minute rest'", "record": "safety-poultry", "fix": "USDA requires no rest for poultry. Remove 'with a 3-minute rest' or relabel it as a juiciness tip." },
+        { "severity": "accuracy", "text_on_master": "'Chicken breasts cook best over higher heat (325-375 F)'", "record": "planning-pit-temperature-bands", "fix": "Acceptable as craft; note FSIS smoker band is 225-300 F and this is a grill/roast figure." }
+      ],
+      "notes": ["Recommended survivor over A: all six regions labelled correctly on the bird, per-cut doneness table that keeps 165 F on every white-meat row, and only one safety defect (the spurious rest) versus A's two."],
+      "publish_gate": "BLOCKED: recipes hub missing; rest wording",
+      "poster_candidate": true,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "lamb-cuts-cooking-guide",
+      "file": "brand-assets/cut-guides/lamb-cuts-cooking-guide.png",
+      "md5": "49680607a0b1c6b0c487c811cff7ec78",
+      "px": [1024, 1536],
+      "subject": "lamb",
+      "format": "full infographic, 7 numbered regions, doneness table, Mediterranean Lamb Shoulder recipe",
+      "decides": ["seven regions and numbering used by cuts/lamb.json"],
+      "names_recipes": ["mediterranean-lamb-shoulder"],
+      "defects": [
+        { "severity": "safety", "text_on_master": "Doneness guide Rare 125-130, Medium rare 130-135, Medium 135-145 with no below-USDA flag; 'The magic range: most lamb cuts finish best between 130-145 F'", "record": "doneness-lamb-goat-convention / doneness-lamb-industry", "fix": "Add the below-minimum disclosure. The American Lamb Board's own scale puts medium rare at a 145 F final; consider leading with it." }
+      ],
+      "notes": ["Footer correctly states 145 F with a 3 minute rest."],
+      "publish_gate": "BLOCKED: recipes hub missing; safety defect open",
+      "poster_candidate": true,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "goat-cuts-cooking-guide",
+      "file": "brand-assets/cut-guides/goat-cuts-cooking-guide.png",
+      "md5": "d0e1ade8c46268da485238a39ceb9564",
+      "px": [1024, 1536],
+      "subject": "goat",
+      "format": "full infographic, 7 numbered regions, doneness table, Moroccan Spiced Goat Shoulder recipe",
+      "decides": ["seven regions mirroring lamb"],
+      "names_recipes": ["moroccan-spiced-goat-shoulder"],
+      "defects": [
+        { "severity": "safety", "text_on_master": "Doneness guide Rare 125-130 through Medium 135-145 with no below-USDA flag; 'magic range 130-145 F'", "record": "doneness-lamb-goat-convention", "fix": "Same as lamb: add the disclosure." }
+      ],
+      "notes": ["Rare in the niche and worth leaning on; the 'goat is lean, low temps 225-275 F' line agrees with FSIS."],
+      "publish_gate": "BLOCKED: recipes hub missing; safety defect open",
+      "poster_candidate": true,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "salmon-cuts-cooking-guide",
+      "file": "brand-assets/cut-guides/salmon-cuts-cooking-guide.png",
+      "md5": "87df2daae8e95a8b2609af42009d7d48",
+      "px": [1024, 1536],
+      "subject": "salmon",
+      "format": "full infographic, 6 numbered regions, doneness table, Maple Cedar Salmon recipe",
+      "decides": ["six regions used by cuts/salmon.json"],
+      "names_recipes": ["pit-log-maple-cedar-salmon"],
+      "defects": [
+        { "severity": "safety", "text_on_master": "'Don't overcook: pull at 135-140 F for juicy, flaky results' beside 'USDA recommends cooking salmon to 145 F'", "record": "doneness-salmon-convention / safety-fish", "fix": "Label the 135-140 F pull as a preference below the federal minimum, or remove it." },
+        { "severity": "accuracy", "text_on_master": "Doneness Rare 120-125 through Medium well 135-145 with no below-minimum flag", "record": "doneness-salmon-convention", "fix": "Add the disclosure." }
+      ],
+      "publish_gate": "BLOCKED: recipes hub missing; safety defect open",
+      "poster_candidate": true,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "id": "smoke-wood-pairing-guide",
+      "file": "brand-assets/cut-guides/smoke-wood-pairing-guide.png",
+      "md5": "7288a8a942f5beb14cfe7d0339afbb5f",
+      "px": [1122, 1402],
+      "subject": "woods",
+      "format": "8-wood flavour profile table, best matches by animal, popular blends",
+      "decides": ["the eight woods in woods/woods.json", "the strength vocabulary mild / medium / strong"],
+      "names_recipes": [],
+      "defects": [],
+      "notes": ["No safety content. Names no recipe. This is the one master that could publish today on a /woods page once the page exists; it still cannot print at 1122 px."],
+      "publish_gate": "OPEN once /woods exists (no recipe promise, no safety defect)",
+      "poster_candidate": true,
+      "review_status": "REVIEWED",
+      "updated_at": "2026-09-02"
+    }
+  ]
+}
