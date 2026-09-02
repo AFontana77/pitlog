@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { getPitmasterTarget, getSafetyMinimum } from '@/content';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app/smoking-times-temperatures' },
   title: 'Smoking Times and Temperatures Chart | PitLog',
   description:
     'Smoking times and internal temperatures for beef, pork, poultry, and fish. Reference every cut with smoker temp and internal target.',

@@ -3,6 +3,7 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app/terms' },
   title: 'Terms of Service — Pit Master Log',
   description: 'Terms of service for the Pit Master Log mobile application and pitlog.app website.',
 };

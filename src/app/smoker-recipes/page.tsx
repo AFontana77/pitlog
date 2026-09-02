@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app/smoker-recipes' },
   title: 'Smoker Recipes — Times and Temps for Every Cut | Pit Master Log',
   description:
     'Smoker recipes for beef, pork, poultry, and fish. Smoking temperatures, internal targets, and times. Log every cook in Pit Master Log.',

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app/library' },
   title: "PitLog Library — BBQ Cuts, Cook Times & Temperature Guide",
   description: "Browse 129+ BBQ cuts with target temps, cook time estimates, stall info, and wood pairing guidance. Full search and cook logging available in the free PitLog app.",
 };

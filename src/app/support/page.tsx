@@ -3,6 +3,7 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app/support' },
   title: 'Support — Pit Master Log',
   description: 'Get help with the Pit Master Log app. Contact support or browse common questions.',
 };

@@ -38,15 +38,14 @@ export const metadata: Metadata = {
     siteName: "Pit Master Log",
     title: "Pit Master Log — Search 129+ BBQ cuts and cook times",
     description: "Pit Master Log has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Pit Master Log" }],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Pit Master Log" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pit Master Log — Search 129+ BBQ cuts and cook times",
     description: "Pit Master Log has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
-  alternates: { canonical: SITE_URL },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     apple: "/icons/icon-192.png",

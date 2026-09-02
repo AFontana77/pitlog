@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app/about' },
   title: "About PitLog",
   description: "The story behind PitLog. Search 129+ BBQ cuts and cook times. Log your cooks. Build your pit mastery.",
 };

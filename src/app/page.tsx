@@ -4,6 +4,7 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app' },
   title: "PitLog — BBQ Reference + Cook Log App",
   description: "PitLog has 129+ BBQ cuts with target temps, stall temps, wood pairings, and cook time estimates. Log every cook, rate the result, and build a record of everything you've pulled off the smoker. Free on iPhone and Android.",
 };
@@ -106,7 +107,7 @@ export default function HomePage() {
                   Browse the library
                 </Link>
                 <Link href="/free-download" className="btn-ghost">
-                  Free temp card
+                  Free field guide
                 </Link>
               </div>
               <p
@@ -168,7 +169,7 @@ export default function HomePage() {
                       className="col-span-4 text-sm tabular-nums text-right"
                       style={{ color: 'oklch(0.82 0.018 50)' }}
                     >
-                      {row.temp} → {row.target.split(' ')[0]}
+                      {row.temp} to {row.target}
                     </div>
                   </li>
                 ))}

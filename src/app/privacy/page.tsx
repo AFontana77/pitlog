@@ -3,6 +3,7 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app/privacy' },
   title: 'Privacy Policy — Pit Master Log',
   description: 'Privacy policy for the Pit Master Log mobile application and pitlog.app website.',
 };

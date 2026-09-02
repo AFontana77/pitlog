@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app/pellet-smoker-recipes' },
   title: 'Pellet Smoker Recipes — Temps, Times & Wood Pairings | PitLog',
   description:
     'Pellet smoker recipes with smoking temps, internal targets, and wood pellet pairings. Works for Traeger, Pit Boss, Camp Chef, and Z Grills.',

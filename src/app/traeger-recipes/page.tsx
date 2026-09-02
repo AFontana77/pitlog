@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://pitlog.app/traeger-recipes' },
   title: 'Traeger Recipes — Smoking Times, Temps & Settings | PitLog',
   description:
     'Traeger recipes with smoking temperatures, times, and internal targets for beef, pork, chicken, and fish. Log every cook in PitLog.',
