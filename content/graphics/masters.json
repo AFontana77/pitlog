@@ -186,7 +186,7 @@
       "names_recipes": [],
       "defects": [],
       "notes": ["No safety content. Names no recipe. This is the one master that could publish today on a /woods page once the page exists; it still cannot print at 1122 px."],
-      "publish_gate": "OPEN. Published on /woods 2026-09-02 as public/images/woods/smoke-wood-pairing-guide.jpg (web only; print still blocked at 1122 px)",
+      "publish_gate": "OPEN for web. Published on /woods 2026-09-02 as public/images/woods/smoke-wood-pairing-guide.jpg. Poster BLOCKED at 1122 px until a 5400 px master exists.",
       "poster_candidate": true,
       "review_status": "REVIEWED",
       "updated_at": "2026-09-02"
