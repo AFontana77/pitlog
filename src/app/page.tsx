@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app' },
-  title: "PitLog — BBQ Reference + Cook Log App",
+  title: "PitLog: BBQ Reference and Cook Log App",
   description: "PitLog has 129+ BBQ cuts with target temps, stall temps, wood pairings, and cook time estimates. Log every cook, rate the result, and build a record of everything you've pulled off the smoker. Free on iPhone and Android.",
 };
 

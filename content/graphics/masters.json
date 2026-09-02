@@ -116,7 +116,7 @@
       "notes": [
         "Recommended survivor over B: matches the seven-region scheme in cuts/pork.json, includes hock and picnic, carries the full doneness table and a correctly stated 145 F + 3 minute rest, and the named sauce is one Pit Log intends to publish."
       ],
-      "publish_gate": "BLOCKED (recipes hub and named recipe pages now exist, 2026-09-02): ",
+      "publish_gate": "OPEN for web on the rules (no safety defect; named recipe page live 2026-09-02). HELD by choice: the hock typo and the unlabelled 195-205 F convention should be regenerated before the full infographic is placed on a page. The diagram crop is published on /cuts/pork. Poster BLOCKED at 1024 px.",
       "poster_candidate": true,
       "review_status": "REVIEWED",
       "updated_at": "2026-09-02"
@@ -145,9 +145,9 @@
       "notes": [
         "Larger, cleaner diagram than A and the only master that shows the jowl. Not recommended as the survivor: no hock, no numbering, no doneness table, and a safety defect. If B's diagram is preferred for the fine-art poster line, brief ChatGPT to carry B's pig drawing into A's layout rather than shipping B."
       ],
-      "publish_gate": "BLOCKED: variant not selected; safety defect open",
+      "publish_gate": "RETIRED 2026-09-02 (variant not chosen). Never ships.",
       "poster_candidate": true,
-      "review_status": "REVIEWED",
+      "review_status": "RETIRED",
       "updated_at": "2026-09-02"
     },
     {
@@ -185,9 +185,9 @@
           "fix": "Regenerate the diagram labels."
         }
       ],
-      "publish_gate": "BLOCKED: variant not selected; two safety defects; diagram defect",
+      "publish_gate": "RETIRED 2026-09-02 (variant not chosen). Never ships.",
       "poster_candidate": false,
-      "review_status": "REVIEWED",
+      "review_status": "RETIRED",
       "updated_at": "2026-09-02"
     },
     {
@@ -223,7 +223,7 @@
       "notes": [
         "Recommended survivor over A: all six regions labelled correctly on the bird, per-cut doneness table that keeps 165 F on every white-meat row, and only one safety defect (the spurious rest) versus A's two."
       ],
-      "publish_gate": "BLOCKED (recipes hub and named recipe pages now exist, 2026-09-02): rest wording",
+      "publish_gate": "BLOCKED (recipes hub and named recipe pages now exist, 2026-09-02): rest wording Diagram crop published on /cuts/chicken.",
       "poster_candidate": true,
       "review_status": "REVIEWED",
       "updated_at": "2026-09-02"
@@ -255,7 +255,7 @@
       "notes": [
         "Footer correctly states 145 F with a 3 minute rest."
       ],
-      "publish_gate": "BLOCKED (recipes hub and named recipe pages now exist, 2026-09-02): safety defect open",
+      "publish_gate": "BLOCKED (recipes hub and named recipe pages now exist, 2026-09-02): safety defect open Diagram crop published on /cuts/lamb.",
       "poster_candidate": true,
       "review_status": "REVIEWED",
       "updated_at": "2026-09-02"
@@ -287,7 +287,7 @@
       "notes": [
         "Rare in the niche and worth leaning on; the 'goat is lean, low temps 225-275 F' line agrees with FSIS."
       ],
-      "publish_gate": "BLOCKED (recipes hub and named recipe pages now exist, 2026-09-02): safety defect open",
+      "publish_gate": "BLOCKED (recipes hub and named recipe pages now exist, 2026-09-02): safety defect open Diagram crop published on /cuts/goat.",
       "poster_candidate": true,
       "review_status": "REVIEWED",
       "updated_at": "2026-09-02"
@@ -322,7 +322,7 @@
           "fix": "Add the disclosure."
         }
       ],
-      "publish_gate": "BLOCKED (recipes hub and named recipe pages now exist, 2026-09-02): safety defect open",
+      "publish_gate": "BLOCKED (recipes hub and named recipe pages now exist, 2026-09-02): safety defect open Diagram crop published on /cuts/salmon.",
       "poster_candidate": true,
       "review_status": "REVIEWED",
       "updated_at": "2026-09-02"

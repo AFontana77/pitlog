@@ -22,7 +22,7 @@ const SITE_URL = "https://pitlog.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Pit Master Log — Search 129+ BBQ cuts and cook times",
+    default: "Pit Master Log: BBQ cuts, temps, woods and a cook log",
     template: "%s | Pit Master Log",
   },
   description: "Pit Master Log has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "Pit Master Log",
-    title: "Pit Master Log — Search 129+ BBQ cuts and cook times",
+    title: "Pit Master Log: BBQ cuts, temps, woods and a cook log",
     description: "Pit Master Log has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Pit Master Log" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pit Master Log — Search 129+ BBQ cuts and cook times",
+    title: "Pit Master Log: BBQ cuts, temps, woods and a cook log",
     description: "Pit Master Log has 129+ BBQ cuts, target temps, cook times, and wood pairings. Log your own cooks, rate the results, and build a record of everything you've pulled off the grill.",
     images: ["/og-image.jpg"],
   },
