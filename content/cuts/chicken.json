@@ -14,23 +14,72 @@
       "long_description": "FSIS lists breast halves bone-in (6 to 8 oz) and boneless (4 oz) with grilling planning times of 10 to 15 and 6 to 8 minutes per side. Brining or a marinade in the refrigerator helps a lean breast survive the smoker. Higher pit temperatures (325 F and up) keep the skin from going rubbery.",
       "tenderness_score": 3,
       "richness_score": 1,
-      "best_methods": ["grill", "smoke at high pit temp", "roast", "spatchcock (whole bird)"],
+      "best_methods": [
+        "grill",
+        "smoke at high pit temp",
+        "roast",
+        "spatchcock (whole bird)"
+      ],
       "retail_cuts": [
-        { "slug": "bone-in-breast", "name": "Bone-in, skin-on breast", "methods": ["smoke", "grill"], "finish": "safety-poultry", "note": "FSIS planning: 10 to 15 minutes per side on a grill. Thermometer in the thickest part, away from bone." },
-        { "slug": "boneless-breast", "name": "Boneless, skinless breast", "methods": ["grill", "sear"], "finish": "safety-poultry", "note": "FSIS planning: 6 to 8 minutes per side. Thin end cooks first; probe through the side." },
-        { "slug": "ground-chicken", "name": "Ground chicken", "methods": ["grill", "pan"], "finish": "safety-poultry", "note": "165 F like every other chicken product." }
+        {
+          "slug": "bone-in-breast",
+          "name": "Bone-in, skin-on breast",
+          "methods": [
+            "smoke",
+            "grill"
+          ],
+          "finish": "safety-poultry",
+          "note": "FSIS planning: 10 to 15 minutes per side on a grill. Thermometer in the thickest part, away from bone."
+        },
+        {
+          "slug": "boneless-breast",
+          "name": "Boneless, skinless breast",
+          "methods": [
+            "grill",
+            "sear"
+          ],
+          "finish": "safety-poultry",
+          "note": "FSIS planning: 6 to 8 minutes per side. Thin end cooks first; probe through the side."
+        },
+        {
+          "slug": "ground-chicken",
+          "name": "Ground chicken",
+          "methods": [
+            "grill",
+            "pan"
+          ],
+          "finish": "safety-poultry",
+          "note": "165 F like every other chicken product."
+        }
       ],
       "safe_temp_ref": "safety-poultry",
-      "doneness_refs": ["doneness-chicken-dark-meat-preference"],
+      "doneness_refs": [
+        "doneness-chicken-dark-meat-preference"
+      ],
       "tenderness_target_ref": null,
       "planning_time_guidance": "FSIS planning times above; a whole bird 60 to 75 minutes indirect. Approximate.",
       "rest_guidance": "USDA requires none. 5 to 10 minutes helps juiciness.",
       "slice_direction": "Across the grain for slices.",
-      "best_woods": ["apple", "cherry", "pecan", "maple"],
-      "common_mistakes": ["Pulling at 160 F to 'let carryover finish it'. The safety rule is a 165 F reading; carryover is not a safety mechanism.", "Judging by colour; FSIS: pink can persist at 165 F.", "Washing the raw bird (FSIS: it spreads bacteria)."],
+      "best_woods": [
+        "apple",
+        "cherry",
+        "pecan",
+        "maple"
+      ],
+      "common_mistakes": [
+        "Pulling at 160 F to 'let carryover finish it'. The safety rule is a 165 F reading; carryover is not a safety mechanism.",
+        "Judging by colour; FSIS: pink can persist at 165 F.",
+        "Washing the raw bird (FSIS: it spreads bacteria)."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["instant-read-thermometer", "leave-in-probe"],
-      "source_refs": ["fsis-chicken-farm-to-table", "fsis-safe-temp-chart"],
+      "gear_category_refs": [
+        "instant-read-thermometer",
+        "leave-in-probe"
+      ],
+      "source_refs": [
+        "fsis-chicken-farm-to-table",
+        "fsis-safe-temp-chart"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -43,22 +92,63 @@
       "long_description": "FSIS lists wings or wingettes (2 to 3 oz) at 8 to 12 minutes per side on a grill. In a smoker the usual approach is smoke at 275 F then finish hot (400 F or a grill) to crisp the skin. Sauce goes on after cooking or in the last minutes (FSIS: last 15 to 30 minutes for a smoke).",
       "tenderness_score": 4,
       "richness_score": 4,
-      "best_methods": ["smoke then crisp", "grill", "fry"],
+      "best_methods": [
+        "smoke then crisp",
+        "grill",
+        "fry"
+      ],
       "retail_cuts": [
-        { "slug": "whole-wings", "name": "Whole wings", "methods": ["smoke then crisp", "grill"], "finish": "safety-poultry", "note": "Probe the thickest part of the drumette. Many cooks take wings to 175 F or more for texture; that is preference above the minimum." },
-        { "slug": "party-wings", "name": "Party wings (drumettes and flats)", "methods": ["smoke then crisp", "grill", "fry"], "finish": "safety-poultry", "note": "FSIS planning: 8 to 12 minutes per side grilled." }
+        {
+          "slug": "whole-wings",
+          "name": "Whole wings",
+          "methods": [
+            "smoke then crisp",
+            "grill"
+          ],
+          "finish": "safety-poultry",
+          "note": "Probe the thickest part of the drumette. Many cooks take wings to 175 F or more for texture; that is preference above the minimum."
+        },
+        {
+          "slug": "party-wings",
+          "name": "Party wings (drumettes and flats)",
+          "methods": [
+            "smoke then crisp",
+            "grill",
+            "fry"
+          ],
+          "finish": "safety-poultry",
+          "note": "FSIS planning: 8 to 12 minutes per side grilled."
+        }
       ],
       "safe_temp_ref": "safety-poultry",
-      "doneness_refs": ["doneness-chicken-dark-meat-preference"],
+      "doneness_refs": [
+        "doneness-chicken-dark-meat-preference"
+      ],
       "tenderness_target_ref": null,
       "planning_time_guidance": "1.5 to 2 hours total: about an hour of smoke, then a hot finish. Approximate.",
       "rest_guidance": "Serve hot.",
       "slice_direction": "Split at the joints.",
-      "best_woods": ["cherry", "apple", "hickory (light)"],
-      "common_mistakes": ["Low and slow to the end; rubbery skin.", "Saucing early and burning the sugar."],
-      "recipe_refs": ["alabama-white-sauce"],
-      "gear_category_refs": ["instant-read-thermometer", "tongs", "wire-rack"],
-      "source_refs": ["fsis-chicken-farm-to-table", "fsis-smoking-meat-poultry"],
+      "best_woods": [
+        "cherry",
+        "apple",
+        "hickory (light)"
+      ],
+      "common_mistakes": [
+        "Low and slow to the end; rubbery skin.",
+        "Saucing early and burning the sugar."
+      ],
+      "recipe_refs": [
+        "alabama-white-sauce"
+      ],
+      "gear_category_refs": [
+        "instant-read-thermometer",
+        "tongs",
+        "wire-rack"
+      ],
+      "source_refs": [
+        "fsis-chicken-farm-to-table",
+        "fsis-smoking-meat-poultry"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -71,23 +161,75 @@
       "long_description": "FSIS lists legs or thighs (4 to 8 oz) at 10 to 15 minutes per side on a grill. The thigh is the barbecue chicken cut: enough fat and collagen to sit in smoke for two hours. Bone-in, skin-on thighs are the base of both signature recipes the chicken masters promise.",
       "tenderness_score": 4,
       "richness_score": 4,
-      "best_methods": ["smoke", "grill", "roast"],
+      "best_methods": [
+        "smoke",
+        "grill",
+        "roast"
+      ],
       "retail_cuts": [
-        { "slug": "bone-in-thigh", "name": "Bone-in, skin-on thigh", "methods": ["smoke", "grill"], "finish": "doneness-chicken-dark-meat-preference", "note": "165 F minimum; 175 to 185 F is the texture preference." },
-        { "slug": "boneless-thigh", "name": "Boneless, skinless thigh", "methods": ["grill", "smoke"], "finish": "doneness-chicken-dark-meat-preference", "note": "Cooks fast; still forgiving." },
-        { "slug": "whole-leg", "name": "Whole leg (thigh plus drumstick)", "methods": ["smoke", "grill"], "finish": "doneness-chicken-dark-meat-preference", "note": "Probe the innermost thigh, not touching bone (FSIS)." }
+        {
+          "slug": "bone-in-thigh",
+          "name": "Bone-in, skin-on thigh",
+          "methods": [
+            "smoke",
+            "grill"
+          ],
+          "finish": "doneness-chicken-dark-meat-preference",
+          "note": "165 F minimum; 175 to 185 F is the texture preference."
+        },
+        {
+          "slug": "boneless-thigh",
+          "name": "Boneless, skinless thigh",
+          "methods": [
+            "grill",
+            "smoke"
+          ],
+          "finish": "doneness-chicken-dark-meat-preference",
+          "note": "Cooks fast; still forgiving."
+        },
+        {
+          "slug": "whole-leg",
+          "name": "Whole leg (thigh plus drumstick)",
+          "methods": [
+            "smoke",
+            "grill"
+          ],
+          "finish": "doneness-chicken-dark-meat-preference",
+          "note": "Probe the innermost thigh, not touching bone (FSIS)."
+        }
       ],
       "safe_temp_ref": "safety-poultry",
-      "doneness_refs": ["doneness-chicken-dark-meat-preference"],
-      "tenderness_target_ref": "target-chicken-pulled",
-      "planning_time_guidance": "1.5 to 2 hours at 275 F smoked; FSIS planning 10 to 15 minutes per side grilled. Approximate.",
+      "doneness_refs": [
+        "doneness-chicken-dark-meat-preference"
+      ],
+      "tenderness_target_ref": null,
+      "planning_time_guidance": "1.5 to 2 hours at 275 F smoked; FSIS planning 10 to 15 minutes per side grilled. Approximate. For pulled chicken, take dark meat to 190 to 205 F, probe tender (craft).",
       "rest_guidance": "5 minutes.",
       "slice_direction": "Served whole or pulled.",
-      "best_woods": ["apple", "cherry", "pecan", "hickory"],
-      "common_mistakes": ["Pulling at 165 F when you wanted rendered dark meat; it is safe but chewy at the joint.", "Skin down in a low smoker without a hot finish."],
-      "recipe_refs": ["pit-log-smoked-chicken-thighs", "pit-log-honey-garlic-chicken-thighs", "alabama-white-sauce"],
-      "gear_category_refs": ["leave-in-probe", "instant-read-thermometer", "tongs"],
-      "source_refs": ["fsis-chicken-farm-to-table", "fsis-safe-temp-chart"],
+      "best_woods": [
+        "apple",
+        "cherry",
+        "pecan",
+        "hickory"
+      ],
+      "common_mistakes": [
+        "Pulling at 165 F when you wanted rendered dark meat; it is safe but chewy at the joint.",
+        "Skin down in a low smoker without a hot finish."
+      ],
+      "recipe_refs": [
+        "pit-log-smoked-chicken-thighs",
+        "pit-log-honey-garlic-chicken-thighs",
+        "alabama-white-sauce"
+      ],
+      "gear_category_refs": [
+        "leave-in-probe",
+        "instant-read-thermometer",
+        "tongs"
+      ],
+      "source_refs": [
+        "fsis-chicken-farm-to-table",
+        "fsis-safe-temp-chart"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -100,21 +242,47 @@
       "long_description": "FSIS lists drumsticks (4 oz) at 8 to 12 minutes per side on a grill. Tendons run the length of the bone; cooking past 165 F toward 180 F softens them, which is why drumsticks are rarely served at the bare minimum.",
       "tenderness_score": 3,
       "richness_score": 3,
-      "best_methods": ["smoke", "grill", "roast"],
+      "best_methods": [
+        "smoke",
+        "grill",
+        "roast"
+      ],
       "retail_cuts": [
-        { "slug": "drumsticks", "name": "Drumsticks", "methods": ["smoke", "grill"], "finish": "doneness-chicken-dark-meat-preference", "note": "Probe alongside the bone, not touching it. FSIS planning: 8 to 12 minutes per side grilled." }
+        {
+          "slug": "drumsticks",
+          "name": "Drumsticks",
+          "methods": [
+            "smoke",
+            "grill"
+          ],
+          "finish": "doneness-chicken-dark-meat-preference",
+          "note": "Probe alongside the bone, not touching it. FSIS planning: 8 to 12 minutes per side grilled."
+        }
       ],
       "safe_temp_ref": "safety-poultry",
-      "doneness_refs": ["doneness-chicken-dark-meat-preference"],
-      "tenderness_target_ref": "target-chicken-pulled",
-      "planning_time_guidance": "1.5 to 2 hours at 275 F. Approximate.",
+      "doneness_refs": [
+        "doneness-chicken-dark-meat-preference"
+      ],
+      "tenderness_target_ref": null,
+      "planning_time_guidance": "1.5 to 2 hours at 275 F. Approximate. For pulled chicken, take dark meat to 190 to 205 F, probe tender (craft).",
       "rest_guidance": "5 minutes.",
       "slice_direction": "Served whole.",
-      "best_woods": ["apple", "cherry", "hickory"],
-      "common_mistakes": ["Probe touching bone reads high and fools you into pulling early."],
+      "best_woods": [
+        "apple",
+        "cherry",
+        "hickory"
+      ],
+      "common_mistakes": [
+        "Probe touching bone reads high and fools you into pulling early."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["instant-read-thermometer", "tongs"],
-      "source_refs": ["fsis-chicken-farm-to-table"],
+      "gear_category_refs": [
+        "instant-read-thermometer",
+        "tongs"
+      ],
+      "source_refs": [
+        "fsis-chicken-farm-to-table"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -127,10 +295,31 @@
       "long_description": "Spatchcocking (removing the backbone and flattening the bird) is the method that makes a whole smoked chicken cook evenly; FSIS's whole-bird rule still applies, 165 F in the innermost thigh and wing and the thickest breast. Roast the back for stock.",
       "tenderness_score": 2,
       "richness_score": 3,
-      "best_methods": ["simmer (stock)", "roast"],
+      "best_methods": [
+        "simmer (stock)",
+        "roast"
+      ],
       "retail_cuts": [
-        { "slug": "chicken-back", "name": "Back / carcass", "methods": ["simmer"], "finish": "safety-poultry", "note": "Stock and soup. Refrigerate within 2 hours; use in 3 to 4 days (FSIS)." },
-        { "slug": "whole-chicken", "name": "Whole chicken (spatchcocked or trussed)", "methods": ["smoke", "roast", "grill indirect"], "finish": "safety-poultry", "note": "FSIS planning: broiler-fryer 3 to 4 lb, 60 to 75 minutes indirect on a grill, 1.25 to 1.5 hours roasted at 350 F. Check thigh, wing and breast." }
+        {
+          "slug": "chicken-back",
+          "name": "Back / carcass",
+          "methods": [
+            "simmer"
+          ],
+          "finish": "safety-poultry",
+          "note": "Stock and soup. Refrigerate within 2 hours; use in 3 to 4 days (FSIS)."
+        },
+        {
+          "slug": "whole-chicken",
+          "name": "Whole chicken (spatchcocked or trussed)",
+          "methods": [
+            "smoke",
+            "roast",
+            "grill indirect"
+          ],
+          "finish": "safety-poultry",
+          "note": "FSIS planning: broiler-fryer 3 to 4 lb, 60 to 75 minutes indirect on a grill, 1.25 to 1.5 hours roasted at 350 F. Check thigh, wing and breast."
+        }
       ],
       "safe_temp_ref": "safety-poultry",
       "doneness_refs": [],
@@ -138,11 +327,25 @@
       "planning_time_guidance": "Whole bird 60 to 75 minutes indirect (FSIS planning); spatchcocked at 325 to 350 F, roughly an hour. Approximate.",
       "rest_guidance": "10 minutes for a whole bird.",
       "slice_direction": "Joint the bird; slice the breast across the grain.",
-      "best_woods": ["apple", "cherry", "pecan"],
-      "common_mistakes": ["Stuffing a bird ahead of time (FSIS: stuff immediately before cooking, and the stuffing must also reach 165 F).", "Trusting the pop-up timer over a thermometer."],
+      "best_woods": [
+        "apple",
+        "cherry",
+        "pecan"
+      ],
+      "common_mistakes": [
+        "Stuffing a bird ahead of time (FSIS: stuff immediately before cooking, and the stuffing must also reach 165 F).",
+        "Trusting the pop-up timer over a thermometer."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["kitchen-shears", "leave-in-probe", "cutting-board"],
-      "source_refs": ["fsis-chicken-farm-to-table", "fsis-safe-temp-chart"],
+      "gear_category_refs": [
+        "kitchen-shears",
+        "leave-in-probe",
+        "cutting-board"
+      ],
+      "source_refs": [
+        "fsis-chicken-farm-to-table",
+        "fsis-safe-temp-chart"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -155,9 +358,21 @@
       "long_description": "Included because the diagram numbers it. There is no separate FSIS rule; it is poultry, 165 F.",
       "tenderness_score": 3,
       "richness_score": 5,
-      "best_methods": ["smoke (on the bird)", "simmer"],
+      "best_methods": [
+        "smoke (on the bird)",
+        "simmer"
+      ],
       "retail_cuts": [
-        { "slug": "chicken-tail", "name": "Tail", "methods": ["smoke", "simmer"], "finish": "safety-poultry", "note": "Sold in bulk in some markets; otherwise part of the whole bird." }
+        {
+          "slug": "chicken-tail",
+          "name": "Tail",
+          "methods": [
+            "smoke",
+            "simmer"
+          ],
+          "finish": "safety-poultry",
+          "note": "Sold in bulk in some markets; otherwise part of the whole bird."
+        }
       ],
       "safe_temp_ref": "safety-poultry",
       "doneness_refs": [],
@@ -165,11 +380,16 @@
       "planning_time_guidance": "Cooks with the bird.",
       "rest_guidance": "None.",
       "slice_direction": "Not applicable.",
-      "best_woods": ["apple", "cherry"],
+      "best_woods": [
+        "apple",
+        "cherry"
+      ],
       "common_mistakes": [],
       "recipe_refs": [],
       "gear_category_refs": [],
-      "source_refs": ["fsis-safe-temp-chart"],
+      "source_refs": [
+        "fsis-safe-temp-chart"
+      ],
       "review_status": "DRAFT",
       "updated_at": "2026-09-02"
     }

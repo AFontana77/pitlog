@@ -1,0 +1,228 @@
+{
+  "_meta": {
+    "purpose": "Hotspot polygons for the goat primal diagram in MASTER pixel coordinates; the web image is the crop below upscaled 2x and the SVG viewBox equals the crop box, so coordinates apply unchanged. If the master md5 changes every polygon must be re-checked.",
+    "master": "goat-cuts-cooking-guide",
+    "master_file": "brand-assets/cut-guides/goat-cuts-cooking-guide.png",
+    "master_md5": "d0e1ade8c46268da485238a39ceb9564",
+    "crop_box_xyxy": [
+      20,
+      240,
+      590,
+      600
+    ],
+    "web_image": "/images/cuts/goat-primal-diagram.png",
+    "web_image_px": [
+      1140,
+      720
+    ],
+    "drawn": "2026-09-02",
+    "method": "grid overlay + visual check of a filled-polygon render",
+    "review_status": "REVIEWED"
+  },
+  "viewBox": "20 240 570 360",
+  "regions": [
+    {
+      "slug": "shoulder",
+      "polygon": [
+        [
+          190,
+          290
+        ],
+        [
+          285,
+          278
+        ],
+        [
+          285,
+          395
+        ],
+        [
+          195,
+          405
+        ]
+      ],
+      "label": [
+        239,
+        342
+      ]
+    },
+    {
+      "slug": "rack",
+      "polygon": [
+        [
+          285,
+          278
+        ],
+        [
+          360,
+          272
+        ],
+        [
+          360,
+          395
+        ],
+        [
+          285,
+          395
+        ]
+      ],
+      "label": [
+        322,
+        335
+      ]
+    },
+    {
+      "slug": "loin",
+      "polygon": [
+        [
+          360,
+          272
+        ],
+        [
+          440,
+          270
+        ],
+        [
+          440,
+          395
+        ],
+        [
+          360,
+          395
+        ]
+      ],
+      "label": [
+        400,
+        333
+      ]
+    },
+    {
+      "slug": "leg",
+      "polygon": [
+        [
+          440,
+          270
+        ],
+        [
+          520,
+          278
+        ],
+        [
+          548,
+          330
+        ],
+        [
+          545,
+          420
+        ],
+        [
+          505,
+          445
+        ],
+        [
+          455,
+          455
+        ],
+        [
+          440,
+          395
+        ]
+      ],
+      "label": [
+        493,
+        370
+      ]
+    },
+    {
+      "slug": "breast",
+      "polygon": [
+        [
+          195,
+          405
+        ],
+        [
+          285,
+          395
+        ],
+        [
+          285,
+          470
+        ],
+        [
+          255,
+          500
+        ],
+        [
+          200,
+          500
+        ]
+      ],
+      "label": [
+        244,
+        454
+      ]
+    },
+    {
+      "slug": "flank",
+      "polygon": [
+        [
+          285,
+          395
+        ],
+        [
+          440,
+          395
+        ],
+        [
+          440,
+          460
+        ],
+        [
+          375,
+          470
+        ],
+        [
+          285,
+          470
+        ]
+      ],
+      "label": [
+        365,
+        438
+      ]
+    },
+    {
+      "slug": "shank",
+      "polygon": [
+        [
+          455,
+          455
+        ],
+        [
+          505,
+          445
+        ],
+        [
+          520,
+          520
+        ],
+        [
+          500,
+          560
+        ],
+        [
+          465,
+          560
+        ],
+        [
+          455,
+          510
+        ]
+      ],
+      "label": [
+        483,
+        508
+      ]
+    }
+  ]
+}

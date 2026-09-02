@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app/cuts' },
 };
 
-const LIVE = new Set(['beef']);
+const LIVE = new Set(['beef', 'pork', 'chicken', 'salmon', 'lamb', 'goat']);
 
 export default function CutsHubPage() {
   const refs = ANIMALS.flatMap((a) => a.source_refs);
@@ -28,7 +28,7 @@ export default function CutsHubPage() {
           <H1>Six animals. Every primal. One set of facts.</H1>
           <Lede>
             Tap a region on the diagram and get what it is, how tender it runs, how to cook it, the USDA safe temperature,
-            the pitmaster finish, the wood, and the recipe. Beef is live. The rest are being built from the same records.
+            the pitmaster finish, the wood, and the recipe. All six animals render from the same records.
           </Lede>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {ANIMALS.map((a) => {

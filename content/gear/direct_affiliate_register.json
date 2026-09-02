@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "purpose": "Owner-ready application queue for direct affiliate programs relevant to Pit Log. Research only. No application was made, no account created, no contract entered. Figures marked 'verified' were read on the brand's own program page on the accessed date; figures marked 'reported' come from affiliate directories and must be confirmed on the network before use. Portfolio rule: direct merchant beats network beats Amazon when economics and reputation justify it.",
+    "accessed": "2026-09-02",
+    "status_enum": ["READY_TO_APPLY", "REPORTED_ONLY", "AMBASSADOR_ONLY", "NO_PROGRAM_FOUND"],
+    "why_it_matters_scale": "P1 = appears on many pages or high ticket; P2 = one page family; P3 = nice to have"
+  },
+  "programs": [
+    {
+      "brand": "ThermoWorks", "category": ["instant-read-thermometer", "leave-in-probe"],
+      "network": "In-house (Post Affiliate Pro)", "commission": "10% of sale value (verified on program FAQ)", "cookie": "30 days (verified)",
+      "payout": "Monthly, direct deposit from $10, check from $100 (verified)",
+      "signup_url": "https://thermoworks.postaffiliatepro.com/affiliates/signup.php", "program_page": "https://www.thermoworks.com/pages/affiliate",
+      "status": "READY_TO_APPLY", "priority": "P1",
+      "why": "The thermometer is on every cut, temperature and recipe page. 10% direct beats Amazon Kitchen at 4.5%, and ThermoWorks is the reference brand for the FSIS two-thermometer rule.",
+      "requirements": "Site content relevant to the product line; complete site with unique content."
+    },
+    {
+      "brand": "MEATER (Traeger-owned)", "category": ["leave-in-probe"],
+      "network": "Reported on FlexOffers / directories", "commission": "10% per sale (reported, unverified)", "cookie": "30 to 45 days (reported, unverified)",
+      "payout": "Per network", "signup_url": "https://www.flexoffers.com/affiliate-programs/meater-affiliate-program/", "program_page": null,
+      "status": "REPORTED_ONLY", "priority": "P2",
+      "why": "Wireless probe for long cooks; pairs with the app's log fields. Confirm terms on the network; meater.com/pages/affiliates returned 404.",
+      "requirements": "Unknown until the network listing is opened."
+    },
+    {
+      "brand": "Traeger Grills", "category": ["smoker", "charcoal-pellets-wood"],
+      "network": "Impact (signup page redirects; open in a browser)", "commission": "6% (reported by directories, unverified)", "cookie": "30 days (reported)",
+      "payout": "Impact", "signup_url": "https://app.impact.com/campaign-promo-signup/Traeger-Grills.brand", "program_page": null,
+      "status": "REPORTED_ONLY", "priority": "P1",
+      "why": "High ticket. The existing /traeger-recipes page already ranks for a 14,800/mo term; a direct program monetises it better than Amazon Outdoors at 3%.",
+      "requirements": "Impact account."
+    },
+    {
+      "brand": "Weber", "category": ["grill", "smoker"],
+      "network": "Impact (signup page redirects; open in a browser)", "commission": "Not stated on directories", "cookie": "30 days (reported)",
+      "payout": "Impact", "signup_url": "https://app.impact.com/campaign-promo-signup/Weber-Inc.brand", "program_page": null,
+      "status": "REPORTED_ONLY", "priority": "P2",
+      "why": "Kettle and Smokey Mountain are the entry smokers most readers own.",
+      "requirements": "Impact account."
+    },
+    {
+      "brand": "Kamado Joe", "category": ["smoker"],
+      "network": "None found; FireSquad ambassador program only", "commission": null, "cookie": null,
+      "payout": null, "signup_url": "https://www.kamadojoe.com/pages/ambassador-application", "program_page": null,
+      "status": "AMBASSADOR_ONLY", "priority": "P3",
+      "why": "Kamado readers exist but no affiliate economics were found. Amazon or Home Depot links remain the path.",
+      "requirements": "Ambassador application, not an affiliate contract."
+    },
+    {
+      "brand": "Pit Boss Grills", "category": ["smoker", "charcoal-pellets-wood"],
+      "network": "In-house program page; FlexOffers listing exists", "commission": "6% standard for creators and bloggers (reported on program page summaries, confirm on signup)", "cookie": "30 days (reported)",
+      "payout": "Per program", "signup_url": "https://www.pitboss-grills.com/pages/affiliate", "program_page": "https://www.pitboss-grills.com/pages/affiliate",
+      "status": "READY_TO_APPLY", "priority": "P1",
+      "why": "/pit-boss-recipes already exists and targets a 2,400/mo term. Direct 6% beats Amazon Outdoors 3%.",
+      "requirements": "Per program page."
+    },
+    {
+      "brand": "Oklahoma Joe's", "category": ["smoker"],
+      "network": "CJ (requires an active CJ publisher account; portfolio CID 7958821 exists)", "commission": "Not stated; 'competitive' per program page", "cookie": "30 days (program page)",
+      "payout": "CJ", "signup_url": "https://www.oklahomajoes.com/pages/affiliate", "program_page": "https://www.oklahomajoes.com/pages/affiliate",
+      "status": "READY_TO_APPLY", "priority": "P2",
+      "why": "Offset smokers are the brisket reader's aspiration. The portfolio already has a CJ publisher account, so this is an in-network apply.",
+      "requirements": "CJ account (exists)."
+    },
+    {
+      "brand": "Masterbuilt", "category": ["smoker"],
+      "network": "None found; ambassador application only", "commission": null, "cookie": null,
+      "payout": null, "signup_url": "https://www.masterbuilt.com/pages/ambassador-application", "program_page": null,
+      "status": "AMBASSADOR_ONLY", "priority": "P3",
+      "why": "Electric and gravity smokers; beginner audience. Amazon path for now.",
+      "requirements": "Ambassador review."
+    },
+    {
+      "brand": "Victorinox", "category": ["slicing-knife"],
+      "network": "Directories report a US program (rates 4.8 to 9.6% reported, region-dependent)", "commission": "4.8 to 9.6% (reported, unverified)", "cookie": "Unknown",
+      "payout": "Per network", "signup_url": "https://getlasso.co/affiliate/victorinox-us/", "program_page": null,
+      "status": "REPORTED_ONLY", "priority": "P2",
+      "why": "The Fibrox slicer is the default brisket knife recommendation.",
+      "requirements": "Find the operating network before applying."
+    },
+    {
+      "brand": "Dalstrong", "category": ["slicing-knife"],
+      "network": "In-house (GoAffPro)", "commission": "10% baseline (program page summary; confirm on portal)", "cookie": "30 days (reported)",
+      "payout": "GoAffPro", "signup_url": "https://dalstrong.goaffpro.com/", "program_page": "https://dalstrong.com/pages/affiliate-program",
+      "status": "READY_TO_APPLY", "priority": "P2",
+      "why": "Premium slicers; higher AOV than Victorinox. 10% direct.",
+      "requirements": "Per portal."
+    },
+    {
+      "brand": "YETI", "category": ["cooler-holding"],
+      "network": "Directories report 5% and a 30 day window", "commission": "5% (reported, unverified)", "cookie": "30 days (reported)",
+      "payout": "Per network", "signup_url": "https://getlasso.co/affiliate/yeti/", "program_page": null,
+      "status": "REPORTED_ONLY", "priority": "P2",
+      "why": "The faux-Cambro brisket hold is on every long-cook page; coolers are high ticket.",
+      "requirements": "Find the operating network before applying."
+    },
+    {
+      "brand": "RTIC Outdoors", "category": ["cooler-holding"],
+      "network": "AvantLink / FlexOffers (program page on rticoutdoors.com)", "commission": "1.5 to 5% tiered (reported)", "cookie": "30 days (reported)",
+      "payout": "Per network", "signup_url": "https://rticoutdoors.com/affiliates", "program_page": "https://rticoutdoors.com/affiliates",
+      "status": "READY_TO_APPLY", "priority": "P3",
+      "why": "Budget alternative to YETI for the same hold use case.",
+      "requirements": "AvantLink account."
+    },
+    {
+      "brand": "Lodge Cast Iron", "category": ["cast-iron", "dutch-oven"],
+      "network": "None found on major networks; brand community only", "commission": null, "cookie": null,
+      "payout": null, "signup_url": "https://www.lodgecastiron.com/pages/affiliations", "program_page": null,
+      "status": "NO_PROGRAM_FOUND", "priority": "P3",
+      "why": "Reverse-sear and braise pages name cast iron; Amazon Kitchen 4.5% remains the path.",
+      "requirements": null
+    },
+    {
+      "brand": "FOGO Charcoal", "category": ["charcoal-pellets-wood"],
+      "network": "None found; open to collaborations per influencer listings", "commission": null, "cookie": null,
+      "payout": null, "signup_url": "https://www.fogocharcoal.com/", "program_page": null,
+      "status": "NO_PROGRAM_FOUND", "priority": "P3",
+      "why": "Premium lump; consumable. Amazon path.",
+      "requirements": null
+    },
+    {
+      "brand": "Jealous Devil", "category": ["charcoal-pellets-wood"],
+      "network": "None found ('Devil's Advocates' community page)", "commission": null, "cookie": null,
+      "payout": null, "signup_url": "https://www.jealousdevil.com/devils-advocates", "program_page": null,
+      "status": "NO_PROGRAM_FOUND", "priority": "P3",
+      "why": "Lump and pellets; consumable. Amazon path.",
+      "requirements": null
+    },
+    {
+      "brand": "B&B Charcoal", "category": ["charcoal-pellets-wood"],
+      "network": "None found", "commission": null, "cookie": null,
+      "payout": null, "signup_url": "https://www.bbcharcoal.com/", "program_page": null,
+      "status": "NO_PROGRAM_FOUND", "priority": "P3",
+      "why": "Post oak splits and chunks; the Central Texas fuel. Amazon or Academy path.",
+      "requirements": null
+    },
+    {
+      "brand": "Bear Mountain BBQ", "category": ["charcoal-pellets-wood"],
+      "network": "None found", "commission": null, "cookie": null,
+      "payout": null, "signup_url": "https://bearmountainbbq.com/", "program_page": null,
+      "status": "NO_PROGRAM_FOUND", "priority": "P3",
+      "why": "Pellets for the Traeger and Pit Boss readers. Amazon path.",
+      "requirements": null
+    }
+  ],
+  "apply_order_recommendation": ["ThermoWorks", "Pit Boss Grills", "Oklahoma Joe's (CJ, account exists)", "Dalstrong", "Traeger (Impact)", "RTIC", "Weber (Impact)"]
+}

@@ -1,0 +1,220 @@
+{
+  "_meta": {
+    "purpose": "Hotspot polygons for the pork primal diagram in MASTER pixel coordinates; the web image is the crop below upscaled 2x and the SVG viewBox equals the crop box, so coordinates apply unchanged. If the master md5 changes every polygon must be re-checked.",
+    "master": "pork-cuts-cooking-guide-A",
+    "master_file": "brand-assets/cut-guides/pork-cuts-cooking-guide-A.png",
+    "master_md5": "72dc9ed1772c3c625fc9b1c27f011028",
+    "crop_box_xyxy": [
+      20,
+      235,
+      580,
+      545
+    ],
+    "web_image": "/images/cuts/pork-primal-diagram.png",
+    "web_image_px": [
+      1120,
+      620
+    ],
+    "drawn": "2026-09-02",
+    "method": "grid overlay + visual check of a filled-polygon render",
+    "review_status": "REVIEWED"
+  },
+  "viewBox": "20 235 560 310",
+  "regions": [
+    {
+      "slug": "butt",
+      "polygon": [
+        [
+          175,
+          265
+        ],
+        [
+          270,
+          258
+        ],
+        [
+          275,
+          372
+        ],
+        [
+          180,
+          380
+        ]
+      ],
+      "label": [
+        225,
+        319
+      ]
+    },
+    {
+      "slug": "loin",
+      "polygon": [
+        [
+          275,
+          258
+        ],
+        [
+          415,
+          255
+        ],
+        [
+          420,
+          370
+        ],
+        [
+          275,
+          372
+        ]
+      ],
+      "label": [
+        346,
+        314
+      ]
+    },
+    {
+      "slug": "ham",
+      "polygon": [
+        [
+          415,
+          255
+        ],
+        [
+          520,
+          268
+        ],
+        [
+          542,
+          330
+        ],
+        [
+          536,
+          420
+        ],
+        [
+          440,
+          430
+        ],
+        [
+          420,
+          370
+        ]
+      ],
+      "label": [
+        479,
+        346
+      ]
+    },
+    {
+      "slug": "picnic-shoulder",
+      "polygon": [
+        [
+          180,
+          380
+        ],
+        [
+          275,
+          372
+        ],
+        [
+          270,
+          470
+        ],
+        [
+          232,
+          520
+        ],
+        [
+          170,
+          520
+        ],
+        [
+          163,
+          450
+        ]
+      ],
+      "label": [
+        215,
+        452
+      ]
+    },
+    {
+      "slug": "spareribs",
+      "polygon": [
+        [
+          275,
+          372
+        ],
+        [
+          350,
+          371
+        ],
+        [
+          350,
+          470
+        ],
+        [
+          272,
+          470
+        ]
+      ],
+      "label": [
+        312,
+        421
+      ]
+    },
+    {
+      "slug": "belly",
+      "polygon": [
+        [
+          350,
+          371
+        ],
+        [
+          420,
+          370
+        ],
+        [
+          432,
+          470
+        ],
+        [
+          350,
+          470
+        ]
+      ],
+      "label": [
+        388,
+        420
+      ]
+    },
+    {
+      "slug": "hock",
+      "polygon": [
+        [
+          440,
+          430
+        ],
+        [
+          500,
+          425
+        ],
+        [
+          510,
+          500
+        ],
+        [
+          462,
+          512
+        ],
+        [
+          440,
+          482
+        ]
+      ],
+      "label": [
+        470,
+        470
+      ]
+    }
+  ]
+}

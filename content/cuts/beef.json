@@ -15,25 +15,93 @@
       "long_description": "USDA FSIS names chuck as one of the four major beef primals and notes it is less tender and generally needs moist heat. In barbecue that translates to smoking and braising: chuck roast cooked like a small brisket, and chuck short ribs that the Beef Board describes as flavourful, moist and tender when slow-cooked. The flat iron, cut from the top blade, is the exception: the Beef Board calls it the second most tender beef cut and it grills like a steak.",
       "tenderness_score": 2,
       "richness_score": 4,
-      "best_methods": ["smoke", "braise", "grill (flat iron and Denver steak only)"],
+      "best_methods": [
+        "smoke",
+        "braise",
+        "grill (flat iron and Denver steak only)"
+      ],
       "retail_cuts": [
-        { "slug": "chuck-roast", "name": "Chuck roast", "methods": ["smoke", "braise"], "finish": "target-beef-chuck-and-short-ribs", "note": "Often called the poor man's brisket. Wrap around 165 F, pull probe tender." },
-        { "slug": "chuck-short-ribs", "name": "Chuck short ribs", "methods": ["smoke", "braise"], "finish": "target-beef-chuck-and-short-ribs", "note": "Beef Board: tender when slow-cooked." },
-        { "slug": "flat-iron-steak", "name": "Flat iron steak", "methods": ["grill", "sear"], "finish": "doneness-beef-industry", "note": "From the top blade. Second most tender beef cut (Beef Board). Slice across the grain." },
-        { "slug": "denver-steak", "name": "Denver steak", "methods": ["grill"], "finish": "doneness-beef-industry", "note": "From the centre of the under blade; high heat (Beef Board)." },
-        { "slug": "ground-chuck", "name": "Ground chuck", "methods": ["grill"], "finish": "safety-ground-meat", "note": "160 F, no exceptions." }
+        {
+          "slug": "chuck-roast",
+          "name": "Chuck roast",
+          "methods": [
+            "smoke",
+            "braise"
+          ],
+          "finish": "target-beef-chuck-and-short-ribs",
+          "note": "Often called the poor man's brisket. Wrap around 165 F, pull probe tender."
+        },
+        {
+          "slug": "chuck-short-ribs",
+          "name": "Chuck short ribs",
+          "methods": [
+            "smoke",
+            "braise"
+          ],
+          "finish": "target-beef-chuck-and-short-ribs",
+          "note": "Beef Board: tender when slow-cooked."
+        },
+        {
+          "slug": "flat-iron-steak",
+          "name": "Flat iron steak",
+          "methods": [
+            "grill",
+            "sear"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "From the top blade. Second most tender beef cut (Beef Board). Slice across the grain."
+        },
+        {
+          "slug": "denver-steak",
+          "name": "Denver steak",
+          "methods": [
+            "grill"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "From the centre of the under blade; high heat (Beef Board)."
+        },
+        {
+          "slug": "ground-chuck",
+          "name": "Ground chuck",
+          "methods": [
+            "grill"
+          ],
+          "finish": "safety-ground-meat",
+          "note": "160 F, no exceptions."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
-      "doneness_refs": ["doneness-beef-industry", "doneness-beef-convention"],
+      "doneness_refs": [
+        "doneness-beef-industry",
+        "doneness-beef-convention"
+      ],
       "tenderness_target_ref": "target-beef-chuck-and-short-ribs",
       "planning_time_guidance": "Chuck roast roughly 1.5 hours per pound at 250 F. Approximate.",
       "rest_guidance": "30 to 60 minutes for a smoked roast; 5 minutes for a flat iron.",
       "slice_direction": "Across the grain. Pull rather than slice when cooked to the tenderness window.",
-      "best_woods": ["oak", "hickory", "pecan"],
-      "common_mistakes": ["Pulling a chuck roast at 165 F because the safety minimum is met; it is safe but tough.", "Grilling chuck roast like a steak.", "Slicing flat iron with the grain."],
-      "recipe_refs": ["coffee-chile-smoked-chuck-roast"],
-      "gear_category_refs": ["leave-in-probe", "butcher-paper", "slicing-knife"],
-      "source_refs": ["fsis-beef-farm-to-table", "beef-board-cuts"],
+      "best_woods": [
+        "oak",
+        "hickory",
+        "pecan"
+      ],
+      "common_mistakes": [
+        "Pulling a chuck roast at 165 F because the safety minimum is met; it is safe but tough.",
+        "Grilling chuck roast like a steak.",
+        "Slicing flat iron with the grain."
+      ],
+      "recipe_refs": [
+        "coffee-chile-smoked-chuck-roast"
+      ],
+      "gear_category_refs": [
+        "leave-in-probe",
+        "butcher-paper",
+        "slicing-knife"
+      ],
+      "source_refs": [
+        "fsis-beef-farm-to-table",
+        "beef-board-cuts",
+        "tamu-meat-selection"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -46,23 +114,74 @@
       "long_description": "FSIS names rib as a major primal that can be cooked by dry heat. The ribeye steak and the standing rib roast come from here, as do beef back ribs. This is grilling and roasting territory; smoke is used for flavour on a rib roast, not to render collagen.",
       "tenderness_score": 5,
       "richness_score": 5,
-      "best_methods": ["grill", "reverse sear", "roast", "smoke (rib roast, back ribs)"],
+      "best_methods": [
+        "grill",
+        "reverse sear",
+        "roast",
+        "smoke (rib roast, back ribs)"
+      ],
       "retail_cuts": [
-        { "slug": "ribeye-steak", "name": "Ribeye steak", "methods": ["grill", "reverse sear"], "finish": "doneness-beef-industry", "note": "Well-marbled. The reverse sear (smoke low, then sear) suits thick ribeyes." },
-        { "slug": "rib-roast", "name": "Rib roast (prime rib)", "methods": ["roast", "smoke"], "finish": "doneness-beef-industry", "note": "Beef Board: roasts rise 5 to 15 F after leaving the heat; stand 15 to 20 minutes." },
-        { "slug": "back-ribs", "name": "Beef back ribs", "methods": ["smoke"], "finish": "target-beef-chuck-and-short-ribs", "note": "Less meat than plate short ribs; smoke until the meat pulls back from the bone." }
+        {
+          "slug": "ribeye-steak",
+          "name": "Ribeye steak",
+          "methods": [
+            "grill",
+            "reverse sear"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Well-marbled. The reverse sear (smoke low, then sear) suits thick ribeyes."
+        },
+        {
+          "slug": "rib-roast",
+          "name": "Rib roast (prime rib)",
+          "methods": [
+            "roast",
+            "smoke"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Beef Board: roasts rise 5 to 15 F after leaving the heat; stand 15 to 20 minutes."
+        },
+        {
+          "slug": "back-ribs",
+          "name": "Beef back ribs",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-beef-chuck-and-short-ribs",
+          "note": "Less meat than plate short ribs; smoke until the meat pulls back from the bone."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
-      "doneness_refs": ["doneness-beef-industry", "doneness-beef-convention"],
+      "doneness_refs": [
+        "doneness-beef-industry",
+        "doneness-beef-convention"
+      ],
       "tenderness_target_ref": null,
       "planning_time_guidance": "Rib roast: FSIS planning table 23 to 25 minutes per pound at 325 F, bone in. Reverse-seared ribeye: 45 to 60 minutes in smoke at 225 F then a hard sear. Approximate.",
       "rest_guidance": "Steaks 5 to 10 minutes. Roasts 15 to 20 minutes (Beef Board).",
       "slice_direction": "Across the grain.",
-      "best_woods": ["oak", "cherry", "pecan"],
-      "common_mistakes": ["Cooking a ribeye to a tenderness window; it is not a collagen cut.", "Skipping the rest on a rib roast, then losing the juice on the board."],
-      "recipe_refs": ["reverse-seared-ribeye-ember-butter"],
-      "gear_category_refs": ["instant-read-thermometer", "cast-iron", "slicing-knife"],
-      "source_refs": ["fsis-beef-farm-to-table", "beef-board-doneness"],
+      "best_woods": [
+        "oak",
+        "cherry",
+        "pecan"
+      ],
+      "common_mistakes": [
+        "Cooking a ribeye to a tenderness window; it is not a collagen cut.",
+        "Skipping the rest on a rib roast, then losing the juice on the board."
+      ],
+      "recipe_refs": [
+        "reverse-seared-ribeye-ember-butter"
+      ],
+      "gear_category_refs": [
+        "instant-read-thermometer",
+        "cast-iron",
+        "slicing-knife"
+      ],
+      "source_refs": [
+        "fsis-beef-farm-to-table",
+        "beef-board-doneness",
+        "tamu-meat-selection"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -75,23 +194,69 @@
       "long_description": "Part of the FSIS loin primal, which cooks by dry heat. FSIS itself notes the naming chaos here: the boneless top loin steak is sold as strip steak, Kansas City steak, N.Y. strip, hotel cut, ambassador steak and club sirloin steak. The tenderloin runs under the short loin and sirloin and is the most tender cut on the animal.",
       "tenderness_score": 5,
       "richness_score": 3,
-      "best_methods": ["grill", "sear", "roast (whole tenderloin)"],
+      "best_methods": [
+        "grill",
+        "sear",
+        "roast (whole tenderloin)"
+      ],
       "retail_cuts": [
-        { "slug": "strip-steak", "name": "Strip steak (New York strip)", "methods": ["grill", "sear"], "finish": "doneness-beef-industry", "note": "Also Kansas City, hotel cut, club sirloin (FSIS)." },
-        { "slug": "t-bone", "name": "T-bone and porterhouse", "methods": ["grill"], "finish": "doneness-beef-industry", "note": "Strip on one side of the bone, tenderloin on the other; the tenderloin side cooks faster." },
-        { "slug": "tenderloin", "name": "Tenderloin (filet mignon)", "methods": ["grill", "sear", "roast"], "finish": "doneness-beef-industry", "note": "Most tender, least fat. FSIS planning: whole tenderloin 45 to 60 minutes at 425 F." }
+        {
+          "slug": "strip-steak",
+          "name": "Strip steak (New York strip)",
+          "methods": [
+            "grill",
+            "sear"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Also Kansas City, hotel cut, club sirloin (FSIS)."
+        },
+        {
+          "slug": "t-bone",
+          "name": "T-bone and porterhouse",
+          "methods": [
+            "grill"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Strip on one side of the bone, tenderloin on the other; the tenderloin side cooks faster."
+        },
+        {
+          "slug": "tenderloin",
+          "name": "Tenderloin (filet mignon)",
+          "methods": [
+            "grill",
+            "sear",
+            "roast"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Most tender, least fat. FSIS planning: whole tenderloin 45 to 60 minutes at 425 F."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
-      "doneness_refs": ["doneness-beef-industry", "doneness-beef-convention"],
+      "doneness_refs": [
+        "doneness-beef-industry",
+        "doneness-beef-convention"
+      ],
       "tenderness_target_ref": null,
       "planning_time_guidance": "Steaks 3/4 inch: FSIS planning 4 to 5 minutes per side on a grill. Approximate; the thermometer decides.",
       "rest_guidance": "5 to 10 minutes.",
       "slice_direction": "Across the grain.",
-      "best_woods": ["oak", "cherry"],
-      "common_mistakes": ["Treating short loin as a low-and-slow cut.", "Overcooking tenderloin, which has no fat to forgive it."],
+      "best_woods": [
+        "oak",
+        "cherry"
+      ],
+      "common_mistakes": [
+        "Treating short loin as a low-and-slow cut.",
+        "Overcooking tenderloin, which has no fat to forgive it."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["instant-read-thermometer", "cast-iron"],
-      "source_refs": ["fsis-beef-farm-to-table", "beef-board-doneness"],
+      "gear_category_refs": [
+        "instant-read-thermometer",
+        "cast-iron"
+      ],
+      "source_refs": [
+        "fsis-beef-farm-to-table",
+        "beef-board-doneness"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -104,23 +269,71 @@
       "long_description": "The rear sub-primal of the FSIS loin. Top sirloin steaks grill well; the tri-tip roast, which the Beef Board describes as boneless, fairly tender and full-flavoured, is the Santa Maria barbecue cut: roast or grill, then slice across a grain that changes direction partway along the roast.",
       "tenderness_score": 4,
       "richness_score": 3,
-      "best_methods": ["grill", "roast", "smoke then sear (tri-tip)"],
+      "best_methods": [
+        "grill",
+        "roast",
+        "smoke then sear (tri-tip)"
+      ],
       "retail_cuts": [
-        { "slug": "top-sirloin-steak", "name": "Top sirloin steak", "methods": ["grill"], "finish": "doneness-beef-industry", "note": "Lean; do not push past medium." },
-        { "slug": "tri-tip", "name": "Tri-tip roast", "methods": ["smoke then sear", "grill", "roast"], "finish": "doneness-beef-industry", "note": "Beef Board: roast or grill then slice across the grain. The grain changes direction at the bend." },
-        { "slug": "sirloin-bavette", "name": "Sirloin bavette / flap", "methods": ["grill"], "finish": "doneness-beef-industry", "note": "Beef Board: hearty texture, marinate and grill; fajita meat." }
+        {
+          "slug": "top-sirloin-steak",
+          "name": "Top sirloin steak",
+          "methods": [
+            "grill"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Lean; do not push past medium."
+        },
+        {
+          "slug": "tri-tip",
+          "name": "Tri-tip roast",
+          "methods": [
+            "smoke then sear",
+            "grill",
+            "roast"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Beef Board: roast or grill then slice across the grain. The grain changes direction at the bend."
+        },
+        {
+          "slug": "sirloin-bavette",
+          "name": "Sirloin bavette / flap",
+          "methods": [
+            "grill"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Beef Board: hearty texture, marinate and grill; fajita meat."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
-      "doneness_refs": ["doneness-beef-industry", "doneness-beef-convention"],
+      "doneness_refs": [
+        "doneness-beef-industry",
+        "doneness-beef-convention"
+      ],
       "tenderness_target_ref": null,
       "planning_time_guidance": "Tri-tip: 60 to 90 minutes at 225 F then a sear. Approximate.",
       "rest_guidance": "10 minutes for a tri-tip.",
       "slice_direction": "Across the grain; on tri-tip, find the two grain directions and cut each half separately.",
-      "best_woods": ["oak (Santa Maria tradition is red oak)", "hickory"],
-      "common_mistakes": ["Slicing tri-tip in one direction end to end.", "Cooking tri-tip to a collagen window; it is a steak-style cut."],
-      "recipe_refs": ["santa-maria-tri-tip"],
-      "gear_category_refs": ["instant-read-thermometer", "slicing-knife", "cutting-board"],
-      "source_refs": ["fsis-beef-farm-to-table", "beef-board-cuts"],
+      "best_woods": [
+        "oak (Santa Maria tradition is red oak)",
+        "hickory"
+      ],
+      "common_mistakes": [
+        "Slicing tri-tip in one direction end to end.",
+        "Cooking tri-tip to a collagen window; it is a steak-style cut."
+      ],
+      "recipe_refs": [
+        "santa-maria-tri-tip"
+      ],
+      "gear_category_refs": [
+        "instant-read-thermometer",
+        "slicing-knife",
+        "cutting-board"
+      ],
+      "source_refs": [
+        "fsis-beef-farm-to-table",
+        "beef-board-cuts"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -130,14 +343,41 @@
       "number": 5,
       "fsis_parent": "chuck (retail convention treats brisket as its own primal)",
       "short_description": "The breast. The Beef Board calls it tougher because it is used for movement, and ideal for low and slow. The centre of Central Texas barbecue.",
-      "long_description": "A whole packer brisket is two muscles: the flat (Beef Board: the leaner 'first cut', can be sliced or shredded) and the point (the less lean, juicier half). FSIS's own planning table has it braising at 325 F for a few hours; barbecue instead smokes it for most of a day at 225 to 250 F until the flat is probe tender. Safety is met at 145 F with a 3 minute rest; tenderness arrives some 50 degrees later.",
+      "long_description": "A whole packer brisket is two muscles: the flat (Beef Board: the leaner 'first cut', can be sliced or shredded) and the point (the less lean, juicier half). FSIS's own planning table has it braising at 325 F for a few hours; barbecue instead smokes it for most of a day at 225 to 250 F until the flat is probe tender. Safety is met at 145 F with a 3 minute rest; tenderness arrives some 50 degrees later. Texas A&M Meat Science: the point is the forward, fatter end; the flat is considerably leaner; cooked, trimmed lean is about half the raw weight.",
       "tenderness_score": 1,
       "richness_score": 5,
-      "best_methods": ["smoke"],
+      "best_methods": [
+        "smoke"
+      ],
       "retail_cuts": [
-        { "slug": "packer-brisket", "name": "Whole packer brisket", "methods": ["smoke"], "finish": "target-brisket", "note": "Flat plus point, 10 to 16 lb untrimmed." },
-        { "slug": "brisket-flat", "name": "Brisket flat (first cut)", "methods": ["smoke", "braise"], "finish": "target-brisket", "note": "Beef Board: the leaner half; sliced or shredded. Dries faster than the point." },
-        { "slug": "brisket-point", "name": "Brisket point", "methods": ["smoke"], "finish": "target-brisket", "note": "Beef Board: the less lean, juicy half. Source of burnt ends." }
+        {
+          "slug": "packer-brisket",
+          "name": "Whole packer brisket",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-brisket",
+          "note": "Flat plus point, 10 to 16 lb untrimmed."
+        },
+        {
+          "slug": "brisket-flat",
+          "name": "Brisket flat (first cut)",
+          "methods": [
+            "smoke",
+            "braise"
+          ],
+          "finish": "target-brisket",
+          "note": "Beef Board: the leaner half; sliced or shredded. Dries faster than the point."
+        },
+        {
+          "slug": "brisket-point",
+          "name": "Brisket point",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-brisket",
+          "note": "Beef Board: the less lean, juicy half. Source of burnt ends."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
       "doneness_refs": [],
@@ -145,11 +385,34 @@
       "planning_time_guidance": "Roughly 1 to 1.5 hours per pound at 225 to 250 F; 10 to 16 hours for a packer. Approximate. Start earlier than you think.",
       "rest_guidance": "1 to 2 hours wrapped, held above 140 F.",
       "slice_direction": "Slice the flat and the point across their own grain; the two muscles run in different directions. Pencil-thick slices on the flat.",
-      "best_woods": ["oak (post oak is the Central Texas standard)", "hickory", "pecan"],
-      "common_mistakes": ["Cooking to a number instead of probe feel.", "Slicing the whole packer in one direction.", "Skipping or shortening the rest.", "Letting a long hold drop below 140 F."],
-      "recipe_refs": ["pit-log-central-texas-brisket", "pit-log-house-brisket-rub"],
-      "gear_category_refs": ["leave-in-probe", "instant-read-thermometer", "butcher-paper", "slicing-knife", "cooler-holding"],
-      "source_refs": ["beef-board-cuts", "fsis-beef-farm-to-table", "tamu-texas-bbq-cooking"],
+      "best_woods": [
+        "oak (post oak is the Central Texas standard)",
+        "hickory",
+        "pecan"
+      ],
+      "common_mistakes": [
+        "Cooking to a number instead of probe feel.",
+        "Slicing the whole packer in one direction.",
+        "Skipping or shortening the rest.",
+        "Letting a long hold drop below 140 F."
+      ],
+      "recipe_refs": [
+        "pit-log-central-texas-brisket",
+        "pit-log-house-brisket-rub"
+      ],
+      "gear_category_refs": [
+        "leave-in-probe",
+        "instant-read-thermometer",
+        "butcher-paper",
+        "slicing-knife",
+        "cooler-holding"
+      ],
+      "source_refs": [
+        "beef-board-cuts",
+        "fsis-beef-farm-to-table",
+        "tamu-texas-bbq-cooking",
+        "tamu-meat-selection"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -162,23 +425,70 @@
       "long_description": "Plate short ribs (dino ribs) are collagen cuts smoked to probe tender like brisket. Skirt steak is a thin, coarse-grained steak that wants very high heat for a very short time and a thin slice across the grain.",
       "tenderness_score": 2,
       "richness_score": 5,
-      "best_methods": ["smoke (short ribs)", "grill hot and fast (skirt, hanger)"],
+      "best_methods": [
+        "smoke (short ribs)",
+        "grill hot and fast (skirt, hanger)"
+      ],
       "retail_cuts": [
-        { "slug": "plate-short-ribs", "name": "Plate short ribs", "methods": ["smoke"], "finish": "target-beef-chuck-and-short-ribs", "note": "Probe tender between the bones; the meat pulls back a finger's width from the bone ends." },
-        { "slug": "skirt-steak", "name": "Skirt steak", "methods": ["grill"], "finish": "doneness-beef-industry", "note": "Beef Board (inside skirt): robust flavour, marinate and grill hot for fajitas. Slice thin across the grain." },
-        { "slug": "hanger-steak", "name": "Hanger steak", "methods": ["grill"], "finish": "doneness-beef-industry", "note": "One per animal. Remove the centre membrane." }
+        {
+          "slug": "plate-short-ribs",
+          "name": "Plate short ribs",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-beef-chuck-and-short-ribs",
+          "note": "Probe tender between the bones; the meat pulls back a finger's width from the bone ends."
+        },
+        {
+          "slug": "skirt-steak",
+          "name": "Skirt steak",
+          "methods": [
+            "grill"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Beef Board (inside skirt): robust flavour, marinate and grill hot for fajitas. Slice thin across the grain."
+        },
+        {
+          "slug": "hanger-steak",
+          "name": "Hanger steak",
+          "methods": [
+            "grill"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "One per animal. Remove the centre membrane."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
-      "doneness_refs": ["doneness-beef-industry", "doneness-beef-convention"],
+      "doneness_refs": [
+        "doneness-beef-industry",
+        "doneness-beef-convention"
+      ],
       "tenderness_target_ref": "target-beef-chuck-and-short-ribs",
       "planning_time_guidance": "Short ribs 6 to 8 hours at 250 to 275 F. Skirt 2 to 3 minutes a side over the hottest fire you have. Approximate.",
       "rest_guidance": "Short ribs 30 minutes; skirt 5 minutes.",
       "slice_direction": "Skirt: thin, across the grain, at an angle. Short ribs: served on the bone or sliced across.",
-      "best_woods": ["oak", "hickory", "mesquite (skirt, hot and fast only)"],
-      "common_mistakes": ["Cooking skirt past medium; it turns to rope.", "Slicing skirt with the grain."],
-      "recipe_refs": ["pepper-bark-beef-short-ribs"],
-      "gear_category_refs": ["leave-in-probe", "cast-iron", "slicing-knife"],
-      "source_refs": ["beef-board-cuts", "fsis-beef-farm-to-table"],
+      "best_woods": [
+        "oak",
+        "hickory",
+        "mesquite (skirt, hot and fast only)"
+      ],
+      "common_mistakes": [
+        "Cooking skirt past medium; it turns to rope.",
+        "Slicing skirt with the grain."
+      ],
+      "recipe_refs": [
+        "pepper-bark-beef-short-ribs"
+      ],
+      "gear_category_refs": [
+        "leave-in-probe",
+        "cast-iron",
+        "slicing-knife"
+      ],
+      "source_refs": [
+        "beef-board-cuts",
+        "fsis-beef-farm-to-table",
+        "tamu-meat-selection"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -191,21 +501,47 @@
       "long_description": "A single flat muscle with a pronounced grain. It has almost no fat, so it is cooked fast and hot to no more than medium, rested, and sliced thin across the grain. It is not a smoking cut.",
       "tenderness_score": 2,
       "richness_score": 3,
-      "best_methods": ["grill", "sear"],
+      "best_methods": [
+        "grill",
+        "sear"
+      ],
       "retail_cuts": [
-        { "slug": "flank-steak", "name": "Flank steak", "methods": ["grill"], "finish": "doneness-beef-industry", "note": "Beef Board: lean and boneless, intense beef flavour, marinate and grill or slice thin for stir-fry." }
+        {
+          "slug": "flank-steak",
+          "name": "Flank steak",
+          "methods": [
+            "grill"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Beef Board: lean and boneless, intense beef flavour, marinate and grill or slice thin for stir-fry."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
-      "doneness_refs": ["doneness-beef-industry", "doneness-beef-convention"],
+      "doneness_refs": [
+        "doneness-beef-industry",
+        "doneness-beef-convention"
+      ],
       "tenderness_target_ref": null,
       "planning_time_guidance": "4 to 6 minutes per side over high heat. Approximate.",
       "rest_guidance": "5 to 10 minutes.",
       "slice_direction": "Thin, across the grain, on a bias. This matters more on flank than on any other beef cut.",
-      "best_woods": ["oak", "cherry"],
-      "common_mistakes": ["Slicing with the grain.", "Cooking past medium."],
+      "best_woods": [
+        "oak",
+        "cherry"
+      ],
+      "common_mistakes": [
+        "Slicing with the grain.",
+        "Cooking past medium."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["instant-read-thermometer", "slicing-knife", "cutting-board"],
-      "source_refs": ["beef-board-cuts"],
+      "gear_category_refs": [
+        "instant-read-thermometer",
+        "slicing-knife",
+        "cutting-board"
+      ],
+      "source_refs": [
+        "beef-board-cuts"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -218,23 +554,66 @@
       "long_description": "FSIS names round as a major primal that, like chuck, is less tender and generally needs moist heat. Top round and eye of round make roast beef and jerky; bottom round braises. In barbecue the round is a smoked-roast-beef cut sliced paper thin, or a braise. It is not brisket and does not become brisket with time; it has too little fat.",
       "tenderness_score": 2,
       "richness_score": 2,
-      "best_methods": ["roast", "braise", "smoke to medium-rare then slice thin"],
+      "best_methods": [
+        "roast",
+        "braise",
+        "smoke to medium-rare then slice thin"
+      ],
       "retail_cuts": [
-        { "slug": "top-round", "name": "Top round roast", "methods": ["roast", "smoke"], "finish": "doneness-beef-industry", "note": "FSIS planning: round or rump roast 30 to 35 minutes per pound at 325 F. Slice thin." },
-        { "slug": "eye-of-round", "name": "Eye of round", "methods": ["roast"], "finish": "doneness-beef-industry", "note": "Jerky and deli-style roast beef." },
-        { "slug": "bottom-round", "name": "Bottom round / rump", "methods": ["braise"], "finish": "doneness-beef-industry", "note": "Pot roast." }
+        {
+          "slug": "top-round",
+          "name": "Top round roast",
+          "methods": [
+            "roast",
+            "smoke"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "FSIS planning: round or rump roast 30 to 35 minutes per pound at 325 F. Slice thin."
+        },
+        {
+          "slug": "eye-of-round",
+          "name": "Eye of round",
+          "methods": [
+            "roast"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Jerky and deli-style roast beef."
+        },
+        {
+          "slug": "bottom-round",
+          "name": "Bottom round / rump",
+          "methods": [
+            "braise"
+          ],
+          "finish": "doneness-beef-industry",
+          "note": "Pot roast."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
-      "doneness_refs": ["doneness-beef-industry"],
+      "doneness_refs": [
+        "doneness-beef-industry"
+      ],
       "tenderness_target_ref": null,
       "planning_time_guidance": "FSIS planning: 30 to 35 minutes per pound at 325 F for a round roast. Approximate.",
       "rest_guidance": "15 to 20 minutes for a roast (Beef Board).",
       "slice_direction": "Thin, across the grain.",
-      "best_woods": ["oak", "pecan"],
-      "common_mistakes": ["Smoking a round roast to 200 F expecting pulled beef; it dries out.", "Thick slices."],
+      "best_woods": [
+        "oak",
+        "pecan"
+      ],
+      "common_mistakes": [
+        "Smoking a round roast to 200 F expecting pulled beef; it dries out.",
+        "Thick slices."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["leave-in-probe", "slicing-knife"],
-      "source_refs": ["fsis-beef-farm-to-table", "beef-board-doneness"],
+      "gear_category_refs": [
+        "leave-in-probe",
+        "slicing-knife"
+      ],
+      "source_refs": [
+        "fsis-beef-farm-to-table",
+        "beef-board-doneness"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -247,10 +626,29 @@
       "long_description": "Cross-cut shanks are the osso buco cut. FSIS's planning table simmers stew or cross-cuts covered in liquid for 2 to 3 hours. Whole smoked shank is a showpiece cook that follows shoulder logic: smoke, then braise or wrap until the meat falls from the bone.",
       "tenderness_score": 1,
       "richness_score": 4,
-      "best_methods": ["braise", "smoke then braise"],
+      "best_methods": [
+        "braise",
+        "smoke then braise"
+      ],
       "retail_cuts": [
-        { "slug": "cross-cut-shank", "name": "Cross-cut shank (osso buco)", "methods": ["braise"], "finish": "target-beef-chuck-and-short-ribs", "note": "FSIS planning: cover with liquid, simmer 2 to 3 hours." },
-        { "slug": "whole-shank", "name": "Whole shank", "methods": ["smoke then braise"], "finish": "target-beef-chuck-and-short-ribs", "note": "Smoke 3 hours, then braise covered until fork tender." }
+        {
+          "slug": "cross-cut-shank",
+          "name": "Cross-cut shank (osso buco)",
+          "methods": [
+            "braise"
+          ],
+          "finish": "target-beef-chuck-and-short-ribs",
+          "note": "FSIS planning: cover with liquid, simmer 2 to 3 hours."
+        },
+        {
+          "slug": "whole-shank",
+          "name": "Whole shank",
+          "methods": [
+            "smoke then braise"
+          ],
+          "finish": "target-beef-chuck-and-short-ribs",
+          "note": "Smoke 3 hours, then braise covered until fork tender."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
       "doneness_refs": [],
@@ -258,11 +656,21 @@
       "planning_time_guidance": "2 to 3 hours simmering (FSIS planning); 6 to 8 hours smoke-then-braise. Approximate.",
       "rest_guidance": "15 minutes.",
       "slice_direction": "Usually served on the bone or pulled.",
-      "best_woods": ["oak", "hickory"],
-      "common_mistakes": ["Dry heat only; without liquid or a wrap the shank never softens."],
+      "best_woods": [
+        "oak",
+        "hickory"
+      ],
+      "common_mistakes": [
+        "Dry heat only; without liquid or a wrap the shank never softens."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["dutch-oven", "leave-in-probe"],
-      "source_refs": ["fsis-beef-farm-to-table"],
+      "gear_category_refs": [
+        "dutch-oven",
+        "leave-in-probe"
+      ],
+      "source_refs": [
+        "fsis-beef-farm-to-table"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     }

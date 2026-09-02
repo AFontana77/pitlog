@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "purpose": "Hotspot polygons for the salmon primal diagram in MASTER pixel coordinates; the web image is the crop below upscaled 2x and the SVG viewBox equals the crop box, so coordinates apply unchanged. If the master md5 changes every polygon must be re-checked.",
+    "master": "salmon-cuts-cooking-guide",
+    "master_file": "brand-assets/cut-guides/salmon-cuts-cooking-guide.png",
+    "master_md5": "87df2daae8e95a8b2609af42009d7d48",
+    "crop_box_xyxy": [
+      20,
+      265,
+      560,
+      505
+    ],
+    "web_image": "/images/cuts/salmon-primal-diagram.png",
+    "web_image_px": [
+      1080,
+      480
+    ],
+    "drawn": "2026-09-02",
+    "method": "grid overlay + visual check of a filled-polygon render",
+    "review_status": "REVIEWED"
+  },
+  "viewBox": "20 265 540 240",
+  "regions": [
+    {
+      "slug": "collar",
+      "polygon": [
+        [
+          150,
+          305
+        ],
+        [
+          255,
+          295
+        ],
+        [
+          255,
+          455
+        ],
+        [
+          160,
+          440
+        ],
+        [
+          135,
+          390
+        ]
+      ],
+      "label": [
+        191,
+        377
+      ]
+    },
+    {
+      "slug": "top-loin",
+      "polygon": [
+        [
+          255,
+          295
+        ],
+        [
+          420,
+          300
+        ],
+        [
+          420,
+          375
+        ],
+        [
+          255,
+          375
+        ]
+      ],
+      "label": [
+        338,
+        336
+      ]
+    },
+    {
+      "slug": "belly",
+      "polygon": [
+        [
+          255,
+          375
+        ],
+        [
+          345,
+          375
+        ],
+        [
+          345,
+          460
+        ],
+        [
+          260,
+          455
+        ]
+      ],
+      "label": [
+        301,
+        416
+      ]
+    },
+    {
+      "slug": "center-cut",
+      "polygon": [
+        [
+          345,
+          375
+        ],
+        [
+          420,
+          375
+        ],
+        [
+          420,
+          460
+        ],
+        [
+          345,
+          465
+        ]
+      ],
+      "label": [
+        382,
+        419
+      ]
+    },
+    {
+      "slug": "tail",
+      "polygon": [
+        [
+          420,
+          300
+        ],
+        [
+          470,
+          315
+        ],
+        [
+          500,
+          360
+        ],
+        [
+          495,
+          400
+        ],
+        [
+          420,
+          400
+        ]
+      ],
+      "label": [
+        461,
+        355
+      ]
+    },
+    {
+      "slug": "second-cut",
+      "polygon": [
+        [
+          420,
+          400
+        ],
+        [
+          495,
+          400
+        ],
+        [
+          505,
+          440
+        ],
+        [
+          440,
+          455
+        ],
+        [
+          420,
+          445
+        ]
+      ],
+      "label": [
+        456,
+        428
+      ]
+    }
+  ]
+}

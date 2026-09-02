@@ -2,7 +2,7 @@
   "_meta": {
     "purpose": "PITMASTER_TENDERNESS records. Where collagen-heavy cuts turn tender. Every figure here is well above the USDA minimum, so none is a safety concern, but none is a safety statement either. Temperature is a checkpoint; the finish test is feel.",
     "kind": "PITMASTER_TENDERNESS",
-    "honesty_note": "Barbecue tenderness windows are craft knowledge. Where an industry body publishes a figure it is cited and it is SOURCED, even when it disagrees with backyard convention. Where nobody authoritative publishes the figure, the record says NEEDS_SOURCE and the page labels it as convention. It does not borrow authority from a graphic or a blog.",
+    "honesty_note": "Barbecue tenderness windows are craft knowledge. Where an industry body or a university publishes a figure it is cited and the record is SOURCED, even when it disagrees with backyard convention; the exact backyard window is still labelled CRAFT CONVENTION in source_note and on every surface. Where nobody authoritative publishes the figure, the record says NEEDS_SOURCE. It does not borrow authority from a graphic or a blog.",
     "finish_tests": {
       "probe_tender": "A thermometer probe or skewer slides into the thickest part with almost no resistance, like into soft butter.",
       "bend_test": "Lift a rack of ribs from one end with tongs; the meat surface cracks and the rack bends near 90 degrees without breaking.",
@@ -14,104 +14,204 @@
     {
       "id": "target-brisket",
       "kind": "PITMASTER_TENDERNESS",
-      "applies_to": { "animal": "beef", "cuts": ["brisket", "brisket-flat", "brisket-point"] },
+      "applies_to": {
+        "animal": "beef",
+        "cuts": [
+          "brisket",
+          "brisket-flat",
+          "brisket-point"
+        ]
+      },
       "safety_ref": "safety-whole-muscle-red-meat",
-      "window_f": { "min": 195, "max": 205 },
+      "window_f": {
+        "min": 195,
+        "max": 205
+      },
       "checkpoint_f": 203,
       "finish_test": "probe_tender",
       "probe_where": "thickest part of the flat",
-      "pit_temp_f": { "min": 225, "max": 250 },
+      "pit_temp_f": {
+        "min": 225,
+        "max": 250
+      },
       "planning_time": "roughly 1 to 1.5 hours per pound at 225 to 250 F; 10 to 16 hours for a whole packer. Approximate.",
       "rest": "1 to 2 hours wrapped, held above 140 F. A long hold in a cooler or warm oven is craft practice for slicing and juiciness; it is not the 3 minute safety rest and it must stay above 140 F.",
       "stall": "Expect a plateau around 150 to 170 F that can last hours. Wait it out or wrap (paper keeps bark firmer, foil is faster).",
-      "statement": "Brisket commonly becomes tender between 195 and 205 F, but the number is a checkpoint. It is done when a probe enters the flat with very little resistance. 203 F is a useful place to start checking, not a guaranteed endpoint.",
-      "conflicts": [],
-      "source_refs": ["tamu-texas-bbq-cooking", "fsis-safe-temp-chart"],
-      "source_note": "Texas A&M supports the 200 to 250 F pit band and the hour-per-pound planning figure. No tier-1/2/3 source for the 195-205 F window has been located; it is barbecue convention and the previous printable carried it. NEEDS_SOURCE until one is found.",
-      "review_status": "NEEDS_SOURCE",
+      "statement": "Brisket commonly becomes tender between 195 and 205 F, but the number is a checkpoint. It is done when a probe enters the flat with very little resistance. Texas A&M Meat Science puts the collagen-to-gelatin conversion at an internal temperature of 185 to 195 F; backyard convention runs about 10 degrees higher because the flat keeps tightening until the last of it lets go. 203 F is a useful place to start checking, not a guaranteed endpoint.",
+      "conflicts": [
+        {
+          "between": [
+            "tamu-bbq-science: collagen conversion requires 185-195 F internal",
+            "convention: pull at 195-205 F, probe tender"
+          ],
+          "resolution": "Not a safety question; both sit far above 145 F. Print the Texas A&M figure as the sourced mechanism and the higher window as the convention the probe test resolves."
+        }
+      ],
+      "source_refs": [
+        "tamu-bbq-science",
+        "tamu-meat-selection",
+        "tamu-texas-bbq-cooking",
+        "fsis-safe-temp-chart"
+      ],
+      "source_note": "CRAFT CONVENTION for the exact window. Texas A&M (tier 2) supports the mechanism, the 200 to 250 F pit band, the hour-per-pound planning figure, the flat-vs-point anatomy and a 185 to 195 F conversion figure. The 195 to 205 F window itself is barbecue convention and is labelled that way on every surface.",
+      "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
     {
       "id": "target-beef-chuck-and-short-ribs",
       "kind": "PITMASTER_TENDERNESS",
-      "applies_to": { "animal": "beef", "cuts": ["chuck-roast", "plate-short-ribs", "chuck-short-ribs", "shank"] },
+      "applies_to": {
+        "animal": "beef",
+        "cuts": [
+          "chuck-roast",
+          "plate-short-ribs",
+          "chuck-short-ribs",
+          "shank"
+        ]
+      },
       "safety_ref": "safety-whole-muscle-red-meat",
-      "window_f": { "min": 200, "max": 205 },
+      "window_f": {
+        "min": 200,
+        "max": 205
+      },
       "checkpoint_f": 203,
       "finish_test": "probe_tender",
       "probe_where": "between bones on short ribs; centre of a chuck roast",
-      "pit_temp_f": { "min": 250, "max": 275 },
+      "pit_temp_f": {
+        "min": 250,
+        "max": 275
+      },
       "planning_time": "chuck roast roughly 1.5 hours per pound; plate short ribs 6 to 8 hours at 250 to 275 F. Approximate.",
       "rest": "30 to 60 minutes.",
       "stall": "Same evaporative plateau as brisket, usually shorter.",
       "statement": "Chuck and short ribs follow brisket logic: pull when probe tender, commonly 200 to 205 F. The Beef Board describes chuck short ribs as tender when slow-cooked and brisket as a low-and-slow primal because it is a working muscle.",
       "conflicts": [],
-      "source_refs": ["beef-board-cuts", "fsis-beef-farm-to-table"],
-      "source_note": "FSIS: chuck is less tender and wants moist heat. Beef Board: short ribs are tender when slow-cooked. The numeric window is convention.",
-      "review_status": "NEEDS_SOURCE",
+      "source_refs": [
+        "tamu-meat-selection",
+        "tamu-bbq-science",
+        "beef-board-cuts",
+        "fsis-beef-farm-to-table"
+      ],
+      "source_note": "Texas A&M: short ribs require long-time low-heat cookery; the shoulder clod is inherently more tender than brisket and may not need as high an internal temperature; collagen conversion at 185 to 195 F. FSIS: chuck wants moist heat. Beef Board: short ribs tender when slow-cooked. The 200 to 205 F window is CRAFT CONVENTION.",
+      "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
     {
       "id": "target-pork-shoulder",
       "kind": "PITMASTER_TENDERNESS",
-      "applies_to": { "animal": "pork", "cuts": ["butt", "picnic-shoulder", "whole-shoulder"] },
+      "applies_to": {
+        "animal": "pork",
+        "cuts": [
+          "butt",
+          "picnic-shoulder",
+          "whole-shoulder"
+        ]
+      },
       "safety_ref": "safety-whole-muscle-red-meat",
-      "window_f": { "min": 195, "max": 205 },
+      "window_f": {
+        "min": 195,
+        "max": 205
+      },
       "checkpoint_f": 203,
       "finish_test": "bone_slip",
       "probe_where": "thickest part away from the blade bone",
-      "pit_temp_f": { "min": 225, "max": 275 },
+      "pit_temp_f": {
+        "min": 225,
+        "max": 275
+      },
       "planning_time": "National Pork Board: about 1 hour 15 minutes per pound. Backyard planning: 8 to 14 hours for an 8 lb butt at 225 to 250 F. Approximate.",
       "rest": "1 hour minimum wrapped, held above 140 F, before pulling.",
       "stall": "Pronounced. 150 to 170 F for two to six hours is normal.",
       "statement": "For pulled pork, backyard convention finishes shoulder at 195 to 205 F when the bone slips clean and the meat shreds. The National Pork Board's own smoking table gives 185 to 190 F with the bone-slip test. Both are above the 145 F minimum; the difference is texture, and Pit Log shows both.",
       "conflicts": [
         {
-          "between": ["pork-board-smoking: 185-190 F, bone slips", "convention and the previous Pit Log printable: 195-205 F"],
+          "between": [
+            "pork-board-smoking: 185-190 F, bone slips",
+            "convention and the previous Pit Log printable: 195-205 F"
+          ],
           "resolution": "Neither is a safety figure. Print the Pork Board figure as the sourced one and the higher window as the common pulled-pork convention. Let the bone-slip test decide."
         }
       ],
-      "source_refs": ["pork-board-smoking", "fsis-pork-farm-to-table", "fsis-safe-temp-chart"],
-      "source_note": "Pork Board is tier 3 and primary for its own guidance. The 195-205 F figure is unsourced convention.",
+      "source_refs": [
+        "pork-board-smoking",
+        "tamu-bbq-science",
+        "fsis-pork-farm-to-table",
+        "fsis-safe-temp-chart"
+      ],
+      "source_note": "National Pork Board (tier 3) publishes 185 to 190 F with the bone-slip test. Texas A&M (tier 2) puts collagen conversion at 185 to 195 F, which agrees with the Pork Board. The 195 to 205 F figure is CRAFT CONVENTION.",
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
     {
       "id": "target-pork-ribs",
       "kind": "PITMASTER_TENDERNESS",
-      "applies_to": { "animal": "pork", "cuts": ["spareribs", "st-louis-ribs", "baby-back-ribs", "country-style-ribs"] },
+      "applies_to": {
+        "animal": "pork",
+        "cuts": [
+          "spareribs",
+          "st-louis-ribs",
+          "baby-back-ribs",
+          "country-style-ribs"
+        ]
+      },
       "safety_ref": "safety-whole-muscle-red-meat",
-      "window_f": { "min": 190, "max": 203 },
+      "window_f": {
+        "min": 190,
+        "max": 203
+      },
       "checkpoint_f": 195,
       "finish_test": "bend_test",
       "probe_where": "between bones, not touching bone; a probe on ribs is a rough guide only",
-      "pit_temp_f": { "min": 225, "max": 250 },
+      "pit_temp_f": {
+        "min": 225,
+        "max": 250
+      },
       "planning_time": "National Pork Board: loin back ribs 3 to 5 hours; St. Louis and spareribs 5 to 7 hours at 225 to 250 F; times vary with thickness. Approximate.",
       "rest": "10 to 15 minutes.",
       "stall": "Mild.",
       "statement": "Ribs are done when they pass the bend test and the meat has pulled back from the bone ends, which usually happens somewhere between 190 and 203 F. The thermometer is unreliable on ribs because the meat is thin and close to bone; FSIS and the Pork Board both say 'until fork tender'.",
       "conflicts": [],
-      "source_refs": ["pork-board-smoking", "fsis-pork-farm-to-table", "fsis-safe-temp-chart"],
-      "source_note": "Times and the fork-tender test are sourced. The numeric window is convention.",
+      "source_refs": [
+        "pork-board-smoking",
+        "tamu-meat-selection",
+        "fsis-pork-farm-to-table",
+        "fsis-safe-temp-chart"
+      ],
+      "source_note": "Times and the fork-tender test are the Pork Board's; Texas A&M supports slow, low, even high-moisture cooking for rib connective tissue. The numeric window is CRAFT CONVENTION.",
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
     {
       "id": "target-pork-belly",
       "kind": "PITMASTER_TENDERNESS",
-      "applies_to": { "animal": "pork", "cuts": ["belly", "belly-burnt-ends"] },
+      "applies_to": {
+        "animal": "pork",
+        "cuts": [
+          "belly",
+          "belly-burnt-ends"
+        ]
+      },
       "safety_ref": "safety-whole-muscle-red-meat",
-      "window_f": { "min": 190, "max": 200 },
+      "window_f": {
+        "min": 190,
+        "max": 200
+      },
       "checkpoint_f": 190,
       "finish_test": "fork_tender",
       "probe_where": "centre of the slab; for burnt ends, a cube",
-      "pit_temp_f": { "min": 225, "max": 250 },
+      "pit_temp_f": {
+        "min": 225,
+        "max": 250
+      },
       "planning_time": "National Pork Board: 4 hours in smoke, wrap, about 3 more hours. Approximate.",
       "rest": "15 to 30 minutes for a slab; burnt ends are served from the pan.",
       "stall": "Moderate.",
       "statement": "Smoked pork belly is done at about 190 F or when fork tender when pierced with a skewer (National Pork Board). Burnt ends: cube around 165 F, sauce, and return uncovered until the cubes are tender and glazed.",
       "conflicts": [],
-      "source_refs": ["pork-board-smoking", "fsis-safe-temp-chart"],
+      "source_refs": [
+        "pork-board-smoking",
+        "fsis-safe-temp-chart"
+      ],
       "source_note": "The 190 F figure and the wrap schedule are the Pork Board's. The burnt-end cube step is convention.",
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
@@ -119,54 +219,102 @@
     {
       "id": "target-lamb-goat-shoulder",
       "kind": "PITMASTER_TENDERNESS",
-      "applies_to": { "animal": "lamb", "cuts": ["shoulder", "shank", "breast"], "also": "goat" },
+      "applies_to": {
+        "animal": "lamb",
+        "cuts": [
+          "shoulder",
+          "shank",
+          "breast"
+        ],
+        "also": "goat"
+      },
       "safety_ref": "safety-whole-muscle-red-meat",
-      "window_f": { "min": 195, "max": 205 },
+      "window_f": {
+        "min": 195,
+        "max": 205
+      },
       "checkpoint_f": 200,
       "finish_test": "probe_tender",
       "probe_where": "thickest part away from the blade bone",
-      "pit_temp_f": { "min": 225, "max": 275 },
+      "pit_temp_f": {
+        "min": 225,
+        "max": 275
+      },
       "planning_time": "roughly 1.5 hours per pound at 250 F for a bone-in shoulder. American Lamb Board braise guidance for shanks: 1 to 2 hours per pound. Approximate.",
       "rest": "30 to 60 minutes.",
       "stall": "Present on a whole shoulder.",
       "statement": "Lamb and goat shoulder, shank and breast are collagen cuts. The American Lamb Board says shoulder benefits from slow cooking to break down connective tissue and shanks practically melt off the bone when slow cooked; FSIS says less tender goat cuts should be braised or stewed. For pulling, backyard convention finishes them probe tender around 195 to 205 F. Goat is very lean, so wrap early and keep the pit gentle.",
       "conflicts": [
         {
-          "between": ["american-lamb-board-time-temp: shoulder roast to 145/160/170 F by doneness", "pulled-shoulder convention 195-205 F"],
+          "between": [
+            "american-lamb-board-time-temp: shoulder roast to 145/160/170 F by doneness",
+            "pulled-shoulder convention 195-205 F"
+          ],
           "resolution": "Two different dishes. A sliced roast follows the Lamb Board scale; pulled shoulder follows the tenderness window. State which one the page is describing."
         }
       ],
-      "source_refs": ["american-lamb-board-cuts", "american-lamb-board-time-temp", "fsis-goat-farm-to-table", "fsis-lamb-farm-to-table"],
-      "source_note": "The slow-cook requirement is sourced. The numeric pull window is convention.",
-      "review_status": "NEEDS_SOURCE",
+      "source_refs": [
+        "american-lamb-board-cuts",
+        "american-lamb-board-time-temp",
+        "tamu-bbq-science",
+        "fsis-goat-farm-to-table",
+        "fsis-lamb-farm-to-table"
+      ],
+      "source_note": "Slow cooking to break down connective tissue is the Lamb Board's own guidance; FSIS says braise or stew less tender goat; Texas A&M puts collagen conversion at 185 to 195 F. The 195 to 205 F pull window is CRAFT CONVENTION.",
+      "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
     {
       "id": "target-chicken-pulled",
       "kind": "PITMASTER_TENDERNESS",
-      "applies_to": { "animal": "chicken", "cuts": ["thigh", "drumstick", "whole-chicken-for-pulling"] },
+      "applies_to": {
+        "animal": "chicken",
+        "cuts": [
+          "thigh",
+          "drumstick",
+          "whole-chicken-for-pulling"
+        ]
+      },
       "safety_ref": "safety-poultry",
-      "window_f": { "min": 190, "max": 205 },
+      "window_f": {
+        "min": 190,
+        "max": 205
+      },
       "checkpoint_f": 195,
       "finish_test": "probe_tender",
       "probe_where": "innermost thigh, not touching bone",
-      "pit_temp_f": { "min": 275, "max": 325 },
+      "pit_temp_f": {
+        "min": 275,
+        "max": 325
+      },
       "planning_time": "thighs 1.5 to 2 hours at 275 F. Approximate.",
       "rest": "5 to 10 minutes.",
       "stall": "None to speak of.",
       "statement": "Dark meat destined for shredding is taken well past 165 F, commonly 190 to 205 F, so the connective tissue renders and the meat pulls. Breast meat is never taken there; it dries.",
       "conflicts": [],
-      "source_refs": ["fsis-safe-temp-chart", "fsis-chicken-farm-to-table"],
-      "source_note": "Convention. Safety floor is sourced.",
+      "source_refs": [
+        "fsis-safe-temp-chart",
+        "fsis-chicken-farm-to-table",
+        "tamu-bbq-science"
+      ],
+      "source_note": "Safety floor sourced (FSIS). Collagen conversion mechanism sourced (Texas A&M). The 190 to 205 F pulled-chicken window is CRAFT CONVENTION.",
       "review_status": "NEEDS_SOURCE",
       "updated_at": "2026-09-02"
     },
     {
       "id": "concept-the-stall",
       "kind": "PITMASTER_TENDERNESS",
-      "applies_to": { "animal": "all", "cuts": ["large collagen cuts"] },
+      "applies_to": {
+        "animal": "all",
+        "cuts": [
+          "large collagen cuts"
+        ]
+      },
       "safety_ref": null,
-      "window_f": { "min": 150, "max": 170 },
+      "window_f": {
+        "min": 150,
+        "max": 170
+      },
       "checkpoint_f": null,
       "finish_test": null,
       "probe_where": null,
@@ -176,9 +324,12 @@
       "stall": null,
       "statement": "The stall is the plateau around 150 to 170 F where a large cut's internal temperature stops climbing for hours. The accepted explanation is evaporative cooling from the meat surface balancing the heat from the pit. Wrapping (the Texas crutch) stops the evaporation; waiting keeps the bark firmer.",
       "conflicts": [],
-      "source_refs": [],
-      "source_note": "Widely reported and experimentally demonstrated in the barbecue literature, but no tier-1/2/3 source is on file. The stall has no safety dimension; it renders as craft explanation.",
-      "review_status": "NEEDS_SOURCE",
+      "source_refs": [
+        "tamu-bbq-science",
+        "amazingribs-stall-blonder"
+      ],
+      "source_note": "Texas A&M Meat Science names evaporative cooling as the cause of the plateau (tier 2). The 150 to 170 F range and the wrapping effect come from Prof. Greg Blonder's controlled experiment as reported by AmazingRibs (tier 5, qualitative). No safety dimension.",
+      "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     }
   ]

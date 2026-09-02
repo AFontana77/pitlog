@@ -3,29 +3,30 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { cutReference, getRegions, getSafetyMinimum, getPitmasterTarget, getWood } from '@/content';
+import { ANIMALS, cutReference, getRegions, getSafetyMinimum, getPitmasterTarget, getWood, renderableDoneness, type AnimalSlug } from '@/content';
 import { SafetyLine } from '@/components/content/SafetyLine';
 import { DonenessTable } from '@/components/content/DonenessTable';
 import { Citations } from '@/components/content/Citations';
 import { GearList } from '@/components/content/GearList';
-import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Label, Lede, P, Section, Td, Th, Tr } from '@/components/content/ui';
+import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, Label, Lede, P, Section, Td, Th, Tr } from '@/components/content/ui';
 
 export function generateStaticParams() {
-  return getRegions('beef').map((r) => ({ region: r.slug }));
+  return ANIMALS.flatMap((a) => getRegions(a.slug).map((r) => ({ animal: a.slug, region: r.slug })));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ region: string }> }): Promise<Metadata> {
-  const { region } = await params;
-  const ref = cutReference('beef', region);
+export async function generateMetadata({ params }: { params: Promise<{ animal: string; region: string }> }): Promise<Metadata> {
+  const { animal, region } = await params;
+  const ref = cutReference(animal as AnimalSlug, region);
   if (!ref) return {};
   const t = ref.tenderness;
+  const rest = ref.safety.rest ? ' with a 3 minute rest' : '';
   const desc = t
-    ? `${ref.region.name}: ${ref.region.short_description} Tender at ${t.window_f?.min} to ${t.window_f?.max} F, probe tender. USDA minimum ${ref.safety.temp_f} F.`
-    : `${ref.region.name}: ${ref.region.short_description} USDA minimum ${ref.safety.temp_f} F with a 3 minute rest. Best methods, woods, slicing and mistakes.`;
+    ? `${ref.animal.name} ${ref.region.name.toLowerCase()}: ${ref.region.short_description} Tender at ${t.window_f?.min} to ${t.window_f?.max} F, ${t.finish_test?.replace(/_/g, ' ')}. USDA minimum ${ref.safety.temp_f} F${rest}.`
+    : `${ref.animal.name} ${ref.region.name.toLowerCase()}: ${ref.region.short_description} USDA minimum ${ref.safety.temp_f} F${rest}. Best methods, woods, slicing and mistakes.`;
   return {
-    title: `Beef ${ref.region.name}: Cuts, Temps, Woods and How to Cook It`,
+    title: `${ref.animal.name} ${ref.region.name}: Cuts, Temps, Woods and How to Cook It`,
     description: desc.slice(0, 158),
-    alternates: { canonical: `https://pitlog.app/cuts/beef/${region}` },
+    alternates: { canonical: `https://pitlog.app/cuts/${animal}/${region}` },
   };
 }
 
@@ -45,16 +46,30 @@ function Bar({ label, value }: { label: string; value: number }) {
   );
 }
 
-export default async function BeefRegionPage({ params }: { params: Promise<{ region: string }> }) {
-  const { region } = await params;
-  const ref = cutReference('beef', region);
+function finishLabel(finish: string, animal: AnimalSlug): string {
+  const t = getPitmasterTarget(finish);
+  if (t) return `${t.finish_test?.replace(/_/g, ' ')}, ${t.window_f?.min} to ${t.window_f?.max} F (craft)`;
+  const s = getSafetyMinimum(finish);
+  if (s) return `${s.temp_f} F${s.rest ? ' + rest' : ''} (USDA)`;
+  const d = renderableDoneness(finish);
+  if (d) return `Your doneness, ${d.safety.temp_f} F${d.safety.rest ? ' + rest' : ''} USDA floor`;
+  return finish;
+}
+
+export default async function RegionPage({ params }: { params: Promise<{ animal: string; region: string }> }) {
+  const { animal: aSlug, region } = await params;
+  const a = aSlug as AnimalSlug;
+  const ref = cutReference(a, region);
   if (!ref) notFound();
   const { region: r, safety, tenderness, woods, recipes, citations, animal } = ref;
   const ground = getSafetyMinimum('safety-ground-meat')!;
+  const total = getRegions(a).length;
+  const restText = safety.rest ? ` with a 3 minute rest` : '';
+  const name = r.name.toLowerCase();
 
   const answer = tenderness
-    ? `${r.name} is done when it is probe tender, usually between ${tenderness.window_f?.min} and ${tenderness.window_f?.max} F. The number is a checkpoint. USDA FSIS calls beef safe at ${safety.temp_f} F with a 3 minute rest. Tenderness comes much later.`
-    : `${r.name} cooks to the doneness you like, at or above the USDA minimum of ${safety.temp_f} F with a 3 minute rest. It is not a low-and-slow cut.`;
+    ? `${animal.name} ${name} is done when it is ${tenderness.finish_test?.replace(/_/g, ' ')}, usually between ${tenderness.window_f?.min} and ${tenderness.window_f?.max} F. The number is a checkpoint. USDA FSIS calls ${animal.name.toLowerCase()} safe at ${safety.temp_f} F${restText}. Tenderness comes later.`
+    : `${animal.name} ${name} cooks to the doneness you like, at or above the USDA minimum of ${safety.temp_f} F${restText}. It is not a low-and-slow cut.`;
 
   return (
     <>
@@ -65,17 +80,17 @@ export default async function BeefRegionPage({ params }: { params: Promise<{ reg
             items={[
               { name: 'Home', href: '/' },
               { name: 'Cuts', href: '/cuts' },
-              { name: 'Beef', href: '/cuts/beef' },
-              { name: r.name, href: `/cuts/beef/${r.slug}` },
+              { name: animal.name, href: `/cuts/${a}` },
+              { name: r.name, href: `/cuts/${a}/${r.slug}` },
             ]}
           />
           <Eyebrow>
-            Beef primal {String(r.number).padStart(2, '0')} of {getRegions('beef').length}
+            {animal.name} region {String(r.number).padStart(2, '0')} of {total}
           </Eyebrow>
           <H1>{r.name}.</H1>
           <Lede>{r.short_description}</Lede>
           <Card raised>
-            <Label>{tenderness ? `What temp is ${r.name.toLowerCase()} done?` : `How do you cook ${r.name.toLowerCase()}?`}</Label>
+            <Label>{tenderness ? `What temp is ${animal.name.toLowerCase()} ${name} done?` : `How do you cook ${animal.name.toLowerCase()} ${name}?`}</Label>
             <p className="text-lg leading-relaxed" style={{ color: C.text }}>
               {answer}
             </p>
@@ -88,9 +103,11 @@ export default async function BeefRegionPage({ params }: { params: Promise<{ reg
               <Eyebrow>What it is</Eyebrow>
               <H2>Where it comes from</H2>
               <P className="mb-6">{r.long_description}</P>
-              <p className="text-sm" style={{ color: C.textMuted }}>
-                USDA FSIS primal: {r.fsis_parent}. {animal.primal_scheme.note.split('.')[0]}.
-              </p>
+              {r.fsis_parent && (
+                <p className="text-sm" style={{ color: C.textMuted }}>
+                  USDA FSIS primal: {r.fsis_parent}. {animal.primal_scheme.note.split('.')[0]}.
+                </p>
+              )}
             </div>
             <div className="space-y-6">
               <Card>
@@ -125,7 +142,7 @@ export default async function BeefRegionPage({ params }: { params: Promise<{ reg
           <Eyebrow>Retail cuts</Eyebrow>
           <H2 id="cuts-heading">What you will see at the counter</H2>
           <div className="overflow-x-auto mt-4">
-            <table className="w-full text-sm" aria-label={`Retail cuts from the beef ${r.name}`}>
+            <table className="w-full text-sm" aria-label={`Retail cuts from the ${animal.name.toLowerCase()} ${name}`}>
               <thead>
                 <tr style={{ borderBottom: `1px solid ${C.border}` }}>
                   <Th>Cut</Th>
@@ -135,25 +152,14 @@ export default async function BeefRegionPage({ params }: { params: Promise<{ reg
                 </tr>
               </thead>
               <tbody>
-                {r.retail_cuts.map((rc, i) => {
-                  const t = getPitmasterTarget(rc.finish);
-                  const s = getSafetyMinimum(rc.finish);
-                  const finish = t
-                    ? `Probe tender, ${t.window_f?.min} to ${t.window_f?.max} F`
-                    : s
-                      ? `${s.temp_f} F${s.rest ? ' + rest' : ''} (USDA)`
-                      : rc.finish.startsWith('doneness-beef')
-                        ? 'Your doneness, 145 F+ USDA'
-                        : rc.finish;
-                  return (
-                    <Tr key={rc.slug} i={i}>
-                      <Td strong>{rc.name}</Td>
-                      <Td>{rc.methods.join(', ')}</Td>
-                      <Td num>{finish}</Td>
-                      <Td>{rc.note}</Td>
-                    </Tr>
-                  );
-                })}
+                {r.retail_cuts.map((rc, i) => (
+                  <Tr key={rc.slug} i={i}>
+                    <Td strong>{rc.name}</Td>
+                    <Td>{rc.methods.join(', ')}</Td>
+                    <Td num>{finishLabel(rc.finish, a)}</Td>
+                    <Td>{rc.note}</Td>
+                  </Tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -168,7 +174,7 @@ export default async function BeefRegionPage({ params }: { params: Promise<{ reg
           </div>
           {tenderness && (
             <Card raised className="mb-8">
-              <Label>Tenderness target ({tenderness.review_status === 'SOURCED' ? 'industry body' : 'barbecue convention'})</Label>
+              <Label>Tenderness target ({tenderness.review_status === 'SOURCED' ? 'sourced, see citations' : 'barbecue convention'})</Label>
               <p className="font-display text-2xl mb-2" style={{ color: C.text }}>
                 {tenderness.window_f?.min} to {tenderness.window_f?.max} F, {tenderness.finish_test?.replace(/_/g, ' ')}
               </p>
@@ -206,9 +212,20 @@ export default async function BeefRegionPage({ params }: { params: Promise<{ reg
           )}
           <div className="space-y-10">
             {r.doneness_refs.map((d) => (
-              <DonenessTable key={d} id={d} title={d.includes('industry') ? 'Beef Board doneness scale' : 'Steakhouse convention'} />
+              <DonenessTable key={d} id={d} title={d.replace('doneness-', '').replace(/-/g, ' ')} />
             ))}
           </div>
+          <p className="mt-6 text-sm" style={{ color: C.textMuted }}>
+            More on the{' '}
+            <Link href={`/temperatures/${a}`} style={{ color: C.emberLight, textDecoration: 'underline' }}>
+              {animal.name.toLowerCase()} temperature page
+            </Link>{' '}
+            and the{' '}
+            <Link href="/temperatures" style={{ color: C.emberLight, textDecoration: 'underline' }}>
+              full chart
+            </Link>
+            .
+          </p>
         </Section>
 
         <Section tone="surface">
@@ -233,16 +250,20 @@ export default async function BeefRegionPage({ params }: { params: Promise<{ reg
             <div>
               <Eyebrow>Mistakes</Eyebrow>
               <H2>What ruins it</H2>
-              <ul className="space-y-3">
-                {r.common_mistakes.map((m, i) => (
-                  <li key={m} className="flex gap-3 text-sm" style={{ color: C.textSoft }}>
-                    <span className="font-display" style={{ color: 'oklch(0.80 0.12 30)' }}>
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    {m}
-                  </li>
-                ))}
-              </ul>
+              {r.common_mistakes.length ? (
+                <ul className="space-y-3">
+                  {r.common_mistakes.map((m, i) => (
+                    <li key={m} className="flex gap-3 text-sm" style={{ color: C.textSoft }}>
+                      <span className="font-display" style={{ color: 'oklch(0.80 0.12 30)' }}>
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      {m}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <P muted>Hard to ruin. Cook it with the rest of the bird.</P>
+              )}
             </div>
           </div>
         </Section>

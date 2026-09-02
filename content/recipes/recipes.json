@@ -251,7 +251,7 @@
     {
       "slug": "santa-maria-tri-tip",
       "title": "Santa Maria-Inspired Tri-Tip",
-      "status": "PLANNED",
+      "status": "TEST_V1",
       "family": "steaks",
       "animal": "beef",
       "cuts": [
@@ -265,9 +265,9 @@
         "garlic powder",
         "dried parsley"
       ],
-      "yield": null,
-      "prep_time": null,
-      "cook_time_guidance": "60 to 90 minutes plus sear. Planning estimate only.",
+      "yield": "A 2.5 lb tri-tip serves 4 to 6",
+      "prep_time": "10 minutes, plus 1 hour uncovered in the fridge",
+      "cook_time_guidance": "60 to 90 minutes at 225 F, then a 2 to 3 minute sear per side, plus a 10 minute rest. Estimate.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "doneness-beef-industry",
       "safety_refs": [
@@ -277,7 +277,9 @@
         "oak"
       ],
       "equipment_refs": [
+        "leave-in-probe",
         "instant-read-thermometer",
+        "cast-iron",
         "slicing-knife",
         "cutting-board"
       ],
@@ -300,7 +302,67 @@
         "beef/sirloin"
       ],
       "review_status": "DRAFT",
-      "updated_at": "2026-09-02"
+      "updated_at": "2026-09-02",
+      "ingredient_groups": [
+        {
+          "name": "Beef",
+          "items": [
+            {
+              "qty": "1",
+              "item": "tri-tip roast, 2 to 3 lb, fat cap trimmed to a quarter inch"
+            }
+          ]
+        },
+        {
+          "name": "Santa Maria rub",
+          "items": [
+            {
+              "qty": "1 tbsp",
+              "item": "kosher salt"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "coarse black pepper"
+            },
+            {
+              "qty": "2 tsp",
+              "item": "garlic powder"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "dried parsley"
+            },
+            {
+              "qty": "1/2 tsp",
+              "item": "cayenne",
+              "note": "optional"
+            }
+          ]
+        },
+        {
+          "name": "Pit",
+          "items": [
+            {
+              "qty": "as needed",
+              "item": "red oak chunks, or any oak"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        "Mix the rub and coat the tri-tip on every side. Leave it uncovered in the fridge for an hour so the surface dries.",
+        "Run the pit at 225 F with oak. Red oak is the Santa Maria tradition. Tri-tip on, fat side up, leave-in probe in the thickest part.",
+        "Smoke until the probe reads about 10 F under your target. Roasts rise 5 to 15 F after they leave the heat (Beef Board), so for a 145 F medium rare final, pull around 130 to 135 F.",
+        "Sear over direct heat or in a hot cast iron pan, 2 to 3 minutes a side, until the crust is dark.",
+        "Rest 10 minutes. USDA FSIS calls beef safe at 145 F with a 3 minute rest. The Beef Board scale is medium rare 145 F, medium 160 F, well done 170 F, final temperatures after rest. Steakhouse convention pulls lower; that is a preference below the minimum, and the beef temperature page says so.",
+        "Find the two grain directions. Tri-tip changes grain at the bend. Cut the roast in two at the bend, then slice each half across its own grain, thin."
+      ],
+      "notes": [
+        "Untested draft. Standard Santa Maria method; becomes OFFICIAL after a logged cook.",
+        "Tri-tip is a steak-style cut. Do not cook it to a brisket window; it dries out."
+      ],
+      "kitchen_tested": false,
+      "test_log": []
     },
     {
       "slug": "pepper-bark-beef-short-ribs",
@@ -811,7 +873,7 @@
     {
       "slug": "pit-log-honey-garlic-chicken-thighs",
       "title": "Pit Log Honey Garlic Chicken Thighs",
-      "status": "PLANNED",
+      "status": "TEST_V1",
       "family": "chicken",
       "animal": "chicken",
       "cuts": [
@@ -828,9 +890,9 @@
         "apple cider vinegar",
         "paprika"
       ],
-      "yield": null,
-      "prep_time": null,
-      "cook_time_guidance": "1.5 to 2 hours. Planning estimate only.",
+      "yield": "Serves 4 (8 thighs)",
+      "prep_time": "15 minutes, plus 30 minutes in the fridge with the rub if you have it",
+      "cook_time_guidance": "1.5 to 2 hours at 275 F, then a short hot finish. Estimate.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "doneness-chicken-dark-meat-preference",
       "safety_refs": [
@@ -843,7 +905,8 @@
       ],
       "equipment_refs": [
         "instant-read-thermometer",
-        "basting-brush"
+        "basting-brush",
+        "tongs"
       ],
       "shop_ingredient_categories": [
         "honey",
@@ -867,12 +930,83 @@
         "chicken/thigh"
       ],
       "review_status": "DRAFT",
-      "updated_at": "2026-09-02"
+      "updated_at": "2026-09-02",
+      "ingredient_groups": [
+        {
+          "name": "Chicken",
+          "items": [
+            {
+              "qty": "8",
+              "item": "bone-in, skin-on chicken thighs, about 3 lb"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "kosher salt"
+            },
+            {
+              "qty": "2 tsp",
+              "item": "paprika"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "coarse black pepper"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "garlic powder"
+            }
+          ]
+        },
+        {
+          "name": "Honey garlic glaze",
+          "items": [
+            {
+              "qty": "1/3 cup",
+              "item": "honey"
+            },
+            {
+              "qty": "3 tbsp",
+              "item": "soy sauce"
+            },
+            {
+              "qty": "3",
+              "item": "garlic cloves, grated"
+            },
+            {
+              "qty": "2 tbsp",
+              "item": "packed brown sugar"
+            },
+            {
+              "qty": "2 tbsp",
+              "item": "apple cider vinegar"
+            },
+            {
+              "qty": "1 tsp",
+              "item": "paprika"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        "Pat the thighs dry. Mix the salt, paprika, pepper and garlic powder. Rub it on every side and under the skin where you can. Fridge, uncovered, 30 minutes if you have the time.",
+        "Whisk the glaze in a small pan. Simmer 3 to 4 minutes until it thickens a little. Set half aside for the table.",
+        "Run the pit at 275 F with cherry or pecan. Skin side up. Leave the lid shut for an hour.",
+        "Brush on the glaze in the last 15 to 30 minutes. That is the USDA FSIS timing for sauce on smoked meat, and it keeps the honey from burning.",
+        "Check the innermost part of each thigh, not touching bone. USDA FSIS says all chicken is safe at 165 F. Thighs eat better at 175 to 185 F, when the connective tissue has rendered. That extra is texture, not safety.",
+        "For crisp skin, move the thighs over direct heat or into a 400 F oven for 3 to 5 minutes at the end.",
+        "Rest 5 minutes. USDA requires no rest for poultry; this one is for juice. Serve with the reserved glaze."
+      ],
+      "notes": [
+        "Untested draft. Concept from the approved Pit Log chicken graphic. Amounts are a first pass.",
+        "Boneless thighs work too. They finish sooner, so start checking at the one-hour mark."
+      ],
+      "kitchen_tested": false,
+      "test_log": []
     },
     {
       "slug": "mediterranean-lamb-shoulder",
       "title": "Mediterranean Lamb Shoulder",
-      "status": "PLANNED",
+      "status": "TEST_V1",
       "family": "lamb",
       "animal": "lamb",
       "cuts": [
@@ -890,9 +1024,9 @@
         "sea salt",
         "black pepper"
       ],
-      "yield": null,
-      "prep_time": null,
-      "cook_time_guidance": "6 to 8 hours. Planning estimate only.",
+      "yield": "A 5 to 6 lb bone-in shoulder serves 6 to 8",
+      "prep_time": "20 minutes, plus 4 hours to overnight in the marinade",
+      "cook_time_guidance": "6 to 8 hours at 250 F, wrapped for the last half, plus a 30 to 60 minute rest. Estimate.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "target-lamb-goat-shoulder",
       "safety_refs": [
@@ -931,12 +1065,88 @@
         "lamb/shoulder"
       ],
       "review_status": "DRAFT",
-      "updated_at": "2026-09-02"
+      "updated_at": "2026-09-02",
+      "ingredient_groups": [
+        {
+          "name": "Lamb",
+          "items": [
+            {
+              "qty": "1",
+              "item": "bone-in lamb shoulder, 5 to 6 lb"
+            }
+          ]
+        },
+        {
+          "name": "Marinade",
+          "items": [
+            {
+              "qty": "1/3 cup",
+              "item": "olive oil"
+            },
+            {
+              "qty": "6",
+              "item": "garlic cloves, crushed"
+            },
+            {
+              "qty": "1",
+              "item": "lemon, zest and juice"
+            },
+            {
+              "qty": "2 tbsp",
+              "item": "fresh rosemary, chopped"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "fresh thyme leaves"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "dried oregano"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "sea salt"
+            },
+            {
+              "qty": "2 tsp",
+              "item": "coarse black pepper"
+            }
+          ]
+        },
+        {
+          "name": "Pit",
+          "items": [
+            {
+              "qty": "as needed",
+              "item": "oak or cherry chunks"
+            },
+            {
+              "qty": "1 roll",
+              "item": "pink butcher paper"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        "Score the fat cap in a diamond pattern, a quarter inch deep. Mix the marinade and rub it into every cut and under any loose flaps.",
+        "Bag it or cover it and marinate in the refrigerator, 4 hours to overnight. Never on the counter. USDA FSIS: marinate in the fridge and discard the used marinade.",
+        "Run the pit at 250 F with oak, or oak and cherry. Shoulder on fat side up. Leave it alone for 3 hours.",
+        "When the bark is set and dark, usually 160 to 170 F, wrap tight in butcher paper. Back on at 250 F.",
+        "Start checking at 195 F. It is done when a probe slides into the thickest part, away from the blade bone, with almost no resistance. That is usually 195 to 205 F. USDA FSIS calls lamb safe at 145 F with a 3 minute rest; this cook passed that hours ago. The extra is about collagen, not safety.",
+        "Rest wrapped for 30 to 60 minutes. Keep it above 140 F if you hold it longer.",
+        "Pull it off the bone with forks or claws. Squeeze fresh lemon over it. Serve on flatbread with yogurt, or over rice."
+      ],
+      "notes": [
+        "Untested draft. Concept from the approved Pit Log lamb graphic.",
+        "For a sliced roast instead of pulled, follow the American Lamb Board scale on the lamb temperature page: pull at 135 F for a 145 F medium rare after rest."
+      ],
+      "kitchen_tested": false,
+      "test_log": []
     },
     {
       "slug": "moroccan-spiced-goat-shoulder",
       "title": "Moroccan Spiced Goat Shoulder",
-      "status": "PLANNED",
+      "status": "TEST_V1",
       "family": "goat",
       "animal": "goat",
       "cuts": [
@@ -955,9 +1165,9 @@
         "cinnamon",
         "kosher salt"
       ],
-      "yield": null,
-      "prep_time": null,
-      "cook_time_guidance": "6 to 8 hours, wrapped for the second half. Planning estimate only.",
+      "yield": "A 4 to 5 lb bone-in shoulder serves 5 to 6",
+      "prep_time": "20 minutes, plus 4 hours to overnight in the paste",
+      "cook_time_guidance": "5 to 7 hours at 240 F, wrapped with liquid for the second half, plus a 30 minute rest. Estimate.",
       "pit_temp_ref": "planning-pit-temperature-bands",
       "finish_ref": "target-lamb-goat-shoulder",
       "safety_refs": [
@@ -969,8 +1179,8 @@
       ],
       "equipment_refs": [
         "leave-in-probe",
-        "butcher-paper",
-        "dutch-oven"
+        "dutch-oven",
+        "foil"
       ],
       "shop_ingredient_categories": [
         "harissa",
@@ -988,14 +1198,93 @@
           "Oak"
         ],
         "target_temp": 240,
-        "wrap_method": "Butcher Paper",
+        "wrap_method": "Foil",
         "rub": "Moroccan spice"
       },
       "related_cut_refs": [
         "goat/shoulder"
       ],
       "review_status": "DRAFT",
-      "updated_at": "2026-09-02"
+      "updated_at": "2026-09-02",
+      "ingredient_groups": [
+        {
+          "name": "Goat",
+          "items": [
+            {
+              "qty": "1",
+              "item": "bone-in goat shoulder, 4 to 5 lb"
+            }
+          ]
+        },
+        {
+          "name": "Spice paste",
+          "items": [
+            {
+              "qty": "3 tbsp",
+              "item": "harissa paste"
+            },
+            {
+              "qty": "3 tbsp",
+              "item": "olive oil"
+            },
+            {
+              "qty": "1 tbsp",
+              "item": "ground cumin"
+            },
+            {
+              "qty": "2 tsp",
+              "item": "ground coriander"
+            },
+            {
+              "qty": "2 tsp",
+              "item": "paprika"
+            },
+            {
+              "qty": "1/2 tsp",
+              "item": "ground cinnamon"
+            },
+            {
+              "qty": "4",
+              "item": "garlic cloves, grated"
+            },
+            {
+              "qty": "1",
+              "item": "lemon, zest and juice"
+            },
+            {
+              "qty": "2 tsp",
+              "item": "kosher salt"
+            }
+          ]
+        },
+        {
+          "name": "Wrap",
+          "items": [
+            {
+              "qty": "1 cup",
+              "item": "chicken or vegetable stock"
+            },
+            {
+              "qty": "1 sheet",
+              "item": "heavy foil, or a Dutch oven"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        "Mix the paste. Rub it over the whole shoulder and into every seam. Refrigerate, covered, 4 hours to overnight. USDA FSIS: marinate in the fridge, never on the counter.",
+        "Run the pit at 240 F with oak, or oak and a little pecan. Goat is lean; keep the pit gentle. Shoulder on for about 3 hours, until the paste has set into a crust.",
+        "Move the shoulder to a foil pan or a Dutch oven. Pour in the stock. Cover tight. Back on the pit, or into a 275 F oven. USDA FSIS says less tender goat cuts should be braised or stewed, and this is the braise.",
+        "Start checking after 2 more hours. It is done when a probe slides into the thickest meat, away from the blade bone, with almost no resistance, usually 195 to 205 F. USDA FSIS calls goat safe at 145 F with a 3 minute rest; this cook passed that long ago. The extra is about collagen.",
+        "Rest, covered, 30 minutes. Keep it above 140 F if you hold it longer.",
+        "Pull the meat and toss it in the pan juices. Finish with lemon and chopped cilantro or parsley. Serve over couscous or rice."
+      ],
+      "notes": [
+        "Untested draft. Concept from the approved Pit Log goat graphic.",
+        "Harissa heat varies by brand. Taste the paste before it goes on and cut it with more olive oil if it is fierce."
+      ],
+      "kitchen_tested": false,
+      "test_log": []
     },
     {
       "slug": "pit-log-maple-cedar-salmon",

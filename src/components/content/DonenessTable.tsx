@@ -18,7 +18,7 @@ export function DonenessTable({ id, title }: { id: string; title?: string }) {
         </h3>
       )}
       <p className="text-sm mb-3" style={{ color: C.textMuted }}>
-        {record.scope.charAt(0).toUpperCase() + record.scope.slice(1)}. Culinary preference, {record.review_status === 'SOURCED' ? 'as published by the industry body cited below' : 'barbecue and steakhouse convention'}.
+        {record.scope.charAt(0).toUpperCase() + record.scope.slice(1)}. Culinary preference, {record.review_status === 'SOURCED' ? 'as published by the industry body cited below' : 'barbecue convention'}.
       </p>
       <div className="overflow-x-auto">
         <table className="w-full text-sm" aria-label={title ?? 'Doneness guide'}>

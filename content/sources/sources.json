@@ -439,6 +439,59 @@
         "Prices are behind a 'Download full price list' control and were NOT captured in this session; Gelato pricing remains unverified",
         "Free plan, no minimums; Shopify, Etsy, WooCommerce integrations and an API (API terms linked in footer)"
       ]
+    },
+    {
+      "id": "tamu-bbq-science",
+      "org": "Texas A&M University, Department of Animal Science, Meat Science Section",
+      "title": "Texas Barbecue: Barbecue Science",
+      "url": "https://meat.tamu.edu/texas-bbq/bbq-science/",
+      "primary": true,
+      "tier": 2,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "stable",
+      "supports": [
+        "The plateau in internal temperature near the end of cooking is evaporative cooling",
+        "Collagen is converted to gelatin when heated; a higher internal temperature, 185 to 195 F, is required to achieve this conversion",
+        "Briskets have a high percentage of connective tissue containing collagen; muscle fibre toughens with heat while connective tissue tenderises, which is why brisket is taken to a high internal temperature",
+        "The smoke ring is nitric oxide from burning wood combining with myoglobin to form nitrosyl hemochromogen"
+      ]
+    },
+    {
+      "id": "tamu-meat-selection",
+      "org": "Texas A&M University, Department of Animal Science, Meat Science Section",
+      "title": "Texas Barbecue: Meat Selection for Barbecuing",
+      "url": "https://meat.tamu.edu/texas-bbq/meat-selection/",
+      "primary": true,
+      "tier": 2,
+      "accessed": "2026-09-02",
+      "page_last_updated": null,
+      "update_sensitivity": "stable",
+      "supports": [
+        "Brisket points are the anterior end and typically fatter; flats are considerably leaner in cover and within the muscle",
+        "Packer-trimmed briskets keep a thicker fat cover that many enthusiasts prefer for long cooking",
+        "Cooked, trimmed lean yield of brisket is approximately 50% of raw weight",
+        "Briskets have high levels of connective tissue and require longer cooking at low temperatures",
+        "Shoulder clod muscles are inherently more tender than brisket and may not need as high an internal temperature",
+        "Back ribs carry large amounts of connective tissue: slow, low, even high-moisture cooking recommended; short ribs require long-time low-heat cookery"
+      ]
+    },
+    {
+      "id": "amazingribs-stall-blonder",
+      "org": "AmazingRibs.com (Meathead), reporting experiments by Prof. Greg Blonder, Boston University",
+      "title": "What Causes The BBQ Stall: It's Not What You Think",
+      "url": "https://amazingribs.com/more-technique-and-science/more-cooking-science/understanding-and-beating-barbecue-stall/",
+      "primary": false,
+      "tier": 5,
+      "accessed": "2026-09-02",
+      "page_last_updated": "2026-07-20",
+      "update_sensitivity": "stable",
+      "supports": [
+        "Controlled-smoker experiment by Prof. Greg Blonder (physicist, Boston University): a water-soaked sponge stalled like a brisket while pure beef fat heated steadily, so the stall is evaporative cooling, not fat rendering",
+        "The stall typically begins between 150 and 170 F and can last hours",
+        "Wrapping (the Texas crutch) traps humidity, stops evaporative cooling and pushes the cut through the stall",
+        "QUALITATIVE ONLY: a practitioner site; it carries no safety claim in this spine"
+      ]
     }
   ]
 }

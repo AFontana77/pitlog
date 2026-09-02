@@ -1,0 +1,215 @@
+{
+  "_meta": {
+    "purpose": "Hotspot polygons for the chicken primal diagram in MASTER pixel coordinates; the web image is the crop below upscaled 2x and the SVG viewBox equals the crop box, so coordinates apply unchanged. If the master md5 changes every polygon must be re-checked.",
+    "master": "chicken-cuts-cooking-guide-B",
+    "master_file": "brand-assets/cut-guides/chicken-cuts-cooking-guide-B.png",
+    "master_md5": "cf9b62e895ff45db7024c263b2e388ce",
+    "crop_box_xyxy": [
+      20,
+      225,
+      520,
+      625
+    ],
+    "web_image": "/images/cuts/chicken-primal-diagram.png",
+    "web_image_px": [
+      1000,
+      800
+    ],
+    "drawn": "2026-09-02",
+    "method": "grid overlay + visual check of a filled-polygon render",
+    "review_status": "REVIEWED"
+  },
+  "viewBox": "20 225 500 400",
+  "regions": [
+    {
+      "slug": "wing",
+      "polygon": [
+        [
+          160,
+          330
+        ],
+        [
+          232,
+          318
+        ],
+        [
+          265,
+          360
+        ],
+        [
+          250,
+          440
+        ],
+        [
+          200,
+          470
+        ],
+        [
+          160,
+          420
+        ]
+      ],
+      "label": [
+        211,
+        390
+      ]
+    },
+    {
+      "slug": "breast",
+      "polygon": [
+        [
+          265,
+          360
+        ],
+        [
+          232,
+          318
+        ],
+        [
+          340,
+          295
+        ],
+        [
+          380,
+          372
+        ],
+        [
+          370,
+          470
+        ],
+        [
+          300,
+          490
+        ],
+        [
+          250,
+          440
+        ]
+      ],
+      "label": [
+        305,
+        392
+      ]
+    },
+    {
+      "slug": "thigh",
+      "polygon": [
+        [
+          200,
+          470
+        ],
+        [
+          250,
+          440
+        ],
+        [
+          300,
+          490
+        ],
+        [
+          296,
+          540
+        ],
+        [
+          215,
+          542
+        ],
+        [
+          194,
+          512
+        ]
+      ],
+      "label": [
+        242,
+        499
+      ]
+    },
+    {
+      "slug": "drumstick",
+      "polygon": [
+        [
+          300,
+          490
+        ],
+        [
+          370,
+          470
+        ],
+        [
+          412,
+          470
+        ],
+        [
+          402,
+          530
+        ],
+        [
+          310,
+          546
+        ],
+        [
+          296,
+          540
+        ]
+      ],
+      "label": [
+        348,
+        508
+      ]
+    },
+    {
+      "slug": "back",
+      "polygon": [
+        [
+          340,
+          295
+        ],
+        [
+          416,
+          290
+        ],
+        [
+          447,
+          342
+        ],
+        [
+          432,
+          402
+        ],
+        [
+          380,
+          372
+        ]
+      ],
+      "label": [
+        403,
+        340
+      ]
+    },
+    {
+      "slug": "tail",
+      "polygon": [
+        [
+          432,
+          402
+        ],
+        [
+          465,
+          395
+        ],
+        [
+          482,
+          440
+        ],
+        [
+          430,
+          452
+        ]
+      ],
+      "label": [
+        452,
+        422
+      ]
+    }
+  ]
+}
