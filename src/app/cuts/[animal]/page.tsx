@@ -5,6 +5,7 @@ import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { ANIMALS, getAnimal, getRegions, getSafetyMinimum, getWood, RECIPES, type AnimalSlug } from '@/content';
 import { getHotspots, diagramAlt } from '@/content/hotspots';
+import { ogImageMeta } from '@/content/ogImage';
 import { CutDiagram, type DiagramRegion } from '@/components/content/CutDiagram';
 import { SafetyLine } from '@/components/content/SafetyLine';
 import { DonenessTable } from '@/components/content/DonenessTable';
@@ -54,15 +55,13 @@ export async function generateMetadata({ params }: { params: Promise<{ animal: s
   if (!t) return {};
   const hs = getHotspots(animal as AnimalSlug);
   const a = getAnimal(animal);
-  const og = hs && a
-    ? { images: [{ url: hs._meta.web_image, width: hs._meta.web_image_px[0], height: hs._meta.web_image_px[1], alt: diagramAlt(a.name, getRegions(animal as AnimalSlug)) }] }
-    : {};
+  const card = a ? ogImageMeta(a.slug, diagramAlt(a.name, getRegions(animal as AnimalSlug))) : undefined;
   return {
     title: t.title,
     description: t.description,
     alternates: { canonical: `https://pitlog.app/cuts/${animal}` },
-    openGraph: { title: t.title, description: t.description, url: `https://pitlog.app/cuts/${animal}`, type: 'article', ...og },
-    twitter: { card: 'summary_large_image', title: t.title, description: t.description, ...(hs ? { images: [hs._meta.web_image] } : {}) },
+    openGraph: { title: t.title, description: t.description, url: `https://pitlog.app/cuts/${animal}`, type: 'article', ...(card?.openGraph ?? {}) },
+    twitter: { card: 'summary_large_image', title: t.title, description: t.description, ...(card?.twitter ?? {}) },
   };
 }
 

@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { FINISH_TESTS, HANDLING, RECIPES, getPitmasterTarget, type PitmasterTarget } from '@/content';
-import { getHotspots } from '@/content/hotspots';
+import { ogImageMeta } from '@/content/ogImage';
 import { CUT_TEMPERATURE_PAGES, cutTemperaturePagesFor, getCutTemperaturePage, resolveCutPage } from '@/content/cutTemperaturePages';
 import { SafetyLine } from '@/components/content/SafetyLine';
 import { DonenessTable } from '@/components/content/DonenessTable';
@@ -42,15 +42,14 @@ export async function generateMetadata({ params }: { params: Promise<{ animal: s
   const ctx = resolveCutPage(page);
   const copy = page.copy(ctx);
   const url = `https://pitlog.app/temperatures/${animal}/${cut}`;
-  const hs = getHotspots(page.animal);
   const description = clampDescription(copy.description);
-  const og = hs ? { images: [{ url: hs._meta.web_image, width: hs._meta.web_image_px[0], height: hs._meta.web_image_px[1], alt: `${ctx.animal.name} cut diagram` }] } : {};
+  const card = ogImageMeta(page.animal, `${ctx.animal.name} cut diagram`);
   return {
     title: copy.title,
     description,
     alternates: { canonical: url },
-    openGraph: { title: copy.title, description, url, type: 'article', ...og },
-    twitter: { card: 'summary_large_image', title: copy.title, description, ...(hs ? { images: [hs._meta.web_image] } : {}) },
+    openGraph: { title: copy.title, description, url, type: 'article', ...card.openGraph },
+    twitter: { card: 'summary_large_image', title: copy.title, description, ...card.twitter },
   };
 }
 

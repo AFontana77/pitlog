@@ -5,6 +5,7 @@ import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { ANIMALS, HANDLING, PITMASTER_TARGETS, RECIPES, getAnimal, getRegions, getSafetyMinimum, renderableDoneness, type AnimalSlug } from '@/content';
 import { cutTemperaturePagesFor } from '@/content/cutTemperaturePages';
+import { ogImageMeta } from '@/content/ogImage';
 import { SafetyLine } from '@/components/content/SafetyLine';
 import { DonenessTable } from '@/components/content/DonenessTable';
 import { Citations } from '@/components/content/Citations';
@@ -87,7 +88,16 @@ export async function generateMetadata({ params }: { params: Promise<{ animal: s
   const { animal } = await params;
   const c = COPY[animal as AnimalSlug];
   if (!c) return {};
-  return { title: c.title, description: c.description.slice(0, 158), alternates: { canonical: `https://pitlog.app/temperatures/${animal}` } };
+  const url = `https://pitlog.app/temperatures/${animal}`;
+  const description = c.description.slice(0, 158);
+  const card = ogImageMeta(animal as AnimalSlug, `${getAnimal(animal)?.name ?? ''} cut diagram`);
+  return {
+    title: c.title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title: c.title, description, url, type: 'article', ...card.openGraph },
+    twitter: { card: 'summary_large_image', title: c.title, description, ...card.twitter },
+  };
 }
 
 export default async function AnimalTemperaturePage({ params }: { params: Promise<{ animal: string }> }) {

@@ -10,6 +10,7 @@ import { GearList } from '@/components/content/GearList';
 import { ShopThisRecipe } from '@/components/content/ShopThisRecipe';
 import { PrintButton } from '@/components/content/PrintButton';
 import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Label, Lede, P, Section } from '@/components/content/ui';
+import { ogImageMeta } from '@/content/ogImage';
 
 const LIVE = RECIPES.filter((r) => r.status !== 'PLANNED' && r.status !== 'RETIRED');
 
@@ -21,10 +22,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const r = getRecipe(slug);
   if (!r || r.status === 'PLANNED') return {};
+  const url = `https://pitlog.app/recipes/${slug}`;
+  const title = `${r.title} Recipe`;
+  const description = r.description.slice(0, 158);
+  // A sauce or rub has no animal, so it falls back to the site card.
+  const card = ogImageMeta(r.animal, r.animal ? `${r.animal} cut diagram` : 'Pit Master Log');
   return {
-    title: `${r.title} Recipe`,
-    description: r.description.slice(0, 158),
-    alternates: { canonical: `https://pitlog.app/recipes/${slug}` },
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: 'article', ...card.openGraph },
+    twitter: { card: 'summary_large_image', title, description, ...card.twitter },
   };
 }
 
