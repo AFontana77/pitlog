@@ -10,6 +10,12 @@
  *   chicken breast internal temp   27,100/mo  KD 6
  *   chicken thigh internal temp    18,100/mo  KD 14
  *   ribs internal temp              9,900/mo  KD 0  (+ pork ribs internal temp 9,900)
+ *   ground beef internal temp       8,100/mo  KD 13
+ *   tri tip internal temp           6,600/mo  KD 0  (+ reverse sear tri tip 6,600)
+ *   pulled pork internal temp       4,400/mo  KD 0  (+ what/when to wrap pork butt
+ *                                                    2,900 each, what temp to pull
+ *                                                    pork butt 1,600, pork butt
+ *                                                    stall temp 1,000)
  *
  * Every figure on these pages is interpolated from a record in content/.
  * The copy functions below receive resolved records and never carry a typed
@@ -35,11 +41,14 @@ import {
 export interface CutTemperatureContext {
   animal: Animal;
   safety: SafetyMinimum;
-  ground?: SafetyMinimum;
+  /** A second safety floor printed beside the first, when the page needs the contrast. */
+  secondary?: SafetyMinimum;
   primary: CutRegion;
   regions: CutRegion[];
   cuts: { region: CutRegion; cut: RetailCut }[];
   targets: PitmasterTarget[];
+  /** Resolved crossTargets, in registry order, so copy can cite their figures. */
+  cross: PitmasterTarget[];
   doneness: CulinaryDoneness[];
 }
 
@@ -61,10 +70,36 @@ export interface CutTemperaturePage {
   primary: string;
   /** Retail cuts rendered, in order. May span regions (ribs do). */
   cuts: { region: string; slug: string }[];
+  /**
+   * Safety floor that leads the page. Defaults to the animal's whole-muscle
+   * ref. The ground beef page overrides it: a burger is 160 F, and printing
+   * the 145 F whole-muscle rule first on a page about ground beef would put
+   * the wrong number in the answer position.
+   */
+  primarySafetyRef?: string;
+  /**
+   * A second floor printed beside the first. Defaults to the animal's ground
+   * ref when the page lists a ground cut, which is how a whole-muscle page
+   * that happens to include ground meat picks up 160 F.
+   */
+  secondarySafetyRef?: string;
   targets: string[];
   doneness: string[];
-  /** A related tenderness record from another animal, with where to read more. */
-  crossTargets?: { id: string; label: string; href: string }[];
+  /**
+   * Whether to print the primary region's planning time, rest, slice direction
+   * and common mistakes. Default true. The ground beef page sets it false: its
+   * primary region is chuck, and chuck's guidance is about a smoked roast, so
+   * the page would tell you to rest a burger 30 to 60 minutes and slice it
+   * across the grain. There is no ground-beef planning record to put there
+   * instead, and inventing one is worse than printing none.
+   */
+  regionGuidance?: boolean;
+  /**
+   * A related tenderness record, labelled as what it is. `href` is optional:
+   * the beef target on the ribs page has a cut guide to link to, the stall on
+   * the pulled pork page is a concept and has none.
+   */
+  crossTargets?: { id: string; label: string; href?: string }[];
   copy: (ctx: CutTemperatureContext) => CutCopy;
 }
 
@@ -205,8 +240,92 @@ export const CUT_TEMPERATURE_PAGES: CutTemperaturePage[] = [
         description: `Pork ribs are safe at ${safety.temp_f} F but not tender until about ${t.window_f?.min} to ${t.window_f?.max} F, when they pass the bend test. Covers baby backs, spareribs, St. Louis and beef ribs.`,
         h1: 'Ribs internal temperature.',
         question: 'What internal temp are ribs done?',
-        intro: `${t.statement} USDA FSIS calls pork safe at ${safety.temp_f} F with a rest of ${rest}, and ribs pass that hours before they are tender. Cook to feel, and use the number as a checkpoint.`,
+        intro: `Ribs are the one cut where the thermometer does not get the final say. They usually come good somewhere around ${t.window_f?.min} to ${t.window_f?.max} F, but the reading moves a lot depending on where you put the probe. Cook them until they pass the ${t.finish_test?.replace(/_/g, ' ')}, and let the number tell you only when to start checking. USDA FSIS calls pork safe at ${safety.temp_f} F with a rest of ${rest}, and ribs clear that hours before they are tender.`,
         probe: `${cap(t.probe_where ?? '')}. The meat is thin and the bones are close, so one reading can be off by a lot. Take two or three, and trust the bend test over any of them.`,
+      };
+    },
+  },
+  {
+    animal: 'beef',
+    cut: 'ground',
+    name: 'Ground beef',
+    primary: 'chuck',
+    cuts: [{ region: 'chuck', slug: 'ground-chuck' }],
+    // A burger is 160 F, not 145 F. Grinding spreads surface bacteria through
+    // the whole patty, so the whole-muscle rule does not apply and must not
+    // sit in the answer position. It is printed second, as the contrast the
+    // query is really asking about.
+    primarySafetyRef: 'safety-ground-meat',
+    secondarySafetyRef: 'safety-whole-muscle-red-meat',
+    targets: [],
+    // No doneness scale. There is no safe medium-rare burger, and a table of
+    // preferences here would read as permission for one.
+    doneness: [],
+    regionGuidance: false,
+    copy: ({ safety, secondary }) => ({
+      title: `Ground Beef Internal Temp: ${safety.temp_f} F, No Pink Rule`,
+      description: `Ground beef and burgers are safe at ${safety.temp_f} F, not the ${secondary?.temp_f} F that applies to steaks. Colour does not tell you when a burger is done. USDA FSIS cited.`,
+      h1: 'Ground beef internal temperature.',
+      question: 'What internal temp is ground beef done?',
+      intro: `Ground beef is done at ${safety.temp_f} F, measured ${safety.measurement}. That is higher than the ${secondary?.temp_f} F a steak needs, and the difference is not fussiness. A steak's bacteria sit on the outside, where the heat of the pan kills them. Grinding mixes that surface through the whole patty, so the centre has to reach a safe temperature too. ${safety.notes[0]} Cook it to the number, not to the colour.`,
+      probe: 'Through the side of the patty into the centre, so the probe sits in the middle of the meat rather than passing out the far side. Meatballs and meat loaf get the same treatment: the thickest part, away from the pan.',
+    }),
+  },
+  {
+    animal: 'beef',
+    cut: 'tri-tip',
+    name: 'Tri-tip',
+    primary: 'sirloin',
+    cuts: [
+      { region: 'sirloin', slug: 'tri-tip' },
+      { region: 'sirloin', slug: 'top-sirloin-steak' },
+      { region: 'sirloin', slug: 'sirloin-bavette' },
+    ],
+    targets: [],
+    // Both scales, in this order: what USDA publishes, then what steakhouses
+    // and pitmasters actually pull at. The convention record is flagged
+    // below-minimum and carries its own disclosure.
+    doneness: ['doneness-beef-industry', 'doneness-beef-convention'],
+    copy: ({ safety, doneness }) => {
+      const industry = doneness[0];
+      const convention = doneness[1];
+      const usdaMr = tier(industry, 'medium rare');
+      const conventionMr = tier(convention, 'medium rare');
+      return {
+        title: `Tri Tip Internal Temp: ${safety.temp_f} F USDA, ${range(conventionMr)} Pulled`,
+        description: `Tri-tip is a steak, not a collagen cut. USDA puts medium rare at ${usdaMr?.temp_f_min} F after a rest. Steakhouse convention pulls at ${range(conventionMr)}, below that minimum.`,
+        h1: 'Tri-tip internal temperature.',
+        question: 'What internal temp is tri-tip done?',
+        intro: `Tri-tip is cooked like a steak, not like a brisket. USDA FSIS puts whole-muscle beef at ${safety.temp_f} F with a rest of ${restShort(safety)}, and its own doneness chart calls that medium rare. Steakhouse and pitmaster convention pulls tri-tip lower, around ${range(conventionMr)} for medium rare, and that is below the USDA minimum. Both numbers are printed here, and which one you use is your decision, not ours. What tri-tip is not is a low-and-slow cut: take it to a collagen window and it dries out rather than pulling apart.`,
+        probe: 'Into the thickest part of the roast from the end, level with the grate, so the tip sits in the centre. Tri-tip is a wedge, so the thin end runs well ahead of the thick end. Read the thick end and pull the whole roast on it.',
+      };
+    },
+  },
+  {
+    animal: 'pork',
+    cut: 'pulled',
+    name: 'Pulled pork',
+    primary: 'butt',
+    cuts: [
+      { region: 'butt', slug: 'boston-butt' },
+      { region: 'picnic-shoulder', slug: 'picnic-roast' },
+      { region: 'picnic-shoulder', slug: 'whole-shoulder' },
+    ],
+    targets: ['target-pork-shoulder'],
+    // The stall is why people search this at midnight with a probe stuck at
+    // 160 F. It is a tenderness concept with no safety dimension of its own.
+    crossTargets: [{ id: 'concept-the-stall', label: 'The stall' }],
+    doneness: [],
+    copy: ({ safety, targets, cross }) => {
+      const t = targets[0];
+      const stall = cross[0];
+      return {
+        title: `Pulled Pork Internal Temp: ${t.window_f?.min} to ${t.window_f?.max} F, and the Bone Decides`,
+        description: `Pork shoulder is safe at ${safety.temp_f} F but will not pull until about ${t.window_f?.min} to ${t.window_f?.max} F. The Pork Board publishes a lower figure. Both are here.`,
+        h1: 'Pulled pork internal temperature.',
+        question: 'What internal temp is pulled pork done?',
+        intro: `Pork shoulder pulls at roughly ${t.window_f?.min} to ${t.window_f?.max} F, and the test that settles it is the bone: when the blade bone slides out clean, the shoulder is ready, whatever the thermometer says. The National Pork Board publishes a lower figure than backyard convention does, and both are printed further down, because the gap between them is texture and not safety. USDA FSIS calls pork safe at ${safety.temp_f} F with a rest of ${restShort(safety)}, and a shoulder passes that many hours before it will pull. Expect the reading to stall somewhere around ${stall?.window_f?.min} to ${stall?.window_f?.max} F and sit there for hours. That is normal, and cranking the pit to beat it is how people ruin bark.`,
+        probe: `${cap(t.probe_where ?? '')}. Bone throws a reading off badly on a shoulder, so take two or three in different spots. When the probe slides in with no resistance anywhere, it is done. ${t.rest}`,
       };
     },
   },
@@ -243,8 +362,9 @@ export function resolveCutPage(p: CutTemperaturePage): CutTemperatureContext {
     if (!d) missing.push(`doneness ${id}`);
     return d?.record;
   });
-  const safety = animal ? getSafetyMinimum(animal.safety_ref) : undefined;
-  if (!safety) missing.push(`safety for ${p.animal}`);
+  const safetyRef = p.primarySafetyRef ?? animal?.safety_ref;
+  const safety = safetyRef ? getSafetyMinimum(safetyRef) : undefined;
+  if (!safety) missing.push(`safety ${safetyRef ?? `for ${p.animal}`}`);
   if (missing.length) throw new Error(`cutTemperaturePages: /temperatures/${p.animal}/${p.cut} has unresolved refs: ${missing.join(', ')}`);
 
   const resolvedCuts = cuts.filter((c): c is NonNullable<typeof c> => !!c);
@@ -257,16 +377,19 @@ export function resolveCutPage(p: CutTemperaturePage): CutTemperatureContext {
     }
   }
   const usesGround = resolvedCuts.some(({ cut }) => cut.finish === 'safety-ground-meat');
-  const ground = usesGround && animal!.ground_safety_ref && animal!.ground_safety_ref !== animal!.safety_ref ? getSafetyMinimum(animal!.ground_safety_ref) : undefined;
+  const secondaryRef =
+    p.secondarySafetyRef ?? (usesGround && animal!.ground_safety_ref ? animal!.ground_safety_ref : undefined);
+  const secondary = secondaryRef && secondaryRef !== safety!.id ? getSafetyMinimum(secondaryRef) : undefined;
 
   return {
     animal: animal!,
     safety: safety!,
-    ground,
+    secondary,
     primary: primary!,
     regions,
     cuts: resolvedCuts,
     targets: targets.slice(0, p.targets.length).filter((t): t is PitmasterTarget => !!t),
+    cross: targets.slice(p.targets.length).filter((t): t is PitmasterTarget => !!t),
     doneness: doneness.filter((d): d is CulinaryDoneness => !!d),
   };
 }

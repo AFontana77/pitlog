@@ -20,6 +20,17 @@ import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Label, P, Section, T
  */
 const HANDLING_IDS = ['handling-thermometer-placement', 'handling-colour-is-not-doneness', 'handling-rest-is-part-of-safety', 'handling-danger-zone'];
 
+/**
+ * Meta descriptions are cut at 158 characters. Cut on a word boundary and
+ * finish with an ellipsis: a hard slice left "which is below t" in the SERP.
+ */
+function clampDescription(d: string): string {
+  if (d.length <= 158) return d;
+  const cut = d.slice(0, 157);
+  const at = cut.lastIndexOf(' ');
+  return `${(at > 120 ? cut.slice(0, at) : cut).replace(/[,;:.]$/, '')}…`;
+}
+
 export function generateStaticParams() {
   return CUT_TEMPERATURE_PAGES.map((p) => ({ animal: p.animal, cut: p.cut }));
 }
@@ -32,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ animal: s
   const copy = page.copy(ctx);
   const url = `https://pitlog.app/temperatures/${animal}/${cut}`;
   const hs = getHotspots(page.animal);
-  const description = copy.description.slice(0, 158);
+  const description = clampDescription(copy.description);
   const og = hs ? { images: [{ url: hs._meta.web_image, width: hs._meta.web_image_px[0], height: hs._meta.web_image_px[1], alt: `${ctx.animal.name} cut diagram` }] } : {};
   return {
     title: copy.title,
@@ -43,15 +54,29 @@ export async function generateMetadata({ params }: { params: Promise<{ animal: s
   };
 }
 
+/**
+ * A tenderness record. Every field below the window is optional, because not
+ * every record in this section is a cook-to target: the stall is a concept
+ * with no finish test, no pit range and no rest. Printing the labels
+ * unconditionally produced "Pit undefined to undefined F."
+ */
 function TargetCard({ t, label }: { t: PitmasterTarget; label: string }) {
   const test = t.finish_test ?? '';
+  const sourced = t.review_status === 'SOURCED';
+  const meta = [
+    t.pit_temp_f ? `Pit ${t.pit_temp_f.min} to ${t.pit_temp_f.max} F.` : '',
+    t.planning_time ?? '',
+    t.rest ? `Rest: ${t.rest}` : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
   return (
     <Card raised>
       <Label>
-        {label} ({t.review_status === 'SOURCED' ? 'sourced, window is craft' : 'barbecue convention'})
+        {label} ({test ? (sourced ? 'sourced, window is craft' : 'barbecue convention') : sourced ? 'sourced' : 'barbecue convention'})
       </Label>
       <p className="font-display text-2xl mb-2" style={{ color: C.text }}>
-        {t.window_f?.min} to {t.window_f?.max} F, {test.replace(/_/g, ' ')}
+        {t.window_f?.min} to {t.window_f?.max} F{test ? `, ${test.replace(/_/g, ' ')}` : ''}
       </p>
       <P className="text-sm mb-2">{t.statement}</P>
       {FINISH_TESTS[test] && (
@@ -62,9 +87,11 @@ function TargetCard({ t, label }: { t: PitmasterTarget; label: string }) {
           {FINISH_TESTS[test]}
         </p>
       )}
-      <p className="text-xs" style={{ color: C.textMuted }}>
-        Pit {t.pit_temp_f?.min} to {t.pit_temp_f?.max} F. {t.planning_time} Rest: {t.rest}
-      </p>
+      {meta && (
+        <p className="text-xs" style={{ color: C.textMuted }}>
+          {meta}
+        </p>
+      )}
       {t.conflicts.map((c) => (
         <p key={c.resolution} className="text-xs mt-3" style={{ color: C.textMuted }}>
           Two sources disagree: {c.between.join(' vs. ')}. {c.resolution}
@@ -79,7 +106,7 @@ export default async function CutTemperaturePage({ params }: { params: Promise<{
   const page = getCutTemperaturePage(aSlug, cSlug);
   if (!page) notFound();
   const ctx = resolveCutPage(page);
-  const { animal, safety, ground, primary, regions, cuts, targets, doneness } = ctx;
+  const { animal, safety, secondary, primary, regions, cuts, targets, doneness } = ctx;
   const copy = page.copy(ctx);
   const cross = (page.crossTargets ?? [])
     .map((x) => ({ ...x, t: getPitmasterTarget(x.id) }))
@@ -88,9 +115,10 @@ export default async function CutTemperaturePage({ params }: { params: Promise<{
   const recipeSlugs = new Set(regions.flatMap((r) => r.recipe_refs));
   const recipes = RECIPES.filter((r) => recipeSlugs.has(r.slug) && r.status !== 'PLANNED' && r.status !== 'RETIRED');
   const siblings = cutTemperaturePagesFor(page.animal).filter((p) => p.cut !== page.cut);
+  const regionGuidance = page.regionGuidance !== false;
   const refs = [
     ...safety.source_refs,
-    ...(ground?.source_refs ?? []),
+    ...(secondary?.source_refs ?? []),
     ...regions.flatMap((r) => r.source_refs),
     ...targets.flatMap((t) => t.source_refs),
     ...cross.flatMap((x) => x.t.source_refs),
@@ -120,9 +148,9 @@ export default async function CutTemperaturePage({ params }: { params: Promise<{
               {copy.intro}
             </p>
           </Card>
-          <div className={`grid ${ground ? 'md:grid-cols-2' : ''} gap-4`}>
+          <div className={`grid ${secondary ? 'md:grid-cols-2' : ''} gap-4`}>
             <SafetyLine safety={safety} />
-            {ground && <SafetyLine safety={ground} />}
+            {secondary && <SafetyLine safety={secondary} contrast />}
           </div>
         </Section>
 
@@ -170,11 +198,13 @@ export default async function CutTemperaturePage({ params }: { params: Promise<{
               {cross.map((x) => (
                 <div key={x.id}>
                   <TargetCard t={x.t} label={x.label} />
-                  <p className="text-sm mt-3" style={{ color: C.textSoft }}>
-                    <Link href={x.href} style={{ color: C.emberLight, textDecoration: 'underline' }}>
-                      {x.label} cut guide
-                    </Link>
-                  </p>
+                  {x.href && (
+                    <p className="text-sm mt-3" style={{ color: C.textSoft }}>
+                      <Link href={x.href} style={{ color: C.emberLight, textDecoration: 'underline' }}>
+                        {x.label} cut guide
+                      </Link>
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -199,21 +229,25 @@ export default async function CutTemperaturePage({ params }: { params: Promise<{
               <Eyebrow>Probe placement</Eyebrow>
               <H3>Where the thermometer goes</H3>
               <P className="text-sm mb-6">{copy.probe}</P>
-              <Eyebrow>Planning</Eyebrow>
-              <dl className="text-sm space-y-2" style={{ color: C.textSoft }}>
-                <div>
-                  <dt className="font-semibold inline" style={{ color: C.text }}>Time: </dt>
-                  <dd className="inline">{primary.planning_time_guidance}</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold inline" style={{ color: C.text }}>Rest: </dt>
-                  <dd className="inline">{primary.rest_guidance}</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold inline" style={{ color: C.text }}>Slice: </dt>
-                  <dd className="inline">{primary.slice_direction}</dd>
-                </div>
-              </dl>
+              {regionGuidance && (
+                <>
+                  <Eyebrow>Planning</Eyebrow>
+                  <dl className="text-sm space-y-2" style={{ color: C.textSoft }}>
+                    <div>
+                      <dt className="font-semibold inline" style={{ color: C.text }}>Time: </dt>
+                      <dd className="inline">{primary.planning_time_guidance}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold inline" style={{ color: C.text }}>Rest: </dt>
+                      <dd className="inline">{primary.rest_guidance}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold inline" style={{ color: C.text }}>Slice: </dt>
+                      <dd className="inline">{primary.slice_direction}</dd>
+                    </div>
+                  </dl>
+                </>
+              )}
             </div>
             <div>
               <Eyebrow>Handling</Eyebrow>
@@ -227,7 +261,7 @@ export default async function CutTemperaturePage({ params }: { params: Promise<{
                   </li>
                 ))}
               </ul>
-              {primary.common_mistakes.length > 0 && (
+              {regionGuidance && primary.common_mistakes.length > 0 && (
                 <>
                   <Eyebrow>Mistakes</Eyebrow>
                   <ul className="space-y-3">
