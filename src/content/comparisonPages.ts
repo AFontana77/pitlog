@@ -17,6 +17,13 @@
  *   pork butt vs boston butt     12,100  KD 2
  *   boston butt vs pork shoulder 12,100  KD 2
  *
+ * brisket-flat-vs-point covers a second cluster, all KD 0: brisket flat 4,400,
+ * brisket point 3,600, brisket flat vs point 2,400, brisket flat smoke 2,400,
+ * brisket point vs flat 1,300. The corned-beef phrasings around it (flat cut
+ * corned beef 8,100, point cut corned beef 2,400) are the same anatomy asked a
+ * different way, but the spine holds no corned beef record, so that page does
+ * not make corned beef claims and does not chase those terms.
+ *
  * Same rule as the temperature registry: no figure is typed here. Every value
  * comes from a record, resolveComparison() throws at import on a bad ref, and
  * the copy functions receive resolved records.
@@ -119,6 +126,31 @@ export const COMPARISON_PAGES: ComparisonPage[] = [
         answer: `They are not two alternatives. "Pork shoulder" is the whole front leg and the meat above it, and USDA FSIS counts it as one of ${animal.fsis_primals.length} pork primals (${primals}). The butt sits inside that primal, and so does the picnic below it. So a pork butt is a pork shoulder, but a pork shoulder is not necessarily a pork butt. Boston butt and pork butt are two names for that same upper half, and neither has anything to do with the back end of the pig.`,
         why: `The naming is historical, not anatomical. Both halves cook the same way and finish at the same temperature, which is why recipes use the words interchangeably and get away with it. What separates them is shape, skin and price, and the table below has the specifics on each.`,
         buying: `For pulled pork, buy the butt. It is squarer, easier to trim, and the blade bone gives you the ${t?.finish_test?.replace(/_/g, ' ')} test that tells you when it is done. Take the picnic if it is cheaper or you want the skin for crackling, and expect to spend longer trimming. A label reading "whole shoulder" is both halves together, which is a long cook and a lot of meat. Either way the safety floor is ${safety.temp_f} F and the tenderness comes much later.`,
+      };
+    },
+  },
+  {
+    slug: 'brisket-flat-vs-point',
+    animal: 'beef',
+    name: 'Brisket flat vs point',
+    sides: [
+      { label: 'Whole packer', region: 'brisket', cut: 'packer-brisket' },
+      { label: 'Flat (first cut)', region: 'brisket', cut: 'brisket-flat' },
+      { label: 'Point (deckle)', region: 'brisket', cut: 'brisket-point' },
+    ],
+    rows: ['note', 'methods', 'finish', 'planning', 'rest', 'slice'],
+    nextCut: { cut: 'ribs', label: 'beef ribs section of the ribs page' },
+    copy: ({ animal, sides, safety }) => {
+      const [packer] = sides;
+      const t = packer.target;
+      return {
+        title: 'Brisket Flat vs Point: Two Muscles, One Brisket',
+        description: `A whole packer is both muscles. The flat is the leaner half that slices; the point is the fattier half that burnt ends come from. They finish together and are sliced apart.`,
+        h1: 'Brisket flat vs point.',
+        question: 'What is the difference between the brisket flat and the point?',
+        answer: `A brisket is two muscles lying one on top of the other, and a whole packer is both of them still joined. The flat is the long lean one underneath, and it is what gets sliced. The point sits on top, carries most of the fat, and is the only place burnt ends come from. Buy a packer and you get both. Buy a first cut and you get the lean one on its own. Neither is a separate cut of the animal, and neither cooks to a different number.`,
+        why: `Their grain runs in different directions, which is the single most common way a good brisket gets ruined at the very last step, and the table below says how to handle it. The other thing worth knowing before you buy is yield: trimmed and cooked, a packer gives up roughly half the weight you paid for.`,
+        buying: `Cook a packer if you want burnt ends, because they come off the point and there is no other source on the animal. Buy the flat alone if you want clean slices and less trimming, and accept that it dries faster with no fat cap above it feeding it. Whichever you buy, the safety floor is ${safety.temp_f} F and the ${t?.finish_test?.replace(/_/g, ' ')} test decides when it is actually ready, ${t?.window_f?.min} to ${t?.window_f?.max} F being where that usually lands. ${animal.name} does not care what the label said.`,
       };
     },
   },

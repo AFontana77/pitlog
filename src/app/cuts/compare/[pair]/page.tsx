@@ -95,6 +95,14 @@ export default async function ComparisonPage({ params }: { params: Promise<{ pai
     ...handling.flatMap((h) => h.source_refs),
   ];
   const updatedAt = [safety, ...regions].map((r) => r.updated_at).sort().at(-1);
+  // The rest of the counter: every retail cut in the regions involved, minus
+  // the ones already standing as columns in the table. Iterating sides here
+  // would list a shared region's cuts once per side, and iterating regions
+  // would print the sides' own notes a second time.
+  const sideCuts = new Set(sides.map((s) => (s.cut ? `${s.region.slug}/${s.cut.slug}` : '')));
+  const otherCuts = regions.flatMap((r) =>
+    r.retail_cuts.filter((c) => !sideCuts.has(`${r.slug}/${c.slug}`)).map((cut) => ({ region: r, cut })),
+  );
 
   return (
     <>
@@ -146,7 +154,7 @@ export default async function ComparisonPage({ params }: { params: Promise<{ pai
                       {same ? (
                         <td colSpan={sides.length} className="py-3 px-3 align-top" style={{ color: C.textSoft }}>
                           <span className="font-semibold" style={{ color: C.text }}>
-                            Both:{' '}
+                            {sides.length === 2 ? 'Both' : 'All'}:{' '}
                           </span>
                           {values[0]}
                         </td>
@@ -158,13 +166,22 @@ export default async function ComparisonPage({ params }: { params: Promise<{ pai
                 })}
                 <Tr i={page.rows.length}>
                   <Td strong>Full guide</Td>
-                  {sides.map((s) => (
-                    <Td key={s.label}>
-                      <Link href={`/cuts/${page.animal}/${s.region.slug}`} style={{ color: C.emberLight, textDecoration: 'underline' }}>
-                        {s.region.name}
+                  {new Set(sides.map((s) => s.region.slug)).size === 1 ? (
+                    // Sides that are retail cuts of one region share a guide.
+                    <td colSpan={sides.length} className="py-3 px-3 align-top">
+                      <Link href={`/cuts/${page.animal}/${sides[0].region.slug}`} style={{ color: C.emberLight, textDecoration: 'underline' }}>
+                        {sides[0].region.name}
                       </Link>
-                    </Td>
-                  ))}
+                    </td>
+                  ) : (
+                    sides.map((s) => (
+                      <Td key={s.label}>
+                        <Link href={`/cuts/${page.animal}/${s.region.slug}`} style={{ color: C.emberLight, textDecoration: 'underline' }}>
+                          {s.region.name}
+                        </Link>
+                      </Td>
+                    ))
+                  )}
                 </Tr>
               </tbody>
             </table>
@@ -196,18 +213,16 @@ export default async function ComparisonPage({ params }: { params: Promise<{ pai
               <P className="text-sm">{copy.buying}</P>
             </div>
             <div>
-              <Eyebrow>At the counter</Eyebrow>
+              {otherCuts.length > 0 && <Eyebrow>Also on the counter</Eyebrow>}
               <ul className="space-y-3 text-sm" style={{ color: C.textSoft }}>
-                {sides.flatMap((s) =>
-                  s.region.retail_cuts.map((rc) => (
-                    <li key={`${s.region.slug}/${rc.slug}`}>
-                      <span className="font-semibold" style={{ color: C.text }}>
-                        {rc.name}.{' '}
-                      </span>
-                      {finishLabel(rc.finish)}. {rc.note}
-                    </li>
-                  )),
-                )}
+                {otherCuts.map(({ region, cut }) => (
+                  <li key={`${region.slug}/${cut.slug}`}>
+                    <span className="font-semibold" style={{ color: C.text }}>
+                      {cut.name}.{' '}
+                    </span>
+                    {finishLabel(cut.finish)}. {cut.note}
+                  </li>
+                ))}
               </ul>
               <Eyebrow>Handling</Eyebrow>
               <ul className="space-y-3 text-sm" style={{ color: C.textSoft }}>
