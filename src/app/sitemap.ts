@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { ANIMALS, RECIPES, getRegions } from '@/content';
 import { CUT_TEMPERATURE_PAGES } from '@/content/cutTemperaturePages';
+import { COMPARISON_PAGES } from '@/content/comparisonPages';
 
 const BASE = 'https://pitlog.app';
 const now = new Date();
@@ -23,6 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
+  }));
+  const comparisons = COMPARISON_PAGES.map((p) => ({
+    url: `${BASE}/cuts/compare/${p.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
   }));
   const beefRegions = ANIMALS.flatMap((a) =>
     getRegions(a.slug).map((r) => ({
@@ -47,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/temperatures`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     ...animalTemps,
     ...cutTemps,
+    ...comparisons,
     { url: `${BASE}/woods`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/recipes`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     ...recipes,

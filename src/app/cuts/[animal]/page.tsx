@@ -6,6 +6,7 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import { ANIMALS, getAnimal, getRegions, getSafetyMinimum, getWood, RECIPES, type AnimalSlug } from '@/content';
 import { getHotspots, diagramAlt } from '@/content/hotspots';
 import { ogImageMeta } from '@/content/ogImage';
+import { comparisonPagesFor } from '@/content/comparisonPages';
 import { CutDiagram, type DiagramRegion } from '@/components/content/CutDiagram';
 import { SafetyLine } from '@/components/content/SafetyLine';
 import { DonenessTable } from '@/components/content/DonenessTable';
@@ -72,6 +73,7 @@ export default async function AnimalPage({ params }: { params: Promise<{ animal:
   const a = slug as AnimalSlug;
   const t = TITLES[a];
   const regions = getRegions(a);
+  const comparisons = comparisonPagesFor(a);
   const safety = getSafetyMinimum(animal.safety_ref)!;
   const ground = animal.ground_safety_ref && animal.ground_safety_ref !== animal.safety_ref ? getSafetyMinimum(animal.ground_safety_ref) : undefined;
   const hs = getHotspots(a);
@@ -154,6 +156,19 @@ export default async function AnimalPage({ params }: { params: Promise<{ animal:
               </li>
             ))}
           </ul>
+          {comparisons.length > 0 && (
+            <p className="text-sm mt-6" style={{ color: C.textSoft }}>
+              <span className="font-semibold" style={{ color: C.text }}>Names confusing? </span>
+              {comparisons.map((cp, i) => (
+                <span key={cp.slug}>
+                  <Link href={`/cuts/compare/${cp.slug}`} style={{ color: C.emberLight, textDecoration: 'underline' }}>
+                    {cp.name.toLowerCase()}
+                  </Link>
+                  {i < comparisons.length - 1 ? ', ' : '.'}
+                </span>
+              ))}
+            </p>
+          )}
         </Section>
 
         <Section tone="surface" id="temps" labelledBy="temps-heading" width="max-w-6xl">
