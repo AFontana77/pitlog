@@ -15,7 +15,9 @@
       "site_listed": "https://pitlog.app",
       "still_blocking_links": "No verified product manifest. Every gear category is category_defined_no_products. An ASIN must be identity-checked (brand AND product type AND model AND pack size) before any link ships.",
       "note": "Direct merchant still beats Amazon where the economics and reputation justify it; this does not change apply_order_recommendation."
-    }
+    },
+    "verification_pass_2026_09_03": "Live re-check of the P1/P2 programs. Four corrections: RTIC is Impact not AvantLink; Pit Boss names Impact/ShareASale not in-house; Dalstrong publishes NO rate (the 10% baseline was not on the page); Victorinox has no findable program at source. ThermoWorks 10% / 30-day CONFIRMED on their own page. Directory-sourced figures continue to be unreliable and must not be used to rank effort.",
+    "stock_cross_reference_2026_09_03": "Cross-referenced against the 114-product manifest. Of 17 registered brands we link only FOUR: Victorinox (slicing-knife), Weber (charcoal-pellets-wood), Lodge (cast-iron, dutch-oven), RTIC (cooler-holding). The entire recommended apply order is brands we do NOT link. That is not automatically wrong - see apply_order_rationale - but it means no application converts anything until the matching products are also placed."
   },
   "programs": [
     {
@@ -25,15 +27,16 @@
         "leave-in-probe"
       ],
       "network": "In-house (Post Affiliate Pro)",
-      "commission": "10% of sale value (verified on program FAQ)",
-      "cookie": "30 days (verified)",
+      "commission": "10% of every sale (VERIFIED 2026-09-03 on thermoworks.com affiliate page)",
+      "cookie": "30 days (VERIFIED 2026-09-03, same page)",
       "payout": "Monthly, direct deposit from $10, check from $100 (verified)",
       "signup_url": "https://thermoworks.postaffiliatepro.com/affiliates/signup.php",
       "program_page": "https://www.thermoworks.com/pages/affiliate",
       "status": "READY_TO_APPLY",
       "priority": "P1",
       "why": "The thermometer is on every cut, temperature and recipe page. 10% direct beats Amazon Kitchen at 4.5%, and ThermoWorks is the reference brand for the FSIS two-thermometer rule.",
-      "requirements": "Site content relevant to the product line; complete site with unique content."
+      "requirements": "Site content relevant to the product line; complete site with unique content.",
+      "verified_2026_09_03": "Program page states 10% and a 30-day cookie, plus exclusive audience codes, banners and samples. Stated stance: 'We don't run paid reviews or sponsored content - just real recommendations.' Signup is Post Affiliate Pro at thermoworks.postaffiliatepro.com/affiliates/signup.php and it is LIVE."
     },
     {
       "brand": "MEATER (Traeger-owned)",
@@ -107,8 +110,8 @@
         "smoker",
         "charcoal-pellets-wood"
       ],
-      "network": "In-house program page; FlexOffers listing exists",
-      "commission": "6% standard for creators and bloggers (reported on program page summaries, confirm on signup)",
+      "network": "Impact and/or ShareASale (CORRECTED 2026-09-03; the register said in-house, the program page names both)",
+      "commission": "6% (seen on the program page 2026-09-03)",
       "cookie": "30 days (reported)",
       "payout": "Per program",
       "signup_url": "https://www.pitboss-grills.com/pages/affiliate",
@@ -125,7 +128,7 @@
       ],
       "network": "CJ (requires an active CJ publisher account; portfolio CID 7958821 exists)",
       "commission": "Not stated; 'competitive' per program page",
-      "cookie": "30 days (program page)",
+      "cookie": "30 days (seen on the program page 2026-09-03)",
       "payout": "CJ",
       "signup_url": "https://www.oklahomajoes.com/pages/affiliate",
       "program_page": "https://www.oklahomajoes.com/pages/affiliate",
@@ -161,10 +164,11 @@
       "payout": "Per network",
       "signup_url": "https://getlasso.co/affiliate/victorinox-us/",
       "program_page": null,
-      "status": "REPORTED_ONLY",
+      "status": "NO_PROGRAM_FOUND",
       "priority": "P2",
       "why": "The Fibrox slicer is the default brisket knife recommendation.",
-      "requirements": "Find the operating network before applying."
+      "requirements": "Find the operating network before applying.",
+      "verified_2026_09_03": "CORRECTED from REPORTED_ONLY. No affiliate program page on victorinox.com/en-US, no network named anywhere on the site. The directory listing that reported 4.8-9.6% could not be corroborated at source. We DO link Victorinox (gear/slicing-knife), so this is worth a direct email rather than a form."
     },
     {
       "brand": "Dalstrong",
@@ -172,7 +176,7 @@
         "slicing-knife"
       ],
       "network": "In-house (GoAffPro)",
-      "commission": "10% baseline (program page summary; confirm on portal)",
+      "commission": "NOT STATED on the portal (CORRECTED 2026-09-03; the register recorded 10% baseline, the GoAffPro portal publishes no rate, only 'competitive rates and generous commissions')",
       "cookie": "30 days (reported)",
       "payout": "GoAffPro",
       "signup_url": "https://dalstrong.goaffpro.com/",
@@ -180,7 +184,8 @@
       "status": "READY_TO_APPLY",
       "priority": "P2",
       "why": "Premium slicers; higher AOV than Victorinox. 10% direct.",
-      "requirements": "Per portal."
+      "requirements": "Per portal.",
+      "verified_2026_09_03": "Portal live. Audience gets 10% off a first order automatically, no code. Commission rate is only disclosed after joining."
     },
     {
       "brand": "YETI",
@@ -203,9 +208,9 @@
       "category": [
         "cooler-holding"
       ],
-      "network": "AvantLink / FlexOffers (program page on rticoutdoors.com)",
-      "commission": "1.5 to 5% tiered (reported)",
-      "cookie": "30 days (reported)",
+      "network": "Impact (CORRECTED 2026-09-03; the register said AvantLink/FlexOffers, rticoutdoors.com/affiliates names impact.com)",
+      "commission": "1.5% to 5% tiered (seen on the program page 2026-09-03)",
+      "cookie": "30 days (seen on the program page 2026-09-03)",
       "payout": "Per network",
       "signup_url": "https://rticoutdoors.com/affiliates",
       "program_page": "https://rticoutdoors.com/affiliates",
@@ -304,5 +309,6 @@
     "Traeger (Impact)",
     "RTIC",
     "Weber (Impact)"
-  ]
+  ],
+  "apply_order_rationale_2026_09_03": "ThermoWorks stays first, on evidence rather than habit. Instant-read thermometer is our #1 gear category (21 cut pages, 4 recipes) and leave-in probe is #2 (16 cut pages, 4 recipes), so the two categories where ThermoWorks is the reference brand are also the two we surface most. Their Thermapen ONE IS on Amazon but ranks 26th on the head query with 1,300 reviews, so our Amazon pipeline structurally under-serves them: they are direct-to-consumer, which is exactly why the direct program is the right route. Economics: 10% of a $74-$311 ThermoWorks basket is $7 to $31 per conversion against roughly $0.68 for Amazon's 4.5% on a $15 instant-read. About 11x. AFTER ThermoWorks, prefer the brands we already link (RTIC, Weber, Lodge) over more brands we do not, because those convert traffic that already exists."
 }
