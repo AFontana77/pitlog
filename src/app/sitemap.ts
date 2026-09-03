@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next';
 import { ANIMALS, RECIPES, getRegions } from '@/content';
 import { CUT_TEMPERATURE_PAGES } from '@/content/cutTemperaturePages';
 import { COMPARISON_PAGES } from '@/content/comparisonPages';
+import { GEAR_CATEGORIES } from '@/content';
+import { hasProducts } from '@/content/products';
 
 const BASE = 'https://pitlog.app';
 const now = new Date();
@@ -59,6 +61,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/recipes`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     ...recipes,
     { url: `${BASE}/sources`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    // /gear enters the sitemap on the same condition it stops being noindex:
+    // when the manifest actually has picks on it. Both read the manifest, so a
+    // page cannot end up indexable and unlisted, or listed and noindexed.
+    ...(GEAR_CATEGORIES.some((g) => hasProducts(g.slug))
+      ? [{ url: `${BASE}/gear`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 }]
+      : []),
     // Existing pages
     { url: `${BASE}/library`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE}/free-download`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
