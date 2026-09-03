@@ -14,23 +14,77 @@
       "long_description": "FSIS lists shoulder butt roast or steak, blade steak and boneless blade Boston roast under the shoulder primal. The Pork Board notes the shoulder is sold as picnic roast, Boston butt, blade roast and pork butt. It is the most forgiving barbecue cut: enough fat and collagen that an extra hour rarely hurts. Safety is met at 145 F; pulled pork happens much later, at 185 to 190 F by the Pork Board's figure or 195 to 205 F by backyard convention, when the blade bone slips out clean.",
       "tenderness_score": 2,
       "richness_score": 4,
-      "best_methods": ["smoke", "braise"],
+      "best_methods": [
+        "smoke",
+        "braise"
+      ],
       "retail_cuts": [
-        { "slug": "boston-butt", "name": "Boston butt (bone-in or boneless)", "methods": ["smoke"], "finish": "target-pork-shoulder", "note": "6 to 9 lb. Bone-in holds shape and gives the bone-slip test." },
-        { "slug": "pork-steak", "name": "Pork shoulder steak (blade steak)", "methods": ["grill", "smoke"], "finish": "doneness-pork-chops-roasts", "note": "St. Louis backyard classic. Grill to 145 F plus rest, or cook long until tender; both are legitimate." },
-        { "slug": "country-style-ribs-shoulder", "name": "Country-style ribs (shoulder end)", "methods": ["smoke", "braise"], "finish": "target-pork-ribs", "note": "FSIS lists country-style ribs under the loin; many are cut from the blade end of the shoulder. Not true ribs." }
+        {
+          "slug": "boston-butt",
+          "name": "Boston butt (bone-in or boneless)",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-pork-shoulder",
+          "note": "6 to 9 lb. Bone-in holds shape and gives the bone-slip test."
+        },
+        {
+          "slug": "pork-steak",
+          "name": "Pork shoulder steak (blade steak)",
+          "methods": [
+            "grill",
+            "smoke"
+          ],
+          "finish": "doneness-pork-chops-roasts",
+          "note": "St. Louis backyard classic. Grill to 145 F plus rest, or cook long until tender; both are legitimate."
+        },
+        {
+          "slug": "country-style-ribs-shoulder",
+          "name": "Country-style ribs (shoulder end)",
+          "methods": [
+            "smoke",
+            "braise"
+          ],
+          "finish": "target-pork-ribs",
+          "note": "FSIS lists country-style ribs under the loin; many are cut from the blade end of the shoulder. Not true ribs."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
-      "doneness_refs": ["doneness-pork-chops-roasts"],
+      "doneness_refs": [
+        "doneness-pork-chops-roasts"
+      ],
       "tenderness_target_ref": "target-pork-shoulder",
       "planning_time_guidance": "Pork Board: about 1 hour 15 minutes per pound. 8 to 14 hours for a full butt at 225 to 250 F. Approximate.",
       "rest_guidance": "1 hour wrapped, above 140 F, before pulling.",
       "slice_direction": "Pull, do not slice, once at the tenderness window.",
-      "best_woods": ["hickory", "apple", "cherry", "pecan"],
-      "common_mistakes": ["Panicking at the stall and cranking the pit.", "Pulling at the safety minimum and finding it tough.", "Not resting before pulling; the juice ends up on the board."],
-      "recipe_refs": ["pit-log-competition-pork-rub", "pit-log-carolina-gold-mustard-sauce", "carolina-vinegar-sauce"],
-      "gear_category_refs": ["leave-in-probe", "butcher-paper", "meat-claws", "cooler-holding", "heat-resistant-gloves"],
-      "source_refs": ["fsis-pork-farm-to-table", "pork-board-cuts", "pork-board-smoking"],
+      "best_woods": [
+        "hickory",
+        "apple",
+        "cherry",
+        "pecan"
+      ],
+      "common_mistakes": [
+        "Panicking at the stall and cranking the pit.",
+        "Pulling at the safety minimum and finding it tough.",
+        "Not resting before pulling; the juice ends up on the board."
+      ],
+      "recipe_refs": [
+        "pit-log-competition-pork-rub",
+        "pit-log-carolina-gold-mustard-sauce",
+        "carolina-vinegar-sauce"
+      ],
+      "gear_category_refs": [
+        "leave-in-probe",
+        "butcher-paper",
+        "meat-claws",
+        "cooler-holding",
+        "heat-resistant-gloves"
+      ],
+      "source_refs": [
+        "fsis-pork-farm-to-table",
+        "pork-board-cuts",
+        "pork-board-smoking"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -43,25 +97,90 @@
       "long_description": "FSIS lists whole loin, loin roast, tenderloin, sirloin roast, country-style ribs and chops under the loin primal. Back ribs (baby backs) are the rib bones trimmed off the loin. Everything here is lean, which means it is cooked to the 145 F minimum with its rest and rarely much further; the exception is baby back ribs, which are a collagen-and-bone cook.",
       "tenderness_score": 4,
       "richness_score": 2,
-      "best_methods": ["grill", "roast", "smoke (loin roast, baby backs)"],
+      "best_methods": [
+        "grill",
+        "roast",
+        "smoke (loin roast, baby backs)"
+      ],
       "retail_cuts": [
-        { "slug": "pork-chops", "name": "Pork chops (loin, rib, sirloin)", "methods": ["grill", "sear"], "finish": "doneness-pork-chops-roasts", "note": "Pork Board: grill-mark then smoke; 145 F followed by a 3 minute rest." },
-        { "slug": "pork-loin-roast", "name": "Pork loin roast", "methods": ["smoke", "roast"], "finish": "doneness-pork-chops-roasts", "note": "Pork Board: pull at 140 F, rest 10 minutes to reach 145 F. Lean; it will not take more." },
-        { "slug": "pork-tenderloin", "name": "Pork tenderloin", "methods": ["grill", "roast", "smoke then sear"], "finish": "doneness-pork-chops-roasts", "note": "The most tender pork cut. FSIS planning: roast at 425 to 450 F, 20 to 27 minutes total." },
-        { "slug": "baby-back-ribs", "name": "Baby back (loin back) ribs", "methods": ["smoke"], "finish": "target-pork-ribs", "note": "Pork Board: 3 to 5 hours at 225 to 250 F. Leaner and quicker than spareribs." },
-        { "slug": "country-style-ribs", "name": "Country-style ribs", "methods": ["smoke", "braise"], "finish": "target-pork-ribs", "note": "FSIS lists them under the loin. Boneless or bone-in strips; not a rack." }
+        {
+          "slug": "pork-chops",
+          "name": "Pork chops (loin, rib, sirloin)",
+          "methods": [
+            "grill",
+            "sear"
+          ],
+          "finish": "doneness-pork-chops-roasts",
+          "note": "Pork Board: grill-mark then smoke; 145 F followed by a 3 minute rest."
+        },
+        {
+          "slug": "pork-loin-roast",
+          "name": "Pork loin roast",
+          "methods": [
+            "smoke",
+            "roast"
+          ],
+          "finish": "doneness-pork-chops-roasts",
+          "note": "Pork Board: pull at 140 F, rest 10 minutes to reach 145 F. Lean; it will not take more."
+        },
+        {
+          "slug": "pork-tenderloin",
+          "name": "Pork tenderloin",
+          "methods": [
+            "grill",
+            "roast",
+            "smoke then sear"
+          ],
+          "finish": "doneness-pork-chops-roasts",
+          "note": "The most tender pork cut. FSIS planning: roast at 425 to 450 F, 20 to 27 minutes total."
+        },
+        {
+          "slug": "baby-back-ribs",
+          "name": "Baby back (loin back) ribs",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-pork-ribs",
+          "note": "Pork Board: 3 to 5 hours at 225 to 250 F. Leaner and quicker than spareribs."
+        },
+        {
+          "slug": "country-style-ribs",
+          "name": "Country-style ribs",
+          "methods": [
+            "smoke",
+            "braise"
+          ],
+          "finish": "target-pork-ribs",
+          "note": "FSIS lists them under the loin. Boneless or bone-in strips; not a rack."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
-      "doneness_refs": ["doneness-pork-chops-roasts"],
+      "doneness_refs": [
+        "doneness-pork-chops-roasts"
+      ],
       "tenderness_target_ref": "target-pork-ribs",
       "planning_time_guidance": "Loin roast: FSIS planning 20 minutes per pound at 350 F; Pork Board smoking about 1.5 hours. Chops: 45 to 60 minutes smoked. Approximate.",
       "rest_guidance": "3 minutes is the safety rest; 10 minutes is better for a roast.",
       "slice_direction": "Across the grain for chops and roasts.",
-      "best_woods": ["apple", "cherry", "maple"],
-      "common_mistakes": ["Cooking loin or tenderloin to 160 F out of old habit; the minimum has been 145 F since 2011.", "Treating baby backs like spareribs on time; they finish sooner."],
+      "best_woods": [
+        "apple",
+        "cherry",
+        "maple"
+      ],
+      "common_mistakes": [
+        "Cooking loin or tenderloin to 160 F out of old habit; the minimum has been 145 F since 2011.",
+        "Treating baby backs like spareribs on time; they finish sooner."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["instant-read-thermometer", "cast-iron"],
-      "source_refs": ["fsis-pork-farm-to-table", "pork-board-smoking", "pork-board-cuts"],
+      "gear_category_refs": [
+        "instant-read-thermometer",
+        "cast-iron"
+      ],
+      "source_refs": [
+        "fsis-pork-farm-to-table",
+        "pork-board-smoking",
+        "pork-board-cuts"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -74,23 +193,69 @@
       "long_description": "FSIS's leg primal yields ham, fresh or smoked and cured. Three safety rules live here and they differ: fresh or uncooked smoked ham cooks to 145 F with a 3 minute rest; a fully cooked ham reheats to 165 F, or to 140 F only if it was packaged in a USDA-inspected plant. Fresh ham is a large, lean roast that takes smoke beautifully.",
       "tenderness_score": 3,
       "richness_score": 2,
-      "best_methods": ["roast", "smoke", "glaze (cooked ham)"],
+      "best_methods": [
+        "roast",
+        "smoke",
+        "glaze (cooked ham)"
+      ],
       "retail_cuts": [
-        { "slug": "fresh-ham", "name": "Fresh ham (whole or half)", "methods": ["smoke", "roast"], "finish": "safety-ham-uncooked", "note": "FSIS planning: whole bone-in 18 to 20 lb at 15 minutes per pound at 350 F; half 22 to 25 minutes per pound." },
-        { "slug": "cured-ham", "name": "Cured, fully cooked ham", "methods": ["glaze", "smoke to reheat"], "finish": "safety-ham-reheat", "note": "165 F, or 140 F if packaged in a USDA-inspected plant. Glaze in the last 15 to 30 minutes." },
-        { "slug": "ham-steak", "name": "Ham steak", "methods": ["grill"], "finish": "safety-ham-reheat", "note": "Usually fully cooked; check the label." }
+        {
+          "slug": "fresh-ham",
+          "name": "Fresh ham (whole or half)",
+          "methods": [
+            "smoke",
+            "roast"
+          ],
+          "finish": "safety-ham-uncooked",
+          "note": "FSIS planning: whole bone-in 18 to 20 lb at 15 minutes per pound at 350 F; half 22 to 25 minutes per pound."
+        },
+        {
+          "slug": "cured-ham",
+          "name": "Cured, fully cooked ham",
+          "methods": [
+            "glaze",
+            "smoke to reheat"
+          ],
+          "finish": "safety-ham-reheat",
+          "note": "165 F, or 140 F if packaged in a USDA-inspected plant. Glaze in the last 15 to 30 minutes."
+        },
+        {
+          "slug": "ham-steak",
+          "name": "Ham steak",
+          "methods": [
+            "grill"
+          ],
+          "finish": "safety-ham-reheat",
+          "note": "Usually fully cooked; check the label."
+        }
       ],
       "safe_temp_ref": "safety-ham-uncooked",
-      "doneness_refs": ["doneness-pork-chops-roasts"],
+      "doneness_refs": [
+        "doneness-pork-chops-roasts"
+      ],
       "tenderness_target_ref": null,
       "planning_time_guidance": "FSIS planning figures above. Approximate.",
       "rest_guidance": "3 minutes minimum; 15 minutes for a whole fresh ham.",
       "slice_direction": "Across the grain, off the bone.",
-      "best_woods": ["apple", "cherry", "maple", "hickory"],
-      "common_mistakes": ["Reheating any ham to 140 F because a graphic said so; that figure is only for USDA-inspected-plant packaged ham.", "Glazing early and burning the sugar."],
+      "best_woods": [
+        "apple",
+        "cherry",
+        "maple",
+        "hickory"
+      ],
+      "common_mistakes": [
+        "Reheating any ham to 140 F because a graphic said so; that figure is only for USDA-inspected-plant packaged ham.",
+        "Glazing early and burning the sugar."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["leave-in-probe", "slicing-knife"],
-      "source_refs": ["fsis-safe-temp-chart", "fsis-pork-farm-to-table"],
+      "gear_category_refs": [
+        "leave-in-probe",
+        "slicing-knife"
+      ],
+      "source_refs": [
+        "fsis-safe-temp-chart",
+        "fsis-pork-farm-to-table"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -103,10 +268,30 @@
       "long_description": "FSIS lists the arm picnic under the shoulder primal. It is the cut below the Boston butt, often sold skin-on. It follows the same tenderness logic as the butt and the Pork Board groups butt, picnic and whole shoulder together in its smoking table at about 1 hour 15 minutes per pound to 185 to 190 F.",
       "tenderness_score": 2,
       "richness_score": 3,
-      "best_methods": ["smoke", "braise"],
+      "best_methods": [
+        "smoke",
+        "braise"
+      ],
       "retail_cuts": [
-        { "slug": "picnic-roast", "name": "Picnic roast (arm picnic)", "methods": ["smoke", "braise"], "finish": "target-pork-shoulder", "note": "Skin-on picnics: score or remove the skin so smoke and rub reach the meat." },
-        { "slug": "whole-shoulder", "name": "Whole shoulder (butt plus picnic)", "methods": ["smoke"], "finish": "target-pork-shoulder", "note": "Whole-hog-style cook, 14 to 20 lb. Long day." }
+        {
+          "slug": "picnic-roast",
+          "name": "Picnic roast (arm picnic)",
+          "methods": [
+            "smoke",
+            "braise"
+          ],
+          "finish": "target-pork-shoulder",
+          "note": "Skin-on picnics: score or remove the skin so smoke and rub reach the meat."
+        },
+        {
+          "slug": "whole-shoulder",
+          "name": "Whole shoulder (butt plus picnic)",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-pork-shoulder",
+          "note": "Whole-hog-style cook, 14 to 20 lb. Long day."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
       "doneness_refs": [],
@@ -114,11 +299,26 @@
       "planning_time_guidance": "Pork Board: about 1 hour 15 minutes per pound. Approximate.",
       "rest_guidance": "1 hour wrapped, above 140 F.",
       "slice_direction": "Pull.",
-      "best_woods": ["hickory", "apple", "pecan"],
-      "common_mistakes": ["Leaving thick skin on and expecting bark."],
-      "recipe_refs": ["carolina-vinegar-sauce"],
-      "gear_category_refs": ["leave-in-probe", "meat-claws", "heat-resistant-gloves"],
-      "source_refs": ["fsis-pork-farm-to-table", "pork-board-smoking"],
+      "best_woods": [
+        "hickory",
+        "apple",
+        "pecan"
+      ],
+      "common_mistakes": [
+        "Leaving thick skin on and expecting bark."
+      ],
+      "recipe_refs": [
+        "carolina-vinegar-sauce"
+      ],
+      "gear_category_refs": [
+        "leave-in-probe",
+        "meat-claws",
+        "heat-resistant-gloves"
+      ],
+      "source_refs": [
+        "fsis-pork-farm-to-table",
+        "pork-board-smoking"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -131,11 +331,37 @@
       "long_description": "FSIS lists spareribs and back ribs under the side primal. Spareribs are the full rack from the belly; the St. Louis cut removes the sternum, cartilage and skirt for an even rectangle. The Pork Board gives 5 to 7 hours at 225 to 250 F for both; FSIS and the Pork Board both finish ribs 'until fork tender'. The bend test is the practical finish; the thermometer is a rough guide between bones.",
       "tenderness_score": 2,
       "richness_score": 4,
-      "best_methods": ["smoke"],
+      "best_methods": [
+        "smoke"
+      ],
       "retail_cuts": [
-        { "slug": "spareribs-full", "name": "Spareribs (full rack)", "methods": ["smoke"], "finish": "target-pork-ribs", "note": "Pork Board: 5 to 7 hours at 225 to 250 F." },
-        { "slug": "st-louis-ribs", "name": "St. Louis cut ribs", "methods": ["smoke"], "finish": "target-pork-ribs", "note": "Trimmed spareribs. Same time band; more even cooking." },
-        { "slug": "rib-tips", "name": "Rib tips", "methods": ["smoke"], "finish": "target-pork-ribs", "note": "The trimmed-off sternum strip. Cartilage-rich; cook alongside." }
+        {
+          "slug": "spareribs-full",
+          "name": "Spareribs (full rack)",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-pork-ribs",
+          "note": "Pork Board: 5 to 7 hours at 225 to 250 F."
+        },
+        {
+          "slug": "st-louis-ribs",
+          "name": "St. Louis cut ribs",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-pork-ribs",
+          "note": "Trimmed spareribs. Same time band; more even cooking."
+        },
+        {
+          "slug": "rib-tips",
+          "name": "Rib tips",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-pork-ribs",
+          "note": "The trimmed-off sternum strip. Cartilage-rich; cook alongside."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
       "doneness_refs": [],
@@ -143,11 +369,30 @@
       "planning_time_guidance": "5 to 7 hours at 225 to 250 F (Pork Board); the 3-2-1 schedule is one way to structure it, not a rule. Approximate.",
       "rest_guidance": "10 to 15 minutes.",
       "slice_direction": "Between the bones, meat side down so you can see them.",
-      "best_woods": ["hickory", "apple", "cherry"],
-      "common_mistakes": ["Following 3-2-1 by the clock on a thin rack and steaming it to mush.", "Saucing early and burning it (FSIS: last 15 to 30 minutes).", "Leaving the membrane on the bone side."],
-      "recipe_refs": ["pit-log-competition-pork-rub", "pit-log-carolina-gold-mustard-sauce"],
-      "gear_category_refs": ["instant-read-thermometer", "butcher-paper", "foil", "tongs"],
-      "source_refs": ["fsis-pork-farm-to-table", "pork-board-smoking"],
+      "best_woods": [
+        "hickory",
+        "apple",
+        "cherry"
+      ],
+      "common_mistakes": [
+        "Following 3-2-1 by the clock on a thin rack and steaming it to mush.",
+        "Saucing early and burning it (FSIS: last 15 to 30 minutes).",
+        "Leaving the membrane on the bone side."
+      ],
+      "recipe_refs": [
+        "pit-log-competition-pork-rub",
+        "pit-log-carolina-gold-mustard-sauce"
+      ],
+      "gear_category_refs": [
+        "instant-read-thermometer",
+        "butcher-paper",
+        "foil",
+        "tongs"
+      ],
+      "source_refs": [
+        "fsis-pork-farm-to-table",
+        "pork-board-smoking"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -160,11 +405,40 @@
       "long_description": "The Pork Board defines belly as the boneless cut that remains after the loin and spareribs are removed. FSIS lists bacon under the side primal. Smoked whole, the Pork Board takes it 4 hours in smoke, wraps, and cooks about 3 more to 190 F or fork tender. Pork belly burnt ends cube it, sauce it and finish it uncovered.",
       "tenderness_score": 3,
       "richness_score": 5,
-      "best_methods": ["smoke", "cure (bacon)", "roast"],
+      "best_methods": [
+        "smoke",
+        "cure (bacon)",
+        "roast"
+      ],
       "retail_cuts": [
-        { "slug": "belly-slab", "name": "Pork belly, skinless slab", "methods": ["smoke", "roast"], "finish": "target-pork-belly", "note": "Pork Board: 190 F or fork tender." },
-        { "slug": "belly-burnt-ends", "name": "Pork belly burnt ends", "methods": ["smoke"], "finish": "target-pork-belly", "note": "Cube at about 165 F, sauce and butter, back on uncovered until glazed and tender." },
-        { "slug": "bacon", "name": "Bacon (cured belly)", "methods": ["cure then smoke"], "finish": "safety-whole-muscle-red-meat", "note": "Home curing needs a tested cure recipe and measured nitrite. Out of scope for this spine until a tested Pit Log procedure exists." }
+        {
+          "slug": "belly-slab",
+          "name": "Pork belly, skinless slab",
+          "methods": [
+            "smoke",
+            "roast"
+          ],
+          "finish": "target-pork-belly",
+          "note": "Pork Board: 190 F or fork tender."
+        },
+        {
+          "slug": "belly-burnt-ends",
+          "name": "Pork belly burnt ends",
+          "methods": [
+            "smoke"
+          ],
+          "finish": "target-pork-belly",
+          "note": "Cube at about 165 F, sauce and butter, back on uncovered until glazed and tender."
+        },
+        {
+          "slug": "bacon",
+          "name": "Bacon (cured belly)",
+          "methods": [
+            "cure then smoke"
+          ],
+          "finish": "safety-whole-muscle-red-meat",
+          "note": "Home curing needs a tested cure recipe and carefully measured curing salt. Pit Log does not publish a curing procedure, so follow a tested source for that part."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
       "doneness_refs": [],
@@ -172,11 +446,26 @@
       "planning_time_guidance": "About 7 hours total at 225 to 250 F (Pork Board). Approximate.",
       "rest_guidance": "15 to 30 minutes for a slab.",
       "slice_direction": "Across the slab into thick slices, or cubes for burnt ends.",
-      "best_woods": ["apple", "cherry", "hickory"],
-      "common_mistakes": ["Skin-on belly in a smoker; the skin never crisps at 250 F. Remove it or score deeply.", "Under-rendering; belly needs time past the safety minimum to be pleasant."],
+      "best_woods": [
+        "apple",
+        "cherry",
+        "hickory"
+      ],
+      "common_mistakes": [
+        "Skin-on belly in a smoker; the skin never crisps at 250 F. Remove it or score deeply.",
+        "Under-rendering; belly needs time past the safety minimum to be pleasant."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["leave-in-probe", "foil", "cast-iron"],
-      "source_refs": ["pork-board-cuts", "pork-board-smoking", "fsis-pork-farm-to-table"],
+      "gear_category_refs": [
+        "leave-in-probe",
+        "foil",
+        "cast-iron"
+      ],
+      "source_refs": [
+        "pork-board-cuts",
+        "pork-board-smoking",
+        "fsis-pork-farm-to-table"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     },
@@ -189,10 +478,30 @@
       "long_description": "FSIS lists the smoked hock under the shoulder primal. It is not a slicing cut; it is simmered or braised until the meat falls away, and it flavours the pot. Whole smoked hocks are sold fully cooked or uncooked; read the label, because the safety rule differs (145 F plus rest for uncooked, 165 F reheat for cooked).",
       "tenderness_score": 1,
       "richness_score": 4,
-      "best_methods": ["simmer", "braise", "smoke then braise"],
+      "best_methods": [
+        "simmer",
+        "braise",
+        "smoke then braise"
+      ],
       "retail_cuts": [
-        { "slug": "fresh-hock", "name": "Fresh hock", "methods": ["smoke then braise"], "finish": "target-pork-shoulder", "note": "Smoke 2 to 3 hours, then simmer in the pot." },
-        { "slug": "smoked-hock", "name": "Smoked hock (check cooked or uncooked on the label)", "methods": ["simmer"], "finish": "safety-ham-reheat", "note": "Cooked: reheat to 165 F. Uncooked smoked: 145 F plus rest, then simmer for tenderness." }
+        {
+          "slug": "fresh-hock",
+          "name": "Fresh hock",
+          "methods": [
+            "smoke then braise"
+          ],
+          "finish": "target-pork-shoulder",
+          "note": "Smoke 2 to 3 hours, then simmer in the pot."
+        },
+        {
+          "slug": "smoked-hock",
+          "name": "Smoked hock (check cooked or uncooked on the label)",
+          "methods": [
+            "simmer"
+          ],
+          "finish": "safety-ham-reheat",
+          "note": "Cooked: reheat to 165 F. Uncooked smoked: 145 F plus rest, then simmer for tenderness."
+        }
       ],
       "safe_temp_ref": "safety-whole-muscle-red-meat",
       "doneness_refs": [],
@@ -200,17 +509,43 @@
       "planning_time_guidance": "2 to 3 hours simmering after smoke. Approximate.",
       "rest_guidance": "Not applicable; served from the pot.",
       "slice_direction": "Pulled off the bone.",
-      "best_woods": ["hickory", "apple"],
-      "common_mistakes": ["Expecting a hock to eat like a chop."],
+      "best_woods": [
+        "hickory",
+        "apple"
+      ],
+      "common_mistakes": [
+        "Expecting a hock to eat like a chop."
+      ],
       "recipe_refs": [],
-      "gear_category_refs": ["dutch-oven"],
-      "source_refs": ["fsis-pork-farm-to-table", "fsis-safe-temp-chart"],
+      "gear_category_refs": [
+        "dutch-oven"
+      ],
+      "source_refs": [
+        "fsis-pork-farm-to-table",
+        "fsis-safe-temp-chart"
+      ],
       "review_status": "SOURCED",
       "updated_at": "2026-09-02"
     }
   ],
   "retail_cuts_outside_regions": [
-    { "slug": "jowl", "name": "Jowl", "fsis_parent": "shoulder (head)", "note": "Appears only on master pork-B. Cured as guanciale or smoked like a small belly. Recorded so the B variant's coverage is not lost if A is chosen.", "safe_temp_ref": "safety-whole-muscle-red-meat", "review_status": "DRAFT", "updated_at": "2026-09-02" },
-    { "slug": "ground-pork", "name": "Ground pork and sausage", "fsis_parent": "shoulder (typically)", "note": "160 F, no rest. Sausage is a Pork Board retail family.", "safe_temp_ref": "safety-ground-meat", "review_status": "SOURCED", "updated_at": "2026-09-02" }
+    {
+      "slug": "jowl",
+      "name": "Jowl",
+      "fsis_parent": "shoulder (head)",
+      "note": "Appears only on master pork-B. Cured as guanciale or smoked like a small belly. Recorded so the B variant's coverage is not lost if A is chosen.",
+      "safe_temp_ref": "safety-whole-muscle-red-meat",
+      "review_status": "DRAFT",
+      "updated_at": "2026-09-02"
+    },
+    {
+      "slug": "ground-pork",
+      "name": "Ground pork and sausage",
+      "fsis_parent": "shoulder (typically)",
+      "note": "160 F, no rest. Sausage is a Pork Board retail family.",
+      "safe_temp_ref": "safety-ground-meat",
+      "review_status": "SOURCED",
+      "updated_at": "2026-09-02"
+    }
   ]
 }

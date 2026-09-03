@@ -12,6 +12,7 @@
  *   ribs internal temp              9,900/mo  KD 0  (+ pork ribs internal temp 9,900)
  *   ground beef internal temp       8,100/mo  KD 13
  *   tri tip internal temp           6,600/mo  KD 0  (+ reverse sear tri tip 6,600)
+ *   pork belly burnt ends         27,100/mo (+ smoked pork belly 18,100)
  *   pulled pork internal temp       4,400/mo  KD 0  (+ what/when to wrap pork butt
  *                                                    2,900 each, what temp to pull
  *                                                    pork butt 1,600, pork butt
@@ -326,6 +327,33 @@ export const CUT_TEMPERATURE_PAGES: CutTemperaturePage[] = [
         question: 'What internal temp is pulled pork done?',
         intro: `Pork shoulder pulls at roughly ${t.window_f?.min} to ${t.window_f?.max} F, and the test that settles it is the bone: when the blade bone slides out clean, the shoulder is ready, whatever the thermometer says. The National Pork Board publishes a lower figure than backyard convention does, and both are printed further down, because the gap between them is texture and not safety. USDA FSIS calls pork safe at ${safety.temp_f} F with a rest of ${restShort(safety)}, and a shoulder passes that many hours before it will pull. Expect the reading to stall somewhere around ${stall?.window_f?.min} to ${stall?.window_f?.max} F and sit there for hours. That is normal, and cranking the pit to beat it is how people ruin bark.`,
         probe: `${cap(t.probe_where ?? '')}. Bone throws a reading off badly on a shoulder, so take two or three in different spots. When the probe slides in with no resistance anywhere, it is done. ${t.rest}`,
+      };
+    },
+  },
+  {
+    animal: 'pork',
+    cut: 'belly',
+    name: 'Pork belly',
+    primary: 'belly',
+    cuts: [
+      { region: 'belly', slug: 'belly-burnt-ends' },
+      { region: 'belly', slug: 'belly-slab' },
+      { region: 'belly', slug: 'bacon' },
+    ],
+    targets: ['target-pork-belly'],
+    // Brisket point is where burnt ends came from, and "brisket burnt ends
+    // recipe" is 1,900/mo of the same intent arriving on the wrong animal.
+    crossTargets: [{ id: 'target-brisket', label: 'Beef brisket point', href: '/cuts/beef/brisket' }],
+    doneness: [],
+    copy: ({ safety, targets }) => {
+      const t = targets[0];
+      return {
+        title: `Pork Belly Burnt Ends Temp: ${t.window_f?.min} to ${t.window_f?.max} F, or Fork Tender`,
+        description: `Smoked pork belly finishes near ${t.window_f?.min} F, or when a skewer slides in clean. Burnt ends get cubed partway through, sauced, then returned uncovered to glaze.`,
+        h1: 'Pork belly internal temperature.',
+        question: 'What internal temp are pork belly burnt ends done?',
+        intro: `Pork belly lands somewhere around ${t.window_f?.min} to ${t.window_f?.max} F, and the real test is a skewer: it should slide into the centre with no resistance. Burnt ends are the same cook with a step in the middle. You take the slab off partway, cut it into cubes, sauce and butter them, and put them back uncovered until they glaze and go tender. Belly is the fattiest cut on the pig, so the safety floor of ${safety.temp_f} F arrives long before anything worth eating does. Under-render it and it is chewy fat rather than the thing you were after.`,
+        probe: `${cap(t.probe_where ?? '')}. Aim for the meat rather than a fat seam, which reads higher than the muscle around it. Once the cubes are back on, stop probing and go by feel and glaze.`,
       };
     },
   },
