@@ -1,0 +1,3729 @@
+{
+  "_meta": {
+    "purpose": "Verified Amazon products per category. Identity only: no prices, ever.",
+    "built": "2026-09-03T05:37:35+00:00",
+    "associates_tag": "pitlog-20",
+    "discovery": "DataForSEO Amazon SERP (US)",
+    "verification": "Keepa product API, domain 1 (amazon.com)",
+    "why_two_sources": "The thing that found the product does not vouch for it. A SERP result is an advertisement; a catalogue record is a fact.",
+    "price_policy": "No price is stored or displayed. The Associates Operating Agreement permits displaying price data only from the Product Advertising API refreshed within 24 hours, and static prices go stale silently.",
+    "recheck_policy": "Re-run this script before any campaign or quarterly. Products get discontinued and ASINs get repurposed; a manifest is a claim with a date on it.",
+    "verified_on": "2026-09-03"
+  },
+  "gear": {
+    "instant-read-thermometer": {
+      "status": "VERIFIED",
+      "query": "instant read meat thermometer digital",
+      "products": [
+        {
+          "asin": "B0F5X4FM3Q",
+          "serp_rank": 2,
+          "keepa_title": "0.5 Sec Instant Read Meat Thermometer Digital for Cooking, Red",
+          "brand": "ThermoMonster",
+          "manufacturer": "ThermoMonster",
+          "part_number": "HT09",
+          "keepa_type": "THERMOMETER",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Thermometers & Timers",
+            "Instant-Read"
+          ],
+          "sales_rank": 58,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 7700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B00S93EQUK",
+          "serp_rank": 4,
+          "keepa_title": "Alpha Grillers Instant Read Meat Thermometer Digital, Cooking, Food, Grill",
+          "brand": "Alpha Grillers",
+          "manufacturer": "yemaolin",
+          "part_number": "296249729076",
+          "keepa_type": "THERMOMETER",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Thermometers & Timers",
+            "Meat"
+          ],
+          "sales_rank": 9,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 91700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07XXSYLL8",
+          "serp_rank": 5,
+          "keepa_title": "TempPro TempSwift 1 Sec Instant Read Meat Thermometer Digital",
+          "brand": "TempPro",
+          "manufacturer": "TempPro",
+          "part_number": "TP-19H",
+          "keepa_type": "THERMOMETER",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Grill Thermometers"
+          ],
+          "sales_rank": 53,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 55900,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0GVM8N2CK",
+          "title": "Meat Thermometer Digital, 1-2 Sec Instant Read, Food, Cooking, Grilling",
+          "rejected_because": "review count 1300 below floor 2000"
+        },
+        {
+          "asin": "B0HF86856D",
+          "title": "Meat Thermometer Digital – Instant Read Food Thermometer for Cooking Blue",
+          "rejected_because": "unnamed brand ('Generic'); cannot stand behind it"
+        },
+        {
+          "asin": "B0H68MTJV6",
+          "title": "Meat Thermometer Digital, 1-2 Sec Instant Read, Grilling, Cooking, Food",
+          "rejected_because": "review count 498 below floor 2000"
+        }
+      ]
+    },
+    "butcher-paper": {
+      "status": "VERIFIED",
+      "query": "pink butcher paper roll unwaxed",
+      "products": [
+        {
+          "asin": "B0F1FTJZNF",
+          "serp_rank": 1,
+          "keepa_title": "PerkHomy 18\" x 200' (2400\") Pink Butcher Paper Roll for Smoker BBQ Grilling Smoking Meat Unbleached Uncoated Unwaxed Peach (Pink, 18\" x 200')",
+          "brand": "PH PERKHOMY",
+          "manufacturer": "PH PERKHOMY",
+          "part_number": "PKUSTFZ-65Pink18200",
+          "keepa_type": "FOOD_WRAP",
+          "category_tree": [
+            "Industrial & Scientific",
+            "Food Service Equipment & Supplies",
+            "Disposables",
+            "Butcher Paper"
+          ],
+          "sales_rank": 255,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 1900,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07K4BRR4N",
+          "serp_rank": 5,
+          "keepa_title": "Bryco Goods Pink Butcher Paper Roll for Smoker, 24\" x 175', Made in USA",
+          "brand": "Bryco Goods",
+          "manufacturer": "Bryco Goods",
+          "part_number": "BG-BP-R-P-24",
+          "keepa_type": "FOOD_WRAP",
+          "category_tree": [
+            "Industrial & Scientific",
+            "Food Service Equipment & Supplies",
+            "Disposables",
+            "Butcher Paper"
+          ],
+          "sales_rank": 921,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 8400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B099M27S64",
+          "title": "Bryco Goods Pink Butcher Paper Roll with Dispenser Box, 18\" x 175' (2100”) Food-Grade Peach Butcher Paper for Smoker, BBQ, Grilling, Smoking Meat - USA Made - Unbleached, Uncoated and Unwaxed",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B0GXPBVFFJ",
+          "title": "PerkHomy Pink Butcher Paper Roll 24\" x 2400\" (200') with Upgraded Packaging for Smoker BBQ Grilling Smoking Meat Unbleached Uncoated Unwaxed",
+          "rejected_because": "review count 79 below floor 1000"
+        },
+        {
+          "asin": "B0GXPQ98Z9",
+          "title": "PerkHomy Pink Butcher Paper Roll 18\" x 2400\" (200') with Upgraded Packaging for Smoker BBQ Grilling Smoking Meat Unbleached Uncoated Unwaxed",
+          "rejected_because": "review count 79 below floor 1000"
+        },
+        {
+          "asin": "B0F1FW5RQR",
+          "title": "PH PERKHOMY Pink Butcher Paper Roll 18\" x 1200\" (100') for Smoker BBQ Grilling Smoking Meat Unbleached Uncoated Unwaxed (Pink, 18\" x 100')",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        }
+      ]
+    },
+    "leave-in-probe": {
+      "status": "VERIFIED",
+      "query": "wireless meat thermometer leave in probe",
+      "products": [
+        {
+          "asin": "B0DG5GKJKB",
+          "serp_rank": 4,
+          "keepa_title": "ThermoMaven Sub-1G Smart Wireless Meat Thermometer with Standalone Base",
+          "brand": "ThermoMaven",
+          "manufacturer": "ThermoMaven",
+          "part_number": "WT10",
+          "keepa_type": "THERMOMETER",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Thermometers & Timers",
+            "Meat"
+          ],
+          "sales_rank": 1261,
+          "is_redirect_asin": false,
+          "rating": 4.3,
+          "reviews": 3100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0FHH6KBGX",
+          "title": "ThermoMaven 3000FT Wireless Meat Thermometer, No App Needed, 2 Probes",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B0DKHVXLHW",
+          "title": "Vuwwey Instant Read Meat Thermometer Digital for Cooking with Dual Probe",
+          "rejected_because": "forbidden token in title: 'instant read'"
+        },
+        {
+          "asin": "B0H5CG1WCR",
+          "title": "Bluetooth Wireless Meat Thermometer Digital, 0.5S Instant Read",
+          "rejected_because": "forbidden token in title: 'instant read'"
+        },
+        {
+          "asin": "B0H2YYVGTM",
+          "title": "ThermoMaven Smart WiFi Wireless Meat Thermometer for Grilling with 2 Probes",
+          "rejected_because": "review count 669 below floor 1000"
+        },
+        {
+          "asin": "B0HCZ8YH5X",
+          "title": "Smart Wireless Meat Thermometer, 2 Probes, WiFi Base with Magnetic Mount",
+          "rejected_because": "review count 139 below floor 1000"
+        }
+      ]
+    },
+    "slicing-knife": {
+      "status": "VERIFIED",
+      "query": "brisket slicing knife granton edge",
+      "products": [
+        {
+          "asin": "B0000CFDB9",
+          "serp_rank": 5,
+          "keepa_title": "Victorinox Fibrox Pro Slicing Knife, Granton Blade, 12-Inch",
+          "brand": "Victorinox",
+          "manufacturer": "Victorinox",
+          "part_number": "47645",
+          "keepa_type": "KITCHEN_KNIFE",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Kitchen Knives & Accessories"
+          ],
+          "sales_rank": 8805,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 4400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07VLW8677",
+          "serp_rank": 6,
+          "keepa_title": "Cutluxe Brisket Knife, 12\" Carving & Slicing Knife for Meat & BBQ",
+          "brand": "Cutluxe",
+          "manufacturer": "Cutluxe",
+          "part_number": "ART-SLC-12-1_SG",
+          "keepa_type": "KITCHEN_KNIFE",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Kitchen Knives & Accessories",
+            "Carving Knives"
+          ],
+          "sales_rank": 1264,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 7400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0CGXKDJV7",
+          "serp_rank": 9,
+          "keepa_title": "SYOKAMI Brisket Slicing Knife, 12 Inch Carving Knife for Meat Cutting",
+          "brand": "SYOKAMI",
+          "manufacturer": "SYOKAMI",
+          "part_number": "12 Inch Carving Knife",
+          "keepa_type": "KITCHEN_KNIFE",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Kitchen Knives & Accessories",
+            "Carving Knives"
+          ],
+          "sales_rank": 15358,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 1400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0CL4DHHZ1",
+          "title": "PAUDIN Brisket Knife, 12 Inch Carving Knife Stainless Steel Brisket Slicing Knifes with Granton Edge for Meat Cutting, Roasts, BBQ, Turkey - Grilling Gifts for Men",
+          "rejected_because": "sales rank 269541 is worse than 60000"
+        },
+        {
+          "asin": "B07VLW8677",
+          "title": "Cutluxe Brisket Knife, 12\" Carving & Slicing Knife for Meat & BBQ",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B0DSRP4ZRZ",
+          "title": "Sunnecko BBQ Carving Knife Set,Slicing and Boning Knife for Meat Cutting",
+          "rejected_because": "forbidden token in title: 'knife set'"
+        }
+      ]
+    },
+    "heat-resistant-gloves": {
+      "status": "VERIFIED",
+      "query": "heat resistant bbq gloves",
+      "products": [
+        {
+          "asin": "B07YTVMRV4",
+          "serp_rank": 1,
+          "keepa_title": "Comsmart BBQ Gloves, 1472 Degree F Heat Resistant Grilling Gloves Silicone Non-Slip Oven Gloves Long Kitchen Gloves for Barbecue, Cooking, Baking, Cutting",
+          "brand": "Comsmart",
+          "manufacturer": "Comsmart",
+          "part_number": "A-590",
+          "keepa_type": "POT_HOLDER",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Protective Mitts & Potholders",
+            "Mitts"
+          ],
+          "sales_rank": 474,
+          "is_redirect_asin": false,
+          "rating": 4.4,
+          "reviews": 14300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0748DCDGC",
+          "serp_rank": 4,
+          "keepa_title": "RAPICCA BBQ Grill Gloves, 932°F Heat Resistant Neoprene, 14 in XL",
+          "brand": "RAPICCA",
+          "manufacturer": null,
+          "part_number": "RAPICCAGrillgloves14",
+          "keepa_type": "POT_HOLDER",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Protective Mitts & Potholders"
+          ],
+          "sales_rank": 875,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 14600,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07Z6FC7HL",
+          "serp_rank": 6,
+          "keepa_title": "932°F Extreme Heat Resistant Gloves for Grill BBQ,Aillary Waterproof Long Sleeve Pit Grill Gloves for Fryer, Baking, Oven,Smoker,Fireproof, Oil Resistant Neoprene Coating（14-Inch ）",
+          "brand": "Aillary",
+          "manufacturer": "Aillary-TECH",
+          "part_number": "mdk-397",
+          "keepa_type": "POT_HOLDER",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Protective Mitts & Potholders"
+          ],
+          "sales_rank": 983,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 4400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0CRHKYHPC",
+          "title": "ANBOSON BBQ Gloves Disposable, Heat Resistant Grilling Gloves for Cooking",
+          "rejected_because": "forbidden token in title: 'disposable'"
+        },
+        {
+          "asin": "B08R86P4Q3",
+          "title": "QUWIN BBQ Gloves, 1472°F Heat Resistant Grilling Gloves Silicone Non-Slip Oven Mitts, Kitchen Gloves for BBQ, Grilling, Cooking, Baking(One Size Fits Most, Black)- 1 Pair",
+          "rejected_because": "forbidden token in title: 'oven mitt'"
+        },
+        {
+          "asin": "B0D2D52ZSR",
+          "title": "FITFIV BBQ Gloves, 1472°F Heat Resistant with Silicone Grip Oven Mitts",
+          "rejected_because": "forbidden token in title: 'oven mitt'"
+        }
+      ]
+    },
+    "meat-claws": {
+      "status": "VERIFIED",
+      "query": "meat claws pulled pork shredder",
+      "products": [
+        {
+          "asin": "B09J746BHB",
+          "serp_rank": 3,
+          "keepa_title": "Alpha Grillers Meat Shredder Claws BBQ Pulled Pork Bear Claws for Shredding",
+          "brand": "Alpha Grillers",
+          "manufacturer": "Alpha Grillers",
+          "part_number": "B09J746BHB_CA NARF",
+          "keepa_type": "FORK",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Grilling & Barbecue Utensils",
+            "Barbecue Forks & Claws",
+            "Barbecue Claws"
+          ],
+          "sales_rank": 1225,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 3700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B003IWI66W",
+          "serp_rank": 4,
+          "keepa_title": "Bear Paws Meat Claws - The Original BBQ Meat Shredder Claws - Black",
+          "brand": "Bear Paws",
+          "manufacturer": "Bear Paw Products",
+          "part_number": "Bear Claws",
+          "keepa_type": "FORK",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Grilling & Barbecue Utensils",
+            "Barbecue Forks & Claws",
+            "Barbecue Claws"
+          ],
+          "sales_rank": 5495,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 30400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07DPMM6PL",
+          "serp_rank": 5,
+          "keepa_title": "LOPE & NG Meat Handler Shredder Claws Set Of 2 - Wood Stainless Steel BBQ Pulled Pork Paws For Shredding Handing Carving Food",
+          "brand": "LOPE & NG",
+          "manufacturer": null,
+          "part_number": "43551-17139",
+          "keepa_type": "FORK",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Grilling & Barbecue Utensils",
+            "Barbecue Forks & Claws",
+            "Barbecue Claws"
+          ],
+          "sales_rank": 16314,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 2000,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0GTXBF7CL",
+          "title": "Meat Claws for Shredding, Bear Claws Meat Shredder, Stainless Steel Meat Shredder Claws for Pulled Pork, Chicken, Brisket, Turkey and Roasts, BBQ Smoker Grill Accessories, 2 Pack",
+          "rejected_because": "review count 50 below floor 1000"
+        },
+        {
+          "asin": "B07RM5S2TJ",
+          "title": "Kaluns Meat Claws, Best Meat and Pulled Pork Shredder - Easily Lift, Handle, Pull, Cut, and Shred Meat - Ultra-Sharp Plastic Blades - Heat Resistant, BPA free, Dishwasher Safe (Black)",
+          "rejected_because": "sales rank 108375 is worse than 60000"
+        },
+        {
+          "asin": "B0GLR287T1",
+          "title": "Meat Shredder Claws for Chicken & Pulled Pork Heavy Duty Meat Claws with Non-Slip Handle, BBQ Shredding Tool for Smoker, Grill & Kitchen",
+          "rejected_because": "review count 52 below floor 1000"
+        }
+      ]
+    },
+    "cooler-holding": {
+      "status": "VERIFIED",
+      "query": "rotomolded cooler 45 quart",
+      "products": [
+        {
+          "asin": "B01M1OJO3B",
+          "serp_rank": 2,
+          "keepa_title": "RTIC 45 QT Ultra-Tough Hard Cooler, Tan",
+          "brand": "RTIC",
+          "manufacturer": "RTIC",
+          "part_number": "FBA_RTIC 45 Tan",
+          "keepa_type": "ICE_CHEST",
+          "category_tree": [
+            "Sports & Outdoors",
+            "Outdoor Recreation",
+            "Camping & Hiking",
+            "Camp Kitchen",
+            "Coolers"
+          ],
+          "sales_rank": 52621,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 2000,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0DNGHXSJJ",
+          "serp_rank": 3,
+          "keepa_title": "Coleman Pro Heavy-Duty 45qt Ultra-Light Premium Hard Cooler, Extra-Thick Insulation Keeps Ice up to 4 Days, 74-Can Capacity",
+          "brand": "Coleman",
+          "manufacturer": "Coleman",
+          "part_number": "2193939",
+          "keepa_type": "ICE_CHEST",
+          "category_tree": [
+            "Sports & Outdoors",
+            "Outdoor Recreation",
+            "Camping & Hiking",
+            "Camp Kitchen",
+            "Coolers"
+          ],
+          "sales_rank": 8205,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 699,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B086VMYSX9",
+          "serp_rank": 5,
+          "keepa_title": "Lifetime 65‑Quart High Performance Hard Cooler, Up to 8‑Day Ice Retention, IGBC Bear‑Resistant Camping & Hunting Ice Chest with Bottle Opener",
+          "brand": "LIFETIME",
+          "manufacturer": "Lifetime Products",
+          "part_number": "91005",
+          "keepa_type": "ICE_CHEST",
+          "category_tree": [
+            "Sports & Outdoors",
+            "Outdoor Recreation",
+            "Camping & Hiking",
+            "Camp Kitchen",
+            "Coolers"
+          ],
+          "sales_rank": 7638,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 2600,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0DMW2Z6BP",
+          "title": "Coleman Pro Heavy-Duty 45qt Ultra-Light Premium Hard Cooler, Extra-Thick Insulation Keeps Ice up to 4 Days, 74-Can Capacity",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B08HQ5PXDK",
+          "title": "Goplus 16 Quart Cooler, 24-Can Capacity Ice Chest with 2 Cup Holders, 3-5 Days Ice Retention, Portable Insulated Ice Box for Camping, Fishing Outdoor Activities (Grey)",
+          "rejected_because": "sales rank 77576 is worse than 60000"
+        },
+        {
+          "asin": "B0C9L67S5C",
+          "title": "YELLOW JACKET 27 Quart Hard Cooler for Camping, Beach & Fishing Yellow",
+          "rejected_because": "sales rank 61473 is worse than 60000"
+        }
+      ]
+    },
+    "cast-iron": {
+      "status": "VERIFIED",
+      "query": "cast iron skillet pre seasoned",
+      "products": [
+        {
+          "asin": "B00006JSUB",
+          "serp_rank": 5,
+          "keepa_title": "Lodge Pre-Seasoned Cast Iron Skillet, PFAS-Free, 12 Inches",
+          "brand": "Lodge",
+          "manufacturer": "Lodge",
+          "part_number": "FBA_1033502000010",
+          "keepa_type": "SAUTE_FRY_PAN",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Cookware",
+            "Pots & Pans",
+            "Skillets"
+          ],
+          "sales_rank": 88,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 131900,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B00X4WQMAS",
+          "serp_rank": 8,
+          "keepa_title": "Utopia Kitchen Cast Iron Skillet 12 Inch Pre-Seasoned PFAS-Free Black",
+          "brand": "Utopia Kitchen",
+          "manufacturer": "Utopia Kitchen",
+          "part_number": "UK0040",
+          "keepa_type": "SAUTE_FRY_PAN",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Cookware",
+            "Pots & Pans",
+            "Chef's Pans"
+          ],
+          "sales_rank": 1622,
+          "is_redirect_asin": false,
+          "rating": 4.5,
+          "reviews": 27300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B00G2XGC88",
+          "title": "Lodge Pre-Seasoned Cast Iron Skillet with Silicone Handle Holder, 12 Inches",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B00006JSUA",
+          "title": "Lodge Pre-Seasoned Cast Iron Skillet, PFAS-Free, 10.25 Inches",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B00WTSCXIS",
+          "title": "Lodge Pre-Seasoned Cast Iron Skillet with Hot Handle Holder, 10.25 Inches",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        }
+      ]
+    },
+    "cedar-planks": {
+      "status": "VERIFIED",
+      "query": "cedar grilling planks for salmon",
+      "products": [
+        {
+          "asin": "B085G36QX9",
+          "serp_rank": 1,
+          "keepa_title": "Wood Fire 12-Pack Cedar Grilling Planks for Salmon, Beef & More - USA-Made",
+          "brand": "Wildwood Grilling",
+          "manufacturer": "Wood Fire Grilling Co.",
+          "part_number": null,
+          "keepa_type": "DISHWARE_PLATE",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Grilling Planks"
+          ],
+          "sales_rank": 1121,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 2400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B009BFBNWO",
+          "serp_rank": 2,
+          "keepa_title": "Cedar Grilling Planks - 12 Pack - Made In USA",
+          "brand": "Grill Gourmet",
+          "manufacturer": "Grill Gourmet",
+          "part_number": "GG12PK",
+          "keepa_type": "OUTDOOR_LIVING",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Grilling Planks"
+          ],
+          "sales_rank": 2489,
+          "is_redirect_asin": false,
+          "rating": 4.4,
+          "reviews": 11100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0DTLSFDBF",
+          "title": "Cedar Grilling Planks (12-Pack): 5x11-2-4 Servings Each, USA-Made",
+          "rejected_because": "review count 420 below floor 500"
+        },
+        {
+          "asin": "B09ZXYSF4D",
+          "title": "Bigger 13 PK, Cedar Planks For Grilling Salmon,11\"x 5.5\" Better Smoking, Add Best Smoky Flavor To Salmon, Veggies, Restaurant Quantity",
+          "rejected_because": "review count 405 below floor 500"
+        },
+        {
+          "asin": "B0DJCHY4KN",
+          "title": "Cedar Grilling Planks (8-Pack): 7x15 - Whole Salmon Fillet Size, USA-Made",
+          "rejected_because": "review count 147 below floor 500"
+        },
+        {
+          "asin": "B0GVHTPGPM",
+          "title": "Langxinese Bigger 13 PK, Cedar Planks for Grilling Salmon,11\"x 5.5\" Better Smoking, Add Smoky Flavor to Salmon, Veggies, Restaurant Quantity",
+          "rejected_because": "review count 405 below floor 500"
+        }
+      ]
+    },
+    "charcoal-pellets-wood": {
+      "status": "VERIFIED",
+      "query": "smoking wood chunks hickory",
+      "products": [
+        {
+          "asin": "B01IF1HFO4",
+          "serp_rank": 3,
+          "keepa_title": "Weber® Hickory Wood Chunks, Outdoor Cooking Fuel, 4 lb",
+          "brand": "Weber",
+          "manufacturer": "Weber",
+          "part_number": "17148",
+          "keepa_type": "SOLID_FIRE_FUEL",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Fuel & Firestarters"
+          ],
+          "sales_rank": 552,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 4300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B09YG8J2S5",
+          "title": "Old Potters Smoker Wood Chunks 13-16 lbs for Grilling, Smoking, and Wood Fire Cooking ~ 2 x 3 Inches, (Hickory, 790 Cu in.)",
+          "rejected_because": "review count 180 below floor 500"
+        },
+        {
+          "asin": "B0H4JCSPDG",
+          "title": "CookinPellets Premium Hickory Hardwood BBQ Smoking Pellets, 3 lb Bag",
+          "rejected_because": "sales rank 149112 is worse than 60000"
+        },
+        {
+          "asin": "B0CPLFM5NP",
+          "title": "Billy Buckskin 18 LB Mesquite Firewood Bundle – Aromatic & Seasoned Wood Logs with Fatwood Starter Sticks for Fire Pit, Campfire, Fireplace, Wood Stoves and Outdoor Grilling",
+          "rejected_because": "none of the required alternatives present: ['wood chunk', 'wood chip', 'smoking wood', 'pellet', 'lump charcoal', 'charcoal']"
+        },
+        {
+          "asin": "B0CXYWTV7P",
+          "title": "Old Potter Kiln Dried Firewood, ~1.5 Cu Ft ~ 38-45 lbs, for Solo Stove, Firepits and Fireplaces or Cooking, 16 Inch Logs, Oak",
+          "rejected_because": "none of the required alternatives present: ['wood chunk', 'wood chip', 'smoking wood', 'pellet', 'lump charcoal', 'charcoal']"
+        },
+        {
+          "asin": "B0H3WRXXMK",
+          "title": "RUSTY REDHORN Wood Chips for Smoker, Variety Pack, All Natural, 3 x 1.8lb",
+          "rejected_because": "review count 28 below floor 500"
+        }
+      ]
+    },
+    "cutting-board": {
+      "status": "VERIFIED",
+      "query": "large cutting board with juice groove",
+      "products": [
+        {
+          "asin": "B07DWNPY77",
+          "serp_rank": 3,
+          "keepa_title": "John Boos Block CB1054-1M2418150 Maple Wood Edge Grain Reversible Cutting Board with Juice Groove, 24 Inches x 18 Inches x 1.5 Inches",
+          "brand": "John Boos",
+          "manufacturer": "John Boos",
+          "part_number": "CB1054-1M2418150",
+          "keepa_type": "CUTTING_BOARD",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Cutting Boards, Mats & Sets",
+            "Cutting Boards"
+          ],
+          "sales_rank": 21514,
+          "is_redirect_asin": false,
+          "rating": 4.5,
+          "reviews": 1800,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B09BG7YYCW",
+          "title": "Farberware 15 x 20 Inch Extra Large Plastic Cutting Board, White",
+          "rejected_because": "none of the required alternatives present: ['juice groove', 'juice well', 'wood', 'bamboo', 'walnut', 'maple', 'teak', 'acacia']"
+        },
+        {
+          "asin": "B0FB15BRF3",
+          "title": "Dexas Rubberwood Pour Spout Cutting Board – 18\" x 13\" x 1\" | Juice Groove, Easy-Pour Corner, Heavy-Duty Wood Board for Carving & Chopping",
+          "rejected_because": "sales rank 374430 is worse than 60000"
+        },
+        {
+          "asin": "B0CBS167GS",
+          "title": "Yes4All Extra Large Acacia Wood Cutting Board for Kitchen, 24''L x 15''W x 1.5'' Thick, Durable Edge Grain Design with Juice Grooves, Pre-Oiled, Easy Grip Handle, Ideal for Chopping and Serving",
+          "rejected_because": "sales rank 108539 is worse than 60000"
+        },
+        {
+          "asin": "B0DZNBWX5Y",
+          "title": "XXX Large Bamboo Cutting Board with Non Slip Feet and Over Sink Butcher Block Chopping Board Nice Solid Thick Wooden Juice Groove Huge Big XXl xlarge Best Hardwood Kitchen Counter Organic",
+          "rejected_because": "review count 789 below floor 1000"
+        },
+        {
+          "asin": "B08FCNP9FC",
+          "title": "Belwares Large Plastic Cutting Board for Kitchen, 18-Inch Chopping Board",
+          "rejected_because": "none of the required alternatives present: ['juice groove', 'juice well', 'wood', 'bamboo', 'walnut', 'maple', 'teak', 'acacia']"
+        }
+      ]
+    },
+    "tongs": {
+      "status": "VERIFIED",
+      "query": "long grill tongs stainless steel",
+      "products": [
+        {
+          "asin": "B07DBPL435",
+          "serp_rank": 3,
+          "keepa_title": "Grill Tongs, 17 Inch Extra Long Stainless Steel BBQ Tongs (17\", 1PC)",
+          "brand": "DAILY KISN",
+          "manufacturer": "KingTong",
+          "part_number": ".",
+          "keepa_type": "TONG_UTENSIL",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Cooking Utensils",
+            "Tongs"
+          ],
+          "sales_rank": 1593,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 8200,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B093BXLL97",
+          "title": "Eddeas Grill Tongs, 17 Inch Extra Long BBQ Tongs, Heat Resistant 600 Degrees Stainless Steel tongs, Kitchen Metal Locking Tongs for Cooking, Grilling, Outdoor Barbecue",
+          "rejected_because": "review count 447 below floor 1000"
+        },
+        {
+          "asin": "B0D7BG2XD6",
+          "title": "HINMAY Extra Long Scissor Tongs 15\" Stainless Steel Barbecue Grilling Tongs",
+          "rejected_because": "isRedirectASIN: this ASIN forwards to a different product"
+        },
+        {
+          "asin": "B08FC726C5",
+          "title": "Walfos 17 Inch Extra Long Grill Tongs, Ultimate Stainless Steel BBQ Tongs for Grilling, Cooking, BBQ/Barbecue, Buffet and Turning Food",
+          "rejected_because": "review count 994 below floor 1000"
+        },
+        {
+          "asin": "B08GM9SBM1",
+          "title": "HINMAY Stainless Steel Kitchen Scissor Tongs Set, 2-Piece (10/13 Inch)",
+          "rejected_because": "none of the required alternatives present: ['grill', 'bbq', '16', '17', 'long']"
+        },
+        {
+          "asin": "B07VWWLC3M",
+          "title": "HINMAY Stainless Steel Scissor Tongs with Comfort-Grip Handle 12-Inch",
+          "rejected_because": "none of the required alternatives present: ['grill', 'bbq', '16', '17', 'long']"
+        }
+      ]
+    },
+    "kitchen-shears": {
+      "status": "VERIFIED",
+      "query": "poultry shears heavy duty",
+      "products": [
+        {
+          "asin": "B0DDGRWKCM",
+          "serp_rank": 1,
+          "keepa_title": "MAD SHARK Heavy Duty Poultry Shears,Spring Loaded Kitchen Shears,Dishwasher",
+          "brand": "MAD SHARK",
+          "manufacturer": "MAD SHARK",
+          "part_number": "001",
+          "keepa_type": "SCISSORS",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Shears"
+          ],
+          "sales_rank": 1297,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 1900,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B000PGG7ZQ",
+          "serp_rank": 2,
+          "keepa_title": "OXO Good Grips Spring-Loaded Poultry Shears, Heavy Duty, Black",
+          "brand": "OXO",
+          "manufacturer": "OXO",
+          "part_number": "1072292",
+          "keepa_type": "SCISSORS",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Shears"
+          ],
+          "sales_rank": 8172,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 7100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0B12HXN22",
+          "serp_rank": 5,
+          "keepa_title": "DRAGON RIOT Heavy Duty Poultry Shears - A Must Have Kitchen Shears for Chicken and Meat Cutting - Dishwasher Safe and Stainless Food Kitchen Scissors for Thanksgiving",
+          "brand": "DRAGON RIOT",
+          "manufacturer": "DRAGON RIOT",
+          "part_number": null,
+          "keepa_type": "SCISSORS",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Shears"
+          ],
+          "sales_rank": 10840,
+          "is_redirect_asin": false,
+          "rating": 4.5,
+          "reviews": 3100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0FC6DVHKY",
+          "title": "Poultry Shears, Kitchen Shears with Spring Loaded, Heavy Duty Poultry Scissors for Meat, Chicken,Turkey, Anti-Slip Handle,Safety Lock,Dishwasher Safe",
+          "rejected_because": "review count 255 below floor 500"
+        }
+      ]
+    },
+    "wire-rack": {
+      "status": "VERIFIED",
+      "query": "stainless steel wire cooling rack half sheet",
+      "products": [
+        {
+          "asin": "B081THCMXB",
+          "serp_rank": 1,
+          "keepa_title": "Ultra Cuisine Cooling and Baking Rack Set - Cooling Racks -11.5'' x16.5''",
+          "brand": "Ultra Cuisine",
+          "manufacturer": "Ultra Cuisine",
+          "part_number": "115-125-2pc",
+          "keepa_type": "SHEET_PAN",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Bakeware",
+            "Baking Tools & Accessories",
+            "Cooling Racks"
+          ],
+          "sales_rank": 1045,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 16300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0DBLLGJM2",
+          "serp_rank": 2,
+          "keepa_title": "2 PCS Cooling Racks for Cooking and Baking, 11.65''x16.85'', Silver",
+          "brand": "Qukaka",
+          "manufacturer": "Qukaka",
+          "part_number": "ZLX-Cooling Rack-2P-11.65*16.85-Silver",
+          "keepa_type": "BAKEWARE",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Bakeware",
+            "Baking Tools & Accessories",
+            "Cooling Racks"
+          ],
+          "sales_rank": 334,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 4500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07KJJ9X8N",
+          "serp_rank": 5,
+          "keepa_title": "KITCHENATICS Half Sheet Cooling Rack Stainless Steel Oven Safe Set of 2",
+          "brand": "KITCHENATICS",
+          "manufacturer": "KITCHENATICS",
+          "part_number": "10",
+          "keepa_type": "COOLING_RACK",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Bakeware",
+            "Baking Tools & Accessories",
+            "Cooling Racks"
+          ],
+          "sales_rank": 14429,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 12500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0FG7VL7D5",
+          "title": "Cooling Racks for Cooking and Baking - 11.5\"x16.5\" Oven Safe Premium Stainless Steel Heavy Duty Baking Rack Tight-Wire, Fits Half Sheet Pan for Roasting & Grilling & Cooking - Set of 2",
+          "rejected_because": "review count 325 below floor 1000"
+        }
+      ]
+    },
+    "foil": {
+      "status": "VERIFIED",
+      "query": "heavy duty aluminum foil roll",
+      "products": [
+        {
+          "asin": "B00279LYL6",
+          "serp_rank": 6,
+          "keepa_title": "Reynolds Wrap Heavy Duty Aluminum Foil Roll, 12 Inch Wide, 50sq ft",
+          "brand": "Reynolds",
+          "manufacturer": "Reynolds Consumer Products",
+          "part_number": "8027",
+          "keepa_type": "FOOD_WRAP",
+          "category_tree": [
+            "Health & Household",
+            "Household Supplies",
+            "Paper & Plastic",
+            "Disposable Food Storage",
+            "Aluminum Foil"
+          ],
+          "sales_rank": 318,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 18300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B00M8ZEAW4",
+          "title": "Reynolds Wrap Heavy Duty Aluminum Foil Roll, 12 Inch Wide, 130sq ft",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B0CG378JB8",
+          "title": "RESTAURANT FEEDER Heavy-Duty Aluminum Foil, Foil Aluminum Roll (18\" x 500\")",
+          "rejected_because": "review count 729 below floor 1000"
+        },
+        {
+          "asin": "B0D3C4JDJ6",
+          "title": "4 Count Heavy Duty Aluminum Foil Roll for Food 18 Inches 500 FT Heavy Duty Food Safe Foil Wrap Pony Package",
+          "rejected_because": "review count 600 below floor 1000"
+        },
+        {
+          "asin": "B0GRGX84ZF",
+          "title": "Aluminum Foil Roll, 12in x 500Sq Ft Aluminum Foil, Thick Strong Tin Foil with Cutter, Food Safe Cling Wrap for Cooking, Baking, Roasting, Grilling, Freezer Storage",
+          "rejected_because": "none of the required alternatives present: ['heavy duty', 'heavy-duty']"
+        },
+        {
+          "asin": "B07JP64WFD",
+          "title": "Aluminum Foil Roll 18\"x 500 feet (1 Pack) - Aluminum Foil Heavy-Duty, Commercial Grade for Food Service Industry - Silver Foil for Cooking & Roasting",
+          "rejected_because": "review count 522 below floor 1000"
+        }
+      ]
+    },
+    "butcher-twine": {
+      "status": "VERIFIED",
+      "query": "butcher twine cooking food safe",
+      "products": [
+        {
+          "asin": "B0BXSBTNQN",
+          "serp_rank": 1,
+          "keepa_title": "PerkHomy Cotton Butchers Twine String 500 Feet 2mm Twine for Cooking Food Safe Crafts Bakers Kitchen Butcher Meat Turkey Sausage Roasting Gift Wrapping Gardening Crocheting Knitting",
+          "brand": "PH PERKHOMY",
+          "manufacturer": "PH PERKHOMY",
+          "part_number": "CT-500ft-Natural White",
+          "keepa_type": "THREAD_CORD",
+          "category_tree": [
+            "Tools & Home Improvement",
+            "Hardware",
+            "Tarps & Tie-Downs",
+            "Twine"
+          ],
+          "sales_rank": 1310,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 4300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B002NU6HOI",
+          "serp_rank": 4,
+          "keepa_title": "Regency Wraps Butchers Cooking Twine, Heavy Duty Cotton 500 Ft 1 Pack",
+          "brand": "Regency Wraps",
+          "manufacturer": "Regency Wraps",
+          "part_number": "RW1620",
+          "keepa_type": "THREAD_CORD",
+          "category_tree": [
+            "Tools & Home Improvement",
+            "Hardware",
+            "Tarps & Tie-Downs",
+            "Twine"
+          ],
+          "sales_rank": 8128,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 35300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0725CHQLJ",
+          "serp_rank": 5,
+          "keepa_title": "Vivifying Butchers Twine, 328 Feet 3Ply Cotton Bakers Twine, Food Safe Cooking String for Tying Meat, Making Sausage, Trussing Turkey, Roasting and Packing (Beige)",
+          "brand": "Vivifying",
+          "manufacturer": "Vivifying",
+          "part_number": "MX-328-WHITE",
+          "keepa_type": "THREAD_CORD",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Cookware",
+            "Cookware Accessories"
+          ],
+          "sales_rank": 5307,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 1600,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0G9JHJJ9G",
+          "title": "SMART&CASUAL 700 Feet 100% Cotton Butcher Twine String 2mm Food-Grade Cooking Twine for Kitchen Roasting Turkey Sausage Meat Prep Baking Crafts Crocheting Gift Wrapping Gardening",
+          "rejected_because": "review count 270 below floor 500"
+        },
+        {
+          "asin": "B0GBWRKB6K",
+          "title": "PerkDecor 400 Feet 100% 2mm Natural Cotton Cooking Twine Food Grade Butcher Twine String for Kitchen Roasting Baking Turkey Tying Meat Prep Crafts Gift Wrapping and Home Uses",
+          "rejected_because": "review count 175 below floor 500"
+        }
+      ]
+    },
+    "basting-brush": {
+      "status": "VERIFIED",
+      "query": "silicone basting brush bbq mop",
+      "products": [
+        {
+          "asin": "B08R6H289V",
+          "serp_rank": 2,
+          "keepa_title": "OXO Outdoor Grilling Basting Brush",
+          "brand": "OXO",
+          "manufacturer": "OXO",
+          "part_number": "11309300",
+          "keepa_type": "PASTRY_BASTING_BRUSH",
+          "category_tree": [
+            "Patio, Lawn & Garden",
+            "Grills & Outdoor Cooking",
+            "Outdoor Cooking Tools & Accessories",
+            "Grilling & Barbecue Utensils",
+            "Basting Brushes"
+          ],
+          "sales_rank": 8426,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 1200,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B00155PNN8",
+          "title": "Outset Basting Brush With Rosewood Handle, BBQ Sauce Mop",
+          "rejected_because": "sales rank 171472 is worse than 60000"
+        },
+        {
+          "asin": "B00ATQR5DK",
+          "title": "GrillPro 41096 Flexible Handle Basting Mop",
+          "rejected_because": "none of the required alternatives present: ['basting brush', 'bbq mop', 'pastry brush', 'sauce mop']"
+        },
+        {
+          "asin": "B0C9BYPKVQ",
+          "title": "Large Silicone Basting Pastry Brush - 3.95inch Extra Wide Silicone Basting Brush for Grilling,Heat Resistant Brushes Spread Oil Butter Sauce for Cooking Baking BBQ,Dishwasher Safe,Set of 2",
+          "rejected_because": "review count 113 below floor 500"
+        },
+        {
+          "asin": "B01CP4ANO6",
+          "title": "BBQ-AID Silicone Basting Brush for Grilling - Premium Acacia Wood Sauce Brush for BBQ & Smoking - Heat Resistant Marinade & Meat Brush - Dishwasher Safe Cooking Brush - Perfect For Fathers Day Gift",
+          "rejected_because": "sales rank 77864 is worse than 60000"
+        },
+        {
+          "asin": "B0FBC54QL9",
+          "title": "Silicone BBQ Basting Brush",
+          "rejected_because": "sales rank 313177 is worse than 60000"
+        }
+      ]
+    },
+    "shaker": {
+      "status": "VERIFIED",
+      "query": "spice shaker bottles for bbq rub",
+      "products": [
+        {
+          "asin": "B01NH9LF55",
+          "serp_rank": 5,
+          "keepa_title": "Plastic Spice Jars Bottle Containers with Black Cap, 16 Oz, 6 Pack",
+          "brand": "RoyalHouse",
+          "manufacturer": "SalusWare",
+          "part_number": "43219-20594",
+          "keepa_type": "FOOD_STORAGE_CONTAINER",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Storage & Organization",
+            "Food Storage",
+            "Food Containers",
+            "Container Sets"
+          ],
+          "sales_rank": 14979,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 1300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07PP3G7LL",
+          "serp_rank": 6,
+          "keepa_title": "Reluen Large Seasoning Shaker Set of 2, 32 Oz Airtight Wide Mouth, Dual Lid",
+          "brand": "Reluen",
+          "manufacturer": "Reluen",
+          "part_number": "641SPCK32R",
+          "keepa_type": "FOOD_STORAGE_CONTAINER",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Storage & Organization",
+            "Food Storage",
+            "Food Jars & Canisters"
+          ],
+          "sales_rank": 6783,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 2000,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B01DCKCRTG",
+          "serp_rank": 7,
+          "keepa_title": "Skyway Supreme Large 32 OZ Plastic Spice Bottles Containers - Flap Cap Pour and Sifter Spice Shaker Jars - Refillable Perfect For Storing and Dispensing Seasonings Herbs Rubs - BPA Free - Set of 2",
+          "brand": "Skyway Products",
+          "manufacturer": null,
+          "part_number": "COMINHKPR133524",
+          "keepa_type": "FOOD_STORAGE_CONTAINER",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Storage & Organization",
+            "Food Storage",
+            "Food Containers",
+            "Container Sets"
+          ],
+          "sales_rank": 49497,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 731,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0CB99262F",
+          "title": "CUSINIUM [Pack of 2] 10 oz Seasonings Spice Shakers - BBQ Dry Rub Shakers - Cooking Dredge with Adjustable Fan-Style Lid and Handles",
+          "rejected_because": "review count 362 below floor 500"
+        }
+      ]
+    },
+    "saucepan": {
+      "status": "VERIFIED",
+      "query": "stainless steel saucepan 2 quart with lid",
+      "products": [
+        {
+          "asin": "B00008CM6C",
+          "serp_rank": 5,
+          "keepa_title": "Cuisinart 719-18 Chef's Classic Stainless 2-Quart Saucepan with Cover",
+          "brand": "Cuisinart",
+          "manufacturer": "Cuisinart",
+          "part_number": "719-18",
+          "keepa_type": "COOKING_POT",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Cookware",
+            "Pots & Pans",
+            "Skillets"
+          ],
+          "sales_rank": 570,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 11000,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B000058AK8",
+          "serp_rank": 6,
+          "keepa_title": "Farberware Classic Series Stainless Steel Sauce Pan with Lid, 2 Qt, Silver",
+          "brand": "Farberware",
+          "manufacturer": "Meyer Corporation",
+          "part_number": "50002",
+          "keepa_type": "COOKING_POT",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Cookware",
+            "Pots & Pans",
+            "Saucepans"
+          ],
+          "sales_rank": 1120,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 35200,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B002WPHUEA",
+          "title": "Cuisinart 419-18P 2-Quart Pour Saucepan with Cover Contour Cookware, Stainless Steel",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B0F83RZMFK",
+          "title": "COOKER KING 1.5 Quart Stainless Steel Saucepan, Nonstick Sauce Pan, Ceramic Suce Pot with Tempered Glass Lid, Induction Pot Compatible with All Cooktops, Dishwasher & Oven Safe(PFAS/PFOA/PTFE Free)",
+          "rejected_because": "review count 825 below floor 1000"
+        },
+        {
+          "asin": "B0GT17MY7T",
+          "title": "Ptacivow 1.5 QT Titanium Saucepan with Lid,Healthy Titanium Pot for Cooking",
+          "rejected_because": "review count 31 below floor 1000"
+        },
+        {
+          "asin": "B0F9X5613L",
+          "title": "P&P CHEF 2 Quart Stainless Steel Sauce Pan Pot with Lid, Small Saucepan",
+          "rejected_because": "review count 176 below floor 1000"
+        }
+      ]
+    },
+    "dutch-oven": {
+      "status": "VERIFIED",
+      "query": "enameled cast iron dutch oven 6 quart",
+      "products": [
+        {
+          "asin": "B000N501BK",
+          "serp_rank": 1,
+          "keepa_title": "Lodge Essential Enamel Cast Iron Dutch Oven, 6 Quart, Island Spice Red",
+          "brand": "Lodge",
+          "manufacturer": "Lodge",
+          "part_number": "EC6D43",
+          "keepa_type": "DUTCH_OVENS",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Cookware",
+            "Pots & Pans",
+            "Dutch Ovens"
+          ],
+          "sales_rank": 804,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 39100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0C545KQQM",
+          "serp_rank": 2,
+          "keepa_title": "Mueller DuraCast 6 Quart Enameled Cast Iron Dutch Oven Pot with Lid",
+          "brand": "JANSKA",
+          "manufacturer": "JANSKA",
+          "part_number": "DO-1175 E",
+          "keepa_type": "DUTCH_OVENS",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Cookware",
+            "Pots & Pans",
+            "Dutch Ovens"
+          ],
+          "sales_rank": 3519,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 4600,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0FQP5RXKV",
+          "title": "Enameled Cast Iron Dutch Oven - 6QT Pot with Lid & Cotton Potholders - Heavy-Duty Cookware for Braising, Stews, Roasting, Bread Baking, Oven Safe up to 500° F & Across All Cooktops, Cream White",
+          "rejected_because": "review count 220 below floor 1000"
+        },
+        {
+          "asin": "B0CWGJ918N",
+          "title": "6 Quart Dutch Oven Pot with Lid, Non Stick Enameled Cast Iron Dutch Oven for Bread Baking, Heavy-Duty, Oven Safe Ceramic Cookware Up to 500°F for Baking, Braising, Stews, Roasting, Red",
+          "rejected_because": "review count 658 below floor 1000"
+        },
+        {
+          "asin": "B0764492S9",
+          "title": "Lodge Essential Enamel Cast Iron Dutch Oven, 6 Quart, Indigo",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B000N4WN08",
+          "title": "Lodge Essential Enamel Cast Iron Dutch Oven, 6 Quart, Caribbean Blue",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        }
+      ]
+    },
+    "fish-spatula": {
+      "status": "VERIFIED",
+      "query": "fish spatula stainless steel slotted",
+      "products": [
+        {
+          "asin": "B000YDO2MK",
+          "serp_rank": 1,
+          "keepa_title": "OXO Good Grips Slotted Fish Spatula Stainless Steel, Fish Turner",
+          "brand": "OXO",
+          "manufacturer": "OXO",
+          "part_number": "1130900",
+          "keepa_type": "FOOD_SPATULA",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Cooking Utensils"
+          ],
+          "sales_rank": 1787,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 11700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07SZ1W1GL",
+          "serp_rank": 3,
+          "keepa_title": "JXWING 304 Stainless Steel Fish Spatula, Thin Flexible Slotted Turner",
+          "brand": "JXWING",
+          "manufacturer": "JXWING",
+          "part_number": "JH-2005",
+          "keepa_type": "FOOD_SPATULA",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Cooking Utensils",
+            "Spatulas"
+          ],
+          "sales_rank": 5943,
+          "is_redirect_asin": false,
+          "rating": 4.5,
+          "reviews": 3200,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0C6MGGNHS",
+          "serp_rank": 5,
+          "keepa_title": "Gourmet Easy Fish Spatula Set, Ultra-Thin Edge for Easy Turning & Flipping",
+          "brand": "Gourmet Easy",
+          "manufacturer": "Gourmet Easy",
+          "part_number": "Gourmet Easy",
+          "keepa_type": "FOOD_SPATULA",
+          "category_tree": [
+            "Home & Kitchen",
+            "Kitchen & Dining",
+            "Kitchen Utensils & Gadgets",
+            "Cooking Utensils",
+            "Spatulas"
+          ],
+          "sales_rank": 10219,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 1500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0BJ6KB675",
+          "title": "Fish Spatula Turner, Stainless Steel Slotted Spatulas Set - 3\"x6\"+4\"x8\"",
+          "rejected_because": "review count 649 below floor 1000"
+        },
+        {
+          "asin": "B0D1FYR493",
+          "title": "2Pack Fish Spatula Stainless Steel,Premium Fish Turner Spatula,Flexible Barbecue Turner,Metal Slotted Spatula For Flipping Fish Egg Patties Fries Pancake Steak by EGYPAMID",
+          "rejected_because": "review count 546 below floor 1000"
+        }
+      ]
+    },
+    "vacuum-sealer": {
+      "status": "NO_VERIFIED_PRODUCT",
+      "query": "vacuum sealer machine food",
+      "products": [],
+      "rejected": [
+        {
+          "asin": "B0D91CQ69R",
+          "title": "Bonsenkitchen Vacuum Sealer Machine, Multiple Modes For Meal Prep,Silver",
+          "rejected_because": "rating 4.2 below floor 4.3"
+        },
+        {
+          "asin": "B0HG1QZYGV",
+          "title": "Food Vacuum Sealer Machine with Storage & Built-in Cutter",
+          "rejected_because": "review count 31 below floor 2000"
+        },
+        {
+          "asin": "B0HCNHVD8J",
+          "title": "95KPa 10-in-1 Commercial Vacuum Sealer Double Heat Seal Device",
+          "rejected_because": "review count 31 below floor 2000"
+        },
+        {
+          "asin": "B08XJW5LHG",
+          "title": "Updated Vacuum Sealer Machine 2025, MEGAWISE Food Sealer w/Starter Kit, Dry & Moist Food Modes, Compact Design with 10 Vacuum Bags & Built-in Cutter (Grey)",
+          "rejected_because": "rating 4.2 below floor 4.3"
+        },
+        {
+          "asin": "B0CYZR7316",
+          "title": "Gasbye 95kPa Precision Vacuum Sealer Machine, Double Heat Seal for Dry/Moist Food, Easy-Lock Handle, Built-in Bag Storage & Cutter, Progress Display, Pulse Mode, Removable Drip Tray, Silver",
+          "rejected_because": "review count 1600 below floor 2000"
+        },
+        {
+          "asin": "B0H69NZ3GR",
+          "title": "UPRUBE Vacuum Sealer for Food, Food Saver, 95kPa, Easy Tear Cutter, 9-in-1",
+          "rejected_because": "review count 21 below floor 2000"
+        }
+      ]
+    },
+    "smoker": {
+      "status": "NOT_SOURCED",
+      "reason": "high-ticket, model-specific; needs a real buying guide, not a top-of-SERP pick",
+      "products": [],
+      "rejected": []
+    },
+    "grill": {
+      "status": "NOT_SOURCED",
+      "reason": "high-ticket, model-specific; needs a real buying guide, not a top-of-SERP pick",
+      "products": [],
+      "rejected": []
+    }
+  },
+  "ingredients": {
+    "kosher-salt": {
+      "status": "VERIFIED",
+      "query": "kosher salt coarse",
+      "products": [
+        {
+          "asin": "B001GHYO44",
+          "serp_rank": 5,
+          "keepa_title": "Morton Kosher Salt Coarse Cooking Salt (48 oz / 3 lb), 1-Pack",
+          "brand": "Morton",
+          "manufacturer": "Morton",
+          "part_number": "DCS-1284",
+          "keepa_type": "CULINARY_SALT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Salt & Salt Substitutes",
+            "Salt",
+            "Kosher Salt"
+          ],
+          "sales_rank": 1835,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 3500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0011BPMUK",
+          "serp_rank": 7,
+          "keepa_title": "Diamond Crystal Kosher Salt – Full Flavor, No Additives - Pure and Natural Since 1886 (Restaurant Pack) - 3 Pound Box",
+          "brand": "Diamond Crystal",
+          "manufacturer": "Diamond Crystal",
+          "part_number": "12729002",
+          "keepa_type": "CULINARY_SALT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Salt & Salt Substitutes",
+            "Salt",
+            "Kosher Salt"
+          ],
+          "sales_rank": 890,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 21600,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B074H5TMQ7",
+          "title": "365 by Whole Foods Market, Kosher Sea Salt, Coarse, 2.2 lb",
+          "rejected_because": "forbidden token in title: 'sea salt'"
+        },
+        {
+          "asin": "B0FYKNJCN1",
+          "title": "Morton Kosher Salt Coarse Cooking Salt (48 oz / 3 lb), 2-Pack",
+          "rejected_because": "review count 14 below floor 1000"
+        },
+        {
+          "asin": "B088XD1GXS",
+          "title": "Morton Kosher Salt Flakes Cooking Salt (48 oz / 3 lb), 4-Pack",
+          "rejected_because": "review count 350 below floor 1000"
+        },
+        {
+          "asin": "B088XP9QX8",
+          "title": "Morton Kosher Salt Coarse Cooking Salt (16 oz / 1 lb), 6-Shaker Pack",
+          "rejected_because": "review count 235 below floor 1000"
+        }
+      ]
+    },
+    "coarse-black-pepper": {
+      "status": "VERIFIED",
+      "query": "coarse ground black pepper",
+      "products": [
+        {
+          "asin": "B0000EXHJ2",
+          "serp_rank": 2,
+          "keepa_title": "McCormick Black Pepper, Coarse Ground, Non GMO, Hand-Harvested, Enjoy Distinctive Pepper Flavor While Cooking & Tableside, 3.12 oz",
+          "brand": "McCormick",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "901143816",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Pepper & Peppercorns",
+            "Ground Pepper"
+          ],
+          "sales_rank": 4634,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 4800,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0FWLKN39X",
+          "title": "McCormick Pepper Black Coarse Ground, 13.0 oz",
+          "rejected_because": "required token missing from title: 'black pepper'"
+        },
+        {
+          "asin": "B0BKN74TFQ",
+          "title": "Sauer's Coarse Ground Black Pepper | 1 Pound Canister | Foodservice",
+          "rejected_because": "review count 190 below floor 500"
+        },
+        {
+          "asin": "B01FQ8U3PC",
+          "title": "Kirkland Signature Coarse Black Pepper (2 bottle)",
+          "rejected_because": "sales rank 60104 is worse than 60000"
+        },
+        {
+          "asin": "B08H66LZYL",
+          "title": "Amazon Grocery, Ground Black Pepper, 18 Oz",
+          "rejected_because": "none of the required alternatives present: ['coarse', 'cracked', 'butcher']"
+        },
+        {
+          "asin": "B0BSLYBL5J",
+          "title": "McCormick Coarse Ground Black Pepper, 6.5 oz",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        }
+      ]
+    },
+    "garlic-powder": {
+      "status": "VERIFIED",
+      "query": "garlic powder",
+      "products": [
+        {
+          "asin": "B074ZK8MQS",
+          "serp_rank": 4,
+          "keepa_title": "McCormick Garlic Powder, Non GMO, Made from Fresh, Whole Garlic Cloves, For Bringing Consistent Flavor to Favorite Foods While Cooking, 8.75 oz",
+          "brand": "McCormick",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "052100038223",
+          "keepa_type": "SEASONING",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Garlic"
+          ],
+          "sales_rank": 2133,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 25700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0CN1QXBLJ",
+          "serp_rank": 5,
+          "keepa_title": "Amazon Saver, Garlic Powder, 2.5 Oz",
+          "brand": "Amazon Saver",
+          "manufacturer": "Amazon.com Services LLC",
+          "part_number": null,
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Garlic"
+          ],
+          "sales_rank": 1158,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 2600,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B07VVGKHLH",
+          "title": "Amazon Grocery, Garlic Powder, 3.9 Oz",
+          "rejected_because": "no current sales rank; demand cannot be checked"
+        },
+        {
+          "asin": "B07QW1GKR1",
+          "title": "Amazon Grocery, Garlic Powder, 24 Oz",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B001PQOATU",
+          "title": "McCormick Fine Garlic Powder, 21 oz",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        }
+      ]
+    },
+    "onion-powder": {
+      "status": "VERIFIED",
+      "query": "onion powder",
+      "products": [
+        {
+          "asin": "B01JH65TM6",
+          "serp_rank": 4,
+          "keepa_title": "McCormick Onion Powder, Non GMO, Made with Fresh, Whole, Onions, For Bringing Consistent Onion Flavor to Meals & Recipes, 7.62 oz",
+          "brand": "McCormick",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "052100038063",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Onion"
+          ],
+          "sales_rank": 2967,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 9700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0005XMXRU",
+          "title": "McCormick Onion Powder, Non GMO, Made with Fresh, Whole, Onions, For Bringing Consistent Flavor to Meals & Recipes, 2.62 oz",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B07VWMM68J",
+          "title": "Amazon Grocery, Onion Powder, 2.85 Oz",
+          "rejected_because": "no current sales rank; demand cannot be checked"
+        },
+        {
+          "asin": "B08H688P26",
+          "title": "Amazon Grocery, Onion Powder, 22 Oz",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B0048B35HM",
+          "title": "McCormick Granulated Onion, From Whole, White Onions, For Bringing Consistent Flavor to Meals & Recipes, 18 oz",
+          "rejected_because": "required token missing from title: 'onion powder'"
+        }
+      ]
+    },
+    "smoked-paprika": {
+      "status": "VERIFIED",
+      "query": "smoked paprika spanish",
+      "products": [
+        {
+          "asin": "B0085WJOLG",
+          "serp_rank": 1,
+          "keepa_title": "La Dalia Authentic Spanish Smoked Paprika, DOP Certified, 2.46 oz Tin",
+          "brand": "La Dalia",
+          "manufacturer": "La Dalia",
+          "part_number": "210038VE",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Paprika"
+          ],
+          "sales_rank": 10359,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 3400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B00J0BXXS6",
+          "serp_rank": 2,
+          "keepa_title": "Chiquilín Smoked Paprika, Spanish Pimentón Ahumado Tins, 2.64 oz, Pack of 2",
+          "brand": "CHIQUILÍN",
+          "manufacturer": "Luis Penalva, S.L.",
+          "part_number": "ds-m2-wm-494042-299-1",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Paprika"
+          ],
+          "sales_rank": 19125,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 5000,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0F4RVDGRN",
+          "serp_rank": 4,
+          "keepa_title": "FASORI Spanish Smoked Paprika Powder, Oak Wood Smoked, 16 oz (453 g)",
+          "brand": "FASORI",
+          "manufacturer": "OKK EXPRESS INC",
+          "part_number": null,
+          "keepa_type": "SEASONING",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Paprika"
+          ],
+          "sales_rank": 6464,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 674,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B000NO943C",
+          "title": "Chiquilín Smoked Paprika, Spanish Pimentón Ahumado, Oak-Smoked, 2.64 oz Tin",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B079QNPH5F",
+          "title": "Gustus Vitae | Smoked Spanish Paprika | Gourmet Ground Paprika Pepper",
+          "rejected_because": "required token missing from title: 'smoked paprika'"
+        }
+      ]
+    },
+    "paprika": {
+      "status": "VERIFIED",
+      "query": "paprika ground",
+      "products": [
+        {
+          "asin": "B07DJZYR94",
+          "serp_rank": 3,
+          "keepa_title": "Spice Classics Paprika, 16 oz - One 16 Ounce Container of Red Paprika Seasoning, Perfect as a Garnish or Use on Pork, Chicken, Soup, Pastas, Fish and More",
+          "brand": "Spice Classics",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": null,
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Paprika"
+          ],
+          "sales_rank": 7794,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 3100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B008OGCQYK",
+          "serp_rank": 4,
+          "keepa_title": "McCormick Culinary Paprika, 18 oz - One 18 Ounce Container of Sweet Paprika Seasoning, Perfect with Chicken, Pork, Beef Marinades and Dressings",
+          "brand": "McCormick Culinary",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "1",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Paprika"
+          ],
+          "sales_rank": 15201,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 4100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B07W1W8TZV",
+          "title": "Amazon Grocery, Paprika, 2.75 Oz",
+          "rejected_because": "no current sales rank; demand cannot be checked"
+        },
+        {
+          "asin": "B0CBNRCLX6",
+          "title": "Premium SWEET Hungarian Paprika Powder (4 oz) - Non-GMO - Vibrant Deep Red Color - Protected Designation of Origin (PDO): Szeged Region, Hungary - Authentic Seasoning Spice in Resealable Bag by MEROPS",
+          "rejected_because": "review count 311 below floor 500"
+        }
+      ]
+    },
+    "brown-sugar": {
+      "status": "VERIFIED",
+      "query": "dark brown sugar",
+      "products": [
+        {
+          "asin": "B0D1LCG5VS",
+          "serp_rank": 1,
+          "keepa_title": "Amazon Grocery, Dark Brown Sugar, 2lb",
+          "brand": "Amazon Grocery",
+          "manufacturer": "Amazon.com Services LLC",
+          "part_number": null,
+          "keepa_type": "SUGAR",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Sugars",
+            "Brown Sugar",
+            "Brown Granulated Sugar"
+          ],
+          "sales_rank": 255,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 2500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B01GHECGE0",
+          "serp_rank": 3,
+          "keepa_title": "Domino Dark Brown Sugar, 1 lb",
+          "brand": "Domino",
+          "manufacturer": "DOMINO FOODS INC",
+          "part_number": "0049200056004",
+          "keepa_type": "SUGAR",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Sugars",
+            "Brown Sugar",
+            "Brown Granulated Sugar"
+          ],
+          "sales_rank": 10267,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 4100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B01I9D32GS",
+          "serp_rank": 4,
+          "keepa_title": "Wholesome Sweeteners 24-Ounce Organic Dark Brown Sugar, Fair Trade, Non GMO, Gluten Free & Vegan, Sugar for Baking and Glazing, 1 Pack (Package May Vary)",
+          "brand": "Wholesome",
+          "manufacturer": "Whole Earth Brands",
+          "part_number": "10111-262-G-1",
+          "keepa_type": "SUGAR",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Sugars",
+            "Brown Sugar",
+            "Brown Granulated Sugar"
+          ],
+          "sales_rank": 8304,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 976,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0GDSMPHZR",
+          "title": "Amazon Grocery, Dark Brown Sugar, 2lb (Pack of 5)",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B0CN3T7NTC",
+          "title": "Unpretentious, Dark Brown Sugar, 1.8 Lb",
+          "rejected_because": "review count 419 below floor 500"
+        },
+        {
+          "asin": "B0CMVL4NHV",
+          "title": "Unpretentious, Dark Brown Sugar, 12 Lb",
+          "rejected_because": "sales rank 62608 is worse than 60000"
+        }
+      ]
+    },
+    "apple-cider-vinegar": {
+      "status": "VERIFIED",
+      "query": "apple cider vinegar with the mother",
+      "products": [
+        {
+          "asin": "B001I7MVG0",
+          "serp_rank": 1,
+          "keepa_title": "Bragg Organic Raw Apple Cider Vinegar, 32 Ounce - 1 Pack",
+          "brand": "Bragg",
+          "manufacturer": "Bragg Live Food Products",
+          "part_number": "TF-AZ-CO066",
+          "keepa_type": "VINEGAR",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Cooking Oils, Vinegars & Sprays",
+            "Vinegars",
+            "Apple Cider"
+          ],
+          "sales_rank": 335,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 63900,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B000R71WMQ",
+          "title": "Bragg Organic Apple Cider Vinegar, Raw, Unfiltered, With The Mother, 128 oz",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B07ZWBKVPT",
+          "title": "Mother Earth, Organic Apple Cider Vinegar with The Mother, Half Gallon, Fresh Pressed Organic Apples, OACV, ACV, Raw, Unpasteurized, Unfiltered (1/64oz Bottle)",
+          "rejected_because": "review count 1300 below floor 2000"
+        },
+        {
+          "asin": "B07BTS92KY",
+          "title": "Nutrivein Apple Cider Vinegar Supplement with Mother 1600 mg - 120 Capsules",
+          "rejected_because": "forbidden token in title: 'capsule'"
+        },
+        {
+          "asin": "B091M74V9H",
+          "title": "Apple Cider Vinegar Gummies - 1500mg/Serving - ACV Supplement with Mother",
+          "rejected_because": "forbidden token in title: 'supplement'"
+        },
+        {
+          "asin": "B0CPTJZQCD",
+          "title": "HealthFare Apple Cider Vinegar Capsules with the Mother | Raw, Organic & Unfiltered ACV | 150 Vegan Pills | Maximum Strength Supplement for Detox & Digestion | Non-GMO, Gluten-Free, Made in USA",
+          "rejected_because": "forbidden token in title: 'capsule'"
+        }
+      ]
+    },
+    "molasses": {
+      "status": "VERIFIED",
+      "query": "unsulphured molasses",
+      "products": [
+        {
+          "asin": "B00NGZETGC",
+          "serp_rank": 2,
+          "keepa_title": "Grandma's Original Unsulphured Molasses, 1 Gallon",
+          "brand": "Grandma's",
+          "manufacturer": "B&G Foods",
+          "part_number": "DOT280511",
+          "keepa_type": "SAUCE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Molasses"
+          ],
+          "sales_rank": 11706,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 2100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B008MQ2KZC",
+          "serp_rank": 4,
+          "keepa_title": "Plantation Blackstrap Molasses 15 oz – Unsulphured Blackstrap Molasses, Rich Natural Sweetener for Baking, BBQ, Baked Beans, Gingerbread & Beverages",
+          "brand": "Plantation",
+          "manufacturer": "Plantation",
+          "part_number": "1550003",
+          "keepa_type": "FOOD",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Molasses"
+          ],
+          "sales_rank": 19987,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 915,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0GDGX97B2",
+          "title": "Grandma's Robust Unsulphured Molasses, 12 Ounce",
+          "rejected_because": "review count 63 below floor 500"
+        },
+        {
+          "asin": "B000QV19BM",
+          "title": "Plantation Organic Blackstrap Molasses 15 oz – USDA Organic Unsulphured Blackstrap Molasses, Natural Sweetener for Baking, Cooking & Beverages",
+          "rejected_because": "rating 4.3 below floor 4.4"
+        },
+        {
+          "asin": "B0DXK8HM4K",
+          "title": "Better Than Honey Organic Blackstrap Molasses 20 Fl oz (32oz weight) – Unsulphured Natural Molasses with Rich Flavor for Baking, Coffee, Smoothies, Pancakes & Everyday Kitchen Use No Mess Pouring Cap",
+          "rejected_because": "review count 274 below floor 500"
+        },
+        {
+          "asin": "B0CQ5JTG72",
+          "title": "Soil Sunrise Dry Horticultural Molasses Powder (4 Pounds) Indoor/Outdoor Gardening Soil Amendment for Plants",
+          "rejected_because": "review count 161 below floor 500"
+        }
+      ]
+    },
+    "honey": {
+      "status": "VERIFIED",
+      "query": "raw honey",
+      "products": [
+        {
+          "asin": "B00CMQD3VS",
+          "serp_rank": 1,
+          "keepa_title": "Nate's 100% Pure, Raw & Unfiltered Honey - 32oz. Squeeze Bottle",
+          "brand": "Nate's Honey",
+          "manufacturer": "Nature Nate's",
+          "part_number": "FP033",
+          "keepa_type": "HONEY",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Honey"
+          ],
+          "sales_rank": 290,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 62700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B08Y6B2TWZ",
+          "serp_rank": 2,
+          "keepa_title": "Fischer’s 100% Pure, Raw & Unfiltered Honey - All-Natural Sweetener - Rich Flavor Profile, Packed with Nutrients, 40 oz",
+          "brand": "Fischer's",
+          "manufacturer": "Fischer's Honey Farm",
+          "part_number": null,
+          "keepa_type": "HONEY",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Honey"
+          ],
+          "sales_rank": 881,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 4100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B01IR6IZZA",
+          "title": "Nate's Organic Honey - 32oz. Squeeze Bottle",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B0FBZ9H7FV",
+          "title": "Fischer’s 100% Pure, Raw & Unfiltered Honey – All-Natural Sweetener – Rich Flavor Profile, Packed with Nutrients, 40 oz (Pack of 2)",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        }
+      ]
+    },
+    "maple-syrup": {
+      "status": "VERIFIED",
+      "query": "pure maple syrup grade a",
+      "products": [
+        {
+          "asin": "B00061ES1U",
+          "serp_rank": 1,
+          "keepa_title": "Maple Grove Farms Organic Pure Maple Syrup, Grade A Amber, 8.5 Ounce",
+          "brand": "Maple Grove Farms",
+          "manufacturer": "B&G Foods",
+          "part_number": "02444594",
+          "keepa_type": "SYRUP",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Maple Syrup"
+          ],
+          "sales_rank": 1432,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 4400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B002483SRI",
+          "serp_rank": 2,
+          "keepa_title": "Butternut Mountain Farm Pure Vermont Maple Syrup, Grade A, Amber Color, Rich Taste, All Natural, Easy Pour Jug, 32 Fl Oz, 1 Qt",
+          "brand": "Butternut Mountain Farm",
+          "manufacturer": "Butternut Mountain Farm",
+          "part_number": "1",
+          "keepa_type": "SYRUP",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Maple Syrup"
+          ],
+          "sales_rank": 1166,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 12500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B005P0LW66",
+          "serp_rank": 3,
+          "keepa_title": "NOW Foods, Certified Organic Maple Syrup, Grade A Dark Color, Certified Non-GMO, Pure, Robust Taste, 16-Ounce",
+          "brand": "NOW",
+          "manufacturer": "NOW",
+          "part_number": "6948",
+          "keepa_type": "SYRUP",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Baking Syrups, Sugars & Sweeteners",
+            "Maple Syrup"
+          ],
+          "sales_rank": 4729,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 3500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B004SI6FIQ",
+          "title": "Shady Maple Farms Organic Grade A Maple Syrup, 12.7 Fl Oz",
+          "rejected_because": "review count 477 below floor 1000"
+        }
+      ]
+    },
+    "soy-sauce": {
+      "status": "VERIFIED",
+      "query": "soy sauce naturally brewed",
+      "products": [
+        {
+          "asin": "B003U2AAQY",
+          "serp_rank": 1,
+          "keepa_title": "Lee Kum Kee Premium Dark Soy Sauce (16.9 oz - 1 Pack), Full-Bodied Naturally Brewed Soy Sauce, Non GMO Soybeans, Vegan, No MSG, Best for Adding Natural Colors to Stews, Gravies, Braised Dishes & Stir-Fried Noodles",
+          "brand": "Lee Kum Kee",
+          "manufacturer": "Lee Kum Kee",
+          "part_number": "5682",
+          "keepa_type": "SAUCE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Sauces, Gravies & Marinades",
+            "Sauces",
+            "Asian",
+            "Soy Sauce"
+          ],
+          "sales_rank": 3153,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 3700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B005GQYXTC",
+          "serp_rank": 2,
+          "keepa_title": "TAKESAN KISHIBORI SOY SAUCE (Original, 12.2 Fl oz.)",
+          "brand": "KISHIBORISHOYU",
+          "manufacturer": "Takesan Co., Ltd.",
+          "part_number": "20096",
+          "keepa_type": "SAUCE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Sauces, Gravies & Marinades",
+            "Sauces",
+            "Asian",
+            "Soy Sauce"
+          ],
+          "sales_rank": 10218,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 3500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B00558RHB2",
+          "serp_rank": 5,
+          "keepa_title": "Kikkoman - Traditionally Brewed Soy Sauce, All Purpose Seasoning - 1 Gallon (Pack of 1)",
+          "brand": "Kikkoman",
+          "manufacturer": "Kikkoman",
+          "part_number": "DOT563532",
+          "keepa_type": "SAUCE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Sauces, Gravies & Marinades",
+            "Sauces",
+            "Asian",
+            "Soy Sauce"
+          ],
+          "sales_rank": 12815,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 2000,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0DH19LD1D",
+          "title": "Roland Foods Premium Soy Sauce, Naturally Brewed, Specialty Imported Food, 62.5 Ounce Bottle, Pack of 1",
+          "rejected_because": "review count 150 below floor 1000"
+        },
+        {
+          "asin": "B00F0PTWTK",
+          "title": "Sempio Naturally Brewed Soy Sauce: 701, 29.08 fl oz / 830 mL",
+          "rejected_because": "review count 196 below floor 1000"
+        }
+      ]
+    },
+    "worcestershire": {
+      "status": "VERIFIED",
+      "query": "worcestershire sauce",
+      "products": [
+        {
+          "asin": "B000WGB26S",
+          "serp_rank": 1,
+          "keepa_title": "French's Worcestershire Sauce, 10 fl oz",
+          "brand": "French's",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "41500013107",
+          "keepa_type": "SAUCE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Sauces, Gravies & Marinades",
+            "Sauces",
+            "Worcestershire Sauce"
+          ],
+          "sales_rank": 3127,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 2100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B001YJBLCW",
+          "title": "French's Worcestershire Sauce, 1 gal - One Gallon Container of Gluten-Free Worcestershire Sauce, Perfect as Meat Tenderizer, Marinades, Sauces and More",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B074H7LFNJ",
+          "title": "365 by Whole Foods Market, Organic Worcestershire Sauce, 5 oz",
+          "rejected_because": "no current sales rank; demand cannot be checked"
+        },
+        {
+          "asin": "B09LMTHKN4",
+          "title": "Al Amin Foods Lea & Perrins Worcestershire Sauce All Natural Kosher - Pack of 2 Bottles - 20oz Each ! - Pack of 2",
+          "rejected_because": "review count 92 below floor 500"
+        },
+        {
+          "asin": "B015O5BUJ0",
+          "title": "Lea & Perrins Worcestershire Sauce, 150 ml",
+          "rejected_because": "rating 4.3 below floor 4.5"
+        }
+      ]
+    },
+    "dijon-mustard": {
+      "status": "VERIFIED",
+      "query": "dijon mustard",
+      "products": [
+        {
+          "asin": "B000RK4BFI",
+          "serp_rank": 1,
+          "keepa_title": "Grey Poupon Mustard, Dijon, 10 oz. Squeeze Bottle",
+          "brand": "Grey Poupon",
+          "manufacturer": "Kraft Heinz",
+          "part_number": "Ad-bm6-8971",
+          "keepa_type": "CONDIMENT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Condiments & Salad Dressings",
+            "Mustard",
+            "Dijon Mustard"
+          ],
+          "sales_rank": 2700,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 11500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B074J6RQZB",
+          "serp_rank": 3,
+          "keepa_title": "365 by Whole Foods Market, Organic Dijon Mustard, 8 Ounce",
+          "brand": "365 by Whole Foods Market",
+          "manufacturer": "365 by Whole Foods Market",
+          "part_number": "0099482407094",
+          "keepa_type": "CONDIMENT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Condiments & Salad Dressings",
+            "Mustard",
+            "Dijon Mustard"
+          ],
+          "sales_rank": 524,
+          "is_redirect_asin": false,
+          "rating": 4.5,
+          "reviews": 6300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B07N74C4SZ",
+          "title": "Amazon Grocery, Dijon Mustard, 12 Oz (Previously Happy Belly, Packaging May Vary)",
+          "rejected_because": "no current sales rank; demand cannot be checked"
+        },
+        {
+          "asin": "B00XYHCPB8",
+          "title": "Grey Poupon Dijon Mustard (215g) - Pack of 2",
+          "rejected_because": "review count 64 below floor 500"
+        },
+        {
+          "asin": "B007NJS008",
+          "title": "Maille Originale Dijon Mustard, Made in France, Fancy Dijon, 13.4 oz 1PK",
+          "rejected_because": "rating 4.4 below floor 4.5"
+        }
+      ]
+    },
+    "yellow-mustard": {
+      "status": "VERIFIED",
+      "query": "yellow mustard classic",
+      "products": [
+        {
+          "asin": "B00SOXJI26",
+          "serp_rank": 3,
+          "keepa_title": "Heinz Yellow Mustard, 20 oz Bottle",
+          "brand": "HEINZ",
+          "manufacturer": "Sun Maid",
+          "part_number": "10013000002186",
+          "keepa_type": "CONDIMENT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Condiments & Salad Dressings",
+            "Mustard",
+            "Brown Mustard"
+          ],
+          "sales_rank": 2730,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 11800,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07DK1S7LP",
+          "serp_rank": 5,
+          "keepa_title": "French's Classic Yellow Mustard, 105 oz - One 105 Ounce Bulk Container of Tangy and Creamy Yellow Mustard Perfect for Professional Use or for Refillable Containers at Home",
+          "brand": "French's",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "81938",
+          "keepa_type": "CONDIMENT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Condiments & Salad Dressings",
+            "Mustard",
+            "Yellow Mustard"
+          ],
+          "sales_rank": 4912,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 4100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B00CHTUJQC",
+          "title": "French's Classic Yellow Mustard, 30 oz",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B000Z4J53Y",
+          "title": "French’s Yellow Mustard, Classic, Stone-Ground #1 Grade Mustard Seeds, Product of the USA, Gluten Free, No Artificial Flavors, For Burgers, Brats, and Hot Dogs, 14 oz",
+          "rejected_because": "forbidden token in title: 'seed'"
+        },
+        {
+          "asin": "B0F2GQTR6K",
+          "title": "Classic Yellow Mustard Portion Packet Single Serve 7 gr. 50 Count",
+          "rejected_because": "review count 83 below floor 500"
+        }
+      ]
+    },
+    "mustard-powder": {
+      "status": "VERIFIED",
+      "query": "ground mustard powder",
+      "products": [
+        {
+          "asin": "B07VYPWBQ3",
+          "serp_rank": 2,
+          "keepa_title": "Amazon Grocery, Ground Mustard, 2.75 Oz",
+          "brand": "Amazon Grocery",
+          "manufacturer": "Amazon.com Services LLC",
+          "part_number": null,
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Mustard"
+          ],
+          "sales_rank": 1620,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 5300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B08H6849V3",
+          "title": "Amazon Grocery, Ground Mustard, 16 Oz",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B00C0RB6JA",
+          "title": "Plochman's Premium Mustard, Natural/Stone Ground, 20.5 Ounce",
+          "rejected_because": "review count 109 below floor 300"
+        },
+        {
+          "asin": "B0C7SK1LSQ",
+          "title": "McCormick Everyday Essentials Variety Pack, 9.09 oz",
+          "rejected_because": "required token missing from title: 'mustard'"
+        },
+        {
+          "asin": "B0D8GH8BCY",
+          "title": "Eastanbul Mustard Seed, Yellow Mustard Seeds for Pickling, Whole, 8.11oz",
+          "rejected_because": "none of the required alternatives present: ['powder', 'ground']"
+        },
+        {
+          "asin": "B09BW5LJKV",
+          "title": "The Authentic Stadium Mustard. From Cleveland's Famed Municipal Stadium. A Tailgate Party Must Have! This Spicy Brown Mustard is the Classic Condiment for Hot Dogs and Hamburgers. Gluten Free, Sugar Free, Kosher, Fat Free 12oz (Pack Of 2)",
+          "rejected_because": "none of the required alternatives present: ['powder', 'ground']"
+        }
+      ]
+    },
+    "ketchup": {
+      "status": "VERIFIED",
+      "query": "tomato ketchup",
+      "products": [
+        {
+          "asin": "B000WHXN3C",
+          "serp_rank": 1,
+          "keepa_title": "Heinz Tomato Ketchup, 32 oz Bottle",
+          "brand": "HEINZ",
+          "manufacturer": "Kraft-Heinz",
+          "part_number": "10013000006054",
+          "keepa_type": "CONDIMENT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Condiments & Salad Dressings",
+            "Ketchup"
+          ],
+          "sales_rank": 487,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 31300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B00EWN76RG",
+          "title": "Heinz Tomato Ketchup, 2 ct Pack, 50.5 oz Bottles",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B01B2OVUAG",
+          "title": "Heinz Organic Tomato Ketchup, 32 oz Bottle",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        }
+      ]
+    },
+    "hot-sauce": {
+      "status": "VERIFIED",
+      "query": "louisiana style hot sauce",
+      "products": [
+        {
+          "asin": "B074CGVWST",
+          "serp_rank": 4,
+          "keepa_title": "Crystal Original Louisiana-Style Hot Sauce, 12 oz - Pack of 2",
+          "brand": "Crystal",
+          "manufacturer": "BAUMER FOODS",
+          "part_number": null,
+          "keepa_type": "SAUCE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Sauces, Gravies & Marinades",
+            "Hot Sauce"
+          ],
+          "sales_rank": 9797,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 2300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0BXYB9B37",
+          "title": "Louisiana Brand Hot Sauce, Original Hot Sauce 12 Ounce (Pack of 2)",
+          "rejected_because": "review count 336 below floor 500"
+        },
+        {
+          "asin": "B0BXB6BMK1",
+          "title": "Louisiana Brand Hot Sauce, Original Hot Sauce (12 Ounce (Pack of 1))",
+          "rejected_because": "review count 175 below floor 500"
+        },
+        {
+          "asin": "B0BX2S6P7Y",
+          "title": "Heatonist Dustin Poirier's Louisiana Style Creole Maple Hot Sauce - Official Hot Sauce of UFC (1-Pack)",
+          "rejected_because": "sales rank 66767 is worse than 60000"
+        },
+        {
+          "asin": "B0BXYB9B37",
+          "title": "Louisiana Brand Hot Sauce, Original Hot Sauce 12 Ounce (Pack of 2)",
+          "rejected_because": "review count 336 below floor 500"
+        },
+        {
+          "asin": "B00LYXC2D0",
+          "title": "Crystal Extra Hot Louisiana-Style Hot Sauce, 6 oz",
+          "rejected_because": "review count 184 below floor 500"
+        }
+      ]
+    },
+    "mayonnaise": {
+      "status": "VERIFIED",
+      "query": "real mayonnaise",
+      "products": [
+        {
+          "asin": "B091DCC2CH",
+          "serp_rank": 2,
+          "keepa_title": "Hellmann's Real Mayonnaise 20 oz, Mayo Squeeze, Sandwich Spread, 3PK",
+          "brand": "HELLMANN'S",
+          "manufacturer": "Unilever",
+          "part_number": null,
+          "keepa_type": "CONDIMENT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Condiments & Salad Dressings",
+            "Mayonnaise"
+          ],
+          "sales_rank": 3108,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 3700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B000WLCEAG",
+          "serp_rank": 5,
+          "keepa_title": "Best Foods Real Mayonnaise 30oz, Mayo Jar, Sandwich Spread, Gluten Free 1PK",
+          "brand": "Best Foods",
+          "manufacturer": "Unilever",
+          "part_number": "48001213517",
+          "keepa_type": "CONDIMENT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Condiments & Salad Dressings",
+            "Mayonnaise"
+          ],
+          "sales_rank": 1068,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 8800,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B00QAIWI88",
+          "title": "Hellmann's Real Mayonnaise Jar, 1 Gallon (128 Fl Oz)",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B0D63Y3ZZ8",
+          "title": "Amazon Grocery, Real Mayonnaise, 30 Fl Oz",
+          "rejected_because": "review count 182 below floor 500"
+        }
+      ]
+    },
+    "prepared-horseradish": {
+      "status": "VERIFIED",
+      "query": "prepared horseradish",
+      "products": [
+        {
+          "asin": "B00MST7XEM",
+          "serp_rank": 5,
+          "keepa_title": "Silver Springs Horseradish Fresh Ground, 8 oz",
+          "brand": "Silver Spring",
+          "manufacturer": "Silver Springs",
+          "part_number": null,
+          "keepa_type": "CONDIMENT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Condiments & Salad Dressings",
+            "Horseradish"
+          ],
+          "sales_rank": 15113,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 2300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B01GCX7UQ0",
+          "title": "Bookbinder's Horseradish, 9.75 oz",
+          "rejected_because": "rating 4.2 below floor 4.4"
+        },
+        {
+          "asin": "B00D42AUZ6",
+          "title": "Reese Prepared Horseradish, 6.5 oz. (Pack of 2)",
+          "rejected_because": "sales rank 77802 is worse than 60000"
+        },
+        {
+          "asin": "B0048IMPUS",
+          "title": "Silver Spring, Horseradish Prepared, 5 Ounce",
+          "rejected_because": "sales rank 78586 is worse than 60000"
+        },
+        {
+          "asin": "B00MYIVJM4",
+          "title": "Morehouse Distinctive Prepared Horseradish, Since 1913, 2-Pack – 8 Ozs",
+          "rejected_because": "review count 295 below floor 300"
+        },
+        {
+          "asin": "B0005ZHDDM",
+          "title": "Inglehoffer Horseradish X Hot, 4 oz",
+          "rejected_because": "rating 4.2 below floor 4.4"
+        }
+      ]
+    },
+    "olive-oil": {
+      "status": "VERIFIED",
+      "query": "extra virgin olive oil",
+      "products": [
+        {
+          "asin": "B07L9GVGPM",
+          "serp_rank": 1,
+          "keepa_title": "Atlas Organic Extra Virgin Olive Oil, Moroccan, High Polyphenol, 1 L",
+          "brand": "A ATLAS OLIVE OILS",
+          "manufacturer": "A ATLAS OLIVE OIL",
+          "part_number": null,
+          "keepa_type": "EDIBLE_OIL_VEGETABLE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Cooking Oils, Vinegars & Sprays",
+            "Oils",
+            "Olive"
+          ],
+          "sales_rank": 135,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 27500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B07BCX2YNG",
+          "serp_rank": 2,
+          "keepa_title": "Pompeian Smooth Extra Virgin Olive Oil - 68 fl oz (2 L)",
+          "brand": "Pompeian",
+          "manufacturer": "Pompeian, Inc.",
+          "part_number": "110132",
+          "keepa_type": "EDIBLE_OIL_VEGETABLE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Cooking & Baking",
+            "Cooking Oils, Vinegars & Sprays",
+            "Oils",
+            "Olive"
+          ],
+          "sales_rank": 384,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 40800,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0H12WLJBV",
+          "title": "Pompeian Robust Organic Extra Virgin Olive Oil - 68 fl oz (2 L)",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B0B1S8QD4Z",
+          "title": "Pompeian Smooth Extra Virgin Olive Oil - 101 fl oz (3 L)",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B00GGBLPVU",
+          "title": "Colavita Extra Virgin Oil First Cold Pressed olive, 68 Fl Oz",
+          "rejected_because": "required token missing from title: 'olive oil'"
+        },
+        {
+          "asin": "B0BG68MBPW",
+          "title": "Brightland The Duo Premium Extra Virgin Olive Oil Set, 12.7 Fl Oz, Set of 2",
+          "rejected_because": "review count 294 below floor 2000"
+        }
+      ]
+    },
+    "crushed-red-pepper": {
+      "status": "VERIFIED",
+      "query": "crushed red pepper flakes",
+      "products": [
+        {
+          "asin": "B00IYNQ1EY",
+          "serp_rank": 1,
+          "keepa_title": "Spice Classics Crushed Red Pepper, 12 oz - One 12 Ounce Container of Dried and Crushed Red Chili Pepper Flakes Great for Pizza, Chowder, Seafood, and Pasta",
+          "brand": "Spice Classics",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "TS0417-A700ML-M118",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Sauces, Gravies & Marinades",
+            "Seasoning Mixes"
+          ],
+          "sales_rank": 3973,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 6200,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0000EYPJS",
+          "serp_rank": 4,
+          "keepa_title": "McCormick Crushed Red Pepper, 4.62 oz",
+          "brand": "McCormick",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "052100038353",
+          "keepa_type": "SEASONING",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Cayenne"
+          ],
+          "sales_rank": 8294,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 7400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B07W2VL1QJ",
+          "title": "Amazon Grocery, Crushed Red Pepper, 2 Oz",
+          "rejected_because": "no current sales rank; demand cannot be checked"
+        },
+        {
+          "asin": "B0GBYXJTVL",
+          "title": "Farmersville Spice Co. Crushed Red Pepper, 4 lb Handle Jug, Kosher",
+          "rejected_because": "review count 24 below floor 500"
+        },
+        {
+          "asin": "B0CWB37C5J",
+          "title": "Fresh Finest Bulk 4LB Crushed Red Pepper Spices Commercial and Home Cooking - Chili Pepper Flakes, Red Peppers Spice Best for Pizza, Flatbreads, Beef, and More - 4 LB",
+          "rejected_because": "review count 433 below floor 500"
+        }
+      ]
+    },
+    "ancho-chile-powder": {
+      "status": "VERIFIED",
+      "query": "ancho chile powder",
+      "products": [
+        {
+          "asin": "B08V933H2Z",
+          "serp_rank": 1,
+          "keepa_title": "Ancho Chile Powder 1LB - Bulk Ground Mild Dried Chili Pepper Mexican Spice",
+          "brand": "Amazing Chiles & Spices",
+          "manufacturer": null,
+          "part_number": null,
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Mixed Spices & Seasonings",
+            "Mexican Seasoning"
+          ],
+          "sales_rank": 16678,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 1400,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B006NIPC5Q",
+          "serp_rank": 2,
+          "keepa_title": "McCormick Gourmet Ancho Chile Pepper, 1.62 Oz",
+          "brand": "McCormick Gourmet",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "984006",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Chili Powder"
+          ],
+          "sales_rank": 5800,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 3300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B08PPD8B3W",
+          "title": "Ancho Chile Powder 4oz Ground Mild Dried Chili Pepper Mexican Spice",
+          "rejected_because": "brand already represented in this category; picks should be alternatives"
+        },
+        {
+          "asin": "B0BLY1B9V3",
+          "title": "Ancho Chile Powder 8oz Ground Mild Dried Chili Pepper Mexican Spice",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B0FK81C2Q6",
+          "title": "Chile Powder Variety Pack 3x4oz Ancho Guajillo Chipotle Ground Mexican",
+          "rejected_because": "review count 185 below floor 200"
+        }
+      ]
+    },
+    "chipotle-powder": {
+      "status": "VERIFIED",
+      "query": "chipotle chile powder",
+      "products": [
+        {
+          "asin": "B00DBETL5M",
+          "serp_rank": 3,
+          "keepa_title": "Frontier Co-op Ground Chipotle Pepper, Chipotle Powder Seasoning | 2.15 Ounce (Pack of 1)",
+          "brand": "Frontier Co-op",
+          "manufacturer": "Frontier",
+          "part_number": "124327-43883",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Chipotle"
+          ],
+          "sales_rank": 11678,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 3900,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B08ZCFXJTS",
+          "serp_rank": 4,
+          "keepa_title": "Chipotle Chili Powder 1LB Bulk Ground Smoky Pepper Seasoning BBQ Rubs",
+          "brand": "Amazing Chiles & Spices",
+          "manufacturer": null,
+          "part_number": null,
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Chili Powder"
+          ],
+          "sales_rank": 23305,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 533,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B00ZK8YHAQ",
+          "serp_rank": 5,
+          "keepa_title": "Simply Organic, Chipotle Powder Organic, 2.65 Ounce",
+          "brand": "Simply Organic",
+          "manufacturer": "Frontier Co-op",
+          "part_number": "19516",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Chili Powder"
+          ],
+          "sales_rank": 1924,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 1200,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B000V89GO2",
+          "title": "McCormick Gourmet Chipotle Chile Pepper, 2 oz",
+          "rejected_because": "none of the required alternatives present: ['powder']"
+        },
+        {
+          "asin": "B07YZXJCJK",
+          "title": "Amazon Grocery, Chipotle Chili Pepper, Ground, 2.75 Oz",
+          "rejected_because": "none of the required alternatives present: ['powder']"
+        },
+        {
+          "asin": "B08WT76PPL",
+          "title": "Chipotle Chili Powder Seasoning 4oz – Natural and Premium. Great For Meats, Grilling Rubs, Sauces, Salsa. Medium to High Heat - Sweet & Smoky Flavor. By Amazing Chiles & Spices.",
+          "rejected_because": "forbidden token in title: 'sauce'"
+        }
+      ]
+    },
+    "ground-cumin": {
+      "status": "VERIFIED",
+      "query": "ground cumin",
+      "products": [
+        {
+          "asin": "B07VXL2JRG",
+          "serp_rank": 1,
+          "keepa_title": "Amazon Grocery, Ground Cumin, 2.6 Oz",
+          "brand": "Amazon Grocery",
+          "manufacturer": "Amazon.com Services LLC",
+          "part_number": null,
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings"
+          ],
+          "sales_rank": 466,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 9200,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B001PQOAOA",
+          "serp_rank": 2,
+          "keepa_title": "McCormick Ground Cumin, 14 oz",
+          "brand": "McCormick",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "11644012229",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Cumin"
+          ],
+          "sales_rank": 5015,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 8300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B074H5LWBG",
+          "serp_rank": 5,
+          "keepa_title": "365 by Whole Foods Market, Organic Ground Cumin, 1.59 Ounce",
+          "brand": "365 by Whole Foods Market",
+          "manufacturer": "365 by Whole Foods Market",
+          "part_number": "0099482445478",
+          "keepa_type": "GROCERY",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Cumin"
+          ],
+          "sales_rank": 1928,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 2100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B08H67J5MW",
+          "title": "Amazon Grocery, Ground Cumin, 16 Oz (Previously Happy Belly, Packaging May Vary)",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        }
+      ]
+    },
+    "ground-coriander": {
+      "status": "VERIFIED",
+      "query": "ground coriander",
+      "products": [
+        {
+          "asin": "B0054M19CC",
+          "serp_rank": 3,
+          "keepa_title": "Badia Ground Coriander, 14 oz – Culantro Spice for Cooking & Seasoning",
+          "brand": "Badia",
+          "manufacturer": "Badia Spices, Inc.",
+          "part_number": "DOT699058",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Coriander"
+          ],
+          "sales_rank": 15804,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 1000,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B074H8NQ2X",
+          "serp_rank": 4,
+          "keepa_title": "365 by Whole Foods Market, Organic Coriander Ground, 1.52 oz",
+          "brand": "365 by Whole Foods Market",
+          "manufacturer": "Cherry",
+          "part_number": "RU11-3284",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Coriander"
+          ],
+          "sales_rank": 1926,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 909,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B07VXM5T7Y",
+          "title": "Amazon Grocery, Ground Coriander, 2.75 Oz",
+          "rejected_because": "no current sales rank; demand cannot be checked"
+        },
+        {
+          "asin": "B0CZRX9ZPQ",
+          "title": "Eastanbul Coriander Ground, Semilla de Cilantro, Natural, Vegan, 5.29oz",
+          "rejected_because": "forbidden token in title: 'cilantro'"
+        },
+        {
+          "asin": "B0FLKMZXMJ",
+          "title": "Coriander Powder 5 LB Bulk Jar - All Natural, Pure, Bulk Corriander Seeds Ground, No Preservatives & Freshly Packed by Spicy World",
+          "rejected_because": "sales rank 69997 is worse than 60000"
+        }
+      ]
+    },
+    "ground-cinnamon": {
+      "status": "VERIFIED",
+      "query": "ground cinnamon",
+      "products": [
+        {
+          "asin": "B07W1WVMDM",
+          "serp_rank": 5,
+          "keepa_title": "Amazon Grocery, Ground Cinnamon, 2.5 Oz",
+          "brand": "Amazon Grocery",
+          "manufacturer": "Amazon.com Services LLC",
+          "part_number": null,
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Cinnamon"
+          ],
+          "sales_rank": 235,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 14200,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B074ZP9VWB",
+          "serp_rank": 7,
+          "keepa_title": "McCormick Ground Cinnamon, Non-GMO, Aged Up to 15 Years, Brings Rich Cinnamon Flavor to Savory & Sweet Recipes, 7.12 oz",
+          "brand": "McCormick",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "052100038216",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Cinnamon"
+          ],
+          "sales_rank": 4201,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 11000,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0CWB1ZKJ9",
+          "serp_rank": 8,
+          "keepa_title": "Fresh Finest Bulk 5LB Ground Cinnamon Powder - Kosher Certified Cinnamon Powder, Perfect for Desserts, Hot Tea, Cider, Meat Rubs, and More - 5 LB",
+          "brand": "Fresh Finest",
+          "manufacturer": "Fresh Finest",
+          "part_number": "F-FF-0488",
+          "keepa_type": "SEASONING",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Cinnamon"
+          ],
+          "sales_rank": 15322,
+          "is_redirect_asin": false,
+          "rating": 4.5,
+          "reviews": 521,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B07QY2VTNM",
+          "title": "Amazon Grocery, Ground Cinnamon, 15 Oz",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        }
+      ]
+    },
+    "dried-oregano": {
+      "status": "VERIFIED",
+      "query": "dried oregano leaves",
+      "products": [
+        {
+          "asin": "B086XCXTDT",
+          "serp_rank": 1,
+          "keepa_title": "Amazon Grocery, Oregano Leaves, 0.65 Oz",
+          "brand": "Amazon Grocery",
+          "manufacturer": "Amazon.com Services LLC",
+          "part_number": null,
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Oregano"
+          ],
+          "sales_rank": 601,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 5100,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B06Y66RL5P",
+          "serp_rank": 2,
+          "keepa_title": "Badia Whole Oregano Leaves, 5.5 oz (Pack of 1) Aromatic Oregano for Cooking",
+          "brand": "Badia",
+          "manufacturer": "Badia Spices, Inc.",
+          "part_number": "DOT701162",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Oregano"
+          ],
+          "sales_rank": 5540,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 3800,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0199AWP4U",
+          "serp_rank": 3,
+          "keepa_title": "McCormick Oregano Leaves, 5 oz",
+          "brand": "McCormick Culinary",
+          "manufacturer": "McCormick & Company, Inc.",
+          "part_number": "1",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Oregano"
+          ],
+          "sales_rank": 8720,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 6300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B0DSLRJXFT",
+          "title": "Fresh Finest Oregano Spice 49.38 oz – Premium Dried Oregano Leaves Bulk, All-Natural, Non-GMO, Gluten-Free, Kosher – Perfect for Cooking, Seasoning & Garnishing",
+          "rejected_because": "review count 68 below floor 300"
+        }
+      ]
+    },
+    "dried-thyme": {
+      "status": "VERIFIED",
+      "query": "dried thyme leaves",
+      "products": [
+        {
+          "asin": "B07GNVR7Z5",
+          "serp_rank": 1,
+          "keepa_title": "Badia Whole Thyme Leaves, 8 oz – Dried Herb for Cooking",
+          "brand": "Badia",
+          "manufacturer": "Badia Spices, Inc.",
+          "part_number": "DOT698988",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Thyme"
+          ],
+          "sales_rank": 11600,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 1900,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B074VBLHMH",
+          "serp_rank": 3,
+          "keepa_title": "365 by Whole Foods Market, Thyme , .49 oz",
+          "brand": "365 by Whole Foods Market",
+          "manufacturer": "365 by Whole Foods Market",
+          "part_number": "0099482445027",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Thyme"
+          ],
+          "sales_rank": 2157,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 1500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B07W1X3PGS",
+          "title": "Amazon Grocery, Ground Thyme, 2 Oz",
+          "rejected_because": "no current sales rank; demand cannot be checked"
+        }
+      ]
+    },
+    "dried-rosemary": {
+      "status": "VERIFIED",
+      "query": "dried rosemary leaves",
+      "products": [
+        {
+          "asin": "B07WGR6NNP",
+          "serp_rank": 4,
+          "keepa_title": "Anthony's Organic Dried Rosemary Leaves, 1 lb, Whole Leaf, Destemmed, Non GMO, Non Irradiated, Gluten Free",
+          "brand": "Anthony's",
+          "manufacturer": "Anthony's",
+          "part_number": "U3-4QK5-MC74",
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Rosemary"
+          ],
+          "sales_rank": 11357,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 2600,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0F95MWPP6",
+          "serp_rank": 5,
+          "keepa_title": "Soeos Dried Rosemary Leaves, 4.2 oz (120g), Whole Rosemary for Cooking, Seasoning, Baking, Roasting, Marinades and Tea, Premium Quality, All Natural, Aromatic Dried Herb",
+          "brand": "Soeos",
+          "manufacturer": "Soeos",
+          "part_number": null,
+          "keepa_type": "HERB",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Single Herbs & Spices",
+            "Rosemary"
+          ],
+          "sales_rank": 15599,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 522,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B07VXL2JS3",
+          "title": "Amazon Grocery, Rosemary Leaves, 1.25 Oz",
+          "rejected_because": "no current sales rank; demand cannot be checked"
+        },
+        {
+          "asin": "B0CQKLRY3J",
+          "title": "Dried Rosemary Leaves 3oz Whole Leaf Herb Seasoning for Cooking, Tea, Oils",
+          "rejected_because": "forbidden token in title: 'oil'"
+        },
+        {
+          "asin": "B0FFZWHN39",
+          "title": "Dried Rosemary Leaves 12oz Whole Leaf Herb Seasoning for Cooking, Tea, Oils",
+          "rejected_because": "forbidden token in title: 'oil'"
+        }
+      ]
+    },
+    "harissa": {
+      "status": "VERIFIED",
+      "query": "harissa paste",
+      "products": [
+        {
+          "asin": "B0D8QPGZFP",
+          "serp_rank": 5,
+          "keepa_title": "PUR Spices Medium Harissa Paste I Hot Sauce for Cooking and Dipping I Spicy Chili Pepper and Garlic Paste | Middle Eastern Inspired | Plant Based, Gluten Free, No Sugar Added, Preservative and Additive Free I 6oz Jar",
+          "brand": "PUR Spices",
+          "manufacturer": "PUR Spices LTD",
+          "part_number": null,
+          "keepa_type": "SAUCE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Sauces, Gravies & Marinades",
+            "Hot Sauce"
+          ],
+          "sales_rank": 12149,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 260,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0050IKSBI",
+          "serp_rank": 6,
+          "keepa_title": "Harissa Condiment In Tube - Spicy 120 Gr",
+          "brand": "Etto",
+          "manufacturer": "Dea",
+          "part_number": "B002L0IRQG",
+          "keepa_type": "SAUCE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Sauces, Gravies & Marinades",
+            "Hot Sauce"
+          ],
+          "sales_rank": 18110,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 1600,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B091JQ87QT",
+          "title": "Zwita Spicy Harissa Paste — Award-Winning Authentic Tunisian Thick Sun-Dried Chili Paste With Fresh Garlic & Extra Virgin Olive Oil — Warm, Lingering Heat — 100% Grandma Approved — North African Condiment — Hot Chili Sauce — For Soups, Stews, Sauces and Marinades — Vegan, Gluten Free, Non-GMO, No Fillers — 6 oz",
+          "rejected_because": "review count 192 below floor 200"
+        },
+        {
+          "asin": "B0D8QKJGZQ",
+          "title": "PUR Spices Original Spicy Harissa Paste I Hot Sauce for Cooking and Dipping I Spicy Chili Pepper and Garlic Paste | Middle Eastern Inspired | Plant Based, Gluten Free, No Sugar Added, Preservative and Additive Free I 6oz Jar",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        },
+        {
+          "asin": "B091JQ87QT",
+          "title": "Zwita Spicy Harissa Paste — Award-Winning Authentic Tunisian Thick Sun-Dried Chili Paste With Fresh Garlic & Extra Virgin Olive Oil — Warm, Lingering Heat — 100% Grandma Approved — North African Condiment — Hot Chili Sauce — For Soups, Stews, Sauces and Marinades — Vegan, Gluten Free, Non-GMO, No Fillers — 6 oz",
+          "rejected_because": "review count 192 below floor 200"
+        },
+        {
+          "asin": "B091G75DMQ",
+          "title": "Zwita Mild Harissa Paste — Award-Winning Authentic Tunisian Thick Sun-Dried Chili Paste With Fresh Garlic & Extra Virgin Olive Oil — Mild, Not Spicy At All, No Heat — 100% Grandma Approved — North African Condiment — Chili Sauce — For Soups, Stews, Sauces and Marinades — Vegan, Gluten Free, Non-GMO, No Fillers — 6 oz",
+          "rejected_because": "review count 188 below floor 200"
+        }
+      ]
+    },
+    "sea-salt": {
+      "status": "VERIFIED",
+      "query": "flaky sea salt finishing",
+      "products": [
+        {
+          "asin": "B0042ZO8CK",
+          "serp_rank": 1,
+          "keepa_title": "Maldon Sea Salt Flakes 125g",
+          "brand": "Maldon",
+          "manufacturer": "Yulo Toys Inc",
+          "part_number": "4000001",
+          "keepa_type": "CULINARY_SALT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Salt & Salt Substitutes",
+            "Salt",
+            "Sea Salt"
+          ],
+          "sales_rank": 681,
+          "is_redirect_asin": false,
+          "rating": 4.8,
+          "reviews": 2700,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B06XKSFW4P",
+          "serp_rank": 2,
+          "keepa_title": "Saltverk Sea Salt - Flaky 3.17 Oz",
+          "brand": "Saltverk",
+          "manufacturer": "Saltverk",
+          "part_number": "5694230174089_SML",
+          "keepa_type": "CULINARY_SALT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Salt & Salt Substitutes",
+            "Salt",
+            "Sea Salt"
+          ],
+          "sales_rank": 2724,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 7000,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B01M2XT0PC",
+          "serp_rank": 7,
+          "keepa_title": "Falksalt - Natural Sea Salt Flakes, Light & Crunchy Gourmet Sea Salt Flakes for Cooking, Baking, & Finishing (8.8 oz)",
+          "brand": "Falksalt",
+          "manufacturer": null,
+          "part_number": null,
+          "keepa_type": "CULINARY_SALT",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Pantry Staples",
+            "Herbs, Spices & Seasonings",
+            "Salt & Salt Substitutes",
+            "Salt",
+            "Sea Salt"
+          ],
+          "sales_rank": 13360,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 4300,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B086XGH24W",
+          "title": "Maldon Salt, Sea Salt Flakes, 20 oz (570 g), Resealable Tub – Kosher, Natural, Unique Gourmet Pyramid Shaped Salt Flakes, Perfect for a Wide Range of Dishes, Hand-Harvested for Four Generations",
+          "rejected_because": "forbidden token in title: 'kosher'"
+        },
+        {
+          "asin": "B0G2T3S543",
+          "title": "Watkins Premium Flaked Sea Salt, 2.1 oz (Pack of 1)",
+          "rejected_because": "review count 86 below floor 500"
+        },
+        {
+          "asin": "B0DRM953CP",
+          "title": "KOSHER CERTIFIED Flake Sea Salt - Flake Finish, Finishing Salt - 4oz",
+          "rejected_because": "forbidden token in title: 'kosher'"
+        }
+      ]
+    },
+    "coffee": {
+      "status": "VERIFIED",
+      "query": "ground coffee dark roast",
+      "products": [
+        {
+          "asin": "B01LXFWK36",
+          "serp_rank": 1,
+          "keepa_title": "Maxwell House Ground Coffee, Smooth Bold Dark Roast, 26.7 oz Canister",
+          "brand": "MAXWELL HOUSE",
+          "manufacturer": "Kraft Heinz",
+          "part_number": "00043000070574",
+          "keepa_type": "COFFEE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Beverages",
+            "Coffee",
+            "Ground Coffee"
+          ],
+          "sales_rank": 132,
+          "is_redirect_asin": false,
+          "rating": 4.7,
+          "reviews": 5500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B0936GLRVN",
+          "serp_rank": 2,
+          "keepa_title": "Starbucks Ground Coffee, Dark Roast Coffee, Italian Roast, 100% Arabica, 1 bag (18 oz)",
+          "brand": "Starbucks",
+          "manufacturer": "Starbucks Coffee",
+          "part_number": "Wnaldc",
+          "keepa_type": "COFFEE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Beverages",
+            "Coffee",
+            "Ground Coffee"
+          ],
+          "sales_rank": 92,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 4500,
+          "accepted_because": "identity, demand and quality checks all passed"
+        },
+        {
+          "asin": "B086ZFM5DK",
+          "serp_rank": 4,
+          "keepa_title": "Peet's Coffee Ground Coffee Dark Roast, Organic French Roast, 18 Ounces",
+          "brand": "Peet's Coffee",
+          "manufacturer": "Peet's Coffee",
+          "part_number": "514546",
+          "keepa_type": "COFFEE",
+          "category_tree": [
+            "Grocery & Gourmet Food",
+            "Beverages",
+            "Coffee",
+            "Ground Coffee"
+          ],
+          "sales_rank": 164,
+          "is_redirect_asin": false,
+          "rating": 4.6,
+          "reviews": 5600,
+          "accepted_because": "identity, demand and quality checks all passed"
+        }
+      ],
+      "rejected": [
+        {
+          "asin": "B00NLB0YFQ",
+          "title": "Seattle's Best Coffee Post Alley Dark Roast Ground Coffee, 20 oz Bag",
+          "rejected_because": "review count 1900 below floor 2000"
+        },
+        {
+          "asin": "B086ZFHF6H",
+          "title": "Peet's Coffee Ground Coffee Dark Roast, Major Dickason's Blend, 18 Ounces",
+          "rejected_because": "same listing family as a pick already accepted (brand and rank or review count match)"
+        }
+      ]
+    }
+  }
+}

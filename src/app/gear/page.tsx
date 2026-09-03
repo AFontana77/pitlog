@@ -3,26 +3,28 @@ import Link from 'next/link';
 import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { ANIMALS, GEAR_CATEGORIES, RECIPES, getRegions } from '@/content';
+import { amazonUrl, hasProducts, productsFor, shortLabel } from '@/content/products';
+import { AffiliateDisclosure } from '@/components/content/AffiliateDisclosure';
 import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Lede, P, Section } from '@/components/content/ui';
 
 /**
- * /gear, category tier. No products, no prices, no links.
+ * /gear. Categories ranked by how often the records ask for them, with the
+ * verified picks for each.
  *
- * pitlog.app IS now enrolled in Amazon Associates as of 2026-09-03, with its
- * own tracking ID (see src/content/commerce.ts). That is not what was blocking
- * this page. What is still missing is a verified product manifest: every gear
- * category in the spine is `category_defined_no_products`, and this lane does
- * not ship an ASIN it has not identity-checked. The page stays noindex until
- * one exists.
- *
- * It is real and useful in the meantime: which tool each cut and recipe
- * actually needs, ranked by how often the records ask for it.
+ * No prices, ever: see src/content/commerce.ts. Picks come from the manifest
+ * built and gated by tools/gear/build_asin_manifest.py; a category with none
+ * simply shows none, which is common and correct. Indexing follows the
+ * manifest rather than a hardcoded flag, so this page cannot end up indexed
+ * with nothing on it or noindexed with picks on it.
  */
 export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app/gear' },
   title: 'BBQ Gear by Cut: What Each Cook Actually Needs',
-  description: 'The thermometer, paper, knife, cooler and fuel each cut and recipe calls for, ranked by how often it comes up. Categories only until verified product links exist.',
-  robots: { index: false, follow: true },
+  description: 'The thermometer, paper, knife, cooler and fuel each cut and recipe calls for, ranked by how often it comes up. Every pick checked against Amazon data.',
+  // noindex while the page is a category list with nothing to click. It earns
+  // indexing when it carries verified picks, and that flips from the manifest
+  // rather than from someone remembering to come back and change it.
+  robots: GEAR_CATEGORIES.some((g) => hasProducts(g.slug)) ? undefined : { index: false, follow: true },
 };
 
 export default function GearPage() {
@@ -59,9 +61,10 @@ export default function GearPage() {
           <H1>What each cook actually needs.</H1>
           <Lede>
             Ranked by how often the cut pages and recipes ask for it. Two thermometers top the list because USDA FSIS says
-            so. No product links yet: when Pit Log carries them, every one will be a verified, current listing with the
-            disclosure above it.
+            so. Where a pick is shown, its brand and product type were checked against Amazon&rsquo;s own catalogue record
+            before it went on the page, and anything that failed that check is not here.
           </Lede>
+          {GEAR_CATEGORIES.some((g) => hasProducts(g.slug)) && <AffiliateDisclosure />}
         </Section>
 
         <Section>
@@ -76,6 +79,22 @@ export default function GearPage() {
                     <H3 id={g.slug}>{g.name}</H3>
                   </div>
                   <P className="text-sm mb-3">{g.why}</P>
+                  {productsFor(g.slug).length > 0 && (
+                    <ul className="mb-3 space-y-1">
+                      {productsFor(g.slug).map((pr) => (
+                        <li key={pr.asin} className="text-sm">
+                          <a
+                            href={amazonUrl(pr.asin)}
+                            target="_blank"
+                            rel="nofollow sponsored noopener noreferrer"
+                            style={{ color: C.emberLight, textDecoration: 'underline' }}
+                          >
+                            {shortLabel(pr)}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <p className="text-xs mb-2" style={{ color: C.textMuted }}>
                     Used on {uses.cuts.length} cut page{uses.cuts.length === 1 ? '' : 's'} and {uses.recipes.length} recipe{uses.recipes.length === 1 ? '' : 's'}.
                   </p>
@@ -102,11 +121,21 @@ export default function GearPage() {
 
         <Section tone="bgDeep">
           <Eyebrow>Honest note</Eyebrow>
-          <H2>Why there are no buy buttons</H2>
+          <H2>How a pick gets on this page</H2>
+          <P className="mb-4">
+            A recommendation with a wrong link is worse than none, and a wrong link looks exactly like a right one. So a
+            product gets here two ways at once. We find it the way you would, by searching Amazon. Then we look it up
+            again in Amazon&rsquo;s own catalogue record and check that the brand, the product type and the category all
+            say what the listing says.
+          </P>
+          <P className="mb-4">
+            Anything that fails is dropped and the reason is kept. A leave-in probe sold as an instant-read gets dropped.
+            An unnamed brand gets dropped. A listing that redirects somewhere else gets dropped. So does a second colour
+            of a thing already on the list, because that is not a choice.
+          </P>
           <P className="mb-8">
-            A recommendation with a broken or wrong link is worse than none. Pit Log adds a product only when the exact
-            item has been checked as live and correct, and only through a program the site is enrolled in. Until then,
-            take the category, buy what you trust, and log the cook.
+            Where you see no pick, nothing passed. That is the honest answer, and it is why smokers and grills are not
+            here at all: those need a real buying guide, not whatever ranks first today.
           </P>
           <CtaRow />
         </Section>

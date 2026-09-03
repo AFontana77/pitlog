@@ -313,6 +313,52 @@ for p in POD["products"]:
     if p.get("fulfillment_status") == "LIVE" and not p.get("print_master"):
         fail(f"pod:{p['slug']} is LIVE without a print master")
 
+# --------------------------------------------------------- product manifest
+# Built by tools/gear/build_asin_manifest.py. These checks defend the two
+# properties the site relies on and the build script cannot enforce by itself:
+# that a shipped pick carries its evidence, and that no price ever gets in.
+MANIFEST_PATH = os.path.join(HERE, "gear", "product_manifest.json")
+if os.path.exists(MANIFEST_PATH):
+    MAN = load("gear/product_manifest.json")
+    GEAR_SLUGS = {g["slug"] for g in GEAR}
+    seen_asins = {}
+    n_products = 0
+    for family in ("gear", "ingredients"):
+        for slug, entry in MAN.get(family, {}).items():
+            if family == "gear" and slug not in GEAR_SLUGS:
+                fail(f"manifest:{slug} is not a gear category in gear_categories.json")
+            status = entry.get("status")
+            if status not in {"VERIFIED", "NO_VERIFIED_PRODUCT", "NO_CANDIDATES", "NOT_SOURCED"}:
+                fail(f"manifest:{slug} status {status!r} is not a known state")
+            products = entry.get("products") or []
+            if status == "VERIFIED" and not products:
+                fail(f"manifest:{slug} claims VERIFIED with no products")
+            if status != "VERIFIED" and products:
+                fail(f"manifest:{slug} is {status} but carries products")
+            for pr in products:
+                n_products += 1
+                asin = pr.get("asin", "")
+                if not re.fullmatch(r"[A-Z0-9]{10}", asin):
+                    fail(f"manifest:{slug} {asin!r} is not an ASIN")
+                # Every claim a pick makes must travel with the evidence for it.
+                for field in ("keepa_title", "brand", "category_tree", "sales_rank"):
+                    if pr.get(field) in (None, "", []):
+                        fail(f"manifest:{slug}:{asin} shipped without {field}")
+                if pr.get("is_redirect_asin"):
+                    fail(f"manifest:{slug}:{asin} is a redirect ASIN and must not ship")
+                if asin in seen_asins:
+                    fail(f"manifest:{asin} appears in both {seen_asins[asin]} and {slug}")
+                seen_asins[asin] = slug
+    # No price, anywhere. The Operating Agreement only permits displaying price
+    # data from the Product Advertising API refreshed within 24 hours, and a
+    # price frozen into a JSON file is stale the day after it is written.
+    blob = json.dumps(MAN)
+    for banned in ("\"price\"", "\"price_from\"", "\"list_price\"", "\"current_price\""):
+        if banned in blob:
+            fail(f"manifest carries {banned}; no price may be stored or displayed")
+else:
+    MAN, n_products = {"gear": {}, "ingredients": {}}, 0
+
 # -------------------------------------------------------------------- report
 counts = {
     "sources": len(SOURCES), "animals": len(A),
@@ -322,6 +368,7 @@ counts = {
     "culinary_doneness": len(DONE), "pitmaster_targets": len(TARG),
     "woods": len(WOODS), "recipes": len(RECIPES), "gear_categories": len(GEAR),
     "masters": len(MASTERS), "pod_products": len(POD["products"]),
+    "verified_products": n_products,
 }
 ns = sum(1 for d in CUTS.values() for r in d["regions"] if r["review_status"] == "NEEDS_SOURCE")
 ns += sum(1 for r in DONE + TARG + WOODS if r["review_status"] == "NEEDS_SOURCE")
