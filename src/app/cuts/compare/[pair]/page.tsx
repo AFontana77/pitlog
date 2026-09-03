@@ -246,7 +246,7 @@ export default async function ComparisonPage({ params }: { params: Promise<{ pai
             {page.nextCut && (
               <>
                 The{' '}
-                <Link href={`/temperatures/${page.animal}/${page.nextCut.cut}`} style={{ color: C.emberLight, textDecoration: 'underline' }}>
+                <Link href={page.nextCut.href} style={{ color: C.emberLight, textDecoration: 'underline' }}>
                   {page.nextCut.label}
                 </Link>{' '}
                 has the finish window, the stall and the rest.{' '}

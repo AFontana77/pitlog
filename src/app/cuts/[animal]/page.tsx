@@ -16,7 +16,7 @@ import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Label, Lede, P, Sect
 const TITLES: Record<AnimalSlug, { title: string; description: string; h1: string }> = {
   beef: {
     title: 'Beef Cuts Chart: Interactive Primal Guide with Temps and Woods',
-    description: 'Tap the beef primals: chuck, rib, short loin, sirloin, brisket, plate, flank, round, shank. Tenderness, method, USDA safe temp, brisket finish, woods, recipes.',
+    description: 'Tap the beef primals: chuck, rib, short loin, sirloin, brisket, plate, flank, round, shank. Tenderness, method, USDA temp, brisket finish, woods.',
     h1: 'Beef primal cuts.',
   },
   pork: {
@@ -41,7 +41,7 @@ const TITLES: Record<AnimalSlug, { title: string; description: string; h1: strin
   },
   salmon: {
     title: 'Salmon Cuts: Collar, Loin, Center Cut, Belly, Tail',
-    description: 'The portions of a side of salmon and how each cooks: collar, top loin, center cut, belly, tail. The 145 F USDA and FDA rule, alder and fruit woods, cedar plank recipe.',
+    description: 'The portions of a side of salmon and how each cooks: collar, top loin, center cut, belly, tail. The 145 F USDA and FDA rule, plus alder and fruit woods.',
     h1: 'Salmon cuts.',
   },
 };

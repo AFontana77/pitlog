@@ -28,6 +28,7 @@
  * comes from a record, resolveComparison() throws at import on a bad ref, and
  * the copy functions receive resolved records.
  */
+import { CUT_TEMPERATURE_PAGES } from '@/content/cutTemperaturePages';
 import {
   getAnimal,
   getPitmasterTarget,
@@ -97,8 +98,15 @@ export interface ComparisonPage {
   rows: CompareAttr[];
   /** Extra regions whose records the page cites but does not compare. */
   alsoRegions?: string[];
-  /** The sub-cut temperature page to send the reader to once they have chosen. */
-  nextCut?: { cut: string; label: string };
+  /**
+   * Where to send the reader once they have chosen, as a full path. It used to
+   * be a cut slug that the template pasted after /temperatures/{animal}/, which
+   * silently built /temperatures/beef/ribs for the brisket page: beef ribs are
+   * a cross-reference on the PORK ribs page and that URL has never existed.
+   * resolveComparison() now checks any /temperatures/ href against the cut
+   * registry, so the build fails instead of production carrying a 404.
+   */
+  nextCut?: { href: string; label: string };
   copy: (ctx: ComparisonContext) => ComparisonCopy;
 }
 
@@ -113,7 +121,7 @@ export const COMPARISON_PAGES: ComparisonPage[] = [
     ],
     rows: ['where', 'scores', 'methods', 'finish', 'planning', 'rest', 'slice'],
     alsoRegions: ['hock'],
-    nextCut: { cut: 'pulled', label: 'pulled pork temperature page' },
+    nextCut: { href: '/temperatures/pork/pulled', label: 'pulled pork temperature page' },
     copy: ({ animal, sides, safety }) => {
       const [butt] = sides;
       const t = butt.target;
@@ -139,7 +147,6 @@ export const COMPARISON_PAGES: ComparisonPage[] = [
       { label: 'Point (deckle)', region: 'brisket', cut: 'brisket-point' },
     ],
     rows: ['note', 'methods', 'finish', 'planning', 'rest', 'slice'],
-    nextCut: { cut: 'ribs', label: 'beef ribs section of the ribs page' },
     copy: ({ animal, sides, safety }) => {
       const [packer] = sides;
       const t = packer.target;
@@ -187,6 +194,14 @@ export function resolveComparison(p: ComparisonPage): ComparisonContext {
 
   const safety = animal ? getSafetyMinimum(animal.safety_ref) : undefined;
   if (!safety) missing.push(`safety for ${p.animal}`);
+
+  // A nextCut pointing into /temperatures/{animal}/{cut} must name a page that
+  // the cut registry actually builds.
+  const next = p.nextCut?.href.match(/^\/temperatures\/([^/]+)\/([^/]+)$/);
+  if (next && !CUT_TEMPERATURE_PAGES.some((c) => c.animal === next[1] && c.cut === next[2])) {
+    missing.push(`nextCut ${p.nextCut!.href} is not a page in CUT_TEMPERATURE_PAGES`);
+  }
+
   if (missing.length) throw new Error(`comparisonPages: /cuts/compare/${p.slug} has unresolved refs: ${missing.join(', ')}`);
 
   const resolved = sides.filter((s): s is ResolvedSide => !!s);
