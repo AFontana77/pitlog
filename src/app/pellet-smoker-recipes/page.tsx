@@ -81,7 +81,7 @@ const RECIPES = [
     steps: [
       'Dry brine salmon with salt and brown sugar for 1 to 2 hours. Rinse and pat dry before smoking.',
       'Set pellet smoker to 180°F using oak or alder pellets. Place salmon skin-side down.',
-      'Smoke until internal hits 130°F. Brush with a honey-soy glaze.',
+      'Smoke until internal hits 130°F. This is a mid-cook glaze point, not a done temperature, and it is below the USDA minimum. Brush with a honey-soy glaze.',
       'Continue smoking until 145°F. Let rest 5 min. Oak gives a clean smoke that does not overpower the fish.',
     ],
   },

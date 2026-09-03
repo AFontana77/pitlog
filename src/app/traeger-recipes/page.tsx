@@ -59,7 +59,7 @@ const RECIPES = [
     steps: [
       'Dry brine salmon with brown sugar and salt for 1 to 2 hours in the fridge. Rinse, pat dry.',
       'Set Traeger to 180°F. Place salmon skin-side down on the grate.',
-      'Smoke until internal hits 130°F, then glaze with a mix of honey, soy sauce, and garlic.',
+      'Smoke until internal hits 130°F. This is a mid-cook glaze point, not a done temperature, and it is below the USDA minimum. Brush on a mix of honey, soy sauce and garlic.',
       'Continue until 145°F internal. Salmon should flake easily. Rest 5 min before serving.',
     ],
   },

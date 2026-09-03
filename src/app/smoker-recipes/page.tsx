@@ -17,7 +17,7 @@ const CATEGORIES = [
     recipes: [
       { name: 'Smoked Brisket', temp: '225 to 250°F', internal: '203°F', time: '1 to 1.5 hr/lb', note: 'Full packer or flat. Wrap in butcher paper at 160°F. Probe tender when done. Not just at temp.' },
       { name: 'Smoked Chuck Roast', temp: '250°F', internal: '205°F', time: '1.5 hr/lb', note: 'Often called the poor man brisket. Wrap at 165°F. Rest 30 min before slicing or pulling.' },
-      { name: 'Smoked Tri-Tip', temp: '225°F then 400°F', internal: '130 to 145°F', time: '2 to 3 hr total', note: 'Smoke until 110°F, then reverse sear on high heat to finish. Best at medium-rare.' },
+      { name: 'Smoked Tri-Tip', temp: '225°F then 400°F', internal: '145°F USDA; 130 to 135°F is steakhouse convention, below the minimum', time: '2 to 3 hr total', note: 'Smoke until 110°F, then reverse sear on high heat to finish. The lower window is a preference, not a safe temperature; see /temperatures/beef/tri-tip.' },
       { name: 'Smoked Beef Short Ribs', temp: '250 to 275°F', internal: '203°F', time: '8 to 10 hr', note: 'Plate ribs (dino ribs) take a full day. Probe tender is the only reliable test. Wrap is optional.' },
     ],
   },

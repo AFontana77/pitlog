@@ -6,10 +6,17 @@ import { ANIMALS, GEAR_CATEGORIES, RECIPES, getRegions } from '@/content';
 import { Breadcrumbs, C, Card, CtaRow, Eyebrow, H1, H2, H3, Lede, P, Section } from '@/components/content/ui';
 
 /**
- * /gear, category tier. No products, no prices, no links: pitlog.app is not
- * enrolled in any program and there is no verified product manifest. The page
- * is noindex until products exist, but it is real and useful: which tool each
- * cut and recipe actually needs, ranked by how often the records ask for it.
+ * /gear, category tier. No products, no prices, no links.
+ *
+ * pitlog.app IS now enrolled in Amazon Associates as of 2026-09-03, with its
+ * own tracking ID (see src/content/commerce.ts). That is not what was blocking
+ * this page. What is still missing is a verified product manifest: every gear
+ * category in the spine is `category_defined_no_products`, and this lane does
+ * not ship an ASIN it has not identity-checked. The page stays noindex until
+ * one exists.
+ *
+ * It is real and useful in the meantime: which tool each cut and recipe
+ * actually needs, ranked by how often the records ask for it.
  */
 export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app/gear' },

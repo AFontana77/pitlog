@@ -2,6 +2,7 @@ import { SiteNav } from '@/components/layout/SiteNav';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { getSafetyMinimum, renderableDoneness } from '@/content';
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://pitlog.app/smoked-meat-recipes' },
@@ -10,11 +11,26 @@ export const metadata: Metadata = {
     'Smoked meat recipes for brisket, ribs, pork shoulder, chicken, and more. Internal temperatures and smoking times for every cut.',
 };
 
+/**
+ * The USDA column is read from the content spine, never typed. It used to be
+ * four hardcoded strings, and all four omitted the rest: the whole-muscle rule
+ * is 145 F PLUS a 3 minute rest, and a table that prints only the number is an
+ * incomplete safety statement. The ground meat row was missing entirely, which
+ * on a page about smoked meat left 160 F unstated.
+ */
+function usdaMin(id: string): string {
+  const s = getSafetyMinimum(id)!;
+  return `${s.temp_f}°F${s.rest ? `, then rest ${s.rest.split(' before')[0]}` : ', no rest required'}`;
+}
+
+const steakConvention = renderableDoneness('doneness-beef-convention');
+
 const TEMP_TABLE = [
-  { protein: 'Pork (whole muscle)', usdaMin: '145°F', pitmasterTarget: '203°F (shoulder/butt) / 195 to 203°F (ribs)', why: 'USDA minimum is safe. But collagen in shoulder and ribs does not fully break down until 195°F+. Pull at minimum and you get chewy, not tender.' },
-  { protein: 'Poultry', usdaMin: '165°F', pitmasterTarget: '175°F (dark meat) / 165°F (breast)', why: 'Breast dries out above 165°F. Dark meat (thighs, drumsticks) is better at 175°F. The extra temp renders the fat properly.' },
-  { protein: 'Beef (whole muscle)', usdaMin: '145°F', pitmasterTarget: '203°F (brisket/chuck) / 130 to 145°F (tri-tip/steak)', why: 'Steaks and tri-tip are served medium-rare (130°F). Brisket and chuck need 203°F for collagen breakdown. No shortcut.' },
-  { protein: 'Fish', usdaMin: '145°F', pitmasterTarget: '145°F', why: 'USDA minimum and pitmaster target are the same. Fish is delicate. Do not go past 145°F or it dries out fast.' },
+  { protein: 'Pork (whole muscle)', usdaMin: usdaMin('safety-whole-muscle-red-meat'), pitmasterTarget: '203°F (shoulder/butt) / 195 to 203°F (ribs)', why: 'The USDA minimum is safe. But collagen in shoulder and ribs does not fully break down until 195°F+. Pull at the minimum and you get chewy, not tender.' },
+  { protein: 'Poultry', usdaMin: usdaMin('safety-poultry'), pitmasterTarget: '175°F (dark meat) / 165°F (breast)', why: 'Breast dries out above 165°F. Dark meat (thighs, drumsticks) is better at 175°F. The extra temp renders the fat properly. Both are above the minimum.' },
+  { protein: 'Beef (whole muscle)', usdaMin: usdaMin('safety-whole-muscle-red-meat'), pitmasterTarget: '203°F (brisket/chuck)', why: 'Brisket and chuck need 203°F for collagen breakdown. No shortcut. Steak and tri-tip are a different question: see the note under this table.' },
+  { protein: 'Ground meat (beef, pork, lamb)', usdaMin: usdaMin('safety-ground-meat'), pitmasterTarget: 'same', why: 'Grinding mixes surface bacteria through the whole patty, so the whole-muscle rule does not apply. There is no craft target above it.' },
+  { protein: 'Fish', usdaMin: usdaMin('safety-fish'), pitmasterTarget: '145°F', why: 'The USDA minimum and the pitmaster target are the same. Fish is delicate. Past 145°F it dries out fast.' },
 ];
 
 const RECIPES = [
@@ -92,7 +108,7 @@ const RECIPES = [
 
 const TEMP_TIPS = [
   { title: 'Buy a dual-probe thermometer', body: 'One probe in the meat, one clipped to the grate near the protein. Your smoker lid thermometer is often 25 to 50°F off. You need to know the actual cooking environment, not the factory guess.' },
-  { title: 'Pull temp vs. resting temp', body: 'Meat continues to cook 5 to 10°F after you pull it from the smoker (carryover cooking). For fish and chicken, this matters a lot. Pull salmon at 140°F and it will carry to 145°F while resting.' },
+  { title: 'Pull temp vs. resting temp', body: 'Meat keeps cooking 5 to 10°F after it comes off the smoker. That carryover is real and it matters when you are chasing a texture on a big cut. It is not a food safety mechanism: do not pull fish or poultry under the USDA minimum expecting carryover to make up the difference, because the reading you took is the reading you can stand behind.' },
   { title: 'Collagen cuts need time, not just temp', body: 'Brisket and shoulder can be at 203°F but still feel tight on the probe. If there is resistance, give it more time. The probe test overrides the thermometer reading every time.' },
 ];
 
@@ -148,6 +164,19 @@ export default function SmokedMeatRecipesPage() {
                 </tbody>
               </table>
             </div>
+            {/* Steak and tri-tip convention sits BELOW the USDA minimum. The
+                spine flags that record below_safety_minimum and carries the
+                disclosure text; this page prints it rather than quietly listing
+                130 F as a target the way it used to. */}
+            {steakConvention?.mustDisclose && steakConvention.disclosure && (
+              <p
+                className="text-sm mt-6 p-4"
+                style={{ color: 'oklch(0.93 0.020 50)', background: 'oklch(0.20 0.06 30)', borderLeft: '3px solid oklch(0.55 0.18 30)' }}
+              >
+                <span className="font-semibold">Steak and tri-tip. </span>
+                {steakConvention.disclosure}
+              </p>
+            )}
             <p className="text-xs mt-4" style={{ color: 'oklch(0.62 0.018 50)' }}>
               Source: USDA Food Safety and Inspection Service. Pitmaster targets reflect documented BBQ practice for collagen-rich cuts.
             </p>
